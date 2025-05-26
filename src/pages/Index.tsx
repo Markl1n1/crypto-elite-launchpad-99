@@ -166,8 +166,8 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Floating Dashboard Cards */}
-          <div className="absolute top-20 left-10 hidden lg:block animate-float">
+          {/* Floating Dashboard Cards - repositioned to avoid text overlap */}
+          <div className="absolute top-16 left-8 hidden xl:block animate-float">
             <Card className="bg-[#283593]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">Portfolio Balance</div>
@@ -177,7 +177,7 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="absolute top-40 right-10 hidden lg:block animate-float" style={{ animationDelay: '1s' }}>
+          <div className="absolute top-32 right-8 hidden xl:block animate-float" style={{ animationDelay: '1s' }}>
             <Card className="bg-[#283593]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">AI Prediction</div>
@@ -187,7 +187,7 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="absolute bottom-20 left-1/4 hidden lg:block animate-float" style={{ animationDelay: '2s' }}>
+          <div className="absolute bottom-32 left-16 hidden xl:block animate-float" style={{ animationDelay: '2s' }}>
             <Card className="bg-[#283593]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">Average Client Monthly Profit</div>
@@ -209,132 +209,14 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[#5c6bc0]/10 to-[#3349ab]/10" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-5 gap-12 items-center">
-            {/* Complex Trading Interface Mockup */}
+            {/* Trading Platform Image */}
             <div className="lg:col-span-2">
-              <div className="relative mx-auto w-80 h-[600px] bg-black rounded-[20px] p-3">
-                <div className="w-full h-full bg-[#283593] rounded-[15px] overflow-hidden relative">
-                  {/* Header Bar */}
-                  <div className="bg-[#1a237e] px-4 py-3 border-b border-white/10">
-                    <div className="flex justify-between items-center">
-                      <div className="text-xs font-semibold">TradingView Pro</div>
-                      <div className="flex space-x-1">
-                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                        <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Main Trading Interface */}
-                  <div className="p-3">
-                    {/* Symbol and Price */}
-                    <div className="flex justify-between items-center mb-3">
-                      <div>
-                        <div className="text-lg font-bold">BTCUSD</div>
-                        <div className="text-xs text-gray-400">Bitcoin / US Dollar</div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-lg font-bold text-green-400">67,234.52</div>
-                        <div className="text-xs text-green-400">+1,987.34 (+3.04%)</div>
-                      </div>
-                    </div>
-                    
-                    {/* Chart Area */}
-                    <div className="h-64 bg-[#1a237e] rounded-lg mb-3 relative overflow-hidden">
-                      {/* Grid Lines */}
-                      <div className="absolute inset-0">
-                        {[...Array(8)].map((_, i) => (
-                          <div key={i} className="absolute w-full border-t border-white/5" style={{ top: `${i * 12.5}%` }} />
-                        ))}
-                        {[...Array(6)].map((_, i) => (
-                          <div key={i} className="absolute h-full border-l border-white/5" style={{ left: `${i * 20}%` }} />
-                        ))}
-                      </div>
-                      
-                      {/* Candlestick Chart */}
-                      <svg className="w-full h-full absolute inset-0" viewBox="0 0 320 200">
-                        {/* Green candles */}
-                        <rect x="20" y="80" width="8" height="40" fill="#22c55e" />
-                        <rect x="40" y="70" width="8" height="50" fill="#22c55e" />
-                        <rect x="60" y="85" width="8" height="35" fill="#ef4444" />
-                        <rect x="80" y="75" width="8" height="45" fill="#22c55e" />
-                        <rect x="100" y="65" width="8" height="55" fill="#22c55e" />
-                        <rect x="120" y="60" width="8" height="60" fill="#22c55e" />
-                        <rect x="140" y="70" width="8" height="50" fill="#ef4444" />
-                        <rect x="160" y="55" width="8" height="65" fill="#22c55e" />
-                        <rect x="180" y="50" width="8" height="70" fill="#22c55e" />
-                        <rect x="200" y="45" width="8" height="75" fill="#22c55e" />
-                        <rect x="220" y="40" width="8" height="80" fill="#22c55e" />
-                        <rect x="240" y="35" width="8" height="85" fill="#22c55e" />
-                        <rect x="260" y="30" width="8" height="90" fill="#22c55e" />
-                        <rect x="280" y="25" width="8" height="95" fill="#22c55e" />
-                        
-                        {/* Trend line */}
-                        <polyline
-                          fill="none"
-                          stroke="#3349ab"
-                          strokeWidth="2"
-                          points="20,120 40,110 60,115 80,105 100,95 120,90 140,95 160,85 180,80 200,75 220,70 240,65 260,60 280,55 300,50"
-                        />
-                      </svg>
-                      
-                      {/* Volume bars */}
-                      <div className="absolute bottom-2 left-2 right-2 flex items-end space-x-1">
-                        {[...Array(15)].map((_, i) => (
-                          <div key={i} className="bg-[#3349ab]/60 flex-1" style={{ height: `${Math.random() * 20 + 5}px` }} />
-                        ))}
-                      </div>
-                    </div>
-                    
-                    {/* Order Book */}
-                    <div className="grid grid-cols-2 gap-2 mb-3">
-                      <div className="bg-[#1a237e] rounded p-2">
-                        <div className="text-xs text-gray-400 mb-1">Order Book</div>
-                        <div className="space-y-1 text-xs">
-                          <div className="flex justify-between">
-                            <span className="text-red-400">67,250</span>
-                            <span>0.245</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-red-400">67,245</span>
-                            <span>0.532</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-green-400">67,235</span>
-                            <span>0.421</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="bg-[#1a237e] rounded p-2">
-                        <div className="text-xs text-gray-400 mb-1">24h Stats</div>
-                        <div className="space-y-1 text-xs">
-                          <div className="flex justify-between">
-                            <span>High:</span>
-                            <span>68,432</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span>Low:</span>
-                            <span>65,123</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span>Volume:</span>
-                            <span>2.4B</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Trading Buttons */}
-                    <div className="grid grid-cols-2 gap-2">
-                      <Button size="sm" className="bg-green-500 hover:bg-green-600 text-white text-xs">
-                        BUY BTCUSD
-                      </Button>
-                      <Button size="sm" className="bg-red-500 hover:bg-red-600 text-white text-xs">
-                        SELL BTCUSD
-                      </Button>
-                    </div>
-                  </div>
-                </div>
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/a2dabffc-b0b6-4eb0-9751-60a6dae1cd48.png" 
+                  alt="Trading Platform Interface"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
               </div>
             </div>
 
@@ -389,63 +271,63 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Steps to Get Started</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-16 relative max-w-5xl mx-auto">
-            {/* Step 1 */}
-            <div className="relative">
-              <Card className="bg-[#3349ab] border-white/10 p-8 text-center relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-white text-[#3349ab] w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
-                </div>
-                <CardContent className="p-0">
-                  <div className="bg-white p-4 rounded-lg inline-block mb-6">
-                    <Edit size={32} className="text-[#3349ab]" />
+          <div className="relative max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Step 1 */}
+              <div className="relative">
+                <Card className="bg-[#3349ab] border-white/10 p-8 text-center relative h-80">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-white text-[#3349ab] w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">Leave your application</h3>
-                  <p className="text-gray-200">Submit your application with basic information. Our team reviews every application personally.</p>
-                </CardContent>
-              </Card>
-              
-              {/* Arrow */}
-              <div className="hidden md:block absolute top-1/2 -right-8 transform -translate-y-1/2 z-10">
-                <ArrowRight size={32} className="text-white" />
+                  <CardContent className="p-0">
+                    <div className="bg-white p-4 rounded-lg inline-block mb-6">
+                      <Edit size={32} className="text-[#3349ab]" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-4">Leave your application</h3>
+                    <p className="text-gray-200">Submit your application with basic information. Our team reviews every application personally.</p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Step 2 */}
+              <div className="relative">
+                <Card className="bg-[#3349ab] border-white/10 p-8 text-center relative h-80">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-white text-[#3349ab] w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
+                  </div>
+                  <CardContent className="p-0">
+                    <div className="bg-white p-4 rounded-lg inline-block mb-6">
+                      <Shield size={32} className="text-[#3349ab]" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-4">Get guidance & access</h3>
+                    <p className="text-gray-200">Receive personal consultation and gain access to our exclusive trading platform and tools.</p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Step 3 */}
+              <div className="relative">
+                <Card className="bg-[#3349ab] border-white/10 p-8 text-center relative h-80">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-white text-[#3349ab] w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
+                  </div>
+                  <CardContent className="p-0">
+                    <div className="bg-white p-4 rounded-lg inline-block mb-6">
+                      <TrendingUp size={32} className="text-[#3349ab]" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-4">Grow your balance</h3>
+                    <p className="text-gray-200">Start trading with our AI-powered platform and watch your investments grow with professional guidance.</p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
 
-            {/* Step 2 */}
-            <div className="relative">
-              <Card className="bg-[#3349ab] border-white/10 p-8 text-center relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-white text-[#3349ab] w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
-                </div>
-                <CardContent className="p-0">
-                  <div className="bg-white p-4 rounded-lg inline-block mb-6">
-                    <Shield size={32} className="text-[#3349ab]" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">Get guidance & access</h3>
-                  <p className="text-gray-200">Receive personal consultation and gain access to our exclusive trading platform and tools.</p>
-                </CardContent>
-              </Card>
-              
-              {/* Arrow */}
-              <div className="hidden md:block absolute top-1/2 -right-8 transform -translate-y-1/2 z-10">
-                <ArrowRight size={32} className="text-white" />
-              </div>
+            {/* Arrows positioned between cards */}
+            <div className="hidden md:block absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/2 z-10">
+              <ArrowRight size={32} className="text-white" />
             </div>
-
-            {/* Step 3 */}
-            <div className="relative">
-              <Card className="bg-[#3349ab] border-white/10 p-8 text-center relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-white text-[#3349ab] w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
-                </div>
-                <CardContent className="p-0">
-                  <div className="bg-white p-4 rounded-lg inline-block mb-6">
-                    <TrendingUp size={32} className="text-[#3349ab]" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">Grow your balance</h3>
-                  <p className="text-gray-200">Start trading with our AI-powered platform and watch your investments grow with professional guidance.</p>
-                </CardContent>
-              </Card>
+            <div className="hidden md:block absolute top-1/2 left-2/3 transform -translate-x-1/2 -translate-y-1/2 z-10">
+              <ArrowRight size={32} className="text-white" />
             </div>
           </div>
 
@@ -482,19 +364,23 @@ const Index = () => {
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Basic AI trading signals
+                    24/7 Support
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Email support
+                    Personalised Manager
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Standard market access
+                    Automatic Notification of Trades
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Monthly reports
+                    Basic Autotrading
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
+                    Limited Number of Simultaneous Trades
                   </li>
                 </ul>
                 <Button 
@@ -520,23 +406,31 @@ const Index = () => {
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Advanced AI predictions
+                    24/7 Support
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Priority phone support
+                    Personalised Manager
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Premium market access
+                    Automatic Notification of Trades
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Weekly reports & analysis
+                    Advanced Autotrading
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Personal account manager
+                    Moderated Number of Simultaneous Trades
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
+                    Analyse Results
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
+                    Meetings with Investors
                   </li>
                 </ul>
                 <Button disabled className="w-full bg-gray-600 cursor-not-allowed">
@@ -556,23 +450,23 @@ const Index = () => {
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Elite AI trading suite
+                    All features from Pro, plus:
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    24/7 dedicated support
+                    Premium+ Autotrade
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Institutional market access
+                    Unlimited Number of Simultaneous Trades
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Daily reports & live calls
+                    Priority Processing of Requests
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#3349ab] rounded-full mr-3" />
-                    Private investment opportunities
+                    Gifts from the Company
                   </li>
                 </ul>
                 <Button 
