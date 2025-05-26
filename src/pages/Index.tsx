@@ -47,7 +47,32 @@ const Index = () => {
     { name: 'TD Ameritrade', logo: 'https://logo.clearbit.com/tdameritrade.com' },
     { name: 'E*TRADE', logo: 'https://logo.clearbit.com/etrade.com' },
     { name: 'Robinhood', logo: 'https://logo.clearbit.com/robinhood.com' },
-    { name: 'Interactive Brokers', logo: 'https://logo.clearbit.com/interactivebrokers.com' }
+    { name: 'Interactive Brokers', logo: 'https://logo.clearbit.com/interactivebrokers.com' },
+    { name: 'Morgan Stanley', logo: 'https://logo.clearbit.com/morganstanley.com' },
+    { name: 'Credit Suisse', logo: 'https://logo.clearbit.com/credit-suisse.com' },
+    { name: 'Deutsche Bank', logo: 'https://logo.clearbit.com/db.com' },
+    { name: 'Barclays', logo: 'https://logo.clearbit.com/barclays.com' },
+    { name: 'UBS', logo: 'https://logo.clearbit.com/ubs.com' },
+    { name: 'HSBC', logo: 'https://logo.clearbit.com/hsbc.com' },
+    { name: 'Citigroup', logo: 'https://logo.clearbit.com/citigroup.com' },
+    { name: 'Vanguard', logo: 'https://logo.clearbit.com/vanguard.com' },
+    { name: 'State Street', logo: 'https://logo.clearbit.com/statestreet.com' },
+    { name: 'T. Rowe Price', logo: 'https://logo.clearbit.com/troweprice.com' },
+    { name: 'Franklin Templeton', logo: 'https://logo.clearbit.com/franklintempleton.com' },
+    { name: 'Northern Trust', logo: 'https://logo.clearbit.com/northerntrust.com' },
+    { name: 'BNY Mellon', logo: 'https://logo.clearbit.com/bnymellon.com' },
+    { name: 'Invesco', logo: 'https://logo.clearbit.com/invesco.com' },
+    { name: 'Prudential', logo: 'https://logo.clearbit.com/prudential.com' },
+    { name: 'MetLife', logo: 'https://logo.clearbit.com/metlife.com' },
+    { name: 'Allianz', logo: 'https://logo.clearbit.com/allianz.com' },
+    { name: 'AIG', logo: 'https://logo.clearbit.com/aig.com' },
+    { name: 'Berkshire Hathaway', logo: 'https://logo.clearbit.com/berkshirehathaway.com' },
+    { name: 'KKR', logo: 'https://logo.clearbit.com/kkr.com' },
+    { name: 'Blackstone', logo: 'https://logo.clearbit.com/blackstone.com' },
+    { name: 'Apollo', logo: 'https://logo.clearbit.com/apollo.com' },
+    { name: 'Carlyle', logo: 'https://logo.clearbit.com/carlyle.com' },
+    { name: 'TPG', logo: 'https://logo.clearbit.com/tpg.com' },
+    { name: 'Bain Capital', logo: 'https://logo.clearbit.com/baincapital.com' }
   ];
 
   return (
@@ -107,7 +132,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden border-b-2 border-[#00d4aa]/30">
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden border-b-4 border-[#00d4aa]">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0e1a] via-[#1a1f35] to-[#0a0e1a]" />
         <div 
@@ -167,7 +192,7 @@ const Index = () => {
           </div>
 
           {/* Floating Dashboard Cards - repositioned to avoid text overlap */}
-          <div className="absolute top-24 left-8 hidden xl:block animate-float">
+          <div className="absolute top-28 left-8 hidden xl:block animate-float">
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">Portfolio Balance</div>
@@ -177,7 +202,7 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="absolute top-40 right-8 hidden xl:block animate-float" style={{ animationDelay: '1s' }}>
+          <div className="absolute top-44 right-8 hidden xl:block animate-float" style={{ animationDelay: '1s' }}>
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">AI Prediction</div>
@@ -205,7 +230,7 @@ const Index = () => {
       </section>
 
       {/* Trading Platform Section */}
-      <section className="py-20 relative border-b-2 border-[#00d4aa]/30">
+      <section className="py-20 relative border-b-4 border-[#00d4aa]">
         <div className="absolute inset-0 bg-gradient-to-r from-[#00d4aa]/10 to-[#0066ff]/10" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-5 gap-12 items-center">
@@ -213,9 +238,9 @@ const Index = () => {
             <div className="lg:col-span-2">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/49d3e326-aa31-4d8d-9a44-de78b2ee7bb6.png" 
+                  src="/lovable-uploads/a2dabffc-b0b6-4eb0-9751-60a6dae1cd48.png" 
                   alt="Trading Platform Interface"
-                  className="w-full h-auto rounded-2xl shadow-2xl"
+                  className="w-full max-w-md h-auto rounded-2xl shadow-2xl mx-auto"
                 />
               </div>
             </div>
@@ -262,7 +287,7 @@ const Index = () => {
       </section>
 
       {/* Steps Section */}
-      <section id="program" className="py-20 bg-[#1a1f35] border-b-2 border-[#00d4aa]/30">
+      <section id="program" className="py-20 bg-[#1a1f35] border-b-4 border-[#00d4aa]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
@@ -275,12 +300,12 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {/* Step 1 */}
               <div className="relative">
-                <Card className="bg-[#00d4aa] border-white/10 p-8 text-center relative h-80">
+                <Card className="bg-[#00d4aa] border-white/10 p-8 text-center relative h-96">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-white text-[#00d4aa] w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
                   </div>
-                  <CardContent className="p-0">
-                    <div className="bg-white p-4 rounded-lg inline-block mb-6">
+                  <CardContent className="p-0 h-full flex flex-col justify-center">
+                    <div className="bg-white p-4 rounded-lg inline-block mb-6 mx-auto">
                       <Edit size={32} className="text-[#00d4aa]" />
                     </div>
                     <h3 className="text-xl font-semibold mb-4 text-black">Leave your application</h3>
@@ -291,12 +316,12 @@ const Index = () => {
 
               {/* Step 2 */}
               <div className="relative">
-                <Card className="bg-[#00d4aa] border-white/10 p-8 text-center relative h-80">
+                <Card className="bg-[#00d4aa] border-white/10 p-8 text-center relative h-96">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-white text-[#00d4aa] w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
                   </div>
-                  <CardContent className="p-0">
-                    <div className="bg-white p-4 rounded-lg inline-block mb-6">
+                  <CardContent className="p-0 h-full flex flex-col justify-center">
+                    <div className="bg-white p-4 rounded-lg inline-block mb-6 mx-auto">
                       <Shield size={32} className="text-[#00d4aa]" />
                     </div>
                     <h3 className="text-xl font-semibold mb-4 text-black">Get guidance & access</h3>
@@ -307,12 +332,12 @@ const Index = () => {
 
               {/* Step 3 */}
               <div className="relative">
-                <Card className="bg-[#00d4aa] border-white/10 p-8 text-center relative h-80">
+                <Card className="bg-[#00d4aa] border-white/10 p-8 text-center relative h-96">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-white text-[#00d4aa] w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
                   </div>
-                  <CardContent className="p-0">
-                    <div className="bg-white p-4 rounded-lg inline-block mb-6">
+                  <CardContent className="p-0 h-full flex flex-col justify-center">
+                    <div className="bg-white p-4 rounded-lg inline-block mb-6 mx-auto">
                       <TrendingUp size={32} className="text-[#00d4aa]" />
                     </div>
                     <h3 className="text-xl font-semibold mb-4 text-black">Grow your balance</h3>
@@ -321,8 +346,6 @@ const Index = () => {
                 </Card>
               </div>
             </div>
-
-            {/* No arrows between cards as requested */}
           </div>
 
           <div className="text-center mt-12">
@@ -337,7 +360,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 border-b-2 border-[#00d4aa]/30">
+      <section id="pricing" className="py-20 border-b-4 border-[#00d4aa]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
@@ -348,7 +371,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Standard Plan */}
-            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-full">
+            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[500px]">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-green-500/20 text-green-400 border-green-500">8 spots available</Badge>
               </div>
@@ -387,7 +410,7 @@ const Index = () => {
             </Card>
 
             {/* Pro Plan */}
-            <Card className="bg-[#1a1f35] border-[#00d4aa] p-8 relative transform scale-105 flex flex-col h-full">
+            <Card className="bg-[#1a1f35] border-[#00d4aa] p-8 relative transform scale-105 flex flex-col h-[500px]">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <Badge className="bg-[#00d4aa] text-black font-bold">MOST POPULAR</Badge>
               </div>
@@ -434,7 +457,7 @@ const Index = () => {
             </Card>
 
             {/* Advanced Plan */}
-            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-full">
+            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[500px]">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-green-500/20 text-green-400 border-green-500">31 spots available</Badge>
               </div>
@@ -476,15 +499,15 @@ const Index = () => {
       </section>
 
       {/* Partners Section */}
-      <section className="py-20 bg-[#1a1f35] overflow-hidden border-b-2 border-[#00d4aa]/30">
+      <section className="py-20 bg-[#1a1f35] overflow-hidden border-b-4 border-[#00d4aa]">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Our Partners
           </h2>
           
-          {/* Auto-scrolling carousel */}
+          {/* Auto-scrolling carousel - increased speed */}
           <div className="relative">
-            <div className="flex animate-scroll">
+            <div className="flex animate-[scroll_15s_linear_infinite]">
               {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={index}
@@ -756,3 +779,4 @@ const Index = () => {
 };
 
 export default Index;
+
