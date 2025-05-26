@@ -608,8 +608,10 @@ const Index = () => {
                     alt={partner.name}
                     className="h-8 object-contain filter brightness-0 invert opacity-70"
                     onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                      e.currentTarget.nextElementSibling!.style.display = 'block';
+                      const target = e.currentTarget as HTMLImageElement;
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      target.style.display = 'none';
+                      if (fallback) fallback.style.display = 'block';
                     }}
                   />
                   <span className="text-gray-300 font-semibold hidden">{partner.name}</span>
