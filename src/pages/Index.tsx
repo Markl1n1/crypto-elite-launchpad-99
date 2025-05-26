@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, Lightning, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -260,7 +260,7 @@ const Index = () => {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-[#ffc045] p-3 rounded-lg">
-                    <Lightning size={24} className="text-black" />
+                    <Zap size={24} className="text-black" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">AI-Powered Predictions</h3>
