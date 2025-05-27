@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,10 +9,70 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+
+// Language data
+const languages = [
+  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'pl', name: 'Polish', flag: '🇵🇱' },
+  { code: 'de', name: 'German', flag: '🇩🇪' },
+  { code: 'es', name: 'Spanish', flag: '🇪🇸' },
+  { code: 'ru', name: 'Russian', flag: '🇷🇺' },
+  { code: 'fr', name: 'French', flag: '🇫🇷' },
+  { code: 'ar', name: 'Arabic', flag: '🇸🇦' },
+  { code: 'tr', name: 'Turkish', flag: '🇹🇷' },
+];
+
+// Countries data
+const countries = [
+  'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria',
+  'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan',
+  'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cabo Verde', 'Cambodia',
+  'Cameroon', 'Canada', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica',
+  'Croatia', 'Cuba', 'Cyprus', 'Czech Republic', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt',
+  'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia', 'Fiji', 'Finland', 'France', 'Gabon',
+  'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana',
+  'Haiti', 'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel',
+  'Italy', 'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan', 'Laos',
+  'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Madagascar', 'Malawi',
+  'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova',
+  'Monaco', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar', 'Namibia', 'Nauru', 'Nepal', 'Netherlands',
+  'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 'Norway', 'Oman', 'Pakistan', 'Palau',
+  'Palestine', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Qatar', 'Romania',
+  'Russia', 'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal',
+  'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea',
+  'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria', 'Taiwan', 'Tajikistan',
+  'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu',
+  'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan', 'Vanuatu', 'Vatican City', 'Venezuela',
+  'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'
+];
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState('en');
+  const [applicationStep, setApplicationStep] = useState(1);
+  
+  // Form state for step 1
+  const [step1Data, setStep1Data] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    plan: '',
+    experience: '',
+    message: ''
+  });
+
+  // Form state for step 2
+  const [step2Data, setStep2Data] = useState({
+    jobTitle: '',
+    annualIncome: '',
+    citizenship: '',
+    residency: '',
+    mortgage: '',
+    financialSituation: ''
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,11 +82,70 @@ const Index = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Auto-detect language based on browser location
+  useEffect(() => {
+    const detectLanguage = () => {
+      const browserLang = navigator.language.toLowerCase();
+      const languageMap = {
+        'en': 'en',
+        'pl': 'pl', 
+        'de': 'de',
+        'es': 'es',
+        'ru': 'ru',
+        'fr': 'fr',
+        'ar': 'ar',
+        'tr': 'tr'
+      };
+      
+      for (const [lang, code] of Object.entries(languageMap)) {
+        if (browserLang.startsWith(lang)) {
+          setCurrentLanguage(code);
+          break;
+        }
+      }
+    };
+    
+    detectLanguage();
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
   };
 
+  const handleStep1Submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setApplicationStep(2);
+  };
+
+  const handleStep2Submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle final form submission
+    console.log('Application submitted:', { ...step1Data, ...step2Data });
+    // Reset form
+    setApplicationStep(1);
+    setStep1Data({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      plan: '',
+      experience: '',
+      message: ''
+    });
+    setStep2Data({
+      jobTitle: '',
+      annualIncome: '',
+      citizenship: '',
+      residency: '',
+      mortgage: '',
+      financialSituation: ''
+    });
+  };
+
+  const currentLanguageData = languages.find(lang => lang.code === currentLanguage) || languages[0];
+
+  // ... keep existing code (partners array)
   const partners = [
     { name: 'BlackRock', logo: 'https://logo.clearbit.com/blackrock.com' },
     { name: 'Goldman Sachs', logo: 'https://logo.clearbit.com/goldmansachs.com' },
@@ -95,6 +213,30 @@ const Index = () => {
             <button onClick={() => scrollToSection('program')} className="hover:text-[#00d4aa] transition-colors">Program</button>
             <button onClick={() => scrollToSection('pricing')} className="hover:text-[#00d4aa] transition-colors">Pricing</button>
             <button onClick={() => scrollToSection('faq')} className="hover:text-[#00d4aa] transition-colors">FAQ</button>
+            
+            {/* Language Switcher */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm" className="flex items-center space-x-2 hover:text-[#00d4aa]">
+                  <Globe size={16} />
+                  <span>{currentLanguageData.flag}</span>
+                  <ChevronDown size={16} />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-[#1a1f35] border-white/20 z-50">
+                {languages.map((lang) => (
+                  <DropdownMenuItem
+                    key={lang.code}
+                    onClick={() => setCurrentLanguage(lang.code)}
+                    className="text-white hover:bg-[#00d4aa]/20 cursor-pointer"
+                  >
+                    <span className="mr-2">{lang.flag}</span>
+                    <span>{lang.code.toUpperCase()}</span>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
             <Button 
               onClick={() => scrollToSection('apply')}
               className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold"
@@ -212,7 +354,7 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="absolute bottom-40 left-16 hidden xl:block animate-float" style={{ animationDelay: '2s' }}>
+          <div className="absolute bottom-[470px] left-16 hidden xl:block animate-float" style={{ animationDelay: '2s' }}>
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">Average Client Monthly Profit</div>
@@ -238,9 +380,9 @@ const Index = () => {
             <div className="lg:col-span-2">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/a2dabffc-b0b6-4eb0-9751-60a6dae1cd48.png" 
+                  src="/lovable-uploads/e77df26a-aeb5-4528-a9ad-eb9b1e25b21b.png" 
                   alt="Trading Platform Interface"
-                  className="w-full max-w-md h-auto rounded-2xl shadow-2xl mx-auto"
+                  className="w-full h-auto rounded-2xl shadow-2xl mx-auto max-w-sm"
                 />
               </div>
             </div>
@@ -371,7 +513,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Standard Plan */}
-            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[500px]">
+            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[600px]">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-green-500/20 text-green-400 border-green-500">8 spots available</Badge>
               </div>
@@ -410,12 +552,12 @@ const Index = () => {
             </Card>
 
             {/* Pro Plan */}
-            <Card className="bg-[#1a1f35] border-[#00d4aa] p-8 relative transform scale-105 flex flex-col h-[500px]">
+            <Card className="bg-[#1a1f35] border-[#00d4aa] p-8 relative transform scale-105 flex flex-col h-[600px]">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <Badge className="bg-[#00d4aa] text-black font-bold">MOST POPULAR</Badge>
               </div>
               <div className="absolute top-4 right-4">
-                <Badge className="bg-red-500/20 text-red-400 border-red-500">No spots available</Badge>
+                <Badge className="bg-red-500/20 text-red-400 border-red-500">0 spots available</Badge>
               </div>
               <CardContent className="p-0 flex-grow flex flex-col">
                 <h3 className="text-2xl font-bold mb-2">Pro Plan</h3>
@@ -457,7 +599,7 @@ const Index = () => {
             </Card>
 
             {/* Advanced Plan */}
-            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[500px]">
+            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[600px]">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-green-500/20 text-green-400 border-green-500">31 spots available</Badge>
               </div>
@@ -505,9 +647,9 @@ const Index = () => {
             Our Partners
           </h2>
           
-          {/* Auto-scrolling carousel - increased speed */}
+          {/* Auto-scrolling carousel */}
           <div className="relative">
-            <div className="flex animate-[scroll_15s_linear_infinite]">
+            <div className="flex animate-[scroll_10s_linear_infinite]">
               {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={index}
@@ -603,94 +745,217 @@ const Index = () => {
             <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
               Begin Your Journey
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Apply Now</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Apply Now {applicationStep === 2 ? '- Step 2' : ''}
+            </h2>
           </div>
 
           <Card className="bg-[#0a0e1a] border-white/10 p-8">
             <CardContent className="p-0">
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              {applicationStep === 1 ? (
+                <form onSubmit={handleStep1Submit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <Label htmlFor="firstName" className="text-white">First Name</Label>
+                      <Input 
+                        id="firstName" 
+                        value={step1Data.firstName}
+                        onChange={(e) => setStep1Data({...step1Data, firstName: e.target.value})}
+                        className="bg-[#1a1f35] border-white/20 text-white"
+                        placeholder="Enter your first name"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="lastName" className="text-white">Last Name</Label>
+                      <Input 
+                        id="lastName" 
+                        value={step1Data.lastName}
+                        onChange={(e) => setStep1Data({...step1Data, lastName: e.target.value})}
+                        className="bg-[#1a1f35] border-white/20 text-white"
+                        placeholder="Enter your last name"
+                        required
+                      />
+                    </div>
+                  </div>
+
                   <div>
-                    <Label htmlFor="firstName">First Name</Label>
+                    <Label htmlFor="email" className="text-white">Email Address</Label>
                     <Input 
-                      id="firstName" 
+                      id="email" 
+                      type="email"
+                      value={step1Data.email}
+                      onChange={(e) => setStep1Data({...step1Data, email: e.target.value})}
                       className="bg-[#1a1f35] border-white/20 text-white"
-                      placeholder="Enter your first name"
+                      placeholder="Enter your email address"
+                      required
                     />
                   </div>
+
                   <div>
-                    <Label htmlFor="lastName">Last Name</Label>
+                    <Label htmlFor="phone" className="text-white">Phone Number</Label>
                     <Input 
-                      id="lastName" 
+                      id="phone" 
+                      value={step1Data.phone}
+                      onChange={(e) => setStep1Data({...step1Data, phone: e.target.value})}
                       className="bg-[#1a1f35] border-white/20 text-white"
-                      placeholder="Enter your last name"
+                      placeholder="Enter your phone number"
+                      required
                     />
                   </div>
-                </div>
 
-                <div>
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input 
-                    id="email" 
-                    type="email"
-                    className="bg-[#1a1f35] border-white/20 text-white"
-                    placeholder="Enter your email address"
-                  />
-                </div>
+                  <div>
+                    <Label htmlFor="plan" className="text-white">Investment Plan</Label>
+                    <Select value={step1Data.plan} onValueChange={(value) => setStep1Data({...step1Data, plan: value})}>
+                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
+                        <SelectValue placeholder="Select your preferred plan" className="placeholder:text-gray-400" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
+                        <SelectItem value="standard" className="text-gray-400">Standard Plan - $250 (8 spots available)</SelectItem>
+                        <SelectItem value="pro" disabled className="text-gray-400">Pro Plan - $1,000 (0 spots available)</SelectItem>
+                        <SelectItem value="advanced" className="text-gray-400">Advanced Plan - $5,000+ (31 spots available)</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
 
-                <div>
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input 
-                    id="phone" 
-                    className="bg-[#1a1f35] border-white/20 text-white"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
+                  <div>
+                    <Label htmlFor="experience" className="text-white">Investment Experience</Label>
+                    <Select value={step1Data.experience} onValueChange={(value) => setStep1Data({...step1Data, experience: value})}>
+                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
+                        <SelectValue placeholder="Select your experience level" className="placeholder:text-gray-400" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
+                        <SelectItem value="beginner" className="text-gray-400">Beginner (0-1 years)</SelectItem>
+                        <SelectItem value="intermediate" className="text-gray-400">Intermediate (1-5 years)</SelectItem>
+                        <SelectItem value="advanced" className="text-gray-400">Advanced (5+ years)</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
 
-                <div>
-                  <Label htmlFor="plan">Investment Plan</Label>
-                  <Select>
-                    <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                      <SelectValue placeholder="Select your preferred plan" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-[#1a1f35] border-white/20">
-                      <SelectItem value="standard">Standard Plan - $250</SelectItem>
-                      <SelectItem value="pro" disabled>Pro Plan - $1,000 (Full)</SelectItem>
-                      <SelectItem value="advanced">Advanced Plan - $5,000+</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <div>
+                    <Label htmlFor="message" className="text-white">Additional Information</Label>
+                    <Textarea 
+                      id="message"
+                      value={step1Data.message}
+                      onChange={(e) => setStep1Data({...step1Data, message: e.target.value})}
+                      className="bg-[#1a1f35] border-white/20 text-white min-h-[100px]"
+                      placeholder="Tell us about your investment goals and any questions you have..."
+                    />
+                  </div>
 
-                <div>
-                  <Label htmlFor="experience">Investment Experience</Label>
-                  <Select>
-                    <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                      <SelectValue placeholder="Select your experience level" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-[#1a1f35] border-white/20">
-                      <SelectItem value="beginner">Beginner (0-1 years)</SelectItem>
-                      <SelectItem value="intermediate">Intermediate (1-5 years)</SelectItem>
-                      <SelectItem value="advanced">Advanced (5+ years)</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6"
+                  >
+                    Continue to Step 2
+                  </Button>
+                </form>
+              ) : (
+                <form onSubmit={handleStep2Submit} className="space-y-6">
+                  <div>
+                    <Label htmlFor="jobTitle" className="text-white">What is your job title? *</Label>
+                    <Input 
+                      id="jobTitle" 
+                      value={step2Data.jobTitle}
+                      onChange={(e) => setStep2Data({...step2Data, jobTitle: e.target.value})}
+                      className="bg-[#1a1f35] border-white/20 text-white"
+                      placeholder="Enter your job title"
+                      required
+                    />
+                  </div>
 
-                <div>
-                  <Label htmlFor="message">Additional Information</Label>
-                  <Textarea 
-                    id="message"
-                    className="bg-[#1a1f35] border-white/20 text-white min-h-[100px]"
-                    placeholder="Tell us about your investment goals and any questions you have..."
-                  />
-                </div>
+                  <div>
+                    <Label htmlFor="annualIncome" className="text-white">What is your average annual income? *</Label>
+                    <Select value={step2Data.annualIncome} onValueChange={(value) => setStep2Data({...step2Data, annualIncome: value})} required>
+                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
+                        <SelectValue placeholder="Select your income range" className="placeholder:text-gray-400" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
+                        <SelectItem value="up-to-10k" className="text-gray-400">Up to $10,000</SelectItem>
+                        <SelectItem value="10k-25k" className="text-gray-400">$10,000 - $25,000</SelectItem>
+                        <SelectItem value="25k-50k" className="text-gray-400">$25,000 - $50,000</SelectItem>
+                        <SelectItem value="50k-100k" className="text-gray-400">$50,000 - $100,000</SelectItem>
+                        <SelectItem value="100k-plus" className="text-gray-400">$100,000 and over</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
 
-                <Button 
-                  type="submit" 
-                  className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6"
-                >
-                  Submit Application
-                </Button>
-              </form>
+                  <div>
+                    <Label htmlFor="citizenship" className="text-white">What is your country of citizenship?</Label>
+                    <Select value={step2Data.citizenship} onValueChange={(value) => setStep2Data({...step2Data, citizenship: value})}>
+                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
+                        <SelectValue placeholder="Select your country of citizenship" className="placeholder:text-gray-400" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
+                        {countries.map((country) => (
+                          <SelectItem key={country} value={country.toLowerCase().replace(/\s+/g, '-')} className="text-gray-400">
+                            {country}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="residency" className="text-white">What is your country of living?</Label>
+                    <Select value={step2Data.residency} onValueChange={(value) => setStep2Data({...step2Data, residency: value})}>
+                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
+                        <SelectValue placeholder="Select your country of residence" className="placeholder:text-gray-400" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
+                        {countries.map((country) => (
+                          <SelectItem key={country} value={country.toLowerCase().replace(/\s+/g, '-')} className="text-gray-400">
+                            {country}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="mortgage" className="text-white">Do you have mortgage or debts? Specify approximate amount in $.</Label>
+                    <Input 
+                      id="mortgage" 
+                      value={step2Data.mortgage}
+                      onChange={(e) => setStep2Data({...step2Data, mortgage: e.target.value})}
+                      className="bg-[#1a1f35] border-white/20 text-white"
+                      placeholder="Enter amount (e.g., $50,000 or None)"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="financialSituation" className="text-white">Rate your overall financial situation from 1 to 10</Label>
+                    <Select value={step2Data.financialSituation} onValueChange={(value) => setStep2Data({...step2Data, financialSituation: value})}>
+                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
+                        <SelectValue placeholder="Select your financial situation (1-10)" className="placeholder:text-gray-400" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
+                        {[1,2,3,4,5,6,7,8,9,10].map((num) => (
+                          <SelectItem key={num} value={num.toString()} className="text-gray-400">
+                            {num} {num === 1 ? '- Living paycheck to paycheck' : num === 10 ? '- Can buy anything, 2+ years capital' : ''}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <Button 
+                      type="button"
+                      onClick={() => setApplicationStep(1)}
+                      className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg py-6"
+                    >
+                      Back to Step 1
+                    </Button>
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6"
+                    >
+                      Submit Application
+                    </Button>
+                  </div>
+                </form>
+              )}
 
               <div className="flex items-center justify-center space-x-2 mt-6 text-sm text-gray-400">
                 <Lock size={16} />
@@ -766,7 +1031,7 @@ const Index = () => {
 
           <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Incite AI. All rights reserved.
+              © 2025 Incite AI. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm mt-4 md:mt-0">
               Investment involves risk. Past performance does not guarantee future results.
@@ -779,4 +1044,3 @@ const Index = () => {
 };
 
 export default Index;
-
