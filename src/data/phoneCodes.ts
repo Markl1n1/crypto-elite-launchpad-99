@@ -1,9 +1,7 @@
 
 export const phoneCodes = [
-  { code: '+1', country: 'United States' },
-  { code: '+1', country: 'Canada' },
-  { code: '+7', country: 'Russia' },
-  { code: '+7', country: 'Kazakhstan' },
+  { code: '+1', country: 'United States/Canada' },
+  { code: '+7', country: 'Russia/Kazakhstan' },
   { code: '+20', country: 'Egypt' },
   { code: '+27', country: 'South Africa' },
   { code: '+30', country: 'Greece' },

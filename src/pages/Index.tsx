@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Facebook, Globe } from 'lucide-react';
+import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Facebook, Globe, MessageCircle, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -404,9 +403,9 @@ const Index = () => {
           <div className="absolute top-28 left-8 hidden xl:block animate-float">
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
-                <div className="text-sm text-gray-400 mb-2">Portfolio Balance</div>
-                <div className="text-2xl font-bold text-green-400">$847,239.52</div>
-                <div className="text-sm text-green-400">+12.4% today</div>
+                <div className="text-sm text-gray-400 mb-2">Record Portfolio May</div>
+                <div className="text-lg font-bold text-green-400">Start - $250, Now - $3,611</div>
+                <div className="text-sm text-green-400">+1,344% growth</div>
               </CardContent>
             </Card>
           </div>
@@ -414,19 +413,29 @@ const Index = () => {
           <div className="absolute top-44 right-8 hidden xl:block animate-float" style={{ animationDelay: '1s' }}>
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
-                <div className="text-sm text-gray-400 mb-2">AI Prediction</div>
-                <div className="text-lg font-semibold text-[#00d4aa]">Strong Buy Signal</div>
+                <div className="text-sm text-gray-400 mb-2">AI Says</div>
+                <div className="text-lg font-semibold text-[#00d4aa]">Strong Buy Signal for ****</div>
                 <div className="text-sm text-gray-400">Confidence: 94%</div>
               </CardContent>
             </Card>
           </div>
 
-          <div className="absolute bottom-[540px] left-16 hidden xl:block animate-float" style={{ animationDelay: '2s' }}>
+          <div className="absolute bottom-[470px] left-16 hidden xl:block animate-float" style={{ animationDelay: '2s' }}>
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">Average Client Monthly Profit</div>
-                <div className="text-2xl font-bold text-green-400">+24.7%</div>
+                <div className="text-2xl font-bold text-green-400">+44.7%</div>
                 <div className="text-sm text-gray-400">Last 12 months</div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="absolute bottom-[400px] right-16 hidden xl:block animate-float" style={{ animationDelay: '3s' }}>
+            <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
+              <CardContent className="p-0">
+                <div className="text-sm text-gray-400 mb-2">Our clients winrate in May</div>
+                <div className="text-2xl font-bold text-green-400">89%</div>
+                <div className="text-sm text-gray-400">Success rate</div>
               </CardContent>
             </Card>
           </div>
@@ -447,7 +456,7 @@ const Index = () => {
             <div className="lg:col-span-2">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/e77df26a-aeb5-4528-a9ad-eb9b1e25b21b.png" 
+                  src="/lovable-uploads/d77102a6-0db1-4f68-9154-d76b9c8831b2.png" 
                   alt="Trading Platform Interface"
                   className="w-full h-auto rounded-2xl shadow-2xl mx-auto max-w-sm"
                 />
@@ -716,7 +725,7 @@ const Index = () => {
           
           {/* Auto-scrolling carousel */}
           <div className="relative">
-            <div className="flex animate-[scroll_8s_linear_infinite]">
+            <div className="flex animate-[scroll_10s_linear_infinite]">
               {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={index}
@@ -1097,16 +1106,16 @@ const Index = () => {
                   <Facebook size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
                 </a>
                 <a href="https://t.me/inciteai" target="_blank" rel="noopener noreferrer">
-                  <Phone size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
+                  <Send size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
                 </a>
                 <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer">
-                  <Phone size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
+                  <MessageCircle size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
                 </a>
               </div>
             </div>
 
             {/* Quick Links */}
-            <div className="md:col-span-1">
+            <div className="md:col-span-1 text-center md:text-left">
               <h3 className="font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li><button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Home</button></li>
@@ -1117,7 +1126,7 @@ const Index = () => {
             </div>
 
             {/* Legal */}
-            <div className="md:col-span-1">
+            <div className="md:col-span-1 text-center md:text-left">
               <h3 className="font-semibold mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Privacy Policy</Link></li>
@@ -1136,7 +1145,7 @@ const Index = () => {
                   <span>support@inciteai.com</span>
                 </li>
                 <li className="flex items-center space-x-2 text-gray-400">
-                  <Phone size={16} />
+                  <Send size={16} />
                   <span>+1 (555) 123-4567</span>
                 </li>
                 <li className="flex items-center space-x-2 text-gray-400">
