@@ -1,6 +1,7 @@
+
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Globe } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Facebook, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,6 +11,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { phoneCodes } from '@/data/phoneCodes';
 
 // Language data
 const languages = [
@@ -48,17 +50,21 @@ const countries = [
 ];
 
 const Index = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('en');
   const [applicationStep, setApplicationStep] = useState(1);
+  const [phoneCode, setPhoneCode] = useState('+1');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
   
   // Form state for step 1
   const [step1Data, setStep1Data] = useState({
     firstName: '',
     lastName: '',
     email: '',
-    phone: '',
     plan: '',
     experience: '',
     message: ''
@@ -113,34 +119,86 @@ const Index = () => {
     setIsMenuOpen(false);
   };
 
+  // Email validation
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // Phone validation
+  const validatePhone = (phone: string) => {
+    const phoneRegex = /^\d{6,15}$/;
+    return phoneRegex.test(phone);
+  };
+
   const handleStep1Submit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Reset errors
+    setEmailError('');
+    setPhoneError('');
+    
+    let hasErrors = false;
+    
+    // Validate email
+    if (!validateEmail(step1Data.email)) {
+      setEmailError('Please enter a valid email address');
+      hasErrors = true;
+    }
+    
+    // Validate phone
+    if (!validatePhone(phoneNumber)) {
+      setPhoneError('Please enter a valid phone number (6-15 digits)');
+      hasErrors = true;
+    }
+    
+    if (hasErrors) return;
+    
     setApplicationStep(2);
   };
 
-  const handleStep2Submit = (e: React.FormEvent) => {
+  const submitToGoogleSheets = async (formData: any) => {
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzQ8_example/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+      console.log('Data submitted to Google Sheets');
+    } catch (error) {
+      console.error('Error submitting to Google Sheets:', error);
+    }
+  };
+
+  const handleStep2Submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle final form submission
-    console.log('Application submitted:', { ...step1Data, ...step2Data });
-    // Reset form
-    setApplicationStep(1);
-    setStep1Data({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      plan: '',
-      experience: '',
-      message: ''
-    });
-    setStep2Data({
-      jobTitle: '',
-      annualIncome: '',
-      citizenship: '',
-      residency: '',
-      mortgage: '',
-      financialSituation: ''
-    });
+    
+    // Prepare form data for Google Sheets
+    const formData = {
+      firstName: step1Data.firstName,
+      lastName: step1Data.lastName,
+      email: step1Data.email,
+      phone: `${phoneCode}${phoneNumber}`,
+      plan: step1Data.plan,
+      experience: step1Data.experience,
+      message: step1Data.message,
+      jobTitle: step2Data.jobTitle,
+      annualIncome: step2Data.annualIncome,
+      citizenship: step2Data.citizenship,
+      residency: step2Data.residency,
+      mortgage: step2Data.mortgage,
+      financialSituation: step2Data.financialSituation,
+      timestamp: new Date().toISOString()
+    };
+    
+    // Submit to Google Sheets
+    await submitToGoogleSheets(formData);
+    
+    // Navigate to success page
+    navigate('/success');
   };
 
   const currentLanguageData = languages.find(lang => lang.code === currentLanguage) || languages[0];
@@ -190,7 +248,16 @@ const Index = () => {
     { name: 'Apollo', logo: 'https://logo.clearbit.com/apollo.com' },
     { name: 'Carlyle', logo: 'https://logo.clearbit.com/carlyle.com' },
     { name: 'TPG', logo: 'https://logo.clearbit.com/tpg.com' },
-    { name: 'Bain Capital', logo: 'https://logo.clearbit.com/baincapital.com' }
+    { name: 'Bain Capital', logo: 'https://logo.clearbit.com/baincapital.com' },
+    { name: 'Bridgewater Associates', logo: 'https://logo.clearbit.com/bridgewater.com' },
+    { name: 'Renaissance Technologies', logo: 'https://logo.clearbit.com/rentec.com' },
+    { name: 'Two Sigma', logo: 'https://logo.clearbit.com/twosigma.com' },
+    { name: 'Citadel', logo: 'https://logo.clearbit.com/citadel.com' },
+    { name: 'DE Shaw', logo: 'https://logo.clearbit.com/deshaw.com' },
+    { name: 'AQR Capital', logo: 'https://logo.clearbit.com/aqr.com' },
+    { name: 'Millennium Management', logo: 'https://logo.clearbit.com/mlp.com' },
+    { name: 'Point72', logo: 'https://logo.clearbit.com/point72.com' },
+    { name: 'Susquehanna', logo: 'https://logo.clearbit.com/sig.com' }
   ];
 
   return (
@@ -257,11 +324,11 @@ const Index = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-[#1a1f35] border-t border-white/10">
-            <nav className="container mx-auto px-4 py-4 space-y-4">
-              <button onClick={() => scrollToSection('home')} className="block w-full text-left hover:text-[#00d4aa] transition-colors">Home</button>
-              <button onClick={() => scrollToSection('program')} className="block w-full text-left hover:text-[#00d4aa] transition-colors">Program</button>
-              <button onClick={() => scrollToSection('pricing')} className="block w-full text-left hover:text-[#00d4aa] transition-colors">Pricing</button>
-              <button onClick={() => scrollToSection('faq')} className="block w-full text-left hover:text-[#00d4aa] transition-colors">FAQ</button>
+            <nav className="container mx-auto px-4 py-4 space-y-4 text-center">
+              <button onClick={() => scrollToSection('home')} className="block w-full hover:text-[#00d4aa] transition-colors">Home</button>
+              <button onClick={() => scrollToSection('program')} className="block w-full hover:text-[#00d4aa] transition-colors">Program</button>
+              <button onClick={() => scrollToSection('pricing')} className="block w-full hover:text-[#00d4aa] transition-colors">Pricing</button>
+              <button onClick={() => scrollToSection('faq')} className="block w-full hover:text-[#00d4aa] transition-colors">FAQ</button>
               <Button 
                 onClick={() => scrollToSection('apply')}
                 className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold"
@@ -354,7 +421,7 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="absolute bottom-[470px] left-16 hidden xl:block animate-float" style={{ animationDelay: '2s' }}>
+          <div className="absolute bottom-[540px] left-16 hidden xl:block animate-float" style={{ animationDelay: '2s' }}>
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">Average Client Monthly Profit</div>
@@ -513,14 +580,14 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Standard Plan */}
-            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[600px]">
+            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[650px]">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-green-500/20 text-green-400 border-green-500">8 spots available</Badge>
               </div>
               <CardContent className="p-0 flex-grow flex flex-col">
-                <h3 className="text-2xl font-bold mb-2">Standard Plan</h3>
+                <h3 className="text-2xl font-bold mb-2 text-white">Standard Plan</h3>
                 <div className="text-4xl font-bold mb-6 text-[#00d4aa]">$250</div>
-                <ul className="space-y-3 mb-8 flex-grow">
+                <ul className="space-y-3 mb-8 flex-grow text-white">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
                     24/7 Support
@@ -552,7 +619,7 @@ const Index = () => {
             </Card>
 
             {/* Pro Plan */}
-            <Card className="bg-[#1a1f35] border-[#00d4aa] p-8 relative transform scale-105 flex flex-col h-[600px]">
+            <Card className="bg-[#1a1f35] border-[#00d4aa] p-8 relative transform scale-105 flex flex-col h-[650px]">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <Badge className="bg-[#00d4aa] text-black font-bold">MOST POPULAR</Badge>
               </div>
@@ -560,9 +627,9 @@ const Index = () => {
                 <Badge className="bg-red-500/20 text-red-400 border-red-500">0 spots available</Badge>
               </div>
               <CardContent className="p-0 flex-grow flex flex-col">
-                <h3 className="text-2xl font-bold mb-2">Pro Plan</h3>
+                <h3 className="text-2xl font-bold mb-2 text-white">Pro Plan</h3>
                 <div className="text-4xl font-bold mb-6 text-[#00d4aa]">$1,000</div>
-                <ul className="space-y-3 mb-8 flex-grow">
+                <ul className="space-y-3 mb-8 flex-grow text-white">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
                     24/7 Support
@@ -599,14 +666,14 @@ const Index = () => {
             </Card>
 
             {/* Advanced Plan */}
-            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[600px]">
+            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[650px]">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-green-500/20 text-green-400 border-green-500">31 spots available</Badge>
               </div>
               <CardContent className="p-0 flex-grow flex flex-col">
-                <h3 className="text-2xl font-bold mb-2">Advanced Plan</h3>
+                <h3 className="text-2xl font-bold mb-2 text-white">Advanced Plan</h3>
                 <div className="text-4xl font-bold mb-6 text-[#00d4aa]">$5,000+</div>
-                <ul className="space-y-3 mb-8 flex-grow">
+                <ul className="space-y-3 mb-8 flex-grow text-white">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
                     All features from Pro, plus:
@@ -649,7 +716,7 @@ const Index = () => {
           
           {/* Auto-scrolling carousel */}
           <div className="relative">
-            <div className="flex animate-[scroll_10s_linear_infinite]">
+            <div className="flex animate-[scroll_8s_linear_infinite]">
               {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={index}
@@ -756,7 +823,9 @@ const Index = () => {
                 <form onSubmit={handleStep1Submit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="firstName" className="text-white">First Name</Label>
+                      <Label htmlFor="firstName" className="text-white">
+                        First Name <span className="text-red-400">*</span>
+                      </Label>
                       <Input 
                         id="firstName" 
                         value={step1Data.firstName}
@@ -767,7 +836,9 @@ const Index = () => {
                       />
                     </div>
                     <div>
-                      <Label htmlFor="lastName" className="text-white">Last Name</Label>
+                      <Label htmlFor="lastName" className="text-white">
+                        Last Name <span className="text-red-400">*</span>
+                      </Label>
                       <Input 
                         id="lastName" 
                         value={step1Data.lastName}
@@ -780,7 +851,9 @@ const Index = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="email" className="text-white">Email Address</Label>
+                    <Label htmlFor="email" className="text-white">
+                      Email Address <span className="text-red-400">*</span>
+                    </Label>
                     <Input 
                       id="email" 
                       type="email"
@@ -790,25 +863,45 @@ const Index = () => {
                       placeholder="Enter your email address"
                       required
                     />
+                    {emailError && <p className="text-red-400 text-sm mt-1">{emailError}</p>}
                   </div>
 
                   <div>
-                    <Label htmlFor="phone" className="text-white">Phone Number</Label>
-                    <Input 
-                      id="phone" 
-                      value={step1Data.phone}
-                      onChange={(e) => setStep1Data({...step1Data, phone: e.target.value})}
-                      className="bg-[#1a1f35] border-white/20 text-white"
-                      placeholder="Enter your phone number"
-                      required
-                    />
+                    <Label htmlFor="phone" className="text-white">
+                      Phone Number <span className="text-red-400">*</span>
+                    </Label>
+                    <div className="flex gap-2">
+                      <Select value={phoneCode} onValueChange={setPhoneCode}>
+                        <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white w-32">
+                          <SelectValue className="text-gray-400" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
+                          {phoneCodes.map((phone, index) => (
+                            <SelectItem key={index} value={phone.code} className="text-gray-400">
+                              {phone.code}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      <Input 
+                        id="phone" 
+                        value={phoneNumber}
+                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        className="bg-[#1a1f35] border-white/20 text-white flex-1"
+                        placeholder="123456789"
+                        required
+                      />
+                    </div>
+                    {phoneError && <p className="text-red-400 text-sm mt-1">{phoneError}</p>}
                   </div>
 
                   <div>
-                    <Label htmlFor="plan" className="text-white">Investment Plan</Label>
-                    <Select value={step1Data.plan} onValueChange={(value) => setStep1Data({...step1Data, plan: value})}>
+                    <Label htmlFor="plan" className="text-white">
+                      Investment Plan <span className="text-red-400">*</span>
+                    </Label>
+                    <Select value={step1Data.plan} onValueChange={(value) => setStep1Data({...step1Data, plan: value})} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder="Select your preferred plan" className="placeholder:text-gray-400" />
+                        <SelectValue placeholder="Select your preferred plan" className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
                         <SelectItem value="standard" className="text-gray-400">Standard Plan - $250 (8 spots available)</SelectItem>
@@ -819,10 +912,12 @@ const Index = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="experience" className="text-white">Investment Experience</Label>
-                    <Select value={step1Data.experience} onValueChange={(value) => setStep1Data({...step1Data, experience: value})}>
+                    <Label htmlFor="experience" className="text-white">
+                      Investment Experience <span className="text-red-400">*</span>
+                    </Label>
+                    <Select value={step1Data.experience} onValueChange={(value) => setStep1Data({...step1Data, experience: value})} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder="Select your experience level" className="placeholder:text-gray-400" />
+                        <SelectValue placeholder="Select your experience level" className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
                         <SelectItem value="beginner" className="text-gray-400">Beginner (0-1 years)</SelectItem>
@@ -853,7 +948,9 @@ const Index = () => {
               ) : (
                 <form onSubmit={handleStep2Submit} className="space-y-6">
                   <div>
-                    <Label htmlFor="jobTitle" className="text-white">What is your job title? *</Label>
+                    <Label htmlFor="jobTitle" className="text-white">
+                      What is your job title? <span className="text-red-400">*</span>
+                    </Label>
                     <Input 
                       id="jobTitle" 
                       value={step2Data.jobTitle}
@@ -865,10 +962,12 @@ const Index = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="annualIncome" className="text-white">What is your average annual income? *</Label>
+                    <Label htmlFor="annualIncome" className="text-white">
+                      What is your average annual income? <span className="text-red-400">*</span>
+                    </Label>
                     <Select value={step2Data.annualIncome} onValueChange={(value) => setStep2Data({...step2Data, annualIncome: value})} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder="Select your income range" className="placeholder:text-gray-400" />
+                        <SelectValue placeholder="Select your income range" className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
                         <SelectItem value="up-to-10k" className="text-gray-400">Up to $10,000</SelectItem>
@@ -881,10 +980,12 @@ const Index = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="citizenship" className="text-white">What is your country of citizenship?</Label>
-                    <Select value={step2Data.citizenship} onValueChange={(value) => setStep2Data({...step2Data, citizenship: value})}>
+                    <Label htmlFor="citizenship" className="text-white">
+                      What is your country of citizenship? <span className="text-red-400">*</span>
+                    </Label>
+                    <Select value={step2Data.citizenship} onValueChange={(value) => setStep2Data({...step2Data, citizenship: value})} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder="Select your country of citizenship" className="placeholder:text-gray-400" />
+                        <SelectValue placeholder="Select your country of citizenship" className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
                         {countries.map((country) => (
@@ -897,10 +998,12 @@ const Index = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="residency" className="text-white">What is your country of living?</Label>
-                    <Select value={step2Data.residency} onValueChange={(value) => setStep2Data({...step2Data, residency: value})}>
+                    <Label htmlFor="residency" className="text-white">
+                      What is your country of living? <span className="text-red-400">*</span>
+                    </Label>
+                    <Select value={step2Data.residency} onValueChange={(value) => setStep2Data({...step2Data, residency: value})} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder="Select your country of residence" className="placeholder:text-gray-400" />
+                        <SelectValue placeholder="Select your country of residence" className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
                         {countries.map((country) => (
@@ -913,28 +1016,38 @@ const Index = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="mortgage" className="text-white">Do you have mortgage or debts? Specify approximate amount in $.</Label>
+                    <Label htmlFor="mortgage" className="text-white">
+                      Do you have mortgage or debts? Specify approximate amount in $. <span className="text-red-400">*</span>
+                    </Label>
                     <Input 
                       id="mortgage" 
                       value={step2Data.mortgage}
                       onChange={(e) => setStep2Data({...step2Data, mortgage: e.target.value})}
                       className="bg-[#1a1f35] border-white/20 text-white"
                       placeholder="Enter amount (e.g., $50,000 or None)"
+                      required
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="financialSituation" className="text-white">Rate your overall financial situation from 1 to 10</Label>
-                    <Select value={step2Data.financialSituation} onValueChange={(value) => setStep2Data({...step2Data, financialSituation: value})}>
+                    <Label htmlFor="financialSituation" className="text-white">
+                      Rate your overall financial situation from 1 to 10 <span className="text-red-400">*</span>
+                    </Label>
+                    <Select value={step2Data.financialSituation} onValueChange={(value) => setStep2Data({...step2Data, financialSituation: value})} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder="Select your financial situation (1-10)" className="placeholder:text-gray-400" />
+                        <SelectValue placeholder="Select your financial situation (1-10)" className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
-                        {[1,2,3,4,5,6,7,8,9,10].map((num) => (
-                          <SelectItem key={num} value={num.toString()} className="text-gray-400">
-                            {num} {num === 1 ? '- Living paycheck to paycheck' : num === 10 ? '- Can buy anything, 2+ years capital' : ''}
-                          </SelectItem>
-                        ))}
+                        <SelectItem value="1" className="text-gray-400">1 - Living paycheck to paycheck</SelectItem>
+                        <SelectItem value="2" className="text-gray-400">2</SelectItem>
+                        <SelectItem value="3" className="text-gray-400">3</SelectItem>
+                        <SelectItem value="4" className="text-gray-400">4</SelectItem>
+                        <SelectItem value="5" className="text-gray-400">5</SelectItem>
+                        <SelectItem value="6" className="text-gray-400">6</SelectItem>
+                        <SelectItem value="7" className="text-gray-400">7</SelectItem>
+                        <SelectItem value="8" className="text-gray-400">8</SelectItem>
+                        <SelectItem value="9" className="text-gray-400">9</SelectItem>
+                        <SelectItem value="10" className="text-gray-400">10 - Can buy anything, 2+ years capital</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -969,7 +1082,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-[#0a0e1a] border-t border-white/10 py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div>
               <div className="text-2xl font-bold mb-4">
@@ -980,15 +1093,20 @@ const Index = () => {
                 Elite investment opportunities with cutting-edge technology and institutional-grade security.
               </p>
               <div className="flex space-x-4">
-                <Facebook size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
-                <Twitter size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
-                <Linkedin size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
-                <Instagram size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                  <Facebook size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
+                </a>
+                <a href="https://t.me/inciteai" target="_blank" rel="noopener noreferrer">
+                  <Phone size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
+                </a>
+                <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer">
+                  <Phone size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
+                </a>
               </div>
             </div>
 
             {/* Quick Links */}
-            <div>
+            <div className="md:col-span-1">
               <h3 className="font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li><button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Home</button></li>
@@ -999,13 +1117,13 @@ const Index = () => {
             </div>
 
             {/* Legal */}
-            <div>
+            <div className="md:col-span-1">
               <h3 className="font-semibold mb-4">Legal</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Risk Disclosure</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Compliance</a></li>
+                <li><Link to="/privacy-policy" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms-of-service" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Terms of Service</Link></li>
+                <li><Link to="/risk-disclosure" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Risk Disclosure</Link></li>
+                <li><Link to="/compliance" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Compliance</Link></li>
               </ul>
             </div>
 
