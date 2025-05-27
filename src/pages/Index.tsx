@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Facebook, Globe, MessageCircle, Send } from 'lucide-react';
+import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -12,6 +11,7 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { phoneCodes } from '@/data/phoneCodes';
+import { useTranslations } from '@/hooks/useTranslations';
 
 // Language data
 const languages = [
@@ -51,9 +51,9 @@ const countries = [
 
 const Index = () => {
   const navigate = useNavigate();
+  const { currentLanguage, changeLanguage, t } = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState('en');
   const [applicationStep, setApplicationStep] = useState(1);
   const [phoneCode, setPhoneCode] = useState('+1');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -142,13 +142,13 @@ const Index = () => {
     
     // Validate email
     if (!validateEmail(step1Data.email)) {
-      setEmailError('Please enter a valid email address');
+      setEmailError(t('validEmailRequired'));
       hasErrors = true;
     }
     
     // Validate phone
     if (!validatePhone(phoneNumber)) {
-      setPhoneError('Please enter a valid phone number (6-15 digits)');
+      setPhoneError(t('validPhoneRequired'));
       hasErrors = true;
     }
     
@@ -276,16 +276,15 @@ const Index = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="hover:text-[#00d4aa] transition-colors">Home</button>
-            <button onClick={() => scrollToSection('program')} className="hover:text-[#00d4aa] transition-colors">Program</button>
-            <button onClick={() => scrollToSection('pricing')} className="hover:text-[#00d4aa] transition-colors">Pricing</button>
-            <button onClick={() => scrollToSection('faq')} className="hover:text-[#00d4aa] transition-colors">FAQ</button>
+            <button onClick={() => scrollToSection('home')} className="hover:text-[#00d4aa] transition-colors">{t('home')}</button>
+            <button onClick={() => scrollToSection('program')} className="hover:text-[#00d4aa] transition-colors">{t('program')}</button>
+            <button onClick={() => scrollToSection('pricing')} className="hover:text-[#00d4aa] transition-colors">{t('pricing')}</button>
+            <button onClick={() => scrollToSection('faq')} className="hover:text-[#00d4aa] transition-colors">{t('faq')}</button>
             
             {/* Language Switcher */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="flex items-center space-x-2 hover:text-[#00d4aa]">
-                  <Globe size={16} />
                   <span>{currentLanguageData.flag}</span>
                   <ChevronDown size={16} />
                 </Button>
@@ -294,7 +293,7 @@ const Index = () => {
                 {languages.map((lang) => (
                   <DropdownMenuItem
                     key={lang.code}
-                    onClick={() => setCurrentLanguage(lang.code)}
+                    onClick={() => changeLanguage(lang.code as any)}
                     className="text-white hover:bg-[#00d4aa]/20 cursor-pointer"
                   >
                     <span className="mr-2">{lang.flag}</span>
@@ -308,7 +307,7 @@ const Index = () => {
               onClick={() => scrollToSection('apply')}
               className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold"
             >
-              Apply Now
+              {t('applyNow')}
             </Button>
           </nav>
 
@@ -325,15 +324,15 @@ const Index = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-[#1a1f35] border-t border-white/10">
             <nav className="container mx-auto px-4 py-4 space-y-4 text-center">
-              <button onClick={() => scrollToSection('home')} className="block w-full hover:text-[#00d4aa] transition-colors">Home</button>
-              <button onClick={() => scrollToSection('program')} className="block w-full hover:text-[#00d4aa] transition-colors">Program</button>
-              <button onClick={() => scrollToSection('pricing')} className="block w-full hover:text-[#00d4aa] transition-colors">Pricing</button>
-              <button onClick={() => scrollToSection('faq')} className="block w-full hover:text-[#00d4aa] transition-colors">FAQ</button>
+              <button onClick={() => scrollToSection('home')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('home')}</button>
+              <button onClick={() => scrollToSection('program')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('program')}</button>
+              <button onClick={() => scrollToSection('pricing')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('pricing')}</button>
+              <button onClick={() => scrollToSection('faq')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('faq')}</button>
               <Button 
                 onClick={() => scrollToSection('apply')}
                 className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold"
               >
-                Apply Now
+                {t('applyNow')}
               </Button>
             </nav>
           </div>
@@ -358,19 +357,15 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
-              Elite Investment Opportunities
+              {t('eliteInvestmentOpportunities')}
             </Badge>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Multiply Your Capital —{' '}
-              <span className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] bg-clip-text text-transparent">
-                Fast, Smart, Global
-              </span>
+              {t('heroTitle')}
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join elite investors accessing global financial powerhouses through exclusive opportunities. 
-              Advanced technology meets sophisticated investment strategies.
+              {t('heroSubtitle')}
             </p>
             
             <Button 
@@ -378,7 +373,7 @@ const Index = () => {
               onClick={() => scrollToSection('pricing')}
               className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-6 mb-12"
             >
-              Get Started Now
+              {t('getStartedNow')}
               <ArrowRight className="ml-2" size={20} />
             </Button>
             
@@ -403,7 +398,7 @@ const Index = () => {
                      style={{ backgroundImage: `url('https://randomuser.me/api/portraits/women/8.jpg')` }} />
               </div>
               <span className="text-gray-300">
-                <span className="font-semibold text-[#00d4aa]">21,000+</span> investors trust us
+                <span className="font-semibold text-[#00d4aa]">21,000+</span> {t('investorsTrustUs')}
               </span>
             </div>
           </div>
@@ -412,9 +407,9 @@ const Index = () => {
           <div className="absolute top-28 left-8 hidden xl:block animate-float">
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
-                <div className="text-sm text-gray-400 mb-2">Record Portfolio May</div>
-                <div className="text-lg font-bold text-green-400">Start - $250, Now - $3,611</div>
-                <div className="text-sm text-green-400">+1,344% growth</div>
+                <div className="text-sm text-gray-400 mb-2">{t('recordPortfolioMay')}</div>
+                <div className="text-lg font-bold text-green-400">{t('portfolioGrowth')}</div>
+                <div className="text-sm text-green-400">{t('growthPercentage')}</div>
               </CardContent>
             </Card>
           </div>
@@ -422,9 +417,9 @@ const Index = () => {
           <div className="absolute top-44 right-8 hidden xl:block animate-float" style={{ animationDelay: '1s' }}>
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
-                <div className="text-sm text-gray-400 mb-2">AI Says</div>
-                <div className="text-lg font-semibold text-[#00d4aa]">Strong Buy Signal for ****</div>
-                <div className="text-sm text-gray-400">Confidence: 94%</div>
+                <div className="text-sm text-gray-400 mb-2">{t('aiSays')}</div>
+                <div className="text-lg font-semibold text-[#00d4aa]">{t('strongBuySignal')}</div>
+                <div className="text-sm text-gray-400">{t('confidence')}</div>
               </CardContent>
             </Card>
           </div>
@@ -432,9 +427,9 @@ const Index = () => {
           <div className="absolute bottom-[540px] left-16 hidden xl:block animate-float" style={{ animationDelay: '2s' }}>
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
-                <div className="text-sm text-gray-400 mb-2">Average Client Monthly Profit</div>
-                <div className="text-2xl font-bold text-green-400">+44.7%</div>
-                <div className="text-sm text-gray-400">Last 12 months</div>
+                <div className="text-sm text-gray-400 mb-2">{t('averageClientProfit')}</div>
+                <div className="text-2xl font-bold text-green-400">{t('monthlyProfit')}</div>
+                <div className="text-sm text-gray-400">{t('last12Months')}</div>
               </CardContent>
             </Card>
           </div>
@@ -442,9 +437,9 @@ const Index = () => {
           <div className="absolute bottom-[400px] right-16 hidden xl:block animate-float" style={{ animationDelay: '3s' }}>
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
-                <div className="text-sm text-gray-400 mb-2">Our clients winrate in May</div>
-                <div className="text-2xl font-bold text-green-400">89%</div>
-                <div className="text-sm text-gray-400">Success rate</div>
+                <div className="text-sm text-gray-400 mb-2">{t('clientWinrate')}</div>
+                <div className="text-2xl font-bold text-green-400">{t('winratePercentage')}</div>
+                <div className="text-sm text-gray-400">{t('successRate')}</div>
               </CardContent>
             </Card>
           </div>
@@ -465,7 +460,7 @@ const Index = () => {
             <div className="lg:col-span-2">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/56d38ce7-8f1e-4893-8651-5591dea78890.png" 
+                  src="/lovable-uploads/d77102a6-0db1-4f68-9154-d76b9c8831b2.png" 
                   alt="Trading Platform Interface"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
@@ -475,16 +470,15 @@ const Index = () => {
             {/* Content */}
             <div className="lg:col-span-3">
               <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
-                Advanced Technology
+                {t('advancedTechnology')}
               </Badge>
               
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Cutting-Edge Trading Platform
+                {t('cuttingEdgeTradingPlatform')}
               </h2>
               
               <p className="text-xl text-gray-300 mb-8">
-                Experience the future of trading with our AI-powered platform. 
-                Advanced algorithms, real-time analytics, and institutional-grade security.
+                {t('tradingPlatformDescription')}
               </p>
               
               <div className="space-y-6">
@@ -493,8 +487,8 @@ const Index = () => {
                     <Zap size={24} className="text-black" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">AI-Powered Predictions</h3>
-                    <p className="text-gray-400">Advanced machine learning algorithms analyze market patterns to provide accurate trading signals.</p>
+                    <h3 className="text-xl font-semibold mb-2">{t('aiPoweredPredictions')}</h3>
+                    <p className="text-gray-400">{t('aiPredictionsDescription')}</p>
                   </div>
                 </div>
                 
@@ -503,8 +497,8 @@ const Index = () => {
                     <Lock size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Bank-Grade Security</h3>
-                    <p className="text-gray-400">Military-grade encryption and multi-layer security protocols protect your investments.</p>
+                    <h3 className="text-xl font-semibold mb-2">{t('bankGradeSecurity')}</h3>
+                    <p className="text-gray-400">{t('securityDescription')}</p>
                   </div>
                 </div>
               </div>
@@ -518,9 +512,9 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
-              Simple 3-Step Process
+              {t('simpleProcess')}
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Steps to Get Started</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('stepsToGetStarted')}</h2>
           </div>
 
           <div className="relative max-w-6xl mx-auto">
@@ -535,8 +529,8 @@ const Index = () => {
                     <div className="bg-white p-4 rounded-lg inline-block mb-6 mx-auto">
                       <Edit size={32} className="text-[#0066ff]" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-4 text-white">Leave your application</h3>
-                    <p className="text-white/80">Submit your application with basic information. Our team reviews every application personally.</p>
+                    <h3 className="text-xl font-semibold mb-4 text-white">{t('leaveApplication')}</h3>
+                    <p className="text-white/80">{t('applicationDescription')}</p>
                   </CardContent>
                 </Card>
               </div>
@@ -551,8 +545,8 @@ const Index = () => {
                     <div className="bg-white p-4 rounded-lg inline-block mb-6 mx-auto">
                       <Shield size={32} className="text-[#0066ff]" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-4 text-white">Get guidance & access</h3>
-                    <p className="text-white/80">Receive personal consultation and gain access to our exclusive trading platform and tools.</p>
+                    <h3 className="text-xl font-semibold mb-4 text-white">{t('getGuidanceAccess')}</h3>
+                    <p className="text-white/80">{t('guidanceDescription')}</p>
                   </CardContent>
                 </Card>
               </div>
@@ -567,8 +561,8 @@ const Index = () => {
                     <div className="bg-white p-4 rounded-lg inline-block mb-6 mx-auto">
                       <TrendingUp size={32} className="text-[#0066ff]" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-4 text-white">Grow your balance</h3>
-                    <p className="text-white/80">Start trading with our AI-powered platform and watch your investments grow with professional guidance.</p>
+                    <h3 className="text-xl font-semibold mb-4 text-white">{t('growBalance')}</h3>
+                    <p className="text-white/80">{t('growDescription')}</p>
                   </CardContent>
                 </Card>
               </div>
@@ -580,7 +574,7 @@ const Index = () => {
               onClick={() => scrollToSection('apply')}
               className="text-[#00d4aa] hover:text-[#00d4aa]/80 transition-colors text-lg font-semibold underline"
             >
-              Start your journey now
+              {t('startJourneyNow')}
             </button>
           </div>
         </div>
@@ -591,45 +585,45 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
-              Flexible Investment Options
+              {t('flexibleInvestmentOptions')}
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Investment Plans & Pricing</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('investmentPlansTitle')}</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Standard Plan */}
             <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[680px]">
               <CardContent className="p-0 flex-grow flex flex-col">
-                <h3 className="text-2xl font-bold mb-2 text-white">Standard Plan</h3>
+                <h3 className="text-2xl font-bold mb-2 text-white">{t('standardPlan')}</h3>
                 <div className="text-4xl font-bold mb-6 text-[#00d4aa]">$250</div>
                 <ul className="space-y-3 mb-8 flex-grow text-white">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    24/7 Support
+                    {t('support247')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Personalised Manager
+                    {t('personalisedManager')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Automatic Notification of Trades
+                    {t('automaticNotification')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Basic Autotrading
+                    {t('basicAutotrading')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Limited Number of Simultaneous Trades
+                    {t('limitedTrades')}
                   </li>
                 </ul>
-                <Badge className="bg-green-500/20 text-green-400 border-green-500 mb-4 self-start">8 spots available</Badge>
+                <Badge className="bg-green-500/20 text-green-400 border-green-500 mb-4 self-start">8 {t('spotsAvailable')}</Badge>
                 <Button 
                   onClick={() => scrollToSection('apply')}
                   className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold mt-auto"
                 >
-                  Start Now
+                  {t('startNow')}
                 </Button>
               </CardContent>
             </Card>
@@ -637,44 +631,44 @@ const Index = () => {
             {/* Pro Plan */}
             <Card className="bg-[#1a1f35] border-[#00d4aa] p-8 relative flex flex-col h-[680px]">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-[#00d4aa] text-black font-bold">MOST POPULAR</Badge>
+                <Badge className="bg-[#00d4aa] text-black font-bold">{t('mostPopular')}</Badge>
               </div>
               <CardContent className="p-0 flex-grow flex flex-col">
-                <h3 className="text-2xl font-bold mb-2 text-white">Pro Plan</h3>
+                <h3 className="text-2xl font-bold mb-2 text-white">{t('proPlan')}</h3>
                 <div className="text-4xl font-bold mb-6 text-[#00d4aa]">$1,000</div>
                 <ul className="space-y-3 mb-8 flex-grow text-white">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    24/7 Support
+                    {t('support247')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Personalised Manager
+                    {t('personalisedManager')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Automatic Notification of Trades
+                    {t('automaticNotification')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Advanced Autotrading
+                    {t('advancedAutotrading')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Moderated Number of Simultaneous Trades
+                    {t('moderatedTrades')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Analyse Results
+                    {t('analyseResults')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Meetings with Investors
+                    {t('meetingsInvestors')}
                   </li>
                 </ul>
-                <Badge className="bg-red-500/20 text-red-400 border-red-500 mb-4 self-start">0 spots available</Badge>
+                <Badge className="bg-red-500/20 text-red-400 border-red-500 mb-4 self-start">0 {t('spotsAvailable')}</Badge>
                 <Button disabled className="w-full bg-gray-600 cursor-not-allowed mt-auto">
-                  Currently Full
+                  {t('currentlyFull')}
                 </Button>
               </CardContent>
             </Card>
@@ -682,36 +676,36 @@ const Index = () => {
             {/* Advanced Plan */}
             <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[680px]">
               <CardContent className="p-0 flex-grow flex flex-col">
-                <h3 className="text-2xl font-bold mb-2 text-white">Advanced Plan</h3>
+                <h3 className="text-2xl font-bold mb-2 text-white">{t('advancedPlan')}</h3>
                 <div className="text-4xl font-bold mb-6 text-[#00d4aa]">$5,000+</div>
                 <ul className="space-y-3 mb-8 flex-grow text-white">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    All features from Pro, plus:
+                    {t('allProFeatures')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Premium+ Autotrade
+                    {t('premiumAutotrade')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Unlimited Number of Simultaneous Trades
+                    {t('unlimitedTrades')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Priority Processing of Requests
+                    {t('priorityProcessing')}
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />
-                    Gifts from the Company
+                    {t('companyGifts')}
                   </li>
                 </ul>
-                <Badge className="bg-green-500/20 text-green-400 border-green-500 mb-4 self-start">31 spots available</Badge>
+                <Badge className="bg-green-500/20 text-green-400 border-green-500 mb-4 self-start">31 {t('spotsAvailable')}</Badge>
                 <Button 
                   onClick={() => scrollToSection('apply')}
                   className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold mt-auto"
                 >
-                  Start Now
+                  {t('startNow')}
                 </Button>
               </CardContent>
             </Card>
@@ -723,12 +717,12 @@ const Index = () => {
       <section className="py-20 bg-[#1a1f35] overflow-hidden border-b-4 border-[#00d4aa]">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Our Partners
+            {t('ourPartners')}
           </h2>
           
           {/* Auto-scrolling carousel */}
           <div className="relative">
-            <div className="flex animate-[scroll_10s_linear_infinite]">
+            <div className="flex animate-[scroll_30s_linear_infinite]">
               {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={index}
@@ -759,59 +753,59 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
             <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
-              Common Questions
+              {t('commonQuestions')}
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('frequentlyAskedQuestions')}</h2>
           </div>
 
           <Accordion type="single" collapsible className="space-y-4">
             <AccordionItem value="item-1" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-              <AccordionTrigger className="text-left">What security measures do you have in place?</AccordionTrigger>
+              <AccordionTrigger className="text-left">{t('securityMeasuresQ')}</AccordionTrigger>
               <AccordionContent className="text-gray-400">
-                We employ bank-grade security with 256-bit SSL encryption, multi-factor authentication, cold storage for funds, and regular security audits. Your investments are protected by industry-leading security protocols.
+                {t('securityMeasuresA')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-2" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-              <AccordionTrigger className="text-left">What returns can I expect?</AccordionTrigger>
+              <AccordionTrigger className="text-left">{t('returnsQ')}</AccordionTrigger>
               <AccordionContent className="text-gray-400">
-                While we cannot guarantee specific returns, our AI-powered platform has historically delivered consistent results. Returns vary based on market conditions, your chosen plan, and investment timeline. Past performance does not guarantee future results.
+                {t('returnsA')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-              <AccordionTrigger className="text-left">What are the qualification requirements?</AccordionTrigger>
+              <AccordionTrigger className="text-left">{t('qualificationQ')}</AccordionTrigger>
               <AccordionContent className="text-gray-400">
-                We accept investors with varying experience levels. Basic requirements include being 18+, having a valid government ID, and meeting the minimum investment threshold for your chosen plan. Our team evaluates each application individually.
+                {t('qualificationA')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-              <AccordionTrigger className="text-left">How does the withdrawal process work?</AccordionTrigger>
+              <AccordionTrigger className="text-left">{t('withdrawalQ')}</AccordionTrigger>
               <AccordionContent className="text-gray-400">
-                Withdrawals are processed within 1-3 business days. You can withdraw your profits at any time through your dashboard. We support various withdrawal methods including bank transfers and digital wallets.
+                {t('withdrawalA')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-5" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-              <AccordionTrigger className="text-left">How does your trading system work?</AccordionTrigger>
+              <AccordionTrigger className="text-left">{t('tradingSystemQ')}</AccordionTrigger>
               <AccordionContent className="text-gray-400">
-                Our proprietary AI system analyzes market data, news sentiment, and technical indicators in real-time. It identifies high-probability trading opportunities and executes trades automatically or provides signals for manual trading, depending on your preferences.
+                {t('tradingSystemA')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-6" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-              <AccordionTrigger className="text-left">Are there any hidden fees?</AccordionTrigger>
+              <AccordionTrigger className="text-left">{t('hiddenFeesQ')}</AccordionTrigger>
               <AccordionContent className="text-gray-400">
-                We believe in complete transparency. All fees are clearly outlined in your plan details. There are no hidden charges, and you'll always know exactly what you're paying for. Our fee structure is simple and straightforward.
+                {t('hiddenFeesA')}
               </AccordionContent>
             </AccordionItem>
           </Accordion>
 
           <div className="text-center mt-12">
-            <p className="text-gray-400 mb-4">Still have questions?</p>
+            <p className="text-gray-400 mb-4">{t('stillHaveQuestions')}</p>
             <a href="mailto:support@inciteai.com" className="text-[#00d4aa] hover:text-[#00d4aa]/80 transition-colors">
-              Contact our support team
+              {t('contactSupport')}
             </a>
           </div>
         </div>
@@ -822,10 +816,10 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-2xl">
           <div className="text-center mb-12">
             <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
-              Begin Your Journey
+              {t('beginJourney')}
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Apply Now {applicationStep === 2 ? '- Step 2' : ''}
+              {t('applyNowTitle')} {applicationStep === 2 ? t('step2') : ''}
             </h2>
           </div>
 
@@ -836,27 +830,27 @@ const Index = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="firstName" className="text-white">
-                        First Name <span className="text-red-400">*</span>
+                        {t('firstName')} <span className="text-red-400">{t('required')}</span>
                       </Label>
                       <Input 
                         id="firstName" 
                         value={step1Data.firstName}
                         onChange={(e) => setStep1Data({...step1Data, firstName: e.target.value})}
                         className="bg-[#1a1f35] border-white/20 text-white"
-                        placeholder="Enter your first name"
+                        placeholder={`${t('firstName')}...`}
                         required
                       />
                     </div>
                     <div>
                       <Label htmlFor="lastName" className="text-white">
-                        Last Name <span className="text-red-400">*</span>
+                        {t('lastName')} <span className="text-red-400">{t('required')}</span>
                       </Label>
                       <Input 
                         id="lastName" 
                         value={step1Data.lastName}
                         onChange={(e) => setStep1Data({...step1Data, lastName: e.target.value})}
                         className="bg-[#1a1f35] border-white/20 text-white"
-                        placeholder="Enter your last name"
+                        placeholder={`${t('lastName')}...`}
                         required
                       />
                     </div>
@@ -864,7 +858,7 @@ const Index = () => {
 
                   <div>
                     <Label htmlFor="email" className="text-white">
-                      Email Address <span className="text-red-400">*</span>
+                      {t('emailAddress')} <span className="text-red-400">{t('required')}</span>
                     </Label>
                     <Input 
                       id="email" 
@@ -872,7 +866,7 @@ const Index = () => {
                       value={step1Data.email}
                       onChange={(e) => setStep1Data({...step1Data, email: e.target.value})}
                       className="bg-[#1a1f35] border-white/20 text-white"
-                      placeholder="Enter your email address"
+                      placeholder={`${t('emailAddress')}...`}
                       required
                     />
                     {emailError && <p className="text-red-400 text-sm mt-1">{emailError}</p>}
@@ -880,7 +874,7 @@ const Index = () => {
 
                   <div>
                     <Label htmlFor="phone" className="text-white">
-                      Phone Number <span className="text-red-400">*</span>
+                      {t('phoneNumber')} <span className="text-red-400">{t('required')}</span>
                     </Label>
                     <div className="flex gap-2">
                       <Select value={phoneCode} onValueChange={setPhoneCode}>
@@ -909,44 +903,44 @@ const Index = () => {
 
                   <div>
                     <Label htmlFor="plan" className="text-white">
-                      Investment Plan <span className="text-red-400">*</span>
+                      {t('investmentPlan')} <span className="text-red-400">{t('required')}</span>
                     </Label>
                     <Select value={step1Data.plan} onValueChange={(value) => setStep1Data({...step1Data, plan: value})} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder="Select your preferred plan" className="text-gray-400" />
+                        <SelectValue placeholder={t('selectPlan')} className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
-                        <SelectItem value="standard" className="text-gray-400">Standard Plan - $250 (8 spots available)</SelectItem>
-                        <SelectItem value="pro" disabled className="text-gray-400">Pro Plan - $1,000 (0 spots available)</SelectItem>
-                        <SelectItem value="advanced" className="text-gray-400">Advanced Plan - $5,000+ (31 spots available)</SelectItem>
+                        <SelectItem value="standard" className="text-gray-400">{t('standardPlanOption')}</SelectItem>
+                        <SelectItem value="pro" disabled className="text-gray-400">{t('proPlanOption')}</SelectItem>
+                        <SelectItem value="advanced" className="text-gray-400">{t('advancedPlanOption')}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
                   <div>
                     <Label htmlFor="experience" className="text-white">
-                      Investment Experience <span className="text-red-400">*</span>
+                      {t('investmentExperience')} <span className="text-red-400">{t('required')}</span>
                     </Label>
                     <Select value={step1Data.experience} onValueChange={(value) => setStep1Data({...step1Data, experience: value})} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder="Select your experience level" className="text-gray-400" />
+                        <SelectValue placeholder={t('selectExperience')} className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
-                        <SelectItem value="beginner" className="text-gray-400">Beginner (0-1 years)</SelectItem>
-                        <SelectItem value="intermediate" className="text-gray-400">Intermediate (1-5 years)</SelectItem>
-                        <SelectItem value="advanced" className="text-gray-400">Advanced (5+ years)</SelectItem>
+                        <SelectItem value="beginner" className="text-gray-400">{t('beginnerExperience')}</SelectItem>
+                        <SelectItem value="intermediate" className="text-gray-400">{t('intermediateExperience')}</SelectItem>
+                        <SelectItem value="advanced" className="text-gray-400">{t('advancedExperience')}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
                   <div>
-                    <Label htmlFor="message" className="text-white">Additional Information</Label>
+                    <Label htmlFor="message" className="text-white">{t('additionalInformation')}</Label>
                     <Textarea 
                       id="message"
                       value={step1Data.message}
                       onChange={(e) => setStep1Data({...step1Data, message: e.target.value})}
                       className="bg-[#1a1f35] border-white/20 text-white min-h-[100px]"
-                      placeholder="Tell us about your investment goals and any questions you have..."
+                      placeholder={t('additionalInfoPlaceholder')}
                     />
                   </div>
 
@@ -954,50 +948,50 @@ const Index = () => {
                     type="submit" 
                     className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6"
                   >
-                    Continue to Step 2
+                    {t('continueStep2')}
                   </Button>
                 </form>
               ) : (
                 <form onSubmit={handleStep2Submit} className="space-y-6">
                   <div>
                     <Label htmlFor="jobTitle" className="text-white">
-                      What is your job title? <span className="text-red-400">*</span>
+                      {t('jobTitle')} <span className="text-red-400">{t('required')}</span>
                     </Label>
                     <Input 
                       id="jobTitle" 
                       value={step2Data.jobTitle}
                       onChange={(e) => setStep2Data({...step2Data, jobTitle: e.target.value})}
                       className="bg-[#1a1f35] border-white/20 text-white"
-                      placeholder="Enter your job title"
+                      placeholder={`${t('jobTitle')}...`}
                       required
                     />
                   </div>
 
                   <div>
                     <Label htmlFor="annualIncome" className="text-white">
-                      What is your average annual income? <span className="text-red-400">*</span>
+                      {t('annualIncome')} <span className="text-red-400">{t('required')}</span>
                     </Label>
                     <Select value={step2Data.annualIncome} onValueChange={(value) => setStep2Data({...step2Data, annualIncome: value})} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder="Select your income range" className="text-gray-400" />
+                        <SelectValue placeholder={t('annualIncome')} className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
-                        <SelectItem value="up-to-10k" className="text-gray-400">Up to $10,000</SelectItem>
-                        <SelectItem value="10k-25k" className="text-gray-400">$10,000 - $25,000</SelectItem>
-                        <SelectItem value="25k-50k" className="text-gray-400">$25,000 - $50,000</SelectItem>
-                        <SelectItem value="50k-100k" className="text-gray-400">$50,000 - $100,000</SelectItem>
-                        <SelectItem value="100k-plus" className="text-gray-400">$100,000 and over</SelectItem>
+                        <SelectItem value="up-to-10k" className="text-gray-400">{t('upTo10k')}</SelectItem>
+                        <SelectItem value="10k-25k" className="text-gray-400">{t('income10k25k')}</SelectItem>
+                        <SelectItem value="25k-50k" className="text-gray-400">{t('income25k50k')}</SelectItem>
+                        <SelectItem value="50k-100k" className="text-gray-400">{t('income50k100k')}</SelectItem>
+                        <SelectItem value="100k-plus" className="text-gray-400">{t('income100kPlus')}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
                   <div>
                     <Label htmlFor="citizenship" className="text-white">
-                      What is your country of citizenship? <span className="text-red-400">*</span>
+                      {t('citizenship')} <span className="text-red-400">{t('required')}</span>
                     </Label>
                     <Select value={step2Data.citizenship} onValueChange={(value) => setStep2Data({...step2Data, citizenship: value})} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder="Select your country of citizenship" className="text-gray-400" />
+                        <SelectValue placeholder={t('citizenship')} className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
                         {countries.map((country) => (
@@ -1011,11 +1005,11 @@ const Index = () => {
 
                   <div>
                     <Label htmlFor="residency" className="text-white">
-                      What is your country of living? <span className="text-red-400">*</span>
+                      {t('residency')} <span className="text-red-400">{t('required')}</span>
                     </Label>
                     <Select value={step2Data.residency} onValueChange={(value) => setStep2Data({...step2Data, residency: value})} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder="Select your country of residence" className="text-gray-400" />
+                        <SelectValue placeholder={t('residency')} className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
                         {countries.map((country) => (
@@ -1029,28 +1023,28 @@ const Index = () => {
 
                   <div>
                     <Label htmlFor="mortgage" className="text-white">
-                      Do you have mortgage or debts? Specify approximate amount in $. <span className="text-red-400">*</span>
+                      {t('mortgage')} <span className="text-red-400">{t('required')}</span>
                     </Label>
                     <Input 
                       id="mortgage" 
                       value={step2Data.mortgage}
                       onChange={(e) => setStep2Data({...step2Data, mortgage: e.target.value})}
                       className="bg-[#1a1f35] border-white/20 text-white"
-                      placeholder="Enter amount (e.g., $50,000 or None)"
+                      placeholder="$50,000 or None"
                       required
                     />
                   </div>
 
                   <div>
                     <Label htmlFor="financialSituation" className="text-white">
-                      Rate your overall financial situation from 1 to 10 <span className="text-red-400">*</span>
+                      {t('financialSituation')} <span className="text-red-400">{t('required')}</span>
                     </Label>
                     <Select value={step2Data.financialSituation} onValueChange={(value) => setStep2Data({...step2Data, financialSituation: value})} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder="Select your financial situation (1-10)" className="text-gray-400" />
+                        <SelectValue placeholder={t('financialSituation')} className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
-                        <SelectItem value="1" className="text-gray-400">1 - Living paycheck to paycheck</SelectItem>
+                        <SelectItem value="1" className="text-gray-400">{t('financialSit1')}</SelectItem>
                         <SelectItem value="2" className="text-gray-400">2</SelectItem>
                         <SelectItem value="3" className="text-gray-400">3</SelectItem>
                         <SelectItem value="4" className="text-gray-400">4</SelectItem>
@@ -1059,7 +1053,7 @@ const Index = () => {
                         <SelectItem value="7" className="text-gray-400">7</SelectItem>
                         <SelectItem value="8" className="text-gray-400">8</SelectItem>
                         <SelectItem value="9" className="text-gray-400">9</SelectItem>
-                        <SelectItem value="10" className="text-gray-400">10 - Can buy anything, 2+ years capital</SelectItem>
+                        <SelectItem value="10" className="text-gray-400">{t('financialSit10')}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -1070,13 +1064,13 @@ const Index = () => {
                       onClick={() => setApplicationStep(1)}
                       className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg py-6"
                     >
-                      Back to Step 1
+                      {t('backStep1')}
                     </Button>
                     <Button 
                       type="submit" 
                       className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6"
                     >
-                      Submit Application
+                      {t('submitApplication')}
                     </Button>
                   </div>
                 </form>
@@ -1084,7 +1078,7 @@ const Index = () => {
 
               <div className="flex items-center justify-center space-x-2 mt-6 text-sm text-gray-400">
                 <Lock size={16} />
-                <span>Your information is secure and encrypted</span>
+                <span>{t('secureEncrypted')}</span>
               </div>
             </CardContent>
           </Card>
@@ -1096,52 +1090,61 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
-            <div>
+            <div className="text-center md:text-left">
               <div className="text-2xl font-bold mb-4">
                 <span className="text-[#00d4aa]">Incite</span>
                 <span className="text-white"> AI</span>
               </div>
               <p className="text-gray-400 mb-6">
-                Elite investment opportunities with cutting-edge technology and institutional-grade security.
+                {t('footerDescription')}
               </p>
               <div className="flex space-x-6 justify-center md:justify-start">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                  <Facebook size={24} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
+                  <div className="w-8 h-8 bg-[#1877F2] rounded-full flex items-center justify-center hover:bg-[#1877F2]/80 transition-colors">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </div>
                 </a>
                 <a href="https://t.me/inciteai" target="_blank" rel="noopener noreferrer">
-                  <Send size={24} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
+                  <div className="w-8 h-8 bg-[#0088cc] rounded-full flex items-center justify-center hover:bg-[#0088cc]/80 transition-colors">
+                    <Send size={16} className="text-white" />
+                  </div>
                 </a>
                 <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle size={24} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
+                  <div className="w-8 h-8 bg-[#25D366] rounded-full flex items-center justify-center hover:bg-[#25D366]/80 transition-colors">
+                    <MessageCircle size={16} className="text-white" />
+                  </div>
                 </a>
               </div>
             </div>
 
-            {/* Quick Links */}
-            <div className="text-center md:text-left">
-              <h3 className="font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Home</button></li>
-                <li><button onClick={() => scrollToSection('program')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Program</button></li>
-                <li><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Pricing</button></li>
-                <li><button onClick={() => scrollToSection('faq')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">FAQ</button></li>
-              </ul>
-            </div>
+            {/* Quick Links and Legal */}
+            <div className="grid grid-cols-2 gap-8 md:col-span-2">
+              <div className="text-center md:text-left">
+                <h3 className="font-semibold mb-4">{t('quickLinks')}</h3>
+                <ul className="space-y-2">
+                  <li><button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('home')}</button></li>
+                  <li><button onClick={() => scrollToSection('program')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('program')}</button></li>
+                  <li><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('pricing')}</button></li>
+                  <li><button onClick={() => scrollToSection('faq')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('faq')}</button></li>
+                </ul>
+              </div>
 
-            {/* Legal */}
-            <div className="text-center md:text-left">
-              <h3 className="font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2">
-                <li><Link to="/privacy-policy" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Privacy Policy</Link></li>
-                <li><Link to="/terms-of-service" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Terms of Service</Link></li>
-                <li><Link to="/risk-disclosure" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Risk Disclosure</Link></li>
-                <li><Link to="/compliance" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Compliance</Link></li>
-              </ul>
+              <div className="text-center md:text-left">
+                <h3 className="font-semibold mb-4">{t('legal')}</h3>
+                <ul className="space-y-2">
+                  <li><Link to="/privacy-policy" className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('privacyPolicy')}</Link></li>
+                  <li><Link to="/terms-of-service" className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('termsOfService')}</Link></li>
+                  <li><Link to="/risk-disclosure" className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('riskDisclosure')}</Link></li>
+                  <li><Link to="/compliance" className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('compliance')}</Link></li>
+                </ul>
+              </div>
             </div>
 
             {/* Contact */}
             <div className="text-center md:text-left">
-              <h3 className="font-semibold mb-4">Contact</h3>
+              <h3 className="font-semibold mb-4">{t('contact')}</h3>
               <ul className="space-y-2">
                 <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
                   <Mail size={16} />
@@ -1161,10 +1164,10 @@ const Index = () => {
 
           <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Incite AI. All rights reserved.
+              {t('allRightsReserved')}
             </p>
             <p className="text-gray-400 text-sm mt-4 md:mt-0">
-              Investment involves risk. Past performance does not guarantee future results.
+              {t('footerDisclaimer')}
             </p>
           </div>
         </div>
