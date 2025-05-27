@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Facebook, Globe, MessageCircle, Send } from 'lucide-react';
@@ -384,17 +385,25 @@ const Index = () => {
             {/* Social Proof */}
             <div className="flex items-center justify-center space-x-4 mb-8">
               <div className="flex -space-x-2">
-                {[...Array(8)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full border-2 border-white/20 bg-gradient-to-br from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-sm font-semibold"
-                  >
-                    {String.fromCharCode(65 + i)}
-                  </div>
-                ))}
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
+                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/men/1.jpg')` }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
+                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/women/2.jpg')` }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
+                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/men/3.jpg')` }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
+                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/women/4.jpg')` }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
+                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/men/5.jpg')` }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
+                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/women/6.jpg')` }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
+                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/men/7.jpg')` }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
+                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/women/8.jpg')` }} />
               </div>
               <span className="text-gray-300">
-                <span className="font-semibold text-[#00d4aa]">2,500+</span> investors trust us
+                <span className="font-semibold text-[#00d4aa]">21,000+</span> investors trust us
               </span>
             </div>
           </div>
@@ -420,7 +429,7 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="absolute bottom-[470px] left-16 hidden xl:block animate-float" style={{ animationDelay: '2s' }}>
+          <div className="absolute bottom-[540px] left-16 hidden xl:block animate-float" style={{ animationDelay: '2s' }}>
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">Average Client Monthly Profit</div>
@@ -456,9 +465,9 @@ const Index = () => {
             <div className="lg:col-span-2">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/d77102a6-0db1-4f68-9154-d76b9c8831b2.png" 
+                  src="/lovable-uploads/56d38ce7-8f1e-4893-8651-5591dea78890.png" 
                   alt="Trading Platform Interface"
-                  className="w-full h-auto rounded-2xl shadow-2xl mx-auto max-w-sm"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
                 />
               </div>
             </div>
@@ -518,48 +527,48 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {/* Step 1 */}
               <div className="relative">
-                <Card className="bg-[#00d4aa] border-white/10 p-8 text-center relative h-96">
+                <Card className="bg-[#0066ff] border-white/10 p-8 text-center relative h-96">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-white text-[#00d4aa] w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+                    <div className="bg-white text-[#0066ff] w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
                   </div>
                   <CardContent className="p-0 h-full flex flex-col justify-center">
                     <div className="bg-white p-4 rounded-lg inline-block mb-6 mx-auto">
-                      <Edit size={32} className="text-[#00d4aa]" />
+                      <Edit size={32} className="text-[#0066ff]" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-4 text-black">Leave your application</h3>
-                    <p className="text-black/80">Submit your application with basic information. Our team reviews every application personally.</p>
+                    <h3 className="text-xl font-semibold mb-4 text-white">Leave your application</h3>
+                    <p className="text-white/80">Submit your application with basic information. Our team reviews every application personally.</p>
                   </CardContent>
                 </Card>
               </div>
 
               {/* Step 2 */}
               <div className="relative">
-                <Card className="bg-[#00d4aa] border-white/10 p-8 text-center relative h-96">
+                <Card className="bg-[#0066ff] border-white/10 p-8 text-center relative h-96">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-white text-[#00d4aa] w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
+                    <div className="bg-white text-[#0066ff] w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
                   </div>
                   <CardContent className="p-0 h-full flex flex-col justify-center">
                     <div className="bg-white p-4 rounded-lg inline-block mb-6 mx-auto">
-                      <Shield size={32} className="text-[#00d4aa]" />
+                      <Shield size={32} className="text-[#0066ff]" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-4 text-black">Get guidance & access</h3>
-                    <p className="text-black/80">Receive personal consultation and gain access to our exclusive trading platform and tools.</p>
+                    <h3 className="text-xl font-semibold mb-4 text-white">Get guidance & access</h3>
+                    <p className="text-white/80">Receive personal consultation and gain access to our exclusive trading platform and tools.</p>
                   </CardContent>
                 </Card>
               </div>
 
               {/* Step 3 */}
               <div className="relative">
-                <Card className="bg-[#00d4aa] border-white/10 p-8 text-center relative h-96">
+                <Card className="bg-[#0066ff] border-white/10 p-8 text-center relative h-96">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-white text-[#00d4aa] w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
+                    <div className="bg-white text-[#0066ff] w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
                   </div>
                   <CardContent className="p-0 h-full flex flex-col justify-center">
                     <div className="bg-white p-4 rounded-lg inline-block mb-6 mx-auto">
-                      <TrendingUp size={32} className="text-[#00d4aa]" />
+                      <TrendingUp size={32} className="text-[#0066ff]" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-4 text-black">Grow your balance</h3>
-                    <p className="text-black/80">Start trading with our AI-powered platform and watch your investments grow with professional guidance.</p>
+                    <h3 className="text-xl font-semibold mb-4 text-white">Grow your balance</h3>
+                    <p className="text-white/80">Start trading with our AI-powered platform and watch your investments grow with professional guidance.</p>
                   </CardContent>
                 </Card>
               </div>
@@ -589,10 +598,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Standard Plan */}
-            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[650px]">
-              <div className="absolute top-4 right-4">
-                <Badge className="bg-green-500/20 text-green-400 border-green-500">8 spots available</Badge>
-              </div>
+            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[680px]">
               <CardContent className="p-0 flex-grow flex flex-col">
                 <h3 className="text-2xl font-bold mb-2 text-white">Standard Plan</h3>
                 <div className="text-4xl font-bold mb-6 text-[#00d4aa]">$250</div>
@@ -618,6 +624,7 @@ const Index = () => {
                     Limited Number of Simultaneous Trades
                   </li>
                 </ul>
+                <Badge className="bg-green-500/20 text-green-400 border-green-500 mb-4 self-start">8 spots available</Badge>
                 <Button 
                   onClick={() => scrollToSection('apply')}
                   className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold mt-auto"
@@ -628,12 +635,9 @@ const Index = () => {
             </Card>
 
             {/* Pro Plan */}
-            <Card className="bg-[#1a1f35] border-[#00d4aa] p-8 relative transform scale-105 flex flex-col h-[650px]">
+            <Card className="bg-[#1a1f35] border-[#00d4aa] p-8 relative flex flex-col h-[680px]">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <Badge className="bg-[#00d4aa] text-black font-bold">MOST POPULAR</Badge>
-              </div>
-              <div className="absolute top-4 right-4">
-                <Badge className="bg-red-500/20 text-red-400 border-red-500">0 spots available</Badge>
               </div>
               <CardContent className="p-0 flex-grow flex flex-col">
                 <h3 className="text-2xl font-bold mb-2 text-white">Pro Plan</h3>
@@ -668,6 +672,7 @@ const Index = () => {
                     Meetings with Investors
                   </li>
                 </ul>
+                <Badge className="bg-red-500/20 text-red-400 border-red-500 mb-4 self-start">0 spots available</Badge>
                 <Button disabled className="w-full bg-gray-600 cursor-not-allowed mt-auto">
                   Currently Full
                 </Button>
@@ -675,10 +680,7 @@ const Index = () => {
             </Card>
 
             {/* Advanced Plan */}
-            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[650px]">
-              <div className="absolute top-4 right-4">
-                <Badge className="bg-green-500/20 text-green-400 border-green-500">31 spots available</Badge>
-              </div>
+            <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[680px]">
               <CardContent className="p-0 flex-grow flex flex-col">
                 <h3 className="text-2xl font-bold mb-2 text-white">Advanced Plan</h3>
                 <div className="text-4xl font-bold mb-6 text-[#00d4aa]">$5,000+</div>
@@ -704,6 +706,7 @@ const Index = () => {
                     Gifts from the Company
                   </li>
                 </ul>
+                <Badge className="bg-green-500/20 text-green-400 border-green-500 mb-4 self-start">31 spots available</Badge>
                 <Button 
                   onClick={() => scrollToSection('apply')}
                   className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold mt-auto"
@@ -1101,21 +1104,21 @@ const Index = () => {
               <p className="text-gray-400 mb-6">
                 Elite investment opportunities with cutting-edge technology and institutional-grade security.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-6 justify-center md:justify-start">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                  <Facebook size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
+                  <Facebook size={24} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
                 </a>
                 <a href="https://t.me/inciteai" target="_blank" rel="noopener noreferrer">
-                  <Send size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
+                  <Send size={24} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
                 </a>
                 <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle size={20} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
+                  <MessageCircle size={24} className="text-gray-400 hover:text-[#00d4aa] transition-colors cursor-pointer" />
                 </a>
               </div>
             </div>
 
             {/* Quick Links */}
-            <div className="md:col-span-1 text-center md:text-left">
+            <div className="text-center md:text-left">
               <h3 className="font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li><button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Home</button></li>
@@ -1126,7 +1129,7 @@ const Index = () => {
             </div>
 
             {/* Legal */}
-            <div className="md:col-span-1 text-center md:text-left">
+            <div className="text-center md:text-left">
               <h3 className="font-semibold mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-gray-400 hover:text-[#00d4aa] transition-colors">Privacy Policy</Link></li>
@@ -1137,18 +1140,18 @@ const Index = () => {
             </div>
 
             {/* Contact */}
-            <div>
+            <div className="text-center md:text-left">
               <h3 className="font-semibold mb-4">Contact</h3>
               <ul className="space-y-2">
-                <li className="flex items-center space-x-2 text-gray-400">
+                <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
                   <Mail size={16} />
                   <span>support@inciteai.com</span>
                 </li>
-                <li className="flex items-center space-x-2 text-gray-400">
+                <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
                   <Send size={16} />
                   <span>+1 (555) 123-4567</span>
                 </li>
-                <li className="flex items-center space-x-2 text-gray-400">
+                <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
                   <MapPin size={16} />
                   <span>New York, NY</span>
                 </li>
