@@ -433,7 +433,7 @@ const Index = () => {
             <div className="lg:col-span-2">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/d77102a6-0db1-4f68-9154-d76b9c8831b2.png" 
+                  src="/lovable-uploads/98f528c7-6c3b-4fa4-907f-eeb151c5e95f.png" 
                   alt="Trading Platform Interface"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
