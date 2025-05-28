@@ -35,7 +35,7 @@ const Index = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(t('submit'));
+    toast.success("Application submitted successfully!");
   };
 
   const languageFlags = {
@@ -448,25 +448,25 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-white">{t('email')}</Label>
-                    <Input id="email" type="email" placeholder={t('email')} required className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
+                    <Label htmlFor="email" className="text-white">Email</Label>
+                    <Input id="email" type="email" placeholder="Email" required className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-white">{t('phone')}</Label>
+                    <Label htmlFor="phone" className="text-white">Phone</Label>
                     <div className="flex">
                       <Select defaultValue="+1">
                         <SelectTrigger className="w-24 bg-white/10 border-white/20 text-white">
                           <SelectValue placeholder="+1" />
                         </SelectTrigger>
                         <SelectContent className="bg-slate-800 border-slate-700">
-                          {phoneCodes.map(code => (
-                            <SelectItem key={code.value} value={code.value} className="text-white hover:bg-slate-700">
-                              {code.label}
+                          {phoneCodes.map(phoneCode => (
+                            <SelectItem key={phoneCode.code} value={phoneCode.code} className="text-white hover:bg-slate-700">
+                              {phoneCode.code}
                             </SelectItem>
                           ))}
                         </SelectContent>
                       </Select>
-                      <Input id="phone" type="tel" placeholder={t('phone')} className="flex-1 ml-2 bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
+                      <Input id="phone" type="tel" placeholder="Phone" className="flex-1 ml-2 bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
                     </div>
                   </div>
                   <div className="space-y-2">
@@ -485,7 +485,7 @@ const Index = () => {
                   </div>
                   <Button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 transform hover:scale-102">
                     <CheckCircle className="mr-2 h-5 w-5" />
-                    {t('submit')}
+                    Apply Now
                   </Button>
                   <p className="text-xs text-center text-gray-400 mt-4">
                     {t('required')}
@@ -520,12 +520,12 @@ const Index = () => {
               </div>
             </div>
             <div className="w-full md:w-1/3 mb-8 md:mb-0">
-              <h3 className="text-lg font-semibold text-white mb-4">{t('about')}</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('about')}</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('program')}</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('pricing')}</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('blog')}</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('contact')}</a></li>
               </ul>
             </div>
@@ -548,7 +548,7 @@ const Index = () => {
         </div>
       </footer>
 
-      <style jsx global>{`
+      <style global>{`
         @keyframes slide-left {
           0% {
             transform: translateX(0);
