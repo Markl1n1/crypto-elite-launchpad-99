@@ -7,7 +7,7 @@ type Language = keyof typeof translations;
 export const useTranslations = () => {
   const [currentLanguage, setCurrentLanguage] = useState<Language>('en');
 
-  // Auto-detect language based on browser location with better matching
+  // Auto-detect language based on browser language with better matching
   useEffect(() => {
     const detectLanguage = () => {
       const browserLang = navigator.language.toLowerCase();
