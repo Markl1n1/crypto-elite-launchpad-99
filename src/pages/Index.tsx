@@ -88,32 +88,6 @@ const Index = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Auto-detect language based on browser location
-  useEffect(() => {
-    const detectLanguage = () => {
-      const browserLang = navigator.language.toLowerCase();
-      const languageMap = {
-        'en': 'en',
-        'pl': 'pl', 
-        'de': 'de',
-        'es': 'es',
-        'ru': 'ru',
-        'fr': 'fr',
-        'ar': 'ar',
-        'tr': 'tr'
-      };
-      
-      for (const [lang, code] of Object.entries(languageMap)) {
-        if (browserLang.startsWith(lang)) {
-          setCurrentLanguage(code);
-          break;
-        }
-      }
-    };
-    
-    detectLanguage();
-  }, []);
-
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
@@ -203,7 +177,6 @@ const Index = () => {
 
   const currentLanguageData = languages.find(lang => lang.code === currentLanguage) || languages[0];
 
-  // ... keep existing code (partners array)
   const partners = [
     { name: 'BlackRock', logo: 'https://logo.clearbit.com/blackrock.com' },
     { name: 'Goldman Sachs', logo: 'https://logo.clearbit.com/goldmansachs.com' },
