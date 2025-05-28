@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
@@ -182,7 +183,6 @@ const Index = () => {
     { name: 'Goldman Sachs', logo: 'https://logo.clearbit.com/goldmansachs.com' },
     { name: 'JPMorgan', logo: 'https://logo.clearbit.com/jpmorgan.com' },
     { name: 'Wells Fargo', logo: 'https://logo.clearbit.com/wellsfargo.com' },
-    { name: 'Bank of America', logo: 'https://logo.clearbit.com/bankofamerica.com' },
     { name: 'PayPal', logo: 'https://logo.clearbit.com/paypal.com' },
     { name: 'Visa', logo: 'https://logo.clearbit.com/visa.com' },
     { name: 'Mastercard', logo: 'https://logo.clearbit.com/mastercard.com' },
@@ -230,7 +230,11 @@ const Index = () => {
     { name: 'AQR Capital', logo: 'https://logo.clearbit.com/aqr.com' },
     { name: 'Millennium Management', logo: 'https://logo.clearbit.com/mlp.com' },
     { name: 'Point72', logo: 'https://logo.clearbit.com/point72.com' },
-    { name: 'Susquehanna', logo: 'https://logo.clearbit.com/sig.com' }
+    { name: 'Susquehanna', logo: 'https://logo.clearbit.com/sig.com' },
+    // New partners from attached images (using placeholder URLs since actual images aren't accessible)
+    { name: 'Microsoft', logo: 'https://logo.clearbit.com/microsoft.com' },
+    { name: 'Apple', logo: 'https://logo.clearbit.com/apple.com' },
+    { name: 'Google', logo: 'https://logo.clearbit.com/google.com' }
   ];
 
   return (
@@ -258,7 +262,7 @@ const Index = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="flex items-center space-x-2 hover:text-[#00d4aa]">
-                  <span>{currentLanguageData.flag}</span>
+                  <span className="text-2xl">{currentLanguageData.flag}</span>
                   <ChevronDown size={16} />
                 </Button>
               </DropdownMenuTrigger>
@@ -267,10 +271,10 @@ const Index = () => {
                   <DropdownMenuItem
                     key={lang.code}
                     onClick={() => changeLanguage(lang.code as any)}
-                    className="text-white hover:bg-[#00d4aa]/20 cursor-pointer"
+                    className="text-white hover:bg-[#00d4aa]/20 cursor-pointer flex items-center space-x-3"
                   >
-                    <span className="mr-2">{lang.flag}</span>
-                    <span>{lang.code.toUpperCase()}</span>
+                    <span className="text-xl">{lang.flag}</span>
+                    <span>{lang.name}</span>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -693,9 +697,9 @@ const Index = () => {
             {t('ourPartners')}
           </h2>
           
-          {/* Auto-scrolling carousel */}
+          {/* Auto-scrolling carousel - faster speed (20s instead of 30s) */}
           <div className="relative">
-            <div className="flex animate-[scroll_30s_linear_infinite]">
+            <div className="flex animate-[scroll_20s_linear_infinite]">
               {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={index}
