@@ -7,27 +7,28 @@ type Language = keyof typeof translations;
 export const useTranslations = () => {
   const [currentLanguage, setCurrentLanguage] = useState<Language>('en');
 
-  // Auto-detect language based on browser location
+  // Auto-detect language based on browser location with better matching
   useEffect(() => {
     const detectLanguage = () => {
       const browserLang = navigator.language.toLowerCase();
-      const languageMap: Record<string, Language> = {
-        'en': 'en',
-        'pl': 'pl', 
-        'de': 'de',
-        'es': 'es',
-        'ru': 'ru',
-        'fr': 'fr',
-        'ar': 'ar',
-        'tr': 'tr'
-      };
+      const browserLangCode = browserLang.split('-')[0]; // Get just the language part (e.g., 'en' from 'en-US')
       
-      for (const [lang, code] of Object.entries(languageMap)) {
-        if (browserLang.startsWith(lang)) {
-          setCurrentLanguage(code);
-          break;
-        }
+      const availableLanguages: Language[] = ['en', 'pl', 'de', 'es', 'ru', 'fr', 'ar', 'tr'];
+      
+      // First try exact match with full language code
+      if (availableLanguages.includes(browserLang as Language)) {
+        setCurrentLanguage(browserLang as Language);
+        return;
       }
+      
+      // Then try match with just the language part
+      if (availableLanguages.includes(browserLangCode as Language)) {
+        setCurrentLanguage(browserLangCode as Language);
+        return;
+      }
+      
+      // Default to English if no match found
+      setCurrentLanguage('en');
     };
     
     detectLanguage();

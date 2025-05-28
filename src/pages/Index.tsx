@@ -1,7 +1,8 @@
 
+
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
+import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Send, MessageCircle, Star, Users, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -231,7 +232,6 @@ const Index = () => {
     { name: 'Millennium Management', logo: 'https://logo.clearbit.com/mlp.com' },
     { name: 'Point72', logo: 'https://logo.clearbit.com/point72.com' },
     { name: 'Susquehanna', logo: 'https://logo.clearbit.com/sig.com' },
-    // New partners from attached images (using placeholder URLs since actual images aren't accessible)
     { name: 'Microsoft', logo: 'https://logo.clearbit.com/microsoft.com' },
     { name: 'Apple', logo: 'https://logo.clearbit.com/apple.com' },
     { name: 'Google', logo: 'https://logo.clearbit.com/google.com' }
@@ -282,7 +282,7 @@ const Index = () => {
             
             <Button 
               onClick={() => scrollToSection('apply')}
-              className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold"
+              className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold transform hover:scale-105 transition-all duration-200"
             >
               {t('applyNow')}
             </Button>
@@ -345,14 +345,25 @@ const Index = () => {
               {t('heroSubtitle')}
             </p>
             
-            <Button 
-              size="lg"
-              onClick={() => scrollToSection('pricing')}
-              className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-6 mb-12"
-            >
-              {t('getStartedNow')}
-              <ArrowRight className="ml-2" size={20} />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Button 
+                size="lg"
+                onClick={() => scrollToSection('pricing')}
+                className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-6 transform hover:scale-105 transition-all duration-200"
+              >
+                {t('getStartedNow')}
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+              
+              <Button 
+                size="lg"
+                onClick={() => scrollToSection('program')}
+                variant="outline"
+                className="border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa]/10 font-semibold text-lg px-8 py-6 transform hover:scale-105 transition-all duration-200"
+              >
+                See Live Demo
+              </Button>
+            </div>
             
             {/* Social Proof */}
             <div className="flex items-center justify-center space-x-4 mb-8">
@@ -395,7 +406,7 @@ const Index = () => {
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">{t('aiSays')}</div>
-                <div className="text-lg font-semibold text-[#00d4aa]">{t('strongBuySignal')}</div>
+                <div className="text-lg font-semibold text-[#00d4aa]">Strong Buy Signal for NVIDIA</div>
                 <div className="text-sm text-gray-400">{t('confidence')}</div>
               </CardContent>
             </Card>
@@ -458,7 +469,7 @@ const Index = () => {
                 {t('tradingPlatformDescription')}
               </p>
               
-              <div className="space-y-6">
+              <div className="space-y-6 mb-8">
                 <div className="flex items-start space-x-4">
                   <div className="bg-[#00d4aa] p-3 rounded-lg">
                     <Zap size={24} className="text-black" />
@@ -479,6 +490,14 @@ const Index = () => {
                   </div>
                 </div>
               </div>
+
+              <Button 
+                onClick={() => scrollToSection('apply')}
+                className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold px-8 py-3 transform hover:scale-105 transition-all duration-200"
+              >
+                Try Incite AI Free
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
             </div>
           </div>
         </div>
@@ -498,7 +517,7 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {/* Step 1 */}
               <div className="relative">
-                <Card className="bg-[#0066ff] border-white/10 p-8 text-center relative h-96">
+                <Card className="bg-[#0066ff] border-white/10 p-8 text-center relative h-96 transform hover:scale-105 transition-all duration-300">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-white text-[#0066ff] w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
                   </div>
@@ -514,7 +533,7 @@ const Index = () => {
 
               {/* Step 2 */}
               <div className="relative">
-                <Card className="bg-[#0066ff] border-white/10 p-8 text-center relative h-96">
+                <Card className="bg-[#0066ff] border-white/10 p-8 text-center relative h-96 transform hover:scale-105 transition-all duration-300">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-white text-[#0066ff] w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
                   </div>
@@ -530,7 +549,7 @@ const Index = () => {
 
               {/* Step 3 */}
               <div className="relative">
-                <Card className="bg-[#0066ff] border-white/10 p-8 text-center relative h-96">
+                <Card className="bg-[#0066ff] border-white/10 p-8 text-center relative h-96 transform hover:scale-105 transition-all duration-300">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-white text-[#0066ff] w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
                   </div>
@@ -547,12 +566,209 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <button 
+            <Button 
               onClick={() => scrollToSection('apply')}
-              className="text-[#00d4aa] hover:text-[#00d4aa]/80 transition-colors text-lg font-semibold underline"
+              className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-4 transform hover:scale-105 transition-all duration-200"
             >
               {t('startJourneyNow')}
-            </button>
+              <ArrowRight className="ml-2" size={20} />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* User Testimonials Section */}
+      <section className="py-20 border-b-4 border-[#00d4aa]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
+              <Users className="mr-2" size={16} />
+              Real User Experiences
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">What Our Users Say</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how Incite AI has transformed the investment journey for thousands of users worldwide.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Testimonial 1 */}
+            <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
+              <CardContent className="p-0">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={20} className="text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">
+                  "Your AI stock app seems doing great so far. I tested asking last weekend what would be the best 5 NYSE stocks to buy last Monday, 100% of the 5, had price increases for that day, & 80% during the week. I am further testing it for this week including currency pairs. If it turns out consistent, thru further testing, I would likely recommend this to my clients & trading, investment groups. Wishing you best."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-lg">
+                    L
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-semibold text-white">Lodrino M.</h4>
+                    <p className="text-gray-400 text-sm">Investment Advisor</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Testimonial 2 */}
+            <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
+              <CardContent className="p-0">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={20} className="text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">
+                  "I think this is a game changer for me and lots of others who do not really understand how to navigate the money market. Good Job!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-lg">
+                    J
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-semibold text-white">Justin F.</h4>
+                    <p className="text-gray-400 text-sm">Retail Investor</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Testimonial 3 */}
+            <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
+              <CardContent className="p-0">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={20} className="text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">
+                  "As a full time trader, Incite can help me source some information regarding market trends/news quickly. I purchased out of curiosity for the future 'trader x' feature to see what that entails."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-lg">
+                    L
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-semibold text-white">Loxton G.</h4>
+                    <p className="text-gray-400 text-sm">Full-Time Trader</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Testimonial 4 */}
+            <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
+              <CardContent className="p-0">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={20} className="text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">
+                  "I think your product has an awesome concept, and I really like it. I've used it for a month. Enhancing its ability to crawl more real-time data could make it truly outstanding!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-lg">
+                    A
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-semibold text-white">Anton T.</h4>
+                    <p className="text-gray-400 text-sm">Data Analyst</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              onClick={() => scrollToSection('apply')}
+              className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-4 transform hover:scale-105 transition-all duration-200"
+            >
+              Get Early Access
+              <ArrowRight className="ml-2" size={20} />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Experts Section */}
+      <section className="py-20 bg-[#1a1f35] border-b-4 border-[#00d4aa]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
+              <Award className="mr-2" size={16} />
+              Industry Recognition
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">What Industry Experts Say</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Leading financial experts and industry veterans recognize the power of Incite AI.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Expert 1 */}
+            <Card className="bg-[#0a0e1a] border-[#00d4aa]/30 p-8 transform hover:scale-105 transition-all duration-300">
+              <CardContent className="p-0">
+                <div className="text-center mb-6">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+                    JM
+                  </div>
+                  <h4 className="font-semibold text-white text-lg">Jill Malandrino</h4>
+                  <p className="text-[#00d4aa] text-sm font-medium">Global Markets Reporter & Host, Nasdaq TradeTalks</p>
+                </div>
+                <p className="text-gray-300 italic text-center">
+                  "Incite AI helped us identify market shifts faster than ever—our portfolio returns speak for it."
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Expert 2 */}
+            <Card className="bg-[#0a0e1a] border-[#00d4aa]/30 p-8 transform hover:scale-105 transition-all duration-300">
+              <CardContent className="p-0">
+                <div className="text-center mb-6">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+                    TC
+                  </div>
+                  <h4 className="font-semibold text-white text-lg">Tarun Chitra</h4>
+                  <p className="text-[#00d4aa] text-sm font-medium">CEO & Founder, Gauntlet</p>
+                </div>
+                <p className="text-gray-300 italic text-center">
+                  "The predictive modeling of Incite AI is best-in-class—essential for DeFi risk analytics."
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Expert 3 */}
+            <Card className="bg-[#0a0e1a] border-[#00d4aa]/30 p-8 transform hover:scale-105 transition-all duration-300">
+              <CardContent className="p-0">
+                <div className="text-center mb-6">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+                    RL
+                  </div>
+                  <h4 className="font-semibold text-white text-lg">Rebecca Lynn</h4>
+                  <p className="text-[#00d4aa] text-sm font-medium">General Partner, Canvas Ventures</p>
+                </div>
+                <p className="text-gray-300 italic text-center">
+                  "Incite AI gave our analysts a serious edge. It's like going from candlelight to floodlights."
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              onClick={() => scrollToSection('apply')}
+              className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-4 transform hover:scale-105 transition-all duration-200"
+            >
+              Join the Experts
+              <ArrowRight className="ml-2" size={20} />
+            </Button>
           </div>
         </div>
       </section>
