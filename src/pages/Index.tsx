@@ -29,13 +29,13 @@ const Index = () => {
       }
     };
 
-    const interval = setInterval(moveSlider, 2000); // Move every 2 seconds
+    const interval = setInterval(moveSlider, 1000); // Move every 1 second (1.5x faster)
     return () => clearInterval(interval);
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(t('formSubmitted'));
+    toast.success(t('submit'));
   };
 
   const languageFlags = {
@@ -76,21 +76,21 @@ const Index = () => {
               <Select value={currentLanguage} onValueChange={changeLanguage}>
                 <SelectTrigger className="w-32 bg-white/10 border-white/20 text-white">
                   <SelectValue>
-                    <span className="text-lg mr-1">{languageFlags[currentLanguage as keyof typeof languageFlags]}</span>
+                    <span className="text-xl mr-2">{languageFlags[currentLanguage as keyof typeof languageFlags]}</span>
                     <span className="text-sm">{currentLanguage.toUpperCase()}</span>
                   </SelectValue>
                 </SelectTrigger>
                 <SelectContent className="bg-slate-800 border-slate-700">
                   {Object.entries(languageFlags).map(([code, flag]) => (
                     <SelectItem key={code} value={code} className="text-white hover:bg-slate-700">
-                      <span className="text-lg mr-2">{flag}</span>
+                      <span className="text-xl mr-3">{flag}</span>
                       <span>{getLanguageName(code)}</span>
                     </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
               <Button onClick={scrollToApplyNow} className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/25">
-                {t('getStarted')}
+                {t('getStartedNow')}
               </Button>
             </div>
           </div>
@@ -113,10 +113,10 @@ const Index = () => {
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                   <Button onClick={scrollToApplyNow} size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 animate-pulse">
                     <ArrowRight className="ml-2 h-5 w-5" />
-                    {t('getEarlyAccess')}
+                    {t('getStartedNow')}
                   </Button>
                   <Button onClick={scrollToApplyNow} variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 transform hover:scale-105 transition-all duration-300">
-                    {t('learnMore')}
+                    {t('contact')}
                   </Button>
                 </div>
               </div>
@@ -129,8 +129,8 @@ const Index = () => {
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">{t('tradingPlatform')}</h2>
-            <p className="text-xl text-gray-300">{t('platformDescription')}</p>
+            <h2 className="text-4xl font-bold text-white mb-4">{t('advancedTechnology')}</h2>
+            <p className="text-xl text-gray-300">{t('heroSubtitle')}</p>
           </div>
           <div className="max-w-6xl mx-auto">
             <img 
@@ -142,7 +142,7 @@ const Index = () => {
           <div className="text-center mt-8">
             <Button onClick={scrollToApplyNow} size="lg" className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-green-500/25">
               <Target className="mr-2 h-5 w-5" />
-              {t('tryLiveDemo')}
+              {t('contact')}
             </Button>
           </div>
         </div>
@@ -152,8 +152,8 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">{t('features')}</h2>
-            <p className="text-xl text-gray-300">{t('featuresDescription')}</p>
+            <h2 className="text-4xl font-bold text-white mb-4">{t('eliteInvestmentOpportunities')}</h2>
+            <p className="text-xl text-gray-300">{t('heroSubtitle')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
@@ -161,14 +161,14 @@ const Index = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <TrendingUp className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle className="text-white">{t('aiPredictions')}</CardTitle>
+                <CardTitle className="text-white">{t('investorsTrustUs')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-300">
-                  {t('aiPredictionsDesc')}
+                  {t('heroSubtitle')}
                 </CardDescription>
                 <Button onClick={scrollToApplyNow} variant="ghost" className="mt-4 text-purple-400 hover:text-purple-300 p-0">
-                  {t('learnMore')} <ArrowRight className="ml-1 h-4 w-4" />
+                  {t('contact')} <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
@@ -178,14 +178,14 @@ const Index = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                   <Shield className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle className="text-white">{t('riskManagement')}</CardTitle>
+                <CardTitle className="text-white">{t('advancedTechnology')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-300">
-                  {t('riskManagementDesc')}
+                  {t('heroSubtitle')}
                 </CardDescription>
                 <Button onClick={scrollToApplyNow} variant="ghost" className="mt-4 text-green-400 hover:text-green-300 p-0">
-                  {t('learnMore')} <ArrowRight className="ml-1 h-4 w-4" />
+                  {t('contact')} <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
@@ -195,14 +195,14 @@ const Index = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mb-4">
                   <Zap className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle className="text-white">{t('realTimeAlerts')}</CardTitle>
+                <CardTitle className="text-white">{t('program')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-300">
-                  {t('realTimeAlertsDesc')}
+                  {t('heroSubtitle')}
                 </CardDescription>
                 <Button onClick={scrollToApplyNow} variant="ghost" className="mt-4 text-orange-400 hover:text-orange-300 p-0">
-                  {t('learnMore')} <ArrowRight className="ml-1 h-4 w-4" />
+                  {t('contact')} <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
@@ -219,7 +219,7 @@ const Index = () => {
                   AI detected bullish momentum with 89% confidence score for NVIDIA stock
                 </CardDescription>
                 <Button onClick={scrollToApplyNow} variant="ghost" className="mt-4 text-blue-400 hover:text-blue-300 p-0">
-                  {t('learnMore')} <ArrowRight className="ml-1 h-4 w-4" />
+                  {t('contact')} <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
@@ -231,14 +231,14 @@ const Index = () => {
       <section className="py-16 bg-black/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">{t('trustedPartners')}</h2>
-            <p className="text-gray-300">{t('partnersDescription')}</p>
+            <h2 className="text-3xl font-bold text-white mb-4">{t('investorsTrustUs')}</h2>
+            <p className="text-gray-300">{t('heroSubtitle')}</p>
           </div>
           <div className="overflow-hidden">
-            <div className="partners-slider flex items-center space-x-12 animate-[slide-left_20s_linear_infinite]">
+            <div className="partners-slider flex items-center space-x-12">
               <img src="/lovable-uploads/56d38ce7-8f1e-4893-8651-5591dea78890.png" alt="Visa" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
               <img src="/lovable-uploads/98f528c7-6c3b-4fa4-907f-eeb151c5e95f.png" alt="Microsoft" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
-              <img src="/lov8able-uploads/a2dabffc-b0b6-4eb0-9751-60a6dae1cd48.png" alt="Apple" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
+              <img src="/lovable-uploads/a2dabffc-b0b6-4eb0-9751-60a6dae1cd48.png" alt="Apple" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
               <img src="/lovable-uploads/3d8173dd-fbc5-4012-8a4a-71b279a74ee6.png" alt="MoneyCheck" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
               <img src="/lovable-uploads/3cb12800-d420-419f-b4a8-2617a446f7c8.png" alt="Yahoo" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
               <img src="/lovable-uploads/b3ec5cdf-cebe-408d-a156-11b798a92ea0.png" alt="Benzinga" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
@@ -256,8 +256,8 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">{t('userTestimonials')}</h2>
-            <p className="text-xl text-gray-300">What Our Users Say</p>
+            <h2 className="text-4xl font-bold text-white mb-4">What Our Users Say</h2>
+            <p className="text-xl text-gray-300">Real feedback from our community</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
@@ -358,7 +358,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Button onClick={scrollToApplyNow} variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 transform hover:scale-105 transition-all duration-300">
               <CheckCircle className="mr-2 h-5 w-5" />
-              {t('joinOurCommunity')}
+              {t('contact')}
             </Button>
           </div>
         </div>
@@ -420,7 +420,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Button onClick={scrollToApplyNow} className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 animate-pulse">
               <ArrowRight className="ml-2 h-5 w-5" />
-              {t('getEarlyAccess')}
+              {t('getStartedNow')}
             </Button>
           </div>
         </div>
@@ -431,8 +431,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">{t('readyToStart')}</h2>
-              <p className="text-xl text-gray-300">{t('applyDescription')}</p>
+              <h2 className="text-4xl font-bold text-white mb-4">{t('applyNow')}</h2>
+              <p className="text-xl text-gray-300">{t('heroSubtitle')}</p>
             </div>
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
               <CardContent className="p-8">
@@ -440,16 +440,16 @@ const Index = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="first-name" className="text-white">{t('firstName')}</Label>
-                      <Input id="first-name" placeholder={t('firstNamePlaceholder')} required className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
+                      <Input id="first-name" placeholder={t('firstName')} required className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="last-name" className="text-white">{t('lastName')}</Label>
-                      <Input id="last-name" placeholder={t('lastNamePlaceholder')} required className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
+                      <Input id="last-name" placeholder={t('lastName')} required className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email" className="text-white">{t('email')}</Label>
-                    <Input id="email" type="email" placeholder={t('emailPlaceholder')} required className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
+                    <Input id="email" type="email" placeholder={t('email')} required className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="text-white">{t('phone')}</Label>
@@ -466,14 +466,14 @@ const Index = () => {
                           ))}
                         </SelectContent>
                       </Select>
-                      <Input id="phone" type="tel" placeholder={t('phonePlaceholder')} className="flex-1 ml-2 bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
+                      <Input id="phone" type="tel" placeholder={t('phone')} className="flex-1 ml-2 bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="experience" className="text-white">{t('tradingExperience')}</Label>
+                    <Label htmlFor="experience" className="text-white">{t('experience')}</Label>
                     <Select defaultValue="intermediate">
                       <SelectTrigger className="bg-white/10 border-white/20 text-white">
-                        <SelectValue placeholder={t('selectExperience')} />
+                        <SelectValue placeholder={t('experience')} />
                       </SelectTrigger>
                       <SelectContent className="bg-slate-800 border-slate-700">
                         <SelectItem value="beginner" className="text-white hover:bg-slate-700">{t('beginner')}</SelectItem>
@@ -488,7 +488,7 @@ const Index = () => {
                     {t('submit')}
                   </Button>
                   <p className="text-xs text-center text-gray-400 mt-4">
-                    {t('privacyNote')}
+                    {t('required')}
                   </p>
                 </form>
               </CardContent>
@@ -503,7 +503,7 @@ const Index = () => {
           <div className="flex flex-wrap justify-between">
             <div className="w-full md:w-1/3 mb-8 md:mb-0">
               <h3 className="text-xl font-bold text-white mb-4">Incite AI</h3>
-              <p className="text-gray-400 mb-4">{t('footerDescription')}</p>
+              <p className="text-gray-400 mb-4">{t('heroSubtitle')}</p>
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
                   <span className="sr-only">Twitter</span>
@@ -520,10 +520,10 @@ const Index = () => {
               </div>
             </div>
             <div className="w-full md:w-1/3 mb-8 md:mb-0">
-              <h3 className="text-lg font-semibold text-white mb-4">{t('quickLinks')}</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">{t('about')}</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('about')}</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('features')}</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('program')}</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('pricing')}</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('blog')}</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('contact')}</a></li>
@@ -542,7 +542,7 @@ const Index = () => {
           <Separator className="my-8 bg-white/10" />
           <div className="text-center">
             <p className="text-gray-500 text-sm">
-              &copy; {new Date().getFullYear()} Incite AI. {t('allRightsReserved')}
+              &copy; {new Date().getFullYear()} Incite AI. All rights reserved.
             </p>
           </div>
         </div>
@@ -561,7 +561,7 @@ const Index = () => {
         .partners-slider {
           display: flex;
           width: 200%;
-          animation: slide-left 20s linear infinite;
+          animation: slide-left 15s linear infinite;
         }
         
         .partners-slider img {
