@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,7 +28,7 @@ const Index = () => {
       }
     };
 
-    const interval = setInterval(moveSlider, 1000); // Move every 1 second (1.5x faster)
+    const interval = setInterval(moveSlider, 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -235,18 +234,18 @@ const Index = () => {
             <p className="text-gray-300">{t('heroSubtitle')}</p>
           </div>
           <div className="overflow-hidden">
-            <div className="partners-slider flex items-center space-x-12">
-              <img src="/lovable-uploads/56d38ce7-8f1e-4893-8651-5591dea78890.png" alt="Visa" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
-              <img src="/lovable-uploads/98f528c7-6c3b-4fa4-907f-eeb151c5e95f.png" alt="Microsoft" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
-              <img src="/lovable-uploads/a2dabffc-b0b6-4eb0-9751-60a6dae1cd48.png" alt="Apple" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
-              <img src="/lovable-uploads/3d8173dd-fbc5-4012-8a4a-71b279a74ee6.png" alt="MoneyCheck" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
-              <img src="/lovable-uploads/3cb12800-d420-419f-b4a8-2617a446f7c8.png" alt="Yahoo" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
-              <img src="/lovable-uploads/b3ec5cdf-cebe-408d-a156-11b798a92ea0.png" alt="Benzinga" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
-              <img src="/lovable-uploads/61a7602a-8426-4bfc-8809-578a5e20e368.png" alt="Investing.com" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
-              <img src="/lovable-uploads/0bac76b5-2f20-4225-9c0e-d3b30d244361.png" alt="Markets Insider" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
-              <img src="/lovable-uploads/c1da2c49-fcbb-4258-92dc-59ce47477622.png" alt="Bloomberg" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
-              <img src="/lovable-uploads/b8840667-fadc-4406-a9b7-23bf5febf2ee.png" alt="Finance Magnates" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
-              <img src="/lovable-uploads/e2e3d57b-c708-4712-aa7b-0c497d71f301.png" alt="Business Insider" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0" />
+            <div className="partners-slider flex items-center space-x-12 animate-slide-left">
+              <img src="/lovable-uploads/56d38ce7-8f1e-4893-8651-5591dea78890.png" alt="Visa" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0 flex-shrink-0" />
+              <img src="/lovable-uploads/98f528c7-6c3b-4fa4-907f-eeb151c5e95f.png" alt="Microsoft" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0 flex-shrink-0" />
+              <img src="/lovable-uploads/a2dabffc-b0b6-4eb0-9751-60a6dae1cd48.png" alt="Apple" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0 flex-shrink-0" />
+              <img src="/lovable-uploads/3d8173dd-fbc5-4012-8a4a-71b279a74ee6.png" alt="MoneyCheck" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0 flex-shrink-0" />
+              <img src="/lovable-uploads/3cb12800-d420-419f-b4a8-2617a446f7c8.png" alt="Yahoo" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0 flex-shrink-0" />
+              <img src="/lovable-uploads/b3ec5cdf-cebe-408d-a156-11b798a92ea0.png" alt="Benzinga" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0 flex-shrink-0" />
+              <img src="/lovable-uploads/61a7602a-8426-4bfc-8809-578a5e20e368.png" alt="Investing.com" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0 flex-shrink-0" />
+              <img src="/lovable-uploads/0bac76b5-2f20-4225-9c0e-d3b30d244361.png" alt="Markets Insider" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0 flex-shrink-0" />
+              <img src="/lovable-uploads/c1da2c49-fcbb-4258-92dc-59ce47477622.png" alt="Bloomberg" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0 flex-shrink-0" />
+              <img src="/lovable-uploads/b8840667-fadc-4406-a9b7-23bf5febf2ee.png" alt="Finance Magnates" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0 flex-shrink-0" />
+              <img src="/lovable-uploads/e2e3d57b-c708-4712-aa7b-0c497d71f301.png" alt="Business Insider" className="h-12 opacity-60 hover:opacity-100 transition-opacity filter grayscale hover:grayscale-0 flex-shrink-0" />
             </div>
           </div>
         </div>
@@ -470,16 +469,16 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="experience" className="text-white">{t('experience')}</Label>
+                    <Label htmlFor="experience" className="text-white">Experience Level</Label>
                     <Select defaultValue="intermediate">
                       <SelectTrigger className="bg-white/10 border-white/20 text-white">
-                        <SelectValue placeholder={t('experience')} />
+                        <SelectValue placeholder="Experience Level" />
                       </SelectTrigger>
                       <SelectContent className="bg-slate-800 border-slate-700">
-                        <SelectItem value="beginner" className="text-white hover:bg-slate-700">{t('beginner')}</SelectItem>
-                        <SelectItem value="intermediate" className="text-white hover:bg-slate-700">{t('intermediate')}</SelectItem>
-                        <SelectItem value="advanced" className="text-white hover:bg-slate-700">{t('advanced')}</SelectItem>
-                        <SelectItem value="professional" className="text-white hover:bg-slate-700">{t('professional')}</SelectItem>
+                        <SelectItem value="beginner" className="text-white hover:bg-slate-700">Beginner</SelectItem>
+                        <SelectItem value="intermediate" className="text-white hover:bg-slate-700">Intermediate</SelectItem>
+                        <SelectItem value="advanced" className="text-white hover:bg-slate-700">Advanced</SelectItem>
+                        <SelectItem value="professional" className="text-white hover:bg-slate-700">Professional</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -548,24 +547,22 @@ const Index = () => {
         </div>
       </footer>
 
-      <style global>{`
+      <style>{`
         @keyframes slide-left {
           0% {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-100%);
           }
         }
         
-        .partners-slider {
-          display: flex;
-          width: 200%;
-          animation: slide-left 15s linear infinite;
+        .animate-slide-left {
+          animation: slide-left 20s linear infinite;
         }
         
-        .partners-slider img {
-          flex-shrink: 0;
+        .partners-slider {
+          width: 200%;
         }
       `}</style>
     </div>
