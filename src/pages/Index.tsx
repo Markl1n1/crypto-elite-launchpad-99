@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -87,68 +88,68 @@ const Index = () => {
     {
       icon: <Brain className="h-12 w-12 text-blue-600" />,
       title: t('advancedTechnology'),
-      description: t('aiPoweredAnalytics')
+      description: "AI-powered analytics for superior market insights"
     },
     {
       icon: <TrendingUp className="h-12 w-12 text-green-600" />,
-      title: t('realTimeInsights'),
-      description: t('instantMarketData')
+      title: "Real-Time Insights",
+      description: "Instant market data and trend analysis"
     },
     {
       icon: <Shield className="h-12 w-12 text-purple-600" />,
-      title: t('riskManagement'),
-      description: t('intelligentRiskAssessment')
+      title: "Risk Management",
+      description: "Intelligent risk assessment and mitigation"
     },
     {
       icon: <Target className="h-12 w-12 text-orange-600" />,
-      title: t('precisionTrading'),
-      description: t('algorithmicPrecision')
+      title: "Precision Trading",
+      description: "Algorithmic precision for optimal execution"
     }
   ];
 
   const stats = [
-    { value: "98.7%", label: t('accuracyRate') },
-    { value: "$2.4B+", label: t('assetsAnalyzed') },
-    { value: "50,000+", label: t('activeTraders') },
-    { value: "24/7", label: t('marketCoverage') }
+    { value: "98.7%", label: "Accuracy Rate" },
+    { value: "$2.4B+", label: "Assets Analyzed" },
+    { value: "50,000+", label: "Active Traders" },
+    { value: "24/7", label: "Market Coverage" }
   ];
 
   const pricingPlans = [
     {
-      name: t('basicPlan'),
+      name: "Basic Plan",
       price: "$99",
-      period: t('perMonth'),
+      period: "per month",
       features: [
-        t('basicAnalytics'),
-        t('emailSupport'),
-        t('mobileApp'),
-        t('basicReports')
+        "Basic Analytics",
+        "Email Support",
+        "Mobile App",
+        "Basic Reports"
       ],
       popular: false
     },
     {
       name: t('proPlan'),
       price: "$299",
-      period: t('perMonth'),
+      period: "per month",
       features: [
-        t('advancedAnalytics'),
-        t('prioritySupport'),
-        t('customAlerts'),
-        t('advancedReports'),
-        t('apiAccess')
+        "Advanced Analytics",
+        "Priority Support",
+        "Custom Alerts",
+        "Advanced Reports",
+        "API Access"
       ],
       popular: true
     },
     {
-      name: t('enterprisePlan'),
-      price: t('customPricing'),
+      name: "Enterprise Plan",
+      price: "Custom Pricing",
       period: "",
       features: [
-        t('enterpriseAnalytics'),
-        t('dedicatedSupport'),
-        t('whiteLabel'),
-        t('customIntegration'),
-        t('onPremise')
+        "Enterprise Analytics",
+        "Dedicated Support",
+        "White Label",
+        "Custom Integration",
+        "On-Premise"
       ],
       popular: false
     }
@@ -157,8 +158,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Mobile Sticky CTA Bar */}
-      <div className="mobile-cta-bar">
-        <Button className="w-full" variant="cta">
+      <div className="mobile-cta-bar fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg z-50 md:hidden">
+        <Button className="w-full animate-pulse bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300">
           {t('applyNow')}
         </Button>
       </div>
@@ -194,7 +195,7 @@ const Index = () => {
                   <SelectItem value="tr">Türkçe</SelectItem>
                 </SelectContent>
               </Select>
-              <Button variant="outline">Try Incite AI</Button>
+              <Button variant="outline" className="hover:bg-blue-50 hover:border-blue-300 transition-all duration-300">Try Incite AI</Button>
             </div>
           </div>
         </div>
@@ -220,7 +221,7 @@ const Index = () => {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8 py-6" variant="cta">
+                <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse">
                   {t('getStartedNow')}
                   <ChevronRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -313,7 +314,7 @@ const Index = () => {
                       </Select>
                     </div>
                     
-                    <Button type="submit" className="w-full" variant="cta">
+                    <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300">
                       Start Your Journey Now
                     </Button>
                   </form>
@@ -330,10 +331,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t('aiDrivenFeatures')}
+              AI-Driven Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('featureSubtitle')}
+              Experience the power of artificial intelligence in financial markets
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -353,10 +354,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t('ourAchievements')}
+              Our Achievements
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('statsSubtitle')}
+              Proven results that speak for themselves
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -378,7 +379,7 @@ const Index = () => {
               {t('flexiblePricingPlans')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('pricingSubtitle')}
+              Choose the plan that fits your trading needs
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -403,7 +404,7 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full" variant="cta">
+                  <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300">
                     {t('choosePlan')}
                   </Button>
                 </CardContent>
@@ -421,7 +422,7 @@ const Index = () => {
               {t('whatClientsSay')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('testimonialSubtitle')}
+              Hear from industry leaders who trust Incite AI
             </p>
           </div>
           
@@ -463,7 +464,7 @@ const Index = () => {
               {t('frequentlyAskedQuestions')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('faqSubtitle')}
+              Get answers to common questions about Incite AI
             </p>
           </div>
           <div className="space-y-4">
