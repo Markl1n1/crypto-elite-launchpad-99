@@ -103,18 +103,18 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 text-white">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
         <div className="relative container mx-auto px-6 py-24">
           <div className="text-center">
             <Badge className="mb-6 bg-[#0c9467]/20 text-[#0c9467] border-[#0c9467]/30">
-              {t('eliteInvestmentOpportunities')}
+              Elite Investment Opportunities
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-[#0c9467] bg-clip-text text-transparent animate-float">
-              {t('heroTitle')}
+              Next-Level Investment Intelligence
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
-              {t('heroSubtitle')}
+              Harness the power of AI to revolutionize your investment strategy with precision insights and automated trading excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
@@ -147,7 +147,7 @@ const Index = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('investorsTrustUs')}</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Trusted by Leading Investors</h2>
             <div className="flex justify-center items-center space-x-8 opacity-60">
               <img src="/lovable-uploads/d77102a6-0db1-4f68-9154-d76b9c8831b2.png" alt="Partner 1" className="h-12" />
               <img src="/lovable-uploads/d77102a6-0db1-4f68-9154-d76b9c8831b2.png" alt="Partner 2" className="h-12" />
@@ -161,7 +161,7 @@ const Index = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('advancedTechnology')}</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Advanced Technology Platform</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Leverage cutting-edge AI technology to make smarter investment decisions
             </p>
@@ -288,7 +288,7 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('faq')}</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-gray-600">Get answers to commonly asked questions</p>
           </div>
           
