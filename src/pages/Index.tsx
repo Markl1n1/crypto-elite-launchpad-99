@@ -429,11 +429,9 @@ const Index = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button size="lg" onClick={() => scrollToSection('pricing')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-6 transform hover:scale-105 transition-all duration-200">
-                {t('getStartedNow')}
+                {t('startJourneyNow')}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
-              
-              
             </div>
             
             {/* Social Proof */}
