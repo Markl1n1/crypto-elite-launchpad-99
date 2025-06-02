@@ -573,7 +573,7 @@ const Index = () => {
               </div>
 
               <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold px-8 py-3 transform hover:scale-105 transition-all duration-200">
-                Try Incite AI Free
+                Try Incite AI Now
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </div>
