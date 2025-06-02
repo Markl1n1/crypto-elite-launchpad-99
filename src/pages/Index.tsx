@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Send, MessageCircle, Star, Users, Award } from 'lucide-react';
@@ -16,44 +14,49 @@ import { phoneCodes } from '@/data/phoneCodes';
 import { useTranslations } from '@/hooks/useTranslations';
 
 // Language data
-const languages = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'pl', name: 'Polish', flag: '🇵🇱' },
-  { code: 'de', name: 'German', flag: '🇩🇪' },
-  { code: 'es', name: 'Spanish', flag: '🇪🇸' },
-  { code: 'ru', name: 'Russian', flag: '🇷🇺' },
-  { code: 'fr', name: 'French', flag: '🇫🇷' },
-  { code: 'ar', name: 'Arabic', flag: '🇸🇦' },
-  { code: 'tr', name: 'Turkish', flag: '🇹🇷' },
-];
+const languages = [{
+  code: 'en',
+  name: 'English',
+  flag: '🇺🇸'
+}, {
+  code: 'pl',
+  name: 'Polish',
+  flag: '🇵🇱'
+}, {
+  code: 'de',
+  name: 'German',
+  flag: '🇩🇪'
+}, {
+  code: 'es',
+  name: 'Spanish',
+  flag: '🇪🇸'
+}, {
+  code: 'ru',
+  name: 'Russian',
+  flag: '🇷🇺'
+}, {
+  code: 'fr',
+  name: 'French',
+  flag: '🇫🇷'
+}, {
+  code: 'ar',
+  name: 'Arabic',
+  flag: '🇸🇦'
+}, {
+  code: 'tr',
+  name: 'Turkish',
+  flag: '🇹🇷'
+}];
 
 // Countries data
-const countries = [
-  'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria',
-  'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan',
-  'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cabo Verde', 'Cambodia',
-  'Cameroon', 'Canada', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica',
-  'Croatia', 'Cuba', 'Cyprus', 'Czech Republic', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt',
-  'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia', 'Fiji', 'Finland', 'France', 'Gabon',
-  'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana',
-  'Haiti', 'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel',
-  'Italy', 'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan', 'Laos',
-  'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Madagascar', 'Malawi',
-  'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova',
-  'Monaco', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar', 'Namibia', 'Nauru', 'Nepal', 'Netherlands',
-  'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 'Norway', 'Oman', 'Pakistan', 'Palau',
-  'Palestine', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Qatar', 'Romania',
-  'Russia', 'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal',
-  'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea',
-  'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria', 'Taiwan', 'Tajikistan',
-  'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu',
-  'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan', 'Vanuatu', 'Vatican City', 'Venezuela',
-  'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'
-];
-
+const countries = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia', 'Fiji', 'Finland', 'France', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana', 'Haiti', 'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar', 'Namibia', 'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 'Norway', 'Oman', 'Pakistan', 'Palau', 'Palestine', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Qatar', 'Romania', 'Russia', 'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea', 'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria', 'Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan', 'Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'];
 const Index = () => {
   const navigate = useNavigate();
-  const { currentLanguage, changeLanguage, t } = useTranslations();
+  const {
+    currentLanguage,
+    changeLanguage,
+    t
+  } = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [applicationStep, setApplicationStep] = useState(1);
@@ -61,7 +64,7 @@ const Index = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [emailError, setEmailError] = useState('');
   const [phoneError, setPhoneError] = useState('');
-  
+
   // Form state for step 1
   const [step1Data, setStep1Data] = useState({
     firstName: '',
@@ -81,7 +84,6 @@ const Index = () => {
     mortgage: '',
     financialSituation: ''
   });
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -89,9 +91,10 @@ const Index = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(sectionId)?.scrollIntoView({
+      behavior: 'smooth'
+    });
     setIsMenuOpen(false);
   };
 
@@ -106,40 +109,35 @@ const Index = () => {
     const phoneRegex = /^\d{6,15}$/;
     return phoneRegex.test(phone);
   };
-
   const handleStep1Submit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Reset errors
     setEmailError('');
     setPhoneError('');
-    
     let hasErrors = false;
-    
+
     // Validate email
     if (!validateEmail(step1Data.email)) {
       setEmailError(t('validEmailRequired'));
       hasErrors = true;
     }
-    
+
     // Validate phone
     if (!validatePhone(phoneNumber)) {
       setPhoneError(t('validPhoneRequired'));
       hasErrors = true;
     }
-    
     if (hasErrors) return;
-    
     setApplicationStep(2);
   };
-
   const submitToGoogleSheets = async (formData: any) => {
     try {
       const response = await fetch('https://script.google.com/macros/s/AKfycbzQ8_example/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
       });
@@ -148,10 +146,9 @@ const Index = () => {
       console.error('Error submitting to Google Sheets:', error);
     }
   };
-
   const handleStep2Submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Prepare form data for Google Sheets
     const formData = {
       firstName: step1Data.firstName,
@@ -169,80 +166,183 @@ const Index = () => {
       financialSituation: step2Data.financialSituation,
       timestamp: new Date().toISOString()
     };
-    
+
     // Submit to Google Sheets
     await submitToGoogleSheets(formData);
-    
+
     // Navigate to success page
     navigate('/success');
   };
-
   const currentLanguageData = languages.find(lang => lang.code === currentLanguage) || languages[0];
-
-  const partners = [
-    { name: 'BlackRock', logo: 'https://logo.clearbit.com/blackrock.com' },
-    { name: 'Goldman Sachs', logo: 'https://logo.clearbit.com/goldmansachs.com' },
-    { name: 'JPMorgan', logo: 'https://logo.clearbit.com/jpmorgan.com' },
-    { name: 'Wells Fargo', logo: 'https://logo.clearbit.com/wellsfargo.com' },
-    { name: 'PayPal', logo: 'https://logo.clearbit.com/paypal.com' },
-    { name: 'Visa', logo: 'https://logo.clearbit.com/visa.com' },
-    { name: 'Mastercard', logo: 'https://logo.clearbit.com/mastercard.com' },
-    { name: 'Stripe', logo: 'https://logo.clearbit.com/stripe.com' },
-    { name: 'Square', logo: 'https://logo.clearbit.com/squareup.com' },
-    { name: 'American Express', logo: 'https://logo.clearbit.com/americanexpress.com' },
-    { name: 'Binance', logo: 'https://logo.clearbit.com/binance.com' },
-    { name: 'Coinbase', logo: 'https://logo.clearbit.com/coinbase.com' },
-    { name: 'Fidelity', logo: 'https://logo.clearbit.com/fidelity.com' },
-    { name: 'Charles Schwab', logo: 'https://logo.clearbit.com/schwab.com' },
-    { name: 'TD Ameritrade', logo: 'https://logo.clearbit.com/tdameritrade.com' },
-    { name: 'E*TRADE', logo: 'https://logo.clearbit.com/etrade.com' },
-    { name: 'Robinhood', logo: 'https://logo.clearbit.com/robinhood.com' },
-    { name: 'Interactive Brokers', logo: 'https://logo.clearbit.com/interactivebrokers.com' },
-    { name: 'Morgan Stanley', logo: 'https://logo.clearbit.com/morganstanley.com' },
-    { name: 'Credit Suisse', logo: 'https://logo.clearbit.com/credit-suisse.com' },
-    { name: 'Deutsche Bank', logo: 'https://logo.clearbit.com/db.com' },
-    { name: 'Barclays', logo: 'https://logo.clearbit.com/barclays.com' },
-    { name: 'UBS', logo: 'https://logo.clearbit.com/ubs.com' },
-    { name: 'HSBC', logo: 'https://logo.clearbit.com/hsbc.com' },
-    { name: 'Citigroup', logo: 'https://logo.clearbit.com/citigroup.com' },
-    { name: 'Vanguard', logo: 'https://logo.clearbit.com/vanguard.com' },
-    { name: 'State Street', logo: 'https://logo.clearbit.com/statestreet.com' },
-    { name: 'T. Rowe Price', logo: 'https://logo.clearbit.com/troweprice.com' },
-    { name: 'Franklin Templeton', logo: 'https://logo.clearbit.com/franklintempleton.com' },
-    { name: 'Northern Trust', logo: 'https://logo.clearbit.com/northerntrust.com' },
-    { name: 'BNY Mellon', logo: 'https://logo.clearbit.com/bnymellon.com' },
-    { name: 'Invesco', logo: 'https://logo.clearbit.com/invesco.com' },
-    { name: 'Prudential', logo: 'https://logo.clearbit.com/prudential.com' },
-    { name: 'MetLife', logo: 'https://logo.clearbit.com/metlife.com' },
-    { name: 'Allianz', logo: 'https://logo.clearbit.com/allianz.com' },
-    { name: 'AIG', logo: 'https://logo.clearbit.com/aig.com' },
-    { name: 'Berkshire Hathaway', logo: 'https://logo.clearbit.com/berkshirehathaway.com' },
-    { name: 'KKR', logo: 'https://logo.clearbit.com/kkr.com' },
-    { name: 'Blackstone', logo: 'https://logo.clearbit.com/blackstone.com' },
-    { name: 'Apollo', logo: 'https://logo.clearbit.com/apollo.com' },
-    { name: 'Carlyle', logo: 'https://logo.clearbit.com/carlyle.com' },
-    { name: 'TPG', logo: 'https://logo.clearbit.com/tpg.com' },
-    { name: 'Bain Capital', logo: 'https://logo.clearbit.com/baincapital.com' },
-    { name: 'Bridgewater Associates', logo: 'https://logo.clearbit.com/bridgewater.com' },
-    { name: 'Renaissance Technologies', logo: 'https://logo.clearbit.com/rentec.com' },
-    { name: 'Two Sigma', logo: 'https://logo.clearbit.com/twosigma.com' },
-    { name: 'Citadel', logo: 'https://logo.clearbit.com/citadel.com' },
-    { name: 'DE Shaw', logo: 'https://logo.clearbit.com/deshaw.com' },
-    { name: 'AQR Capital', logo: 'https://logo.clearbit.com/aqr.com' },
-    { name: 'Millennium Management', logo: 'https://logo.clearbit.com/mlp.com' },
-    { name: 'Point72', logo: 'https://logo.clearbit.com/point72.com' },
-    { name: 'Susquehanna', logo: 'https://logo.clearbit.com/sig.com' },
-    { name: 'Microsoft', logo: 'https://logo.clearbit.com/microsoft.com' },
-    { name: 'Apple', logo: 'https://logo.clearbit.com/apple.com' },
-    { name: 'Google', logo: 'https://logo.clearbit.com/google.com' }
-  ];
-
-  return (
-    <div className="min-h-screen bg-[#0a0e1a] text-white overflow-x-hidden">
+  const partners = [{
+    name: 'BlackRock',
+    logo: 'https://logo.clearbit.com/blackrock.com'
+  }, {
+    name: 'Goldman Sachs',
+    logo: 'https://logo.clearbit.com/goldmansachs.com'
+  }, {
+    name: 'JPMorgan',
+    logo: 'https://logo.clearbit.com/jpmorgan.com'
+  }, {
+    name: 'Wells Fargo',
+    logo: 'https://logo.clearbit.com/wellsfargo.com'
+  }, {
+    name: 'PayPal',
+    logo: 'https://logo.clearbit.com/paypal.com'
+  }, {
+    name: 'Visa',
+    logo: 'https://logo.clearbit.com/visa.com'
+  }, {
+    name: 'Mastercard',
+    logo: 'https://logo.clearbit.com/mastercard.com'
+  }, {
+    name: 'Stripe',
+    logo: 'https://logo.clearbit.com/stripe.com'
+  }, {
+    name: 'Square',
+    logo: 'https://logo.clearbit.com/squareup.com'
+  }, {
+    name: 'American Express',
+    logo: 'https://logo.clearbit.com/americanexpress.com'
+  }, {
+    name: 'Binance',
+    logo: 'https://logo.clearbit.com/binance.com'
+  }, {
+    name: 'Coinbase',
+    logo: 'https://logo.clearbit.com/coinbase.com'
+  }, {
+    name: 'Fidelity',
+    logo: 'https://logo.clearbit.com/fidelity.com'
+  }, {
+    name: 'Charles Schwab',
+    logo: 'https://logo.clearbit.com/schwab.com'
+  }, {
+    name: 'TD Ameritrade',
+    logo: 'https://logo.clearbit.com/tdameritrade.com'
+  }, {
+    name: 'E*TRADE',
+    logo: 'https://logo.clearbit.com/etrade.com'
+  }, {
+    name: 'Robinhood',
+    logo: 'https://logo.clearbit.com/robinhood.com'
+  }, {
+    name: 'Interactive Brokers',
+    logo: 'https://logo.clearbit.com/interactivebrokers.com'
+  }, {
+    name: 'Morgan Stanley',
+    logo: 'https://logo.clearbit.com/morganstanley.com'
+  }, {
+    name: 'Credit Suisse',
+    logo: 'https://logo.clearbit.com/credit-suisse.com'
+  }, {
+    name: 'Deutsche Bank',
+    logo: 'https://logo.clearbit.com/db.com'
+  }, {
+    name: 'Barclays',
+    logo: 'https://logo.clearbit.com/barclays.com'
+  }, {
+    name: 'UBS',
+    logo: 'https://logo.clearbit.com/ubs.com'
+  }, {
+    name: 'HSBC',
+    logo: 'https://logo.clearbit.com/hsbc.com'
+  }, {
+    name: 'Citigroup',
+    logo: 'https://logo.clearbit.com/citigroup.com'
+  }, {
+    name: 'Vanguard',
+    logo: 'https://logo.clearbit.com/vanguard.com'
+  }, {
+    name: 'State Street',
+    logo: 'https://logo.clearbit.com/statestreet.com'
+  }, {
+    name: 'T. Rowe Price',
+    logo: 'https://logo.clearbit.com/troweprice.com'
+  }, {
+    name: 'Franklin Templeton',
+    logo: 'https://logo.clearbit.com/franklintempleton.com'
+  }, {
+    name: 'Northern Trust',
+    logo: 'https://logo.clearbit.com/northerntrust.com'
+  }, {
+    name: 'BNY Mellon',
+    logo: 'https://logo.clearbit.com/bnymellon.com'
+  }, {
+    name: 'Invesco',
+    logo: 'https://logo.clearbit.com/invesco.com'
+  }, {
+    name: 'Prudential',
+    logo: 'https://logo.clearbit.com/prudential.com'
+  }, {
+    name: 'MetLife',
+    logo: 'https://logo.clearbit.com/metlife.com'
+  }, {
+    name: 'Allianz',
+    logo: 'https://logo.clearbit.com/allianz.com'
+  }, {
+    name: 'AIG',
+    logo: 'https://logo.clearbit.com/aig.com'
+  }, {
+    name: 'Berkshire Hathaway',
+    logo: 'https://logo.clearbit.com/berkshirehathaway.com'
+  }, {
+    name: 'KKR',
+    logo: 'https://logo.clearbit.com/kkr.com'
+  }, {
+    name: 'Blackstone',
+    logo: 'https://logo.clearbit.com/blackstone.com'
+  }, {
+    name: 'Apollo',
+    logo: 'https://logo.clearbit.com/apollo.com'
+  }, {
+    name: 'Carlyle',
+    logo: 'https://logo.clearbit.com/carlyle.com'
+  }, {
+    name: 'TPG',
+    logo: 'https://logo.clearbit.com/tpg.com'
+  }, {
+    name: 'Bain Capital',
+    logo: 'https://logo.clearbit.com/baincapital.com'
+  }, {
+    name: 'Bridgewater Associates',
+    logo: 'https://logo.clearbit.com/bridgewater.com'
+  }, {
+    name: 'Renaissance Technologies',
+    logo: 'https://logo.clearbit.com/rentec.com'
+  }, {
+    name: 'Two Sigma',
+    logo: 'https://logo.clearbit.com/twosigma.com'
+  }, {
+    name: 'Citadel',
+    logo: 'https://logo.clearbit.com/citadel.com'
+  }, {
+    name: 'DE Shaw',
+    logo: 'https://logo.clearbit.com/deshaw.com'
+  }, {
+    name: 'AQR Capital',
+    logo: 'https://logo.clearbit.com/aqr.com'
+  }, {
+    name: 'Millennium Management',
+    logo: 'https://logo.clearbit.com/mlp.com'
+  }, {
+    name: 'Point72',
+    logo: 'https://logo.clearbit.com/point72.com'
+  }, {
+    name: 'Susquehanna',
+    logo: 'https://logo.clearbit.com/sig.com'
+  }, {
+    name: 'Microsoft',
+    logo: 'https://logo.clearbit.com/microsoft.com'
+  }, {
+    name: 'Apple',
+    logo: 'https://logo.clearbit.com/apple.com'
+  }, {
+    name: 'Google',
+    logo: 'https://logo.clearbit.com/google.com'
+  }];
+  return <div className="min-h-screen bg-[#0a0e1a] text-white overflow-x-hidden">
       {/* Header Navigation */}
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[#0a0e1a]/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
-      }`}>
+      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0a0e1a]/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="text-2xl font-bold">
@@ -267,69 +367,51 @@ const Index = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-[#1a1f35] border-white/20 z-50">
-                {languages.map((lang) => (
-                  <DropdownMenuItem
-                    key={lang.code}
-                    onClick={() => changeLanguage(lang.code as any)}
-                    className="text-white hover:bg-[#00d4aa]/20 cursor-pointer flex items-center space-x-3"
-                  >
+                {languages.map(lang => <DropdownMenuItem key={lang.code} onClick={() => changeLanguage(lang.code as any)} className="text-white hover:bg-[#00d4aa]/20 cursor-pointer flex items-center space-x-3">
                     <span className="text-xl">{lang.flag}</span>
                     <span>{lang.name}</span>
-                  </DropdownMenuItem>
-                ))}
+                  </DropdownMenuItem>)}
               </DropdownMenuContent>
             </DropdownMenu>
             
-            <Button 
-              onClick={() => scrollToSection('apply')}
-              className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold transform hover:scale-105 transition-all duration-200"
-            >
+            <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold transform hover:scale-105 transition-all duration-200">
               {t('applyNow')}
             </Button>
           </nav>
 
           {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-[#1a1f35] border-t border-white/10">
+        {isMenuOpen && <div className="md:hidden bg-[#1a1f35] border-t border-white/10">
             <nav className="container mx-auto px-4 py-4 space-y-4 text-center">
               <button onClick={() => scrollToSection('home')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('home')}</button>
               <button onClick={() => scrollToSection('program')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('program')}</button>
               <button onClick={() => scrollToSection('pricing')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('pricing')}</button>
               <button onClick={() => scrollToSection('faq')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('faq')}</button>
-              <Button 
-                onClick={() => scrollToSection('apply')}
-                className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold"
-              >
+              <Button onClick={() => scrollToSection('apply')} className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold">
                 {t('applyNow')}
               </Button>
             </nav>
-          </div>
-        )}
+          </div>}
       </header>
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden border-b-4 border-[#00d4aa]">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0e1a] via-[#1a1f35] to-[#0a0e1a]" />
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}
-        />
+        <div className="absolute inset-0" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }} />
         
         {/* Floating Blur Elements */}
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#00d4aa]/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#0066ff]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#0066ff]/20 rounded-full blur-3xl animate-pulse" style={{
+        animationDelay: '1s'
+      }} />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
@@ -346,44 +428,41 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button 
-                size="lg"
-                onClick={() => scrollToSection('pricing')}
-                className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-6 transform hover:scale-105 transition-all duration-200"
-              >
+              <Button size="lg" onClick={() => scrollToSection('pricing')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-6 transform hover:scale-105 transition-all duration-200">
                 {t('getStartedNow')}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
               
-              <Button 
-                size="lg"
-                onClick={() => scrollToSection('program')}
-                variant="outline"
-                className="border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa]/10 font-semibold text-lg px-8 py-6 transform hover:scale-105 transition-all duration-200"
-              >
-                See Live Demo
-              </Button>
+              
             </div>
             
             {/* Social Proof */}
             <div className="flex items-center justify-center space-x-4 mb-8">
               <div className="flex -space-x-2">
-                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
-                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/men/1.jpg')` }} />
-                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
-                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/women/2.jpg')` }} />
-                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
-                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/men/3.jpg')` }} />
-                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
-                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/women/4.jpg')` }} />
-                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
-                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/men/5.jpg')` }} />
-                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
-                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/women/6.jpg')` }} />
-                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
-                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/men/7.jpg')` }} />
-                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center"
-                     style={{ backgroundImage: `url('https://randomuser.me/api/portraits/women/8.jpg')` }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center" style={{
+                backgroundImage: `url('https://randomuser.me/api/portraits/men/1.jpg')`
+              }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center" style={{
+                backgroundImage: `url('https://randomuser.me/api/portraits/women/2.jpg')`
+              }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center" style={{
+                backgroundImage: `url('https://randomuser.me/api/portraits/men/3.jpg')`
+              }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center" style={{
+                backgroundImage: `url('https://randomuser.me/api/portraits/women/4.jpg')`
+              }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center" style={{
+                backgroundImage: `url('https://randomuser.me/api/portraits/men/5.jpg')`
+              }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center" style={{
+                backgroundImage: `url('https://randomuser.me/api/portraits/women/6.jpg')`
+              }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center" style={{
+                backgroundImage: `url('https://randomuser.me/api/portraits/men/7.jpg')`
+              }} />
+                <div className="w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center" style={{
+                backgroundImage: `url('https://randomuser.me/api/portraits/women/8.jpg')`
+              }} />
               </div>
               <span className="text-gray-300">
                 <span className="font-semibold text-[#00d4aa]">21,000+</span> {t('investorsTrustUs')}
@@ -402,7 +481,9 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="absolute top-44 right-8 hidden xl:block animate-float" style={{ animationDelay: '1s' }}>
+          <div className="absolute top-44 right-8 hidden xl:block animate-float" style={{
+          animationDelay: '1s'
+        }}>
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">{t('aiSays')}</div>
@@ -412,7 +493,9 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="absolute bottom-[540px] left-16 hidden xl:block animate-float" style={{ animationDelay: '2s' }}>
+          <div className="absolute bottom-[540px] left-16 hidden xl:block animate-float" style={{
+          animationDelay: '2s'
+        }}>
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">{t('averageClientProfit')}</div>
@@ -422,7 +505,9 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="absolute bottom-[400px] right-16 hidden xl:block animate-float" style={{ animationDelay: '3s' }}>
+          <div className="absolute bottom-[400px] right-16 hidden xl:block animate-float" style={{
+          animationDelay: '3s'
+        }}>
             <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
               <CardContent className="p-0">
                 <div className="text-sm text-gray-400 mb-2">{t('clientWinrate')}</div>
@@ -447,11 +532,7 @@ const Index = () => {
             {/* Trading Platform Image */}
             <div className="lg:col-span-2">
               <div className="relative">
-                <img 
-                  src="/lovable-uploads/98f528c7-6c3b-4fa4-907f-eeb151c5e95f.png" 
-                  alt="Trading Platform Interface"
-                  className="w-full h-auto rounded-2xl shadow-2xl"
-                />
+                <img src="/lovable-uploads/98f528c7-6c3b-4fa4-907f-eeb151c5e95f.png" alt="Trading Platform Interface" className="w-full h-auto rounded-2xl shadow-2xl" />
               </div>
             </div>
 
@@ -491,10 +572,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <Button 
-                onClick={() => scrollToSection('apply')}
-                className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold px-8 py-3 transform hover:scale-105 transition-all duration-200"
-              >
+              <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold px-8 py-3 transform hover:scale-105 transition-all duration-200">
                 Try Incite AI Free
                 <ArrowRight className="ml-2" size={20} />
               </Button>
@@ -566,10 +644,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button 
-              onClick={() => scrollToSection('apply')}
-              className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-4 transform hover:scale-105 transition-all duration-200"
-            >
+            <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-4 transform hover:scale-105 transition-all duration-200">
               {t('startJourneyNow')}
               <ArrowRight className="ml-2" size={20} />
             </Button>
@@ -596,9 +671,7 @@ const Index = () => {
             <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
               <CardContent className="p-0">
                 <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={20} className="text-yellow-400 fill-current" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} size={20} className="text-yellow-400 fill-current" />)}
                 </div>
                 <p className="text-gray-300 mb-6 italic">
                   "Your AI stock app seems doing great so far. I tested asking last weekend what would be the best 5 NYSE stocks to buy last Monday, 100% of the 5, had price increases for that day, & 80% during the week. I am further testing it for this week including currency pairs. If it turns out consistent, thru further testing, I would likely recommend this to my clients & trading, investment groups. Wishing you best."
@@ -619,9 +692,7 @@ const Index = () => {
             <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
               <CardContent className="p-0">
                 <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={20} className="text-yellow-400 fill-current" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} size={20} className="text-yellow-400 fill-current" />)}
                 </div>
                 <p className="text-gray-300 mb-6 italic">
                   "I think this is a game changer for me and lots of others who do not really understand how to navigate the money market. Good Job!"
@@ -642,9 +713,7 @@ const Index = () => {
             <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
               <CardContent className="p-0">
                 <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={20} className="text-yellow-400 fill-current" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} size={20} className="text-yellow-400 fill-current" />)}
                 </div>
                 <p className="text-gray-300 mb-6 italic">
                   "As a full time trader, Incite can help me source some information regarding market trends/news quickly. I purchased out of curiosity for the future 'trader x' feature to see what that entails."
@@ -665,9 +734,7 @@ const Index = () => {
             <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
               <CardContent className="p-0">
                 <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={20} className="text-yellow-400 fill-current" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} size={20} className="text-yellow-400 fill-current" />)}
                 </div>
                 <p className="text-gray-300 mb-6 italic">
                   "I think your product has an awesome concept, and I really like it. I've used it for a month. Enhancing its ability to crawl more real-time data could make it truly outstanding!"
@@ -686,10 +753,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button 
-              onClick={() => scrollToSection('apply')}
-              className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-4 transform hover:scale-105 transition-all duration-200"
-            >
+            <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-4 transform hover:scale-105 transition-all duration-200">
               Get Early Access
               <ArrowRight className="ml-2" size={20} />
             </Button>
@@ -762,10 +826,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button 
-              onClick={() => scrollToSection('apply')}
-              className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-4 transform hover:scale-105 transition-all duration-200"
-            >
+            <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-4 transform hover:scale-105 transition-all duration-200">
               Join the Experts
               <ArrowRight className="ml-2" size={20} />
             </Button>
@@ -812,10 +873,7 @@ const Index = () => {
                   </li>
                 </ul>
                 <Badge className="bg-green-500/20 text-green-400 border-green-500 mb-4 self-start">8 {t('spotsAvailable')}</Badge>
-                <Button 
-                  onClick={() => scrollToSection('apply')}
-                  className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold mt-auto"
-                >
+                <Button onClick={() => scrollToSection('apply')} className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold mt-auto">
                   {t('startNow')}
                 </Button>
               </CardContent>
@@ -894,10 +952,7 @@ const Index = () => {
                   </li>
                 </ul>
                 <Badge className="bg-green-500/20 text-green-400 border-green-500 mb-4 self-start">31 {t('spotsAvailable')}</Badge>
-                <Button 
-                  onClick={() => scrollToSection('apply')}
-                  className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold mt-auto"
-                >
+                <Button onClick={() => scrollToSection('apply')} className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold mt-auto">
                   {t('startNow')}
                 </Button>
               </CardContent>
@@ -916,26 +971,17 @@ const Index = () => {
           {/* Auto-scrolling carousel - faster speed (20s instead of 30s) */}
           <div className="relative">
             <div className="flex animate-[scroll_20s_linear_infinite]">
-              {[...partners, ...partners].map((partner, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 mx-8 h-16 flex items-center justify-center bg-white/5 rounded-lg px-6 hover:bg-white/10 transition-colors"
-                  style={{ minWidth: '200px' }}
-                >
-                  <img 
-                    src={partner.logo} 
-                    alt={partner.name}
-                    className="h-8 object-contain filter brightness-0 invert opacity-70"
-                    onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      const fallback = target.nextElementSibling as HTMLElement;
-                      target.style.display = 'none';
-                      if (fallback) fallback.style.display = 'block';
-                    }}
-                  />
+              {[...partners, ...partners].map((partner, index) => <div key={index} className="flex-shrink-0 mx-8 h-16 flex items-center justify-center bg-white/5 rounded-lg px-6 hover:bg-white/10 transition-colors" style={{
+              minWidth: '200px'
+            }}>
+                  <img src={partner.logo} alt={partner.name} className="h-8 object-contain filter brightness-0 invert opacity-70" onError={e => {
+                const target = e.currentTarget as HTMLImageElement;
+                const fallback = target.nextElementSibling as HTMLElement;
+                target.style.display = 'none';
+                if (fallback) fallback.style.display = 'block';
+              }} />
                   <span className="text-gray-300 font-semibold hidden">{partner.name}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -1018,34 +1064,25 @@ const Index = () => {
 
           <Card className="bg-[#0a0e1a] border-white/10 p-8">
             <CardContent className="p-0">
-              {applicationStep === 1 ? (
-                <form onSubmit={handleStep1Submit} className="space-y-6">
+              {applicationStep === 1 ? <form onSubmit={handleStep1Submit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="firstName" className="text-white">
                         {t('firstName')} <span className="text-red-400">{t('required')}</span>
                       </Label>
-                      <Input 
-                        id="firstName" 
-                        value={step1Data.firstName}
-                        onChange={(e) => setStep1Data({...step1Data, firstName: e.target.value})}
-                        className="bg-[#1a1f35] border-white/20 text-white"
-                        placeholder={`${t('firstName')}...`}
-                        required
-                      />
+                      <Input id="firstName" value={step1Data.firstName} onChange={e => setStep1Data({
+                    ...step1Data,
+                    firstName: e.target.value
+                  })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('firstName')}...`} required />
                     </div>
                     <div>
                       <Label htmlFor="lastName" className="text-white">
                         {t('lastName')} <span className="text-red-400">{t('required')}</span>
                       </Label>
-                      <Input 
-                        id="lastName" 
-                        value={step1Data.lastName}
-                        onChange={(e) => setStep1Data({...step1Data, lastName: e.target.value})}
-                        className="bg-[#1a1f35] border-white/20 text-white"
-                        placeholder={`${t('lastName')}...`}
-                        required
-                      />
+                      <Input id="lastName" value={step1Data.lastName} onChange={e => setStep1Data({
+                    ...step1Data,
+                    lastName: e.target.value
+                  })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('lastName')}...`} required />
                     </div>
                   </div>
 
@@ -1053,15 +1090,10 @@ const Index = () => {
                     <Label htmlFor="email" className="text-white">
                       {t('emailAddress')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <Input 
-                      id="email" 
-                      type="email"
-                      value={step1Data.email}
-                      onChange={(e) => setStep1Data({...step1Data, email: e.target.value})}
-                      className="bg-[#1a1f35] border-white/20 text-white"
-                      placeholder={`${t('emailAddress')}...`}
-                      required
-                    />
+                    <Input id="email" type="email" value={step1Data.email} onChange={e => setStep1Data({
+                  ...step1Data,
+                  email: e.target.value
+                })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('emailAddress')}...`} required />
                     {emailError && <p className="text-red-400 text-sm mt-1">{emailError}</p>}
                   </div>
 
@@ -1075,21 +1107,12 @@ const Index = () => {
                           <SelectValue className="text-gray-400" />
                         </SelectTrigger>
                         <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
-                          {phoneCodes.map((phone, index) => (
-                            <SelectItem key={index} value={phone.code} className="text-gray-400">
+                          {phoneCodes.map((phone, index) => <SelectItem key={index} value={phone.code} className="text-gray-400">
                               {phone.code}
-                            </SelectItem>
-                          ))}
+                            </SelectItem>)}
                         </SelectContent>
                       </Select>
-                      <Input 
-                        id="phone" 
-                        value={phoneNumber}
-                        onChange={(e) => setPhoneNumber(e.target.value)}
-                        className="bg-[#1a1f35] border-white/20 text-white flex-1"
-                        placeholder="123456789"
-                        required
-                      />
+                      <Input id="phone" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} className="bg-[#1a1f35] border-white/20 text-white flex-1" placeholder="123456789" required />
                     </div>
                     {phoneError && <p className="text-red-400 text-sm mt-1">{phoneError}</p>}
                   </div>
@@ -1098,7 +1121,10 @@ const Index = () => {
                     <Label htmlFor="plan" className="text-white">
                       {t('investmentPlan')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <Select value={step1Data.plan} onValueChange={(value) => setStep1Data({...step1Data, plan: value})} required>
+                    <Select value={step1Data.plan} onValueChange={value => setStep1Data({
+                  ...step1Data,
+                  plan: value
+                })} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
                         <SelectValue placeholder={t('selectPlan')} className="text-gray-400" />
                       </SelectTrigger>
@@ -1114,7 +1140,10 @@ const Index = () => {
                     <Label htmlFor="experience" className="text-white">
                       {t('investmentExperience')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <Select value={step1Data.experience} onValueChange={(value) => setStep1Data({...step1Data, experience: value})} required>
+                    <Select value={step1Data.experience} onValueChange={value => setStep1Data({
+                  ...step1Data,
+                  experience: value
+                })} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
                         <SelectValue placeholder={t('selectExperience')} className="text-gray-400" />
                       </SelectTrigger>
@@ -1128,43 +1157,34 @@ const Index = () => {
 
                   <div>
                     <Label htmlFor="message" className="text-white">{t('additionalInformation')}</Label>
-                    <Textarea 
-                      id="message"
-                      value={step1Data.message}
-                      onChange={(e) => setStep1Data({...step1Data, message: e.target.value})}
-                      className="bg-[#1a1f35] border-white/20 text-white min-h-[100px]"
-                      placeholder={t('additionalInfoPlaceholder')}
-                    />
+                    <Textarea id="message" value={step1Data.message} onChange={e => setStep1Data({
+                  ...step1Data,
+                  message: e.target.value
+                })} className="bg-[#1a1f35] border-white/20 text-white min-h-[100px]" placeholder={t('additionalInfoPlaceholder')} />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6"
-                  >
+                  <Button type="submit" className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6">
                     {t('continueStep2')}
                   </Button>
-                </form>
-              ) : (
-                <form onSubmit={handleStep2Submit} className="space-y-6">
+                </form> : <form onSubmit={handleStep2Submit} className="space-y-6">
                   <div>
                     <Label htmlFor="jobTitle" className="text-white">
                       {t('jobTitle')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <Input 
-                      id="jobTitle" 
-                      value={step2Data.jobTitle}
-                      onChange={(e) => setStep2Data({...step2Data, jobTitle: e.target.value})}
-                      className="bg-[#1a1f35] border-white/20 text-white"
-                      placeholder={`${t('jobTitle')}...`}
-                      required
-                    />
+                    <Input id="jobTitle" value={step2Data.jobTitle} onChange={e => setStep2Data({
+                  ...step2Data,
+                  jobTitle: e.target.value
+                })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('jobTitle')}...`} required />
                   </div>
 
                   <div>
                     <Label htmlFor="annualIncome" className="text-white">
                       {t('annualIncome')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <Select value={step2Data.annualIncome} onValueChange={(value) => setStep2Data({...step2Data, annualIncome: value})} required>
+                    <Select value={step2Data.annualIncome} onValueChange={value => setStep2Data({
+                  ...step2Data,
+                  annualIncome: value
+                })} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
                         <SelectValue placeholder={t('annualIncome')} className="text-gray-400" />
                       </SelectTrigger>
@@ -1182,16 +1202,17 @@ const Index = () => {
                     <Label htmlFor="citizenship" className="text-white">
                       {t('citizenship')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <Select value={step2Data.citizenship} onValueChange={(value) => setStep2Data({...step2Data, citizenship: value})} required>
+                    <Select value={step2Data.citizenship} onValueChange={value => setStep2Data({
+                  ...step2Data,
+                  citizenship: value
+                })} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
                         <SelectValue placeholder={t('citizenship')} className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
-                        {countries.map((country) => (
-                          <SelectItem key={country} value={country.toLowerCase().replace(/\s+/g, '-')} className="text-gray-400">
+                        {countries.map(country => <SelectItem key={country} value={country.toLowerCase().replace(/\s+/g, '-')} className="text-gray-400">
                             {country}
-                          </SelectItem>
-                        ))}
+                          </SelectItem>)}
                       </SelectContent>
                     </Select>
                   </div>
@@ -1200,16 +1221,17 @@ const Index = () => {
                     <Label htmlFor="residency" className="text-white">
                       {t('residency')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <Select value={step2Data.residency} onValueChange={(value) => setStep2Data({...step2Data, residency: value})} required>
+                    <Select value={step2Data.residency} onValueChange={value => setStep2Data({
+                  ...step2Data,
+                  residency: value
+                })} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
                         <SelectValue placeholder={t('residency')} className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
-                        {countries.map((country) => (
-                          <SelectItem key={country} value={country.toLowerCase().replace(/\s+/g, '-')} className="text-gray-400">
+                        {countries.map(country => <SelectItem key={country} value={country.toLowerCase().replace(/\s+/g, '-')} className="text-gray-400">
                             {country}
-                          </SelectItem>
-                        ))}
+                          </SelectItem>)}
                       </SelectContent>
                     </Select>
                   </div>
@@ -1218,21 +1240,20 @@ const Index = () => {
                     <Label htmlFor="mortgage" className="text-white">
                       {t('mortgage')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <Input 
-                      id="mortgage" 
-                      value={step2Data.mortgage}
-                      onChange={(e) => setStep2Data({...step2Data, mortgage: e.target.value})}
-                      className="bg-[#1a1f35] border-white/20 text-white"
-                      placeholder="$50,000 or None"
-                      required
-                    />
+                    <Input id="mortgage" value={step2Data.mortgage} onChange={e => setStep2Data({
+                  ...step2Data,
+                  mortgage: e.target.value
+                })} className="bg-[#1a1f35] border-white/20 text-white" placeholder="$50,000 or None" required />
                   </div>
 
                   <div>
                     <Label htmlFor="financialSituation" className="text-white">
                       {t('financialSituation')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <Select value={step2Data.financialSituation} onValueChange={(value) => setStep2Data({...step2Data, financialSituation: value})} required>
+                    <Select value={step2Data.financialSituation} onValueChange={value => setStep2Data({
+                  ...step2Data,
+                  financialSituation: value
+                })} required>
                       <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
                         <SelectValue placeholder={t('financialSituation')} className="text-gray-400" />
                       </SelectTrigger>
@@ -1252,22 +1273,14 @@ const Index = () => {
                   </div>
 
                   <div className="flex gap-4">
-                    <Button 
-                      type="button"
-                      onClick={() => setApplicationStep(1)}
-                      className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg py-6"
-                    >
+                    <Button type="button" onClick={() => setApplicationStep(1)} className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg py-6">
                       {t('backStep1')}
                     </Button>
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6"
-                    >
+                    <Button type="submit" className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6">
                       {t('submitApplication')}
                     </Button>
                   </div>
-                </form>
-              )}
+                </form>}
 
               <div className="flex items-center justify-center space-x-2 mt-6 text-sm text-gray-400">
                 <Lock size={16} />
@@ -1295,7 +1308,7 @@ const Index = () => {
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                   <div className="w-8 h-8 bg-[#1877F2] rounded-full flex items-center justify-center hover:bg-[#1877F2]/80 transition-colors">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                     </svg>
                   </div>
                 </a>
@@ -1365,8 +1378,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
