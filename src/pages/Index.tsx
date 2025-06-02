@@ -1,13 +1,36 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, TrendingUp, Shield, Zap, BarChart3, Users, Star, ChevronDown } from "lucide-react";
+import { CheckCircle, TrendingUp, Shield, Zap, BarChart3, Users, Star, ChevronDown, Instagram, Twitter } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useTranslations } from "@/hooks/useTranslations";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 const Index = () => {
   const { t } = useTranslations();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+    },
+  });
+
+  const onSubmit = async (data: any) => {
+    setIsSubmitting(true);
+    console.log("Form submitted:", data);
+    // Handle form submission here
+    setTimeout(() => {
+      setIsSubmitting(false);
+      alert("Application submitted successfully!");
+    }, 1000);
+  };
 
   const features = [
     {
@@ -139,6 +162,101 @@ const Index = () => {
           <div className="container mx-auto px-6 text-center">
             <p className="text-lg font-semibold mb-2">Join Our Exclusive Investment Program</p>
             <p className="text-sm opacity-90">Limited spots available - Apply now for priority access</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Application Form Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-md mx-auto">
+            <Card className="border-0 shadow-lg">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl font-bold text-gray-900">Apply Now</CardTitle>
+                <CardDescription>Join our exclusive investment program</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    <FormField
+                      control={form.control}
+                      name="firstName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>First Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Enter your first name" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="lastName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Last Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Enter your last name" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email Address</FormLabel>
+                          <FormControl>
+                            <Input type="email" placeholder="Enter your email" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Phone Number</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Enter your phone number" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-[#0c9467] hover:bg-[#0c9467]/90 text-white"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Submitting..." : "Apply Now"}
+                    </Button>
+                  </form>
+                </Form>
+                
+                <div className="mt-6 text-center">
+                  <p className="text-sm text-gray-600 mb-4">Follow us on social media</p>
+                  <div className="flex justify-center space-x-4">
+                    <a href="#" className="text-gray-400 hover:text-[#0c9467] transition-colors">
+                      <Instagram className="h-6 w-6" />
+                    </a>
+                    <a href="#" className="text-gray-400 hover:text-[#0c9467] transition-colors">
+                      <Twitter className="h-6 w-6" />
+                    </a>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
