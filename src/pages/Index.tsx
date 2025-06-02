@@ -2,12 +2,25 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, TrendingUp, Shield, Zap, BarChart3, Users, Star, ChevronDown } from "lucide-react";
+import { CheckCircle, TrendingUp, Shield, Zap, BarChart3, Users, Star, ChevronDown, Globe, Instagram, Twitter } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useTranslations } from "@/hooks/useTranslations";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 const Index = () => {
-  const { t } = useTranslations();
+  const { t, changeLanguage, currentLanguage } = useTranslations();
+
+  const languages = [
+    { code: 'en', name: 'English', nativeName: 'English' },
+    { code: 'pl', name: 'Polish', nativeName: 'Polski' },
+    { code: 'de', name: 'German', nativeName: 'Deutsch' },
+    { code: 'es', name: 'Spanish', nativeName: 'Español' },
+    { code: 'ru', name: 'Russian', nativeName: 'Русский' },
+    { code: 'fr', name: 'French', nativeName: 'Français' },
+    { code: 'ar', name: 'Arabic', nativeName: 'العربية' },
+    { code: 'tr', name: 'Turkish', nativeName: 'Türkçe' }
+  ];
 
   const features = [
     {
@@ -81,26 +94,72 @@ const Index = () => {
       role: "Managing Partner at Haun Ventures",
       content: "Incite AI has revolutionized our investment strategy. The precision and insights are unmatched.",
       rating: 5,
-      avatar: "/lovable-uploads/56d38ce7-8f1e-4893-8651-5591dea78890.png"
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
     },
     {
       name: "Jill Malandrino", 
       role: "Global Markets Reporter at Nasdaq",
       content: "The real-time analytics have given us a significant edge in fast-moving markets.",
       rating: 5,
-      avatar: "/lovable-uploads/98f528c7-6c3b-4fa4-907f-eeb151c5e95f.png"
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
     },
     {
       name: "Rebecca Lynn",
       role: "Co-Founder and General Partner at Canvas Ventures", 
       content: "Incite AI's risk management tools have helped us navigate volatile markets with confidence.",
       rating: 5,
-      avatar: "/lovable-uploads/a2dabffc-b0b6-4eb0-9751-60a6dae1cd48.png"
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    }
+  ];
+
+  const steps = [
+    {
+      number: "01",
+      title: "Create Account",
+      description: "Sign up in minutes with our streamlined registration process."
+    },
+    {
+      number: "02", 
+      title: "Verify Identity",
+      description: "Complete secure identity verification to protect your investments."
+    },
+    {
+      number: "03",
+      title: "Fund Account",
+      description: "Deposit funds using multiple secure payment methods."
+    },
+    {
+      number: "04",
+      title: "Start Trading",
+      description: "Begin trading with AI-powered insights and advanced tools."
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+      {/* Language Selector */}
+      <div className="fixed top-4 right-4 z-50">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" size="sm" className="bg-white/90 backdrop-blur-sm">
+              <Globe className="h-4 w-4 mr-2" />
+              <ChevronDown className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="bg-white border shadow-lg">
+            {languages.map((lang) => (
+              <DropdownMenuItem
+                key={lang.code}
+                onClick={() => changeLanguage(lang.code as any)}
+                className={currentLanguage === lang.code ? "bg-gray-100" : ""}
+              >
+                {lang.nativeName}
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 text-white">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
@@ -122,13 +181,6 @@ const Index = () => {
                 className="bg-[#0c9467] hover:bg-[#0c9467]/90 text-white px-8 py-4 text-lg font-semibold cta-button cta-primary transform hover:scale-105 transition-all duration-300"
               >
                 Start Your Journey Now
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold cta-button cta-secondary transform hover:scale-105 transition-all duration-300"
-              >
-                Try Incite AI
               </Button>
             </div>
           </div>
@@ -183,6 +235,99 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cutting-Edge Trading Platform Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Cutting-Edge Trading Platform</h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Experience the future of trading with our AI-powered platform designed for modern investors.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center">
+                  <CheckCircle className="h-6 w-6 text-[#0c9467] mr-4" />
+                  <span className="text-gray-700">Real-time market analysis</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-6 w-6 text-[#0c9467] mr-4" />
+                  <span className="text-gray-700">Advanced charting tools</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-6 w-6 text-[#0c9467] mr-4" />
+                  <span className="text-gray-700">Automated trading strategies</span>
+                </div>
+              </div>
+              <Button 
+                size="lg" 
+                className="bg-[#0c9467] hover:bg-[#0c9467]/90 text-white px-8 py-4 text-lg font-semibold"
+              >
+                Try Incite AI Now
+              </Button>
+            </div>
+            <div className="relative">
+              <div className="bg-gradient-to-br from-[#0c9467] to-blue-600 rounded-lg p-8 text-white">
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="bg-white/20 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold">$1.2M</div>
+                    <div className="text-sm opacity-80">Portfolio Value</div>
+                  </div>
+                  <div className="bg-white/20 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-green-300">+24.5%</div>
+                    <div className="text-sm opacity-80">Monthly Return</div>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span>AAPL</span>
+                    <span className="text-green-300">+2.4%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>TSLA</span>
+                    <span className="text-green-300">+5.1%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>NVDA</span>
+                    <span className="text-green-300">+8.7%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Steps to Get Started */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Steps to Get Started</h2>
+            <p className="text-xl text-gray-600">Begin your investment journey in just four simple steps</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {steps.map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-[#0c9467] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                  {step.number}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <Button 
+              size="lg" 
+              className="bg-[#0c9467] hover:bg-[#0c9467]/90 text-white px-8 py-4 text-lg font-semibold"
+            >
+              Start Right Now
+            </Button>
           </div>
         </div>
       </section>
@@ -248,11 +393,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* What Industry Experts Say */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Industry Experts Say</h2>
             <p className="text-xl text-gray-600">Trusted by leading investors and institutions</p>
           </div>
           
@@ -284,8 +429,72 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Apply Form Section */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Apply for Exclusive Access</h2>
+              <p className="text-xl text-gray-600">Join our elite investment program</p>
+            </div>
+            
+            <Card className="shadow-lg">
+              <CardContent className="p-8">
+                <form className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                      <input 
+                        type="text" 
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0c9467] focus:border-transparent"
+                        placeholder="Enter your first name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                      <input 
+                        type="text" 
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0c9467] focus:border-transparent"
+                        placeholder="Enter your last name"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                    <input 
+                      type="email" 
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0c9467] focus:border-transparent"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Investment Experience</label>
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0c9467] focus:border-transparent">
+                      <option>Beginner (Less than 1 year)</option>
+                      <option>Intermediate (1-5 years)</option>
+                      <option>Advanced (5+ years)</option>
+                      <option>Professional</option>
+                    </select>
+                  </div>
+                  
+                  <Button 
+                    type="submit"
+                    size="lg" 
+                    className="w-full bg-[#0c9467] hover:bg-[#0c9467]/90 text-white py-4 text-lg font-semibold"
+                  >
+                    Apply Now
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('faq')}</h2>
@@ -323,7 +532,11 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">Incite AI</h3>
-              <p className="text-gray-400">Empowering investors with AI-driven insights and precision trading tools.</p>
+              <p className="text-gray-400 mb-4">Empowering investors with AI-driven insights and precision trading tools.</p>
+              <div className="flex space-x-4">
+                <Instagram className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+                <Twitter className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+              </div>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
@@ -337,6 +550,14 @@ const Index = () => {
                 <li><a href="/risk-disclosure" className="hover:text-white transition-colors">Risk Disclosure</a></li>
               </ul>
             </div>
+            <div>
+              <h4 className="font-semibold mb-4">Resources</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">API</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
+              </ul>
+            </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 Incite AI. All rights reserved.</p>
@@ -345,7 +566,7 @@ const Index = () => {
       </footer>
 
       {/* Mobile Sticky CTA Bar */}
-      <div className="mobile-cta-bar">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 md:hidden z-40">
         <div className="flex gap-2">
           <Button 
             size="sm" 
@@ -358,7 +579,7 @@ const Index = () => {
             size="sm"
             className="flex-1 cta-button cta-secondary"
           >
-            Try Incite AI
+            Try Incite AI Now
           </Button>
         </div>
       </div>
