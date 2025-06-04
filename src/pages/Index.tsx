@@ -813,13 +813,16 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            {/* Expert 3 */}
+            {/* Expert 3 - Rebecca Lynn */}
             <Card className="bg-[#0a0e1a] border-[#00d4aa]/30 p-8 transform hover:scale-105 transition-all duration-300">
               <CardContent className="p-0">
                 <div className="text-center mb-6">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                    RL
-                  </div>
+                  <Avatar className="w-20 h-20 mx-auto mb-4">
+                    <AvatarImage src="/lovable-uploads/e69dc72f-be50-48f4-907a-cbb10bbcfa3b.png" alt="Rebecca Lynn" />
+                    <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold text-2xl">
+                      RL
+                    </AvatarFallback>
+                  </Avatar>
                   <h4 className="font-semibold text-white text-lg">Rebecca Lynn</h4>
                   <p className="text-[#00d4aa] text-sm font-medium">General Partner, Canvas Ventures</p>
                 </div>
