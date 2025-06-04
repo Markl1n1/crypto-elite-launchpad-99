@@ -1125,51 +1125,11 @@ const Index = () => {
                     {phoneError && <p className="text-red-400 text-sm mt-1">{phoneError}</p>}
                   </div>
 
-                  <div>
-                    <Label htmlFor="plan" className="text-white">
-                      {t('investmentPlan')} <span className="text-red-400">{t('required')}</span>
-                    </Label>
-                    <Select value={step1Data.plan} onValueChange={value => setStep1Data({
-                  ...step1Data,
-                  plan: value
-                })} required>
-                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder={t('selectPlan')} className="text-gray-400" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
-                        <SelectItem value="standard" className="text-gray-400">{t('standardPlanOption')}</SelectItem>
-                        <SelectItem value="pro" disabled className="text-gray-400">{t('proPlanOption')}</SelectItem>
-                        <SelectItem value="advanced" className="text-gray-400">{t('advancedPlanOption')}</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
+                  
 
-                  <div>
-                    <Label htmlFor="experience" className="text-white">
-                      {t('investmentExperience')} <span className="text-red-400">{t('required')}</span>
-                    </Label>
-                    <Select value={step1Data.experience} onValueChange={value => setStep1Data({
-                  ...step1Data,
-                  experience: value
-                })} required>
-                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder={t('selectExperience')} className="text-gray-400" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
-                        <SelectItem value="beginner" className="text-gray-400">{t('beginnerExperience')}</SelectItem>
-                        <SelectItem value="intermediate" className="text-gray-400">{t('intermediateExperience')}</SelectItem>
-                        <SelectItem value="advanced" className="text-gray-400">{t('advancedExperience')}</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
+                  
 
-                  <div>
-                    <Label htmlFor="message" className="text-white">{t('additionalInformation')}</Label>
-                    <Textarea id="message" value={step1Data.message} onChange={e => setStep1Data({
-                  ...step1Data,
-                  message: e.target.value
-                })} className="bg-[#1a1f35] border-white/20 text-white min-h-[100px]" placeholder={t('additionalInfoPlaceholder')} />
-                  </div>
+                  
 
                   <Button type="submit" className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6">
                     {t('continueStep2')}
