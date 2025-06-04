@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Send, MessageCircle, Star, Users, Award } from 'lucide-react';
@@ -819,7 +818,7 @@ const Index = () => {
               <CardContent className="p-0">
                 <div className="text-center mb-6">
                   <Avatar className="w-20 h-20 mx-auto mb-4">
-                    <AvatarImage src="/lovable-uploads/e69dc72f-be50-48f4-907a-cbb10bbcfa3b.png" alt="Rebecca Lynn" />
+                    <AvatarImage src="/lovable-uploads/8cea484c-1f52-4aee-84ba-e8fb9cb7e7e3.png" alt="Rebecca Lynn" />
                     <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold text-2xl">
                       RL
                     </AvatarFallback>
