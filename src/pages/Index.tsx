@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Send, MessageCircle, Star, Users, Award } from 'lucide-react';
@@ -795,13 +794,16 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            {/* Expert 2 */}
+            {/* Expert 2 - Tarun Chitra */}
             <Card className="bg-[#0a0e1a] border-[#00d4aa]/30 p-8 transform hover:scale-105 transition-all duration-300">
               <CardContent className="p-0">
                 <div className="text-center mb-6">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                    TC
-                  </div>
+                  <Avatar className="w-20 h-20 mx-auto mb-4">
+                    <AvatarImage src="/lovable-uploads/ffe495da-a680-4b06-bb34-b1178c165835.png" alt="Tarun Chitra" />
+                    <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold text-2xl">
+                      TC
+                    </AvatarFallback>
+                  </Avatar>
                   <h4 className="font-semibold text-white text-lg">Tarun Chitra</h4>
                   <p className="text-[#00d4aa] text-sm font-medium">CEO & Founder, Gauntlet</p>
                 </div>
