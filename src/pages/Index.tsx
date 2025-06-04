@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Send, MessageCircle, Star, Users, Award } from 'lucide-react';
@@ -21,31 +22,31 @@ const languages = [{
   flag: '🇺🇸'
 }, {
   code: 'pl',
-  name: 'Polish',
+  name: 'Polski',
   flag: '🇵🇱'
 }, {
   code: 'de',
-  name: 'German',
+  name: 'Deutsch',
   flag: '🇩🇪'
 }, {
   code: 'es',
-  name: 'Spanish',
+  name: 'Español',
   flag: '🇪🇸'
 }, {
   code: 'ru',
-  name: 'Russian',
+  name: 'Русский',
   flag: '🇷🇺'
 }, {
   code: 'fr',
-  name: 'French',
+  name: 'Français',
   flag: '🇫🇷'
 }, {
   code: 'ar',
-  name: 'Arabic',
+  name: 'العربية',
   flag: '🇸🇦'
 }, {
   code: 'tr',
-  name: 'Turkish',
+  name: 'Türkçe',
   flag: '🇹🇷'
 }];
 
