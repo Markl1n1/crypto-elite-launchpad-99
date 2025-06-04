@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Send, MessageCircle, Star, Users, Award } from 'lucide-react';
@@ -10,6 +11,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { phoneCodes } from '@/data/phoneCodes';
 import { useTranslations } from '@/hooks/useTranslations';
 
@@ -774,13 +776,16 @@ const Index = () => {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Expert 1 */}
+            {/* Expert 1 - Jill Malandrino */}
             <Card className="bg-[#0a0e1a] border-[#00d4aa]/30 p-8 transform hover:scale-105 transition-all duration-300">
               <CardContent className="p-0">
                 <div className="text-center mb-6">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                    JM
-                  </div>
+                  <Avatar className="w-20 h-20 mx-auto mb-4">
+                    <AvatarImage src="/lovable-uploads/859db36d-dbb9-4b46-ae09-80ae2675c512.png" alt="Jill Malandrino" />
+                    <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold text-2xl">
+                      JM
+                    </AvatarFallback>
+                  </Avatar>
                   <h4 className="font-semibold text-white text-lg">Jill Malandrino</h4>
                   <p className="text-[#00d4aa] text-sm font-medium">Global Markets Reporter & Host, Nasdaq TradeTalks</p>
                 </div>
