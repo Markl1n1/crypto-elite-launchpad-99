@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Send, MessageCircle, Star, Users, Award } from 'lucide-react';
+import { Menu, X, ChevronDown, Zap, Lock, Edit, Shield, TrendingUp, ArrowRight, Mail, Phone, MapPin, Send, MessageCircle, Star, Users, Award, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -60,14 +60,13 @@ const Index = () => {
   } = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [applicationStep, setApplicationStep] = useState(1);
   const [phoneCode, setPhoneCode] = useState('+1');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [emailError, setEmailError] = useState('');
   const [phoneError, setPhoneError] = useState('');
 
-  // Form state for step 1
-  const [step1Data, setStep1Data] = useState({
+  // Form state for application (single step now)
+  const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
@@ -76,15 +75,6 @@ const Index = () => {
     message: ''
   });
 
-  // Form state for step 2
-  const [step2Data, setStep2Data] = useState({
-    jobTitle: '',
-    annualIncome: '',
-    citizenship: '',
-    residency: '',
-    mortgage: '',
-    financialSituation: ''
-  });
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -92,6 +82,7 @@ const Index = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({
       behavior: 'smooth'
@@ -110,28 +101,7 @@ const Index = () => {
     const phoneRegex = /^\d{6,15}$/;
     return phoneRegex.test(phone);
   };
-  const handleStep1Submit = (e: React.FormEvent) => {
-    e.preventDefault();
 
-    // Reset errors
-    setEmailError('');
-    setPhoneError('');
-    let hasErrors = false;
-
-    // Validate email
-    if (!validateEmail(step1Data.email)) {
-      setEmailError(t('validEmailRequired'));
-      hasErrors = true;
-    }
-
-    // Validate phone
-    if (!validatePhone(phoneNumber)) {
-      setPhoneError(t('validPhoneRequired'));
-      hasErrors = true;
-    }
-    if (hasErrors) return;
-    setApplicationStep(2);
-  };
   const submitToGoogleSheets = async (formData: any) => {
     try {
       const response = await fetch('https://script.google.com/macros/s/AKfycbzQ8_example/exec', {
@@ -147,33 +117,48 @@ const Index = () => {
       console.error('Error submitting to Google Sheets:', error);
     }
   };
-  const handleStep2Submit = async (e: React.FormEvent) => {
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Reset errors
+    setEmailError('');
+    setPhoneError('');
+    let hasErrors = false;
+
+    // Validate email
+    if (!validateEmail(formData.email)) {
+      setEmailError(t('validEmailRequired'));
+      hasErrors = true;
+    }
+
+    // Validate phone
+    if (!validatePhone(phoneNumber)) {
+      setPhoneError(t('validPhoneRequired'));
+      hasErrors = true;
+    }
+
+    if (hasErrors) return;
+
     // Prepare form data for Google Sheets
-    const formData = {
-      firstName: step1Data.firstName,
-      lastName: step1Data.lastName,
-      email: step1Data.email,
+    const submissionData = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
       phone: `${phoneCode}${phoneNumber}`,
-      plan: step1Data.plan,
-      experience: step1Data.experience,
-      message: step1Data.message,
-      jobTitle: step2Data.jobTitle,
-      annualIncome: step2Data.annualIncome,
-      citizenship: step2Data.citizenship,
-      residency: step2Data.residency,
-      mortgage: step2Data.mortgage,
-      financialSituation: step2Data.financialSituation,
+      plan: formData.plan,
+      experience: formData.experience,
+      message: formData.message,
       timestamp: new Date().toISOString()
     };
 
     // Submit to Google Sheets
-    await submitToGoogleSheets(formData);
+    await submitToGoogleSheets(submissionData);
 
     // Navigate to success page
     navigate('/success');
   };
+
   const currentLanguageData = languages.find(lang => lang.code === currentLanguage) || languages[0];
   const partners = [{
     name: 'BlackRock',
@@ -880,7 +865,9 @@ const Index = () => {
                     {t('limitedTrades')}
                   </li>
                 </ul>
-                <Badge className="bg-green-500/20 text-green-400 border-green-500 mb-4 self-start">8 {t('spotsAvailable')}</Badge>
+                <div className="flex justify-center mb-4">
+                  <Badge className="bg-green-500/20 text-green-400 border-green-500">8 {t('spotsAvailable')}</Badge>
+                </div>
                 <Button onClick={() => scrollToSection('apply')} className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold mt-auto">
                   {t('startNow')}
                 </Button>
@@ -925,7 +912,9 @@ const Index = () => {
                     {t('meetingsInvestors')}
                   </li>
                 </ul>
-                <Badge className="bg-red-500/20 text-red-400 border-red-500 mb-4 self-start">0 {t('spotsAvailable')}</Badge>
+                <div className="flex justify-center mb-4">
+                  <Badge className="bg-red-500/20 text-red-400 border-red-500">0 {t('spotsAvailable')}</Badge>
+                </div>
                 <Button disabled className="w-full bg-gray-600 cursor-not-allowed mt-auto">
                   {t('currentlyFull')}
                 </Button>
@@ -959,7 +948,9 @@ const Index = () => {
                     {t('companyGifts')}
                   </li>
                 </ul>
-                <Badge className="bg-green-500/20 text-green-400 border-green-500 mb-4 self-start">31 {t('spotsAvailable')}</Badge>
+                <div className="flex justify-center mb-4">
+                  <Badge className="bg-green-500/20 text-green-400 border-green-500">31 {t('spotsAvailable')}</Badge>
+                </div>
                 <Button onClick={() => scrollToSection('apply')} className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold mt-auto">
                   {t('startNow')}
                 </Button>
@@ -1066,189 +1057,138 @@ const Index = () => {
               {t('beginJourney')}
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              {t('applyNowTitle')} {applicationStep === 2 ? t('step2') : ''}
+              {t('applyNowTitle')}
             </h2>
           </div>
 
           <Card className="bg-[#0a0e1a] border-white/10 p-8">
             <CardContent className="p-0">
-              {applicationStep === 1 ? <form onSubmit={handleStep1Submit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <Label htmlFor="firstName" className="text-white">
-                        {t('firstName')} <span className="text-red-400">{t('required')}</span>
-                      </Label>
-                      <Input id="firstName" value={step1Data.firstName} onChange={e => setStep1Data({
-                    ...step1Data,
-                    firstName: e.target.value
-                  })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('firstName')}...`} required />
-                    </div>
-                    <div>
-                      <Label htmlFor="lastName" className="text-white">
-                        {t('lastName')} <span className="text-red-400">{t('required')}</span>
-                      </Label>
-                      <Input id="lastName" value={step1Data.lastName} onChange={e => setStep1Data({
-                    ...step1Data,
-                    lastName: e.target.value
-                  })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('lastName')}...`} required />
-                    </div>
-                  </div>
-
+              <form onSubmit={handleFormSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="email" className="text-white">
-                      {t('emailAddress')} <span className="text-red-400">{t('required')}</span>
+                    <Label htmlFor="firstName" className="text-white">
+                      {t('firstName')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <Input id="email" type="email" value={step1Data.email} onChange={e => setStep1Data({
-                  ...step1Data,
-                  email: e.target.value
-                })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('emailAddress')}...`} required />
-                    {emailError && <p className="text-red-400 text-sm mt-1">{emailError}</p>}
+                    <Input 
+                      id="firstName" 
+                      value={formData.firstName} 
+                      onChange={e => setFormData({...formData, firstName: e.target.value})} 
+                      className="bg-[#1a1f35] border-white/20 text-white" 
+                      placeholder={`${t('firstName')}...`} 
+                      required 
+                    />
                   </div>
-
                   <div>
-                    <Label htmlFor="phone" className="text-white">
-                      {t('phoneNumber')} <span className="text-red-400">{t('required')}</span>
+                    <Label htmlFor="lastName" className="text-white">
+                      {t('lastName')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <div className="flex gap-2">
-                      <Select value={phoneCode} onValueChange={setPhoneCode}>
-                        <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white w-32">
-                          <SelectValue className="text-gray-400" />
-                        </SelectTrigger>
-                        <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
-                          {phoneCodes.map((phone, index) => <SelectItem key={index} value={phone.code} className="text-gray-400">
-                              {phone.code}
-                            </SelectItem>)}
-                        </SelectContent>
-                      </Select>
-                      <Input id="phone" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} className="bg-[#1a1f35] border-white/20 text-white flex-1" placeholder="123456789" required />
-                    </div>
-                    {phoneError && <p className="text-red-400 text-sm mt-1">{phoneError}</p>}
+                    <Input 
+                      id="lastName" 
+                      value={formData.lastName} 
+                      onChange={e => setFormData({...formData, lastName: e.target.value})} 
+                      className="bg-[#1a1f35] border-white/20 text-white" 
+                      placeholder={`${t('lastName')}...`} 
+                      required 
+                    />
                   </div>
+                </div>
 
-                  
+                <div>
+                  <Label htmlFor="email" className="text-white">
+                    {t('emailAddress')} <span className="text-red-400">{t('required')}</span>
+                  </Label>
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    value={formData.email} 
+                    onChange={e => setFormData({...formData, email: e.target.value})} 
+                    className="bg-[#1a1f35] border-white/20 text-white" 
+                    placeholder={`${t('emailAddress')}...`} 
+                    required 
+                  />
+                  {emailError && <p className="text-red-400 text-sm mt-1">{emailError}</p>}
+                </div>
 
-                  
-
-                  
-
-                  <Button type="submit" className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6">
-                    {t('continueStep2')}
-                  </Button>
-                </form> : <form onSubmit={handleStep2Submit} className="space-y-6">
-                  <div>
-                    <Label htmlFor="jobTitle" className="text-white">
-                      {t('jobTitle')} <span className="text-red-400">{t('required')}</span>
-                    </Label>
-                    <Input id="jobTitle" value={step2Data.jobTitle} onChange={e => setStep2Data({
-                  ...step2Data,
-                  jobTitle: e.target.value
-                })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('jobTitle')}...`} required />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="annualIncome" className="text-white">
-                      {t('annualIncome')} <span className="text-red-400">{t('required')}</span>
-                    </Label>
-                    <Select value={step2Data.annualIncome} onValueChange={value => setStep2Data({
-                  ...step2Data,
-                  annualIncome: value
-                })} required>
-                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder={t('annualIncome')} className="text-gray-400" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
-                        <SelectItem value="up-to-10k" className="text-gray-400">{t('upTo10k')}</SelectItem>
-                        <SelectItem value="10k-25k" className="text-gray-400">{t('income10k25k')}</SelectItem>
-                        <SelectItem value="25k-50k" className="text-gray-400">{t('income25k50k')}</SelectItem>
-                        <SelectItem value="50k-100k" className="text-gray-400">{t('income50k100k')}</SelectItem>
-                        <SelectItem value="100k-plus" className="text-gray-400">{t('income100kPlus')}</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div>
-                    <Label htmlFor="citizenship" className="text-white">
-                      {t('citizenship')} <span className="text-red-400">{t('required')}</span>
-                    </Label>
-                    <Select value={step2Data.citizenship} onValueChange={value => setStep2Data({
-                  ...step2Data,
-                  citizenship: value
-                })} required>
-                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder={t('citizenship')} className="text-gray-400" />
+                <div>
+                  <Label htmlFor="phone" className="text-white">
+                    {t('phoneNumber')} <span className="text-red-400">{t('required')}</span>
+                  </Label>
+                  <div className="flex gap-2">
+                    <Select value={phoneCode} onValueChange={setPhoneCode}>
+                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white w-32">
+                        <SelectValue className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
-                        {countries.map(country => <SelectItem key={country} value={country.toLowerCase().replace(/\s+/g, '-')} className="text-gray-400">
-                            {country}
-                          </SelectItem>)}
+                        {phoneCodes.map((phone, index) => 
+                          <SelectItem key={index} value={phone.code} className="text-gray-400">
+                            {phone.code}
+                          </SelectItem>
+                        )}
                       </SelectContent>
                     </Select>
+                    <Input 
+                      id="phone" 
+                      value={phoneNumber} 
+                      onChange={e => setPhoneNumber(e.target.value)} 
+                      className="bg-[#1a1f35] border-white/20 text-white flex-1" 
+                      placeholder="123456789" 
+                      required 
+                    />
                   </div>
+                  {phoneError && <p className="text-red-400 text-sm mt-1">{phoneError}</p>}
+                </div>
 
-                  <div>
-                    <Label htmlFor="residency" className="text-white">
-                      {t('residency')} <span className="text-red-400">{t('required')}</span>
-                    </Label>
-                    <Select value={step2Data.residency} onValueChange={value => setStep2Data({
-                  ...step2Data,
-                  residency: value
-                })} required>
-                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder={t('residency')} className="text-gray-400" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
-                        {countries.map(country => <SelectItem key={country} value={country.toLowerCase().replace(/\s+/g, '-')} className="text-gray-400">
-                            {country}
-                          </SelectItem>)}
-                      </SelectContent>
-                    </Select>
-                  </div>
+                <div>
+                  <Label htmlFor="plan" className="text-white">
+                    {t('investmentPlan')} <span className="text-red-400">{t('required')}</span>
+                  </Label>
+                  <Select value={formData.plan} onValueChange={value => setFormData({...formData, plan: value})} required>
+                    <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
+                      <SelectValue placeholder={t('investmentPlan')} className="text-gray-400" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
+                      <SelectItem value="standard" className="text-gray-400">{t('standardPlan')}</SelectItem>
+                      <SelectItem value="pro" className="text-gray-400">{t('proPlan')}</SelectItem>
+                      <SelectItem value="advanced" className="text-gray-400">{t('advancedPlan')}</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
 
-                  <div>
-                    <Label htmlFor="mortgage" className="text-white">
-                      {t('mortgage')} <span className="text-red-400">{t('required')}</span>
-                    </Label>
-                    <Input id="mortgage" value={step2Data.mortgage} onChange={e => setStep2Data({
-                  ...step2Data,
-                  mortgage: e.target.value
-                })} className="bg-[#1a1f35] border-white/20 text-white" placeholder="$50,000 or None" required />
-                  </div>
+                <div>
+                  <Label htmlFor="experience" className="text-white">
+                    {t('experience')} <span className="text-red-400">{t('required')}</span>
+                  </Label>
+                  <Select value={formData.experience} onValueChange={value => setFormData({...formData, experience: value})} required>
+                    <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
+                      <SelectValue placeholder={t('experience')} className="text-gray-400" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
+                      <SelectItem value="beginner" className="text-gray-400">{t('beginner')}</SelectItem>
+                      <SelectItem value="intermediate" className="text-gray-400">{t('intermediate')}</SelectItem>
+                      <SelectItem value="advanced" className="text-gray-400">{t('advanced')}</SelectItem>
+                      <SelectItem value="expert" className="text-gray-400">{t('expert')}</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
 
-                  <div>
-                    <Label htmlFor="financialSituation" className="text-white">
-                      {t('financialSituation')} <span className="text-red-400">{t('required')}</span>
-                    </Label>
-                    <Select value={step2Data.financialSituation} onValueChange={value => setStep2Data({
-                  ...step2Data,
-                  financialSituation: value
-                })} required>
-                      <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                        <SelectValue placeholder={t('financialSituation')} className="text-gray-400" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
-                        <SelectItem value="1" className="text-gray-400">{t('financialSit1')}</SelectItem>
-                        <SelectItem value="2" className="text-gray-400">2</SelectItem>
-                        <SelectItem value="3" className="text-gray-400">3</SelectItem>
-                        <SelectItem value="4" className="text-gray-400">4</SelectItem>
-                        <SelectItem value="5" className="text-gray-400">5</SelectItem>
-                        <SelectItem value="6" className="text-gray-400">6</SelectItem>
-                        <SelectItem value="7" className="text-gray-400">7</SelectItem>
-                        <SelectItem value="8" className="text-gray-400">8</SelectItem>
-                        <SelectItem value="9" className="text-gray-400">9</SelectItem>
-                        <SelectItem value="10" className="text-gray-400">{t('financialSit10')}</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
+                <div>
+                  <Label htmlFor="message" className="text-white">
+                    {t('additionalMessage')} <span className="text-gray-400">({t('optional')})</span>
+                  </Label>
+                  <Textarea 
+                    id="message" 
+                    value={formData.message} 
+                    onChange={e => setFormData({...formData, message: e.target.value})} 
+                    className="bg-[#1a1f35] border-white/20 text-white" 
+                    placeholder={`${t('additionalMessage')}...`} 
+                    rows={4} 
+                  />
+                </div>
 
-                  <div className="flex gap-4">
-                    <Button type="button" onClick={() => setApplicationStep(1)} className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg py-6">
-                      {t('backStep1')}
-                    </Button>
-                    <Button type="submit" className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6">
-                      {t('submitApplication')}
-                    </Button>
-                  </div>
-                </form>}
+                <Button type="submit" className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6">
+                  {t('applyNow')}
+                </Button>
+              </form>
 
               <div className="flex items-center justify-center space-x-2 mt-6 text-sm text-gray-400">
                 <Lock size={16} />
@@ -1285,9 +1225,14 @@ const Index = () => {
                     <Send size={16} className="text-white" />
                   </div>
                 </a>
-                <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer">
-                  <div className="w-8 h-8 bg-[#25D366] rounded-full flex items-center justify-center hover:bg-[#25D366]/80 transition-colors">
-                    <MessageCircle size={16} className="text-white" />
+                <a href="https://instagram.com/inciteai" target="_blank" rel="noopener noreferrer">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#E4405F] to-[#F56040] rounded-full flex items-center justify-center hover:opacity-80 transition-colors">
+                    <Instagram size={16} className="text-white" />
+                  </div>
+                </a>
+                <a href="https://x.com/inciteai" target="_blank" rel="noopener noreferrer">
+                  <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+                    <X size={16} className="text-white" />
                   </div>
                 </a>
               </div>
