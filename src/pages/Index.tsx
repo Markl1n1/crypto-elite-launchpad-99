@@ -74,7 +74,6 @@ const Index = () => {
     experience: '',
     message: ''
   });
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -82,7 +81,6 @@ const Index = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({
       behavior: 'smooth'
@@ -101,7 +99,6 @@ const Index = () => {
     const phoneRegex = /^\d{6,15}$/;
     return phoneRegex.test(phone);
   };
-
   const submitToGoogleSheets = async (formData: any) => {
     try {
       const response = await fetch('https://script.google.com/macros/s/AKfycbzQ8_example/exec', {
@@ -117,7 +114,6 @@ const Index = () => {
       console.error('Error submitting to Google Sheets:', error);
     }
   };
-
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -137,7 +133,6 @@ const Index = () => {
       setPhoneError(t('validPhoneRequired'));
       hasErrors = true;
     }
-
     if (hasErrors) return;
 
     // Prepare form data for Google Sheets
@@ -158,7 +153,6 @@ const Index = () => {
     // Navigate to success page
     navigate('/success');
   };
-
   const currentLanguageData = languages.find(lang => lang.code === currentLanguage) || languages[0];
   const partners = [{
     name: 'BlackRock',
@@ -1069,27 +1063,19 @@ const Index = () => {
                     <Label htmlFor="firstName" className="text-white">
                       {t('firstName')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <Input 
-                      id="firstName" 
-                      value={formData.firstName} 
-                      onChange={e => setFormData({...formData, firstName: e.target.value})} 
-                      className="bg-[#1a1f35] border-white/20 text-white" 
-                      placeholder={`${t('firstName')}...`} 
-                      required 
-                    />
+                    <Input id="firstName" value={formData.firstName} onChange={e => setFormData({
+                    ...formData,
+                    firstName: e.target.value
+                  })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('firstName')}...`} required />
                   </div>
                   <div>
                     <Label htmlFor="lastName" className="text-white">
                       {t('lastName')} <span className="text-red-400">{t('required')}</span>
                     </Label>
-                    <Input 
-                      id="lastName" 
-                      value={formData.lastName} 
-                      onChange={e => setFormData({...formData, lastName: e.target.value})} 
-                      className="bg-[#1a1f35] border-white/20 text-white" 
-                      placeholder={`${t('lastName')}...`} 
-                      required 
-                    />
+                    <Input id="lastName" value={formData.lastName} onChange={e => setFormData({
+                    ...formData,
+                    lastName: e.target.value
+                  })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('lastName')}...`} required />
                   </div>
                 </div>
 
@@ -1097,15 +1083,10 @@ const Index = () => {
                   <Label htmlFor="email" className="text-white">
                     {t('emailAddress')} <span className="text-red-400">{t('required')}</span>
                   </Label>
-                  <Input 
-                    id="email" 
-                    type="email" 
-                    value={formData.email} 
-                    onChange={e => setFormData({...formData, email: e.target.value})} 
-                    className="bg-[#1a1f35] border-white/20 text-white" 
-                    placeholder={`${t('emailAddress')}...`} 
-                    required 
-                  />
+                  <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                  ...formData,
+                  email: e.target.value
+                })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('emailAddress')}...`} required />
                   {emailError && <p className="text-red-400 text-sm mt-1">{emailError}</p>}
                 </div>
 
@@ -1119,71 +1100,21 @@ const Index = () => {
                         <SelectValue className="text-gray-400" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
-                        {phoneCodes.map((phone, index) => 
-                          <SelectItem key={index} value={phone.code} className="text-gray-400">
+                        {phoneCodes.map((phone, index) => <SelectItem key={index} value={phone.code} className="text-gray-400">
                             {phone.code}
-                          </SelectItem>
-                        )}
+                          </SelectItem>)}
                       </SelectContent>
                     </Select>
-                    <Input 
-                      id="phone" 
-                      value={phoneNumber} 
-                      onChange={e => setPhoneNumber(e.target.value)} 
-                      className="bg-[#1a1f35] border-white/20 text-white flex-1" 
-                      placeholder="123456789" 
-                      required 
-                    />
+                    <Input id="phone" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} className="bg-[#1a1f35] border-white/20 text-white flex-1" placeholder="123456789" required />
                   </div>
                   {phoneError && <p className="text-red-400 text-sm mt-1">{phoneError}</p>}
                 </div>
 
-                <div>
-                  <Label htmlFor="plan" className="text-white">
-                    {t('investmentPlan')} <span className="text-red-400">{t('required')}</span>
-                  </Label>
-                  <Select value={formData.plan} onValueChange={value => setFormData({...formData, plan: value})} required>
-                    <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                      <SelectValue placeholder={t('investmentPlan')} className="text-gray-400" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
-                      <SelectItem value="standard" className="text-gray-400">{t('standardPlan')}</SelectItem>
-                      <SelectItem value="pro" className="text-gray-400">{t('proPlan')}</SelectItem>
-                      <SelectItem value="advanced" className="text-gray-400">{t('advancedPlan')}</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                
 
-                <div>
-                  <Label htmlFor="experience" className="text-white">
-                    {t('experience')} <span className="text-red-400">{t('required')}</span>
-                  </Label>
-                  <Select value={formData.experience} onValueChange={value => setFormData({...formData, experience: value})} required>
-                    <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                      <SelectValue placeholder={t('experience')} className="text-gray-400" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-[#1a1f35] border-white/20 z-50">
-                      <SelectItem value="beginner" className="text-gray-400">{t('beginner')}</SelectItem>
-                      <SelectItem value="intermediate" className="text-gray-400">{t('intermediate')}</SelectItem>
-                      <SelectItem value="advanced" className="text-gray-400">{t('advanced')}</SelectItem>
-                      <SelectItem value="expert" className="text-gray-400">{t('expert')}</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                
 
-                <div>
-                  <Label htmlFor="message" className="text-white">
-                    {t('additionalMessage')} <span className="text-gray-400">({t('optional')})</span>
-                  </Label>
-                  <Textarea 
-                    id="message" 
-                    value={formData.message} 
-                    onChange={e => setFormData({...formData, message: e.target.value})} 
-                    className="bg-[#1a1f35] border-white/20 text-white" 
-                    placeholder={`${t('additionalMessage')}...`} 
-                    rows={4} 
-                  />
-                </div>
+                
 
                 <Button type="submit" className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6">
                   {t('applyNow')}
