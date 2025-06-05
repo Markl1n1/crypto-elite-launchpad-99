@@ -6,7 +6,7 @@ const partners = [{
   logo: 'https://logo.clearbit.com/blackrock.com'
 }, {
   name: 'Goldman Sachs',
-  logo: 'https://logo.clearbit.com/goldmansachs.com'
+  logo: '/lovable-uploads/8e537a70-a7f3-41a2-bffd-09d279977760.png'
 }, {
   name: 'JPMorgan',
   logo: 'https://logo.clearbit.com/jpmorgan.com'
@@ -42,7 +42,7 @@ const partners = [{
   logo: 'https://logo.clearbit.com/fidelity.com'
 }, {
   name: 'Charles Schwab',
-  logo: 'https://logo.clearbit.com/schwab.com'
+  logo: '/lovable-uploads/34bd4338-931b-4466-ac18-b6e371dba259.png'
 }, {
   name: 'TD Ameritrade',
   logo: 'https://logo.clearbit.com/tdameritrade.com'
@@ -54,7 +54,7 @@ const partners = [{
   logo: 'https://logo.clearbit.com/robinhood.com'
 }, {
   name: 'Interactive Brokers',
-  logo: 'https://logo.clearbit.com/interactivebrokers.com'
+  logo: '/lovable-uploads/cd33a977-b5cf-49c1-813d-9d0375e2fffd.png'
 }, {
   name: 'Morgan Stanley',
   logo: 'https://logo.clearbit.com/morganstanley.com'
@@ -138,7 +138,7 @@ const partners = [{
   logo: 'https://logo.clearbit.com/rentec.com'
 }, {
   name: 'Two Sigma',
-  logo: 'https://logo.clearbit.com/twosigma.com'
+  logo: '/lovable-uploads/8c4ad041-b32f-4b99-ab5e-ef240932986b.png'
 }, {
   name: 'Citadel',
   logo: 'https://logo.clearbit.com/citadel.com'
@@ -166,6 +166,15 @@ const partners = [{
 }, {
   name: 'Grok',
   logo: '/lovable-uploads/b77e48d1-9712-4790-9824-9d5cf0570058.png'
+}, {
+  name: 'Pantera',
+  logo: '/lovable-uploads/4042221c-cf7e-4e66-b589-48adaa5326a1.png'
+}, {
+  name: 'Virtu Financial',
+  logo: '/lovable-uploads/11ce648a-63c3-45f8-b742-85fc1e8ee724.png'
+}, {
+  name: 'Webull',
+  logo: '/lovable-uploads/547358b7-1d87-4edb-8377-aa78f39b1ca4.png'
 }];
 
 export const PartnersSection = () => {
