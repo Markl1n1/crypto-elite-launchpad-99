@@ -396,10 +396,12 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
-              {t('eliteInvestmentOpportunities')}
+              <span className="bg-gradient-to-r from-[#00d4aa] via-[#00b896] to-[#0066ff] bg-clip-text text-transparent font-semibold">
+                {t('eliteInvestmentOpportunities')}
+              </span>
             </Badge>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-[#00d4aa] via-[#00b896] to-[#0066ff] bg-clip-text text-transparent">
               {t('heroTitle')}
             </h1>
             
@@ -1109,8 +1111,6 @@ const Index = () => {
                   </div>
                   {phoneError && <p className="text-red-400 text-sm mt-1">{phoneError}</p>}
                 </div>
-
-                
 
                 
 
