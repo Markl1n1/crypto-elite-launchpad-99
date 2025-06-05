@@ -317,8 +317,8 @@ const Index = () => {
     name: 'Apple',
     logo: 'https://logo.clearbit.com/apple.com'
   }, {
-    name: 'Google',
-    logo: 'https://logo.clearbit.com/google.com'
+    name: 'Grok',
+    logo: '/lovable-uploads/b77e48d1-9712-4790-9824-9d5cf0570058.png'
   }];
   return <div className="min-h-screen bg-[#0a0e1a] text-white overflow-x-hidden">
       {/* Header Navigation */}
