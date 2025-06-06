@@ -13,7 +13,7 @@ import { useTranslations } from '@/hooks/useTranslations';
 
 export const ApplicationSection = () => {
   const navigate = useNavigate();
-  const { t } = useTranslations();
+  const { t, currentLanguage } = useTranslations();
   const [phoneCode, setPhoneCode] = useState('+1');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -85,6 +85,9 @@ export const ApplicationSection = () => {
 
     if (hasErrors) return;
 
+    // Store the current language in localStorage for the success page
+    localStorage.setItem('applicationLanguage', currentLanguage);
+
     // Prepare form data for Google Sheets
     const submissionData = {
       firstName: formData.firstName,
@@ -94,7 +97,8 @@ export const ApplicationSection = () => {
       plan: formData.plan,
       experience: formData.experience,
       message: formData.message,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      language: currentLanguage
     };
 
     // Submit to Google Sheets
@@ -105,7 +109,7 @@ export const ApplicationSection = () => {
   };
 
   return (
-    <section id="apply" className="py-20 bg-[#1a1f35] border-b-2 border-[#00d4aa]/30">
+    <section id="apply" className="py-20 bg-[#1a1f35] border-b-2" style={{ borderColor: 'rgb(0 212 170 / 0.3)' }}>
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="text-center mb-12">
           <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">

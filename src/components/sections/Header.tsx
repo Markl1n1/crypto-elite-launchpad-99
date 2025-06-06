@@ -103,10 +103,38 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
           </Button>
         </nav>
 
-        {/* Mobile Menu Toggle */}
-        <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Menu Toggle & Language Switcher */}
+        <div className="md:hidden flex items-center space-x-2">
+          {/* Mobile Language Switcher */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="sm" className="flex items-center space-x-2 hover:text-[#00d4aa] relative">
+                <Globe size={20} />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent 
+              className="bg-[#1a1f35] border-white/20 z-[60] min-w-[180px]" 
+              align="end"
+              sideOffset={5}
+              avoidCollisions={true}
+            >
+              {languages.map(lang => 
+                <DropdownMenuItem 
+                  key={lang.code} 
+                  onClick={() => changeLanguage(lang.code as any)} 
+                  className="text-white hover:bg-[#00d4aa]/20 cursor-pointer flex items-center space-x-3"
+                >
+                  <span className="text-xl">{lang.flag}</span>
+                  <span>{lang.name}</span>
+                </DropdownMenuItem>
+              )}
+            </DropdownMenuContent>
+          </DropdownMenu>
+          
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}

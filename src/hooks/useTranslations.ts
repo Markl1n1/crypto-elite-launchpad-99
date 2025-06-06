@@ -10,6 +10,13 @@ export const useTranslations = () => {
   // Auto-detect language based on browser language with better matching
   useEffect(() => {
     const detectLanguage = () => {
+      // Check if there's a stored language from application form
+      const storedLanguage = localStorage.getItem('applicationLanguage');
+      if (storedLanguage && Object.keys(translations).includes(storedLanguage)) {
+        setCurrentLanguage(storedLanguage as Language);
+        return;
+      }
+
       const browserLang = navigator.language.toLowerCase();
       const browserLangCode = browserLang.split('-')[0]; // Get just the language part (e.g., 'en' from 'en-US')
       
@@ -40,6 +47,8 @@ export const useTranslations = () => {
 
   const changeLanguage = (lang: Language) => {
     setCurrentLanguage(lang);
+    // Clear stored application language when manually changing language
+    localStorage.removeItem('applicationLanguage');
   };
 
   return {

@@ -181,7 +181,7 @@ export const PartnersSection = () => {
   const { t } = useTranslations();
 
   return (
-    <section className="py-20 bg-[#1a1f35] overflow-hidden" style={{ borderBottom: '4px solid rgb(0 212 170 / 0.5)' }}>
+    <section className="py-20 bg-[#1a1f35] overflow-hidden border-b-2" style={{ borderColor: 'rgb(0 212 170 / 0.3)' }}>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           {t('ourPartners')}
@@ -198,16 +198,20 @@ export const PartnersSection = () => {
               >
                 <img 
                   src={partner.logo} 
-                  alt={partner.name} 
-                  className="h-8 object-contain filter brightness-0 invert opacity-70" 
+                  alt={partner.name}
+                  className="h-8 w-auto object-contain filter brightness-0 invert opacity-70" 
+                  loading="eager"
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;
-                    const fallback = target.nextElementSibling as HTMLElement;
+                    const textSpan = target.nextElementSibling as HTMLElement;
                     target.style.display = 'none';
-                    if (fallback) fallback.style.display = 'block';
+                    if (textSpan) {
+                      textSpan.style.display = 'block';
+                      textSpan.className = 'text-gray-300 font-semibold text-sm';
+                    }
                   }} 
                 />
-                <span className="text-gray-300 font-semibold hidden">{partner.name}</span>
+                <span className="text-gray-300 font-semibold text-sm hidden">{partner.name}</span>
               </div>
             ))}
           </div>
