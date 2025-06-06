@@ -96,7 +96,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
   };
 
   const prevTestimonials = () => {
-    setCurrentIndex((prev) => (prev - 4 < 0 : Math.max(0, testimonials.length - 4) : prev - 4));
+    setCurrentIndex((prev) => (prev - 4 < 0 ? Math.max(0, testimonials.length - 4) : prev - 4));
   };
 
   const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + 4);
