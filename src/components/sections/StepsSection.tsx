@@ -26,13 +26,13 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Step 1 */}
             <div className="relative">
-              <Card className="bg-[#0066ff] border-white/10 p-8 text-center relative h-96 transform hover:scale-105 transition-all duration-300">
+              <Card className="bg-[#0a0e1a] border-white/10 p-8 text-center relative h-96 transform hover:scale-105 transition-all duration-300">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-white text-[#0066ff] w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+                  <div className="bg-[#00d4aa] text-black w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
                 </div>
                 <CardContent className="p-0 h-full flex flex-col justify-center">
-                  <div className="bg-white p-4 rounded-lg inline-block mb-6 mx-auto">
-                    <Edit size={32} className="text-[#0066ff]" />
+                  <div className="bg-[#00d4aa] p-4 rounded-lg inline-block mb-6 mx-auto">
+                    <Edit size={32} className="text-black" />
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-white">{t('leaveApplication')}</h3>
                   <p className="text-white/80">{t('applicationDescription')}</p>
@@ -42,15 +42,15 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
 
             {/* Step 2 */}
             <div className="relative">
-              <Card className="bg-[#0066ff] border-white/10 p-8 text-center relative h-96 transform hover:scale-105 transition-all duration-300">
+              <Card className="bg-[#0a0e1a] border-white/10 p-8 text-center relative h-96 transform hover:scale-105 transition-all duration-300">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-white text-[#0066ff] w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
+                  <div className="bg-[#00d4aa] text-black w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
                 </div>
                 <CardContent className="p-0 h-full flex flex-col justify-center">
-                  <div className="bg-white p-4 rounded-lg inline-block mb-6 mx-auto">
-                    <Shield size={32} className="text-[#0066ff]" />
+                  <div className="bg-[#00d4aa] p-4 rounded-lg inline-block mb-6 mx-auto">
+                    <Shield size={32} className="text-black" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-white">{t('getGuidanceAccess')}</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-white">Get Professional Advisor</h3>
                   <p className="text-white/80">{t('guidanceDescription')}</p>
                 </CardContent>
               </Card>
@@ -58,13 +58,13 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
 
             {/* Step 3 */}
             <div className="relative">
-              <Card className="bg-[#0066ff] border-white/10 p-8 text-center relative h-96 transform hover:scale-105 transition-all duration-300">
+              <Card className="bg-[#0a0e1a] border-white/10 p-8 text-center relative h-96 transform hover:scale-105 transition-all duration-300">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-white text-[#0066ff] w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
+                  <div className="bg-[#00d4aa] text-black w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
                 </div>
                 <CardContent className="p-0 h-full flex flex-col justify-center">
-                  <div className="bg-white p-4 rounded-lg inline-block mb-6 mx-auto">
-                    <TrendingUp size={32} className="text-[#0066ff]" />
+                  <div className="bg-[#00d4aa] p-4 rounded-lg inline-block mb-6 mx-auto">
+                    <TrendingUp size={32} className="text-black" />
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-white">{t('growBalance')}</h3>
                   <p className="text-white/80">{t('growDescription')}</p>

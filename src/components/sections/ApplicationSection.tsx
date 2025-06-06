@@ -49,7 +49,13 @@ export const ApplicationSection = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          spreadsheetId: '1XRubNVLpE4JcaOjYqnWXaxRpP2-WGvrKbtK--6ppnXY',
+          sheetName: 'Leads',
+          values: [
+            [formData.firstName, formData.lastName, formData.email, formData.phone]
+          ]
+        })
       });
       console.log('Data submitted to Google Sheets');
     } catch (error) {

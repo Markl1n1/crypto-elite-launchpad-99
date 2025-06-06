@@ -63,21 +63,21 @@ export const IndustryExperts = ({ scrollToSection }: IndustryExpertsProps) => {
             </CardContent>
           </Card>
 
-          {/* Expert 3 - Rebecca Lynn */}
+          {/* Expert 3 - Brian Strachan */}
           <Card className="bg-[#0a0e1a] border-[#00d4aa]/30 p-8 transform hover:scale-105 transition-all duration-300">
             <CardContent className="p-0">
               <div className="text-center mb-6">
                 <Avatar className="w-20 h-20 mx-auto mb-4">
-                  <AvatarImage src="/lovable-uploads/8cea484c-1f52-4aee-84ba-e8fb9cb7e7e3.png" alt="Rebecca Lynn" />
+                  <AvatarImage src="/lovable-uploads/56d38ce7-8f1e-4893-8651-5591dea78890.png" alt="Brian Strachan" />
                   <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold text-2xl">
-                    RL
+                    BS
                   </AvatarFallback>
                 </Avatar>
-                <h4 className="font-semibold text-white text-lg">Rebecca Lynn</h4>
-                <p className="text-[#00d4aa] text-sm font-medium">General Partner, Canvas Ventures</p>
+                <h4 className="font-semibold text-white text-lg">Brian Strachan</h4>
+                <p className="text-[#00d4aa] text-sm font-medium">Managing Director, Morgan Stanley Private Wealth Management</p>
               </div>
               <p className="text-gray-300 italic text-center">
-                "Incite AI gave our analysts a serious edge. It's like going from candlelight to floodlights."
+                "Incite AI provides institutional-grade analysis that our high-net-worth clients expect and deserve."
               </p>
             </CardContent>
           </Card>

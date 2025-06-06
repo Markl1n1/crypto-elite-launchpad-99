@@ -33,15 +33,17 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
                 ))}
               </div>
               <p className="text-gray-300 mb-6 italic">
-                "Your AI stock app seems doing great so far. I tested asking last weekend what would be the best 5 NYSE stocks to buy last Monday, 100% of the 5, had price increases for that day, & 80% during the week. I am further testing it for this week including currency pairs. If it turns out consistent, thru further testing, I would likely recommend this to my clients & trading, investment groups. Wishing you best."
+                "Finally found something that helps me understand the market better! As someone who sells cars, I appreciate when things are explained simply. This AI actually makes investing feel less scary."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-lg">
-                  L
-                </div>
+                <img 
+                  src="/lovable-uploads/98f528c7-6c3b-4fa4-907f-eeb151c5e95f.png" 
+                  alt="Lodrino M." 
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div className="ml-4">
                   <h4 className="font-semibold text-white">Lodrino M.</h4>
-                  <p className="text-gray-400 text-sm">Investment Advisor</p>
+                  <p className="text-gray-400 text-sm">Automotive Retailer</p>
                 </div>
               </div>
             </CardContent>
@@ -56,15 +58,17 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
                 ))}
               </div>
               <p className="text-gray-300 mb-6 italic">
-                "I think this is a game changer for me and lots of others who do not really understand how to navigate the money market. Good Job!"
+                "Love the clean interface design! As a designer myself, I appreciate good UX. But more importantly, it's helping me grow my savings alongside my creative work."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-lg">
-                  J
-                </div>
+                <img 
+                  src="/lovable-uploads/e69dc72f-be50-48f4-907a-cbb10bbcfa3b.png" 
+                  alt="Justin F." 
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div className="ml-4">
                   <h4 className="font-semibold text-white">Justin F.</h4>
-                  <p className="text-gray-400 text-sm">Retail Investor</p>
+                  <p className="text-gray-400 text-sm">Designer</p>
                 </div>
               </div>
             </CardContent>
@@ -79,15 +83,17 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
                 ))}
               </div>
               <p className="text-gray-300 mb-6 italic">
-                "As a full time trader, Incite can help me source some information regarding market trends/news quickly. I purchased out of curiosity for the future 'trader x' feature to see what that entails."
+                "Running my coffee shop keeps me busy, but this AI helps me check my investments quickly during breaks. It's like having a financial advisor that understands small business owners."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-lg">
-                  L
-                </div>
+                <img 
+                  src="/lovable-uploads/a2dabffc-b0b6-4eb0-9751-60a6dae1cd48.png" 
+                  alt="Loxton G." 
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div className="ml-4">
                   <h4 className="font-semibold text-white">Loxton G.</h4>
-                  <p className="text-gray-400 text-sm">Full-Time Trader</p>
+                  <p className="text-gray-400 text-sm">Coffee Shop Owner</p>
                 </div>
               </div>
             </CardContent>
@@ -102,15 +108,17 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
                 ))}
               </div>
               <p className="text-gray-300 mb-6 italic">
-                "I think your product has an awesome concept, and I really like it. I've used it for a month. Enhancing its ability to crawl more real-time data could make it truly outstanding!"
+                "The data processing capabilities are impressive! As a sysadmin, I appreciate how efficiently it handles market information. Great tool for automating investment research."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#00d4aa] to-[#0066ff] flex items-center justify-center text-white font-bold text-lg">
-                  A
-                </div>
+                <img 
+                  src="/lovable-uploads/d77102a6-0db1-4f68-9154-d76b9c8831b2.png" 
+                  alt="Anton T." 
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div className="ml-4">
                   <h4 className="font-semibold text-white">Anton T.</h4>
-                  <p className="text-gray-400 text-sm">Data Analyst</p>
+                  <p className="text-gray-400 text-sm">System Administrator</p>
                 </div>
               </div>
             </CardContent>

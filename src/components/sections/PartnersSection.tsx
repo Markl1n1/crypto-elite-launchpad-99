@@ -6,7 +6,7 @@ const partners = [{
   logo: 'https://logo.clearbit.com/blackrock.com'
 }, {
   name: 'Goldman Sachs',
-  logo: '/lovable-uploads/8e537a70-a7f3-41a2-bffd-09d279977760.png'
+  logo: '/lovable-uploads/187857cc-a312-485f-8334-78e237867f29.png'
 }, {
   name: 'JPMorgan',
   logo: 'https://logo.clearbit.com/jpmorgan.com'
@@ -16,9 +16,6 @@ const partners = [{
 }, {
   name: 'PayPal',
   logo: 'https://logo.clearbit.com/paypal.com'
-}, {
-  name: 'Visa',
-  logo: 'https://logo.clearbit.com/visa.com'
 }, {
   name: 'Mastercard',
   logo: 'https://logo.clearbit.com/mastercard.com'
@@ -42,19 +39,19 @@ const partners = [{
   logo: 'https://logo.clearbit.com/fidelity.com'
 }, {
   name: 'Charles Schwab',
-  logo: '/lovable-uploads/34bd4338-931b-4466-ac18-b6e371dba259.png'
+  logo: '/lovable-uploads/8a2151b0-d08c-4e82-ad2d-b63153df659e.png'
 }, {
   name: 'TD Ameritrade',
   logo: 'https://logo.clearbit.com/tdameritrade.com'
 }, {
   name: 'E*TRADE',
-  logo: 'https://logo.clearbit.com/etrade.com'
+  logo: '/lovable-uploads/c7524817-82e4-4f9e-8ae5-d4ab0c862f35.png'
 }, {
   name: 'Robinhood',
   logo: 'https://logo.clearbit.com/robinhood.com'
 }, {
   name: 'Interactive Brokers',
-  logo: '/lovable-uploads/cd33a977-b5cf-49c1-813d-9d0375e2fffd.png'
+  logo: '/lovable-uploads/ae5576a8-4325-4c68-bbcf-623cdc338a01.png'
 }, {
   name: 'Morgan Stanley',
   logo: 'https://logo.clearbit.com/morganstanley.com'
@@ -138,7 +135,7 @@ const partners = [{
   logo: 'https://logo.clearbit.com/rentec.com'
 }, {
   name: 'Two Sigma',
-  logo: '/lovable-uploads/8c4ad041-b32f-4b99-ab5e-ef240932986b.png'
+  logo: '/lovable-uploads/8e6fae17-0758-4e04-b2b6-7d678596958c.png'
 }, {
   name: 'Citadel',
   logo: 'https://logo.clearbit.com/citadel.com'
@@ -168,13 +165,16 @@ const partners = [{
   logo: '/lovable-uploads/b77e48d1-9712-4790-9824-9d5cf0570058.png'
 }, {
   name: 'Pantera',
-  logo: '/lovable-uploads/4042221c-cf7e-4e66-b589-48adaa5326a1.png'
+  logo: '/lovable-uploads/8d238fc3-3770-4d84-b04e-20f59922f9b5.png'
 }, {
   name: 'Virtu Financial',
-  logo: '/lovable-uploads/11ce648a-63c3-45f8-b742-85fc1e8ee724.png'
+  logo: '/lovable-uploads/6bb94be7-6750-4265-97cf-2e2b09c7b9e2.png'
 }, {
   name: 'Webull',
-  logo: '/lovable-uploads/547358b7-1d87-4edb-8377-aa78f39b1ca4.png'
+  logo: '/lovable-uploads/d96b5037-4feb-4523-9644-68da59c95695.png'
+}, {
+  name: 'TradeStation',
+  logo: '/lovable-uploads/f3b1da55-f20a-492f-b3a0-beafbb902cd2.png'
 }];
 
 export const PartnersSection = () => {
