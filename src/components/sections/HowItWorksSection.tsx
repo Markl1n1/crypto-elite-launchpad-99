@@ -19,7 +19,7 @@ export const HowItWorksSection = ({ scrollToSection }: HowItWorksSectionProps) =
           {/* Screenshot */}
           <div className="lg:col-span-2">
             <div className="relative">
-              <img src="/lovable-uploads/98f528c7-6c3b-4fa4-907f-eeb151c5e95f.png" alt="Incite AI Simple Request Process" className="w-full h-auto rounded-2xl shadow-2xl" />
+              <img src="/lovable-uploads/12132be5-2229-43c7-93d9-43f5df5ca0a8.png" alt="Incite AI Simple Request Process" className="w-full h-auto rounded-2xl shadow-2xl" />
             </div>
           </div>
 
