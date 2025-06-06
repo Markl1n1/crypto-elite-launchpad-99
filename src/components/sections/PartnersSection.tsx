@@ -5,8 +5,8 @@ const partners = [{
   name: 'BlackRock',
   logo: 'https://logo.clearbit.com/blackrock.com'
 }, {
-  name: 'Goldman Sachs',
-  logo: '/lovable-uploads/187857cc-a312-485f-8334-78e237867f29.png'
+  name: 'Two Sigma',
+  logo: '/lovable-uploads/45dda7d1-3fda-4b64-8cce-43971e7d5555.png'
 }, {
   name: 'JPMorgan',
   logo: 'https://logo.clearbit.com/jpmorgan.com'
@@ -39,19 +39,19 @@ const partners = [{
   logo: 'https://logo.clearbit.com/fidelity.com'
 }, {
   name: 'Charles Schwab',
-  logo: '/lovable-uploads/8a2151b0-d08c-4e82-ad2d-b63153df659e.png'
+  logo: '/lovable-uploads/cf43e08d-c15e-4d10-89d3-df60aeffaf73.png'
 }, {
   name: 'TD Ameritrade',
   logo: 'https://logo.clearbit.com/tdameritrade.com'
 }, {
   name: 'E*TRADE',
-  logo: '/lovable-uploads/c7524817-82e4-4f9e-8ae5-d4ab0c862f35.png'
+  logo: '/lovable-uploads/907b4126-5457-4b23-95d7-80b80af3f7f2.png'
 }, {
   name: 'Robinhood',
   logo: 'https://logo.clearbit.com/robinhood.com'
 }, {
   name: 'Interactive Brokers',
-  logo: '/lovable-uploads/ae5576a8-4325-4c68-bbcf-623cdc338a01.png'
+  logo: '/lovable-uploads/da3a7c59-1495-46c4-801a-75f84b2e9d91.png'
 }, {
   name: 'Morgan Stanley',
   logo: 'https://logo.clearbit.com/morganstanley.com'
@@ -134,9 +134,6 @@ const partners = [{
   name: 'Renaissance Technologies',
   logo: 'https://logo.clearbit.com/rentec.com'
 }, {
-  name: 'Two Sigma',
-  logo: '/lovable-uploads/8e6fae17-0758-4e04-b2b6-7d678596958c.png'
-}, {
   name: 'Citadel',
   logo: 'https://logo.clearbit.com/citadel.com'
 }, {
@@ -165,23 +162,26 @@ const partners = [{
   logo: '/lovable-uploads/b77e48d1-9712-4790-9824-9d5cf0570058.png'
 }, {
   name: 'Pantera',
-  logo: '/lovable-uploads/8d238fc3-3770-4d84-b04e-20f59922f9b5.png'
+  logo: '/lovable-uploads/cc72d12e-2e59-48cd-b6e8-69939c5909bf.png'
 }, {
   name: 'Virtu Financial',
-  logo: '/lovable-uploads/6bb94be7-6750-4265-97cf-2e2b09c7b9e2.png'
+  logo: '/lovable-uploads/d023fa60-dcdc-4885-8b61-d918341857ff.png'
 }, {
   name: 'Webull',
-  logo: '/lovable-uploads/d96b5037-4feb-4523-9644-68da59c95695.png'
+  logo: '/lovable-uploads/a8ab74ff-364a-46f6-8e26-0669271ceb2b.png'
 }, {
   name: 'TradeStation',
-  logo: '/lovable-uploads/f3b1da55-f20a-492f-b3a0-beafbb902cd2.png'
+  logo: '/lovable-uploads/feff8e9a-70c1-4be7-bb4c-89a461f275a0.png'
+}, {
+  name: 'Goldman Sachs',
+  logo: '/lovable-uploads/72abe75f-33aa-4c9d-91fb-f35082cc876d.png'
 }];
 
 export const PartnersSection = () => {
   const { t } = useTranslations();
 
   return (
-    <section className="py-20 bg-[#1a1f35] overflow-hidden border-b-4 border-[#00d4aa]">
+    <section className="py-20 bg-[#1a1f35] overflow-hidden" style={{ borderBottom: '4px solid rgb(0 212 170 / 0.5)' }}>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           {t('ourPartners')}
