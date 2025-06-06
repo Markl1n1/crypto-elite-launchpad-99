@@ -1,4 +1,3 @@
-
 export const translations = {
   en: {
     // Navigation
@@ -30,6 +29,24 @@ export const translations = {
     successRate: "Success rate",
     clientSuccessRate: "Client Success Rate",
     eliteMembers: "Elite Members",
+    
+    // Trading Platform Section
+    advancedTechnology: "Advanced Technology",
+    cuttingEdgeTradingPlatform: "Cutting-Edge Trading Platform",
+    tradingPlatformDescription: "Our proprietary AI technology analyzes market patterns and executes trades with precision, delivering consistent results for our elite clients.",
+    aiPoweredPredictions: "AI-Powered Predictions",
+    aiPredictionsDescription: "Advanced machine learning algorithms analyze market data in real-time to identify profitable opportunities.",
+    bankGradeSecurity: "Bank-Grade Security",
+    securityDescription: "Your investments are protected with enterprise-level security and encryption protocols.",
+    
+    // Steps Section
+    simpleProcess: "Simple Process",
+    stepsToGetStarted: "3 Steps to Get Started",
+    leaveApplication: "Leave Application",
+    applicationDescription: "Fill out our simple application form to begin your journey to financial freedom.",
+    guidanceDescription: "Get matched with a dedicated advisor who will guide you through the investment process.",
+    growBalance: "Grow Your Balance",
+    growDescription: "Watch your portfolio grow with our AI-powered trading strategies and expert guidance.",
     
     // Application Section
     beginJourney: "Begin Your Journey",
@@ -150,6 +167,24 @@ export const translations = {
     clientSuccessRate: "Wskaźnik Sukcesu Klientów",
     eliteMembers: "Członkowie Elite",
     
+    // Trading Platform Section
+    advancedTechnology: "Zaawansowana Technologia",
+    cuttingEdgeTradingPlatform: "Nowoczesna Platforma Handlowa",
+    tradingPlatformDescription: "Nasza zastrzeżona technologia AI analizuje wzorce rynkowe i wykonuje transakcje z precyzją, dostarczając stałe rezultaty dla naszych elitarnych klientów.",
+    aiPoweredPredictions: "Predykcje Napędzane AI",
+    aiPredictionsDescription: "Zaawansowane algorytmy uczenia maszynowego analizują dane rynkowe w czasie rzeczywistym, aby zidentyfikować zyskowne możliwości.",
+    bankGradeSecurity: "Bezpieczeństwo na Poziomie Bankowym",
+    securityDescription: "Twoje inwestycje są chronione zabezpieczeniami i protokołami szyfrowania na poziomie przedsiębiorstwa.",
+    
+    // Steps Section
+    simpleProcess: "Prosty Proces",
+    stepsToGetStarted: "3 Kroki do Rozpoczęcia",
+    leaveApplication: "Zostaw Aplikację",
+    applicationDescription: "Wypełnij nasz prosty formularz aplikacyjny, aby rozpocząć swoją podróż do wolności finansowej.",
+    guidanceDescription: "Zostań połączony z dedykowanym doradcą, który poprowadzi Cię przez proces inwestycyjny.",
+    growBalance: "Powiększ Swoje Saldo",
+    growDescription: "Obserwuj, jak Twój portfel rośnie dzięki naszym strategiom handlowym napędzanym AI i eksperckim wskazówkom.",
+    
     // Application Section
     beginJourney: "Rozpocznij Swoją Podróż",
     applyNowTitle: "Aplikuj o Dostęp Elite",
@@ -268,6 +303,24 @@ export const translations = {
     successRate: "Erfolgsrate",
     clientSuccessRate: "Kunden-Erfolgsrate",
     eliteMembers: "Elite-Mitglieder",
+    
+    // Trading Platform Section
+    advancedTechnology: "Fortschrittliche Technologie",
+    cuttingEdgeTradingPlatform: "Hochmoderne Trading-Plattform",
+    tradingPlatformDescription: "Unsere eigene KI-Technologie analysiert Marktmuster und führt Trades mit Präzision aus, um konsistente Ergebnisse für unsere Elite-Kunden zu liefern.",
+    aiPoweredPredictions: "KI-gestützte Vorhersagen",
+    aiPredictionsDescription: "Fortschrittliche maschinelle Lernalgorithmen analysieren Marktdaten in Echtzeit, um profitable Gelegenheiten zu identifizieren.",
+    bankGradeSecurity: "Bank-Level-Sicherheit",
+    securityDescription: "Ihre Investitionen sind durch Sicherheits- und Verschlüsselungsprotokolle auf Unternehmensebene geschützt.",
+    
+    // Steps Section
+    simpleProcess: "Einfacher Prozess",
+    stepsToGetStarted: "3 Schritte zum Einstieg",
+    leaveApplication: "Bewerbung hinterlassen",
+    applicationDescription: "Füllen Sie unser einfaches Bewerbungsformular aus, um Ihre Reise zur finanziellen Freiheit zu beginnen.",
+    guidanceDescription: "Lassen Sie sich mit einem dedizierten Berater verbinden, der Sie durch den Investmentprozess führt.",
+    growBalance: "Lassen Sie Ihr Guthaben wachsen",
+    growDescription: "Beobachten Sie, wie Ihr Portfolio mit unseren KI-gestützten Trading-Strategien und Expertenberatung wächst.",
     
     // Application Section
     beginJourney: "Beginnen Sie Ihre Reise",
@@ -388,6 +441,24 @@ export const translations = {
     clientSuccessRate: "Tasa de Éxito del Cliente",
     eliteMembers: "Miembros Elite",
     
+    // Trading Platform Section
+    advancedTechnology: "Tecnología Avanzada",
+    cuttingEdgeTradingPlatform: "Plataforma de Trading Vanguardista",
+    tradingPlatformDescription: "Nuestra tecnología de IA propietaria analiza patrones de mercado y ejecuta operaciones con precisión, entregando resultados consistentes para nuestros clientes elite.",
+    aiPoweredPredictions: "Predicciones Impulsadas por IA",
+    aiPredictionsDescription: "Los algoritmos avanzados de aprendizaje automático analizan datos de mercado en tiempo real para identificar oportunidades rentables.",
+    bankGradeSecurity: "Seguridad de Grado Bancario",
+    securityDescription: "Sus inversiones están protegidas con protocolos de seguridad y encriptación de nivel empresarial.",
+    
+    // Steps Section
+    simpleProcess: "Proceso Simple",
+    stepsToGetStarted: "3 Pasos para Comenzar",
+    leaveApplication: "Dejar Aplicación",
+    applicationDescription: "Complete nuestro formulario de aplicación simple para comenzar su viaje hacia la libertad financiera.",
+    guidanceDescription: "Conéctese con un asesor dedicado que lo guiará a través del proceso de inversión.",
+    growBalance: "Haga Crecer Su Saldo",
+    growDescription: "Observe cómo crece su portafolio con nuestras estrategias de trading impulsadas por IA y orientación experta.",
+    
     // Application Section
     beginJourney: "Comienza Tu Viaje",
     applyNowTitle: "Aplicar para Acceso Elite",
@@ -506,6 +577,24 @@ export const translations = {
     successRate: "Показатель успеха",
     clientSuccessRate: "Показатель Успеха Клиентов",
     eliteMembers: "Элитные Участники",
+    
+    // Trading Platform Section
+    advancedTechnology: "Передовая Технология",
+    cuttingEdgeTradingPlatform: "Передовая Торговая Платформа",
+    tradingPlatformDescription: "Наша собственная ИИ-технология анализирует рыночные паттерны и выполняет сделки с точностью, обеспечивая стабильные результаты для наших элитных клиентов.",
+    aiPoweredPredictions: "ИИ-Прогнозы",
+    aiPredictionsDescription: "Продвинутые алгоритмы машинного обучения анализируют рыночные данные в реальном времени для выявления прибыльных возможностей.",
+    bankGradeSecurity: "Безопасность Банковского Уровня",
+    securityDescription: "Ваши инвестиции защищены протоколами безопасности и шифрования корпоративного уровня.",
+    
+    // Steps Section
+    simpleProcess: "Простой Процесс",
+    stepsToGetStarted: "3 Шага для Начала",
+    leaveApplication: "Оставить Заявку",
+    applicationDescription: "Заполните нашу простую форму заявки, чтобы начать свой путь к финансовой свободе.",
+    guidanceDescription: "Получите личного консультанта, который проведет вас через инвестиционный процесс.",
+    growBalance: "Увеличивайте Баланс",
+    growDescription: "Наблюдайте, как растет ваш портфель с нашими ИИ-стратегиями торговли и экспертным руководством.",
     
     // Application Section
     beginJourney: "Начните Свой Путь",
@@ -626,6 +715,24 @@ export const translations = {
     clientSuccessRate: "Taux de Succès des Clients",
     eliteMembers: "Membres Elite",
     
+    // Trading Platform Section
+    advancedTechnology: "Technologie Avancée",
+    cuttingEdgeTradingPlatform: "Plateforme de Trading de Pointe",
+    tradingPlatformDescription: "Notre technologie IA propriétaire analyse les modèles de marché et exécute les trades avec précision, livrant des résultats cohérents pour nos clients d'élite.",
+    aiPoweredPredictions: "Prédictions Alimentées par IA",
+    aiPredictionsDescription: "Les algorithmes d'apprentissage automatique avancés analysent les données de marché en temps réel pour identifier les opportunités rentables.",
+    bankGradeSecurity: "Sécurité de Niveau Bancaire",
+    securityDescription: "Vos investissements sont protégés par des protocoles de sécurité et de cryptage de niveau entreprise.",
+    
+    // Steps Section
+    simpleProcess: "Processus Simple",
+    stepsToGetStarted: "3 Étapes pour Commencer",
+    leaveApplication: "Laisser une Candidature",
+    applicationDescription: "Remplissez notre formulaire de candidature simple pour commencer votre voyage vers la liberté financière.",
+    guidanceDescription: "Connectez-vous avec un conseiller dédié qui vous guidera à travers le processus d'investissement.",
+    growBalance: "Faites Croître Votre Solde",
+    growDescription: "Regardez votre portefeuille croître avec nos stratégies de trading alimentées par IA et les conseils d'experts.",
+    
     // Application Section
     beginJourney: "Commencez Votre Voyage",
     applyNowTitle: "Postuler pour l'Accès Elite",
@@ -745,6 +852,24 @@ export const translations = {
     clientSuccessRate: "معدل نجاح العملاء",
     eliteMembers: "أعضاء النخبة",
     
+    // Trading Platform Section
+    advancedTechnology: "التكنولوجيا المتقدمة",
+    cuttingEdgeTradingPlatform: "منصة تداول متطورة",
+    tradingPlatformDescription: "تقنية الذكاء الاصطناعي المملوكة لنا تحلل أنماط السوق وتنفذ الصفقات بدقة، مما يحقق نتائج متسقة لعملائنا النخبة.",
+    aiPoweredPredictions: "التنبؤات المدعومة بالذكاء الاصطناعي",
+    aiPredictionsDescription: "خوارزميات التعلم الآلي المتقدمة تحلل بيانات السوق في الوقت الفعلي لتحديد الفرص المربحة.",
+    bankGradeSecurity: "أمان على مستوى البنوك",
+    securityDescription: "استثماراتك محمية ببروتوكولات الأمان والتشفير على مستوى المؤسسات.",
+    
+    // Steps Section
+    simpleProcess: "عملية بسيطة",
+    stepsToGetStarted: "3 خطوات للبدء",
+    leaveApplication: "ترك الطلب",
+    applicationDescription: "املأ نموذج الطلب البسيط لدينا لبدء رحلتك نحو الحرية المالية.",
+    guidanceDescription: "تواصل مع مستشار مخصص سيرشدك خلال عملية الاستثمار.",
+    growBalance: "نمي رصيدك",
+    growDescription: "شاهد محفظتك تنمو مع استراتيجيات التداول المدعومة بالذكاء الاصطناعي والإرشاد المتخصص.",
+    
     // Application Section
     beginJourney: "ابدأ رحلتك",
     applyNowTitle: "التقديم للوصول النخبة",
@@ -863,6 +988,24 @@ export const translations = {
     successRate: "Başarı oranı",
     clientSuccessRate: "Müşteri Başarı Oranı",
     eliteMembers: "Elit Üyeler",
+    
+    // Trading Platform Section
+    advancedTechnology: "Gelişmiş Teknoloji",
+    cuttingEdgeTradingPlatform: "Son Teknoloji Ticaret Platformu",
+    tradingPlatformDescription: "Mülkiyetimizde olan AI teknolojimiz piyasa desenlerini analiz eder ve işlemleri hassasiyetle gerçekleştirir, elit müşterilerimiz için tutarlı sonuçlar sunar.",
+    aiPoweredPredictions: "AI Destekli Tahminler",
+    aiPredictionsDescription: "Gelişmiş makine öğrenimi algoritmaları, karlı fırsatları belirlemek için piyasa verilerini gerçek zamanlı analiz eder.",
+    bankGradeSecurity: "Banka Seviyesi Güvenlik",
+    securityDescription: "Yatırımlarınız kurumsal düzeyde güvenlik ve şifreleme protokolleri ile korunmaktadır.",
+    
+    // Steps Section
+    simpleProcess: "Basit Süreç",
+    stepsToGetStarted: "Başlamak için 3 Adım",
+    leaveApplication: "Başvuru Bırak",
+    applicationDescription: "Mali özgürlüğe giden yolculuğunuza başlamak için basit başvuru formumuzu doldurun.",
+    guidanceDescription: "Yatırım sürecinde size rehberlik edecek özel bir danışmanla bağlantı kurun.",
+    growBalance: "Bakiyenizi Büyütün",
+    growDescription: "AI destekli ticaret stratejilerimiz ve uzman rehberliği ile portföyünüzün büyümesini izleyin.",
     
     // Application Section
     beginJourney: "Yolculuğunuza Başlayın",
