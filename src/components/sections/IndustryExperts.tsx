@@ -11,7 +11,7 @@ interface IndustryExpertsProps {
 
 export const IndustryExperts = ({ scrollToSection }: IndustryExpertsProps) => {
   return (
-    <section className="py-20 bg-[#1a1f35] border-b-4 border-[#00d4aa]">
+    <section className="py-20 bg-[#1a1f35] border-b-4" style={{ borderColor: 'rgb(0 212 170 / 0.5)' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
@@ -68,7 +68,7 @@ export const IndustryExperts = ({ scrollToSection }: IndustryExpertsProps) => {
             <CardContent className="p-0">
               <div className="text-center mb-6">
                 <Avatar className="w-20 h-20 mx-auto mb-4">
-                  <AvatarImage src="/lovable-uploads/56d38ce7-8f1e-4893-8651-5591dea78890.png" alt="Brian Strachan" />
+                  <AvatarImage src="/lovable-uploads/8e537a70-a7f3-41a2-bffd-09d279977760.png" alt="Brian Strachan" />
                   <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold text-2xl">
                     BS
                   </AvatarFallback>

@@ -10,7 +10,7 @@ interface TestimonialsProps {
 
 export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
   return (
-    <section className="py-20 border-b-4 border-[#00d4aa]">
+    <section className="py-20 border-b-4" style={{ borderColor: 'rgb(0 212 170 / 0.5)' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
@@ -24,7 +24,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* Testimonial 1 */}
+          {/* Testimonial 1 - Lorenzo */}
           <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
             <CardContent className="p-0">
               <div className="flex items-center mb-4">
@@ -37,7 +37,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
               </p>
               <div className="flex items-center">
                 <img 
-                  src="/lovable-uploads/98f528c7-6c3b-4fa4-907f-eeb151c5e95f.png" 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" 
                   alt="Lodrino M." 
                   className="w-12 h-12 rounded-full object-cover"
                 />
@@ -49,7 +49,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
             </CardContent>
           </Card>
 
-          {/* Testimonial 2 */}
+          {/* Testimonial 2 - Justin */}
           <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
             <CardContent className="p-0">
               <div className="flex items-center mb-4">
@@ -62,7 +62,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
               </p>
               <div className="flex items-center">
                 <img 
-                  src="/lovable-uploads/e69dc72f-be50-48f4-907a-cbb10bbcfa3b.png" 
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" 
                   alt="Justin F." 
                   className="w-12 h-12 rounded-full object-cover"
                 />
@@ -74,7 +74,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
             </CardContent>
           </Card>
 
-          {/* Testimonial 3 */}
+          {/* Testimonial 3 - Loxon */}
           <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
             <CardContent className="p-0">
               <div className="flex items-center mb-4">
@@ -87,7 +87,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
               </p>
               <div className="flex items-center">
                 <img 
-                  src="/lovable-uploads/a2dabffc-b0b6-4eb0-9751-60a6dae1cd48.png" 
+                  src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=150&h=150&fit=crop&crop=face" 
                   alt="Loxton G." 
                   className="w-12 h-12 rounded-full object-cover"
                 />
@@ -99,7 +99,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
             </CardContent>
           </Card>
 
-          {/* Testimonial 4 */}
+          {/* Testimonial 4 - Anton */}
           <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
             <CardContent className="p-0">
               <div className="flex items-center mb-4">
@@ -112,7 +112,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
               </p>
               <div className="flex items-center">
                 <img 
-                  src="/lovable-uploads/d77102a6-0db1-4f68-9154-d76b9c8831b2.png" 
+                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face" 
                   alt="Anton T." 
                   className="w-12 h-12 rounded-full object-cover"
                 />

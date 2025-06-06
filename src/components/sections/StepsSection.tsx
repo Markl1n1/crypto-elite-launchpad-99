@@ -13,7 +13,7 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
   const { t } = useTranslations();
 
   return (
-    <section id="program" className="py-20 bg-[#1a1f35] border-b-4 border-[#00d4aa]">
+    <section id="program" className="py-20 bg-[#1a1f35] border-b-4" style={{ borderColor: 'rgb(0 212 170 / 0.5)' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">

@@ -16,9 +16,15 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="text-center md:text-left">
-            <div className="text-2xl font-bold mb-4">
-              <span className="text-[#00d4aa]">Incite</span>
-              <span className="text-white"> AI</span>
+            <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
+              <img 
+                src="/lovable-uploads/8cea484c-1f52-4aee-84ba-e8fb9cb7e7e3.png" 
+                alt="Incite AI Logo" 
+                className="w-8 h-8"
+              />
+              <div className="text-2xl font-bold text-white">
+                Incite AI
+              </div>
             </div>
             <p className="text-gray-400 mb-6">
               {t('footerDescription')}

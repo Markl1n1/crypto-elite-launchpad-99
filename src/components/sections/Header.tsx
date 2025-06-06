@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { useTranslations } from '@/hooks/useTranslations';
@@ -48,16 +48,18 @@ interface HeaderProps {
 export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
   const { currentLanguage, changeLanguage, t } = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-  const currentLanguageData = languages.find(lang => lang.code === currentLanguage) || languages[0];
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0a0e1a]/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="text-2xl font-bold">
-            <span className="text-[#00d4aa]">Incite</span>
-            <span className="text-white"> AI</span>
+        <div className="flex items-center space-x-3">
+          <img 
+            src="/lovable-uploads/8cea484c-1f52-4aee-84ba-e8fb9cb7e7e3.png" 
+            alt="Incite AI Logo" 
+            className="w-8 h-8"
+          />
+          <div className="text-2xl font-bold text-white">
+            Incite AI
           </div>
         </div>
 
@@ -72,8 +74,7 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="sm" className="flex items-center space-x-2 hover:text-[#00d4aa]">
-                <span className="text-2xl">{currentLanguageData.flag}</span>
-                <ChevronDown size={16} />
+                <Globe size={20} />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-[#1a1f35] border-white/20 z-50">
