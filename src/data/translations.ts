@@ -8,126 +8,183 @@ export const translations = {
     applyNow: "Apply Now",
 
     // Hero Section
-    eliteInvestmentOpportunities: "🔥 Elite Investment Opportunities",
+    eliteInvestmentOpportunities: "Elite Investment Opportunities",
     heroTitle: "Unlock Elite Financial Opportunities with AI-Powered Trading",
-    heroSubtitle: "Join the exclusive Incite AI investment program and access premium trading strategies backed by cutting-edge artificial intelligence.",
+    heroSubtitle: "Join thousands of successful investors using our cutting-edge AI platform to maximize returns and minimize risks in today's volatile markets.",
     startJourneyNow: "Start Your Journey Now",
     investorsTrustUs: "investors trust us",
 
-    // Floating Cards
+    // Hero Cards
     recordPortfolioMay: "Record Portfolio Growth - May 2024",
     portfolioGrowth: "Portfolio Growth",
-    growthPercentage: "+847.3%",
-    aiSays: "Incite AI says:",
-    confidence: "97.2% confidence",
+    growthPercentage: "+34.7%",
+    aiSays: "AI Says:",
+    confidence: "96% confidence",
     averageClientProfit: "Average Client Profit",
-    monthlyProfit: "$47,832",
+    monthlyProfit: "+2,847€",
     last12Months: "Last 12 months",
     clientWinrate: "Client Win Rate",
-    winratePercentage: "94.7%",
+    winratePercentage: "87.3%",
     successRate: "Success rate",
 
-    // Trading Platform Section
-    advancedTechnology: "🚀 Advanced Technology",
-    cuttingEdgeTradingPlatform: "Cutting-Edge Trading Platform",
-    tradingPlatformDescription: "Experience the future of trading with our AI-powered platform that delivers real-time insights and automated strategies.",
-    aiPoweredPredictions: "AI-Powered Predictions",
-    aiPredictionsDescription: "Advanced machine learning algorithms analyze market data to provide accurate predictions.",
-    bankGradeSecurity: "Bank-Grade Security",
-    securityDescription: "Your investments are protected with enterprise-level security and encryption.",
-
     // Steps Section
-    simpleProcess: "✨ Simple Process",
-    stepsToGetStarted: "3 Steps to Get Started",
-    leaveApplication: "Leave Application",
-    applicationDescription: "Fill out our quick application form to get started with your investment journey.",
-    getGuidanceAccess: "Get Guidance & Access",
-    guidanceDescription: "Receive personalized guidance and access to our exclusive trading platform.",
-    growBalance: "Grow Your Balance",
-    growDescription: "Watch your investments grow with our AI-powered trading strategies.",
+    howItWorks: "How It Works",
+    stepsTitle: "Your Path to Financial Success",
+    stepsSubtitle: "Follow our proven 3-step process to start generating consistent returns with AI-powered trading insights.",
 
-    // Pricing Section
-    flexibleInvestmentOptions: "💰 Flexible Investment Options",
-    investmentPlansTitle: "Investment Plans & Pricing",
-    standardPlan: "Standard Plan",
+    step1Title: "Sign Up & Get Verified",
+    step1Description: "Complete our quick registration process and get verified to access our exclusive AI trading platform.",
+
+    step2Title: "AI Analyzes Markets",
+    step2Description: "Our advanced AI continuously scans global markets, identifying profitable opportunities in real-time.",
+
+    step3Title: "Execute & Profit",
+    step3Description: "Receive clear trading signals and execute trades with confidence, backed by institutional-grade analytics.",
+
+    // Trading Platform
+    tradingPlatformTitle: "Advanced AI Trading Platform",
+    tradingPlatformSubtitle: "Experience the power of institutional-grade trading technology designed for modern investors.",
+
+    feature1Title: "Real-Time Market Analysis",
+    feature1Description: "Advanced AI algorithms analyze thousands of data points every second to identify profitable opportunities.",
+
+    feature2Title: "Risk Management",
+    feature2Description: "Sophisticated risk assessment tools help protect your capital while maximizing potential returns.",
+
+    feature3Title: "Portfolio Optimization",
+    feature3Description: "Dynamic portfolio balancing ensures optimal diversification and performance across all market conditions.",
+
+    // Testimonials
+    realUserExperiences: "Real User Experiences",
+    testimonialsTitle: "What Our Users Say",
+    testimonialsSubtitle: "See how Incite AI has transformed the investment journey for thousands of users worldwide.",
+    getEarlyAccess: "Get Early Access",
+
+    // Industry Experts
+    industryRecognition: "Industry Recognition",
+    industryExpertsTitle: "What Industry Experts Say",
+    industryExpertsSubtitle: "Leading financial experts and industry veterans recognize the power of Incite AI.",
+    joinTheExperts: "Join the Experts",
+
+    // Leadership Section
+    leadership: "Leadership",
+    leadershipTitle: "Leadership of Incite AI",
+    founderCEO: "Founder & CEO of Incite AI",
+    ceoDescription: "Responsible for the strategic development of the company and the creation of an AI platform for financial market analysis.",
+
+    // Pricing
+    pricingTitle: "Choose Your Investment Plan",
+    pricingSubtitle: "Select the perfect plan to match your investment goals and experience level.",
+
+    starterPlan: "Starter Plan",
+    starterPrice: "€299",
+    starterDescription: "Perfect for beginners looking to start their AI-powered investment journey.",
+
     proPlan: "Pro Plan",
-    advancedPlan: "Advanced Plan",
+    proPrice: "€599",
+    proDescription: "Advanced features for serious investors seeking maximum returns.",
     mostPopular: "Most Popular",
-    support247: "24/7 Priority Support",
-    personalisedManager: "Personalised Account Manager",
-    automaticNotification: "Automatic Trade Notifications",
-    basicAutotrading: "Basic Auto-trading Features",
-    limitedTrades: "Up to 50 trades/month",
-    advancedAutotrading: "Advanced Auto-trading",
-    moderatedTrades: "Up to 200 trades/month",
-    analyseResults: "Detailed Performance Analysis",
-    meetingsInvestors: "Monthly Strategy Meetings",
-    allProFeatures: "All Pro Plan Features",
-    premiumAutotrade: "Premium Auto-trading Engine",
-    unlimitedTrades: "Unlimited trades/month",
-    priorityProcessing: "Priority Order Processing",
-    companyGifts: "Exclusive Company Perks & Gifts",
-    spotsAvailable: "spots available",
-    startNow: "Start Now",
-    currentlyFull: "Currently Full",
 
-    // Partners Section
-    ourPartners: "Trusted by Leading Financial Institutions",
+    elitePlan: "Elite Plan",
+    elitePrice: "€999",
+    eliteDescription: "Premium access to institutional-grade trading tools and personal support.",
 
-    // FAQ Section
-    commonQuestions: "❓ Common Questions",
-    frequentlyAskedQuestions: "Frequently Asked Questions",
-    securityMeasuresQ: "What security measures do you have in place?",
-    securityMeasuresA: "We use bank-grade encryption, two-factor authentication, and comply with all major financial regulations to ensure your investments are secure.",
-    returnsQ: "What kind of returns can I expect?",
-    returnsA: "While past performance doesn't guarantee future results, our AI system has historically delivered strong returns for our clients. Individual results may vary based on market conditions and investment amount.",
-    qualificationQ: "Do I need to be an accredited investor?",
-    qualificationA: "No, our platform is designed for investors of all experience levels. We provide guidance and support to help you make informed investment decisions.",
-    withdrawalQ: "How quickly can I withdraw my funds?",
-    withdrawalA: "Standard withdrawals are processed within 24-48 hours. Priority withdrawals for Pro and Advanced plan members are processed within 2-4 hours.",
-    tradingSystemQ: "How does your AI trading system work?",
-    tradingSystemA: "Our AI analyzes thousands of market indicators, news events, and historical patterns in real-time to identify profitable trading opportunities and execute trades automatically.",
-    hiddenFeesQ: "Are there any hidden fees?",
-    hiddenFeesA: "No, we believe in complete transparency. All fees are clearly outlined in your plan. There are no hidden charges or surprise fees.",
-    stillHaveQuestions: "Still have questions?",
-    contactSupport: "Contact our support team",
+    choosePlan: "Choose Plan",
 
-    // Application Section
-    beginJourney: "🚀 Begin Your Journey",
-    applyNowTitle: "Apply for Incite AI Program",
-    step2: "- Step 2",
+    // Pricing Features
+    aiSignals: "AI Trading Signals",
+    marketAnalysis: "Market Analysis",
+    riskManagement: "Risk Management",
+    portfolio: "Portfolio Tracking",
+    support: "Email Support",
+    prioritySupport: "Priority Support",
+    personalManager: "Personal Manager",
+    advancedTools: "Advanced Tools",
+    institutionalAccess: "Institutional Access",
+
+    // FAQ
+    faqTitle: "Frequently Asked Questions",
+    faqSubtitle: "Get answers to the most common questions about our AI trading platform.",
+
+    faq1Question: "How does the AI trading platform work?",
+    faq1Answer: "Our AI platform uses advanced machine learning algorithms to analyze market data, identify patterns, and generate trading signals. It processes thousands of data points in real-time to provide you with actionable investment opportunities.",
+
+    faq2Question: "Is my investment capital safe?",
+    faq2Answer: "We prioritize security and use bank-level encryption to protect your data. However, all investments carry risk, and we provide comprehensive risk management tools to help you make informed decisions.",
+
+    faq3Question: "What returns can I expect?",
+    faq3Answer: "While past performance doesn't guarantee future results, our users have historically seen an average monthly return of 8-15%. Results vary based on market conditions and individual risk tolerance.",
+
+    faq4Question: "Do I need trading experience?",
+    faq4Answer: "No prior trading experience is required. Our platform is designed for both beginners and experienced traders, with educational resources and intuitive interfaces to guide you.",
+
+    faq5Question: "How do I get started?",
+    faq5Answer: "Simply choose your plan, complete the registration process, and you'll get immediate access to our AI trading platform with full onboarding support.",
+
+    // Application Form
+    applyTitle: "Apply for Early Access",
+    applySubtitle: "Join thousands of successful investors already using our AI-powered platform.",
+
+    personalInformation: "Personal Information",
     firstName: "First Name",
     lastName: "Last Name",
-    emailAddress: "Email Address",
-    phoneNumber: "Phone Number",
-    investmentPlan: "Investment Plan",
-    experience: "Trading Experience",
-    additionalMessage: "Additional Message",
-    required: "*",
-    optional: "optional",
+    email: "Email Address",
+    phone: "Phone Number",
+    country: "Country",
+    selectCountry: "Select your country",
+
+    investmentExperience: "Investment Experience",
+    experienceLevel: "Experience Level",
+    selectExperience: "Select your experience level",
     beginner: "Beginner (0-1 years)",
     intermediate: "Intermediate (1-3 years)",
-    advanced: "Advanced (3-5 years)",
-    expert: "Expert (5+ years)",
-    continueStep2: "Continue to Step 2",
-    backStep1: "Back to Step 1",
-    submitApplication: "Submit Application",
-    secureEncrypted: "Your information is secure and encrypted",
-    validEmailRequired: "Please enter a valid email address",
-    validPhoneRequired: "Please enter a valid phone number (6-15 digits)",
+    advanced: "Advanced (3+ years)",
 
-    // Additional fields for step 2
-    jobTitle: "Job Title",
-    annualIncome: "Annual Income",
-    citizenship: "Citizenship",
-    residency: "Country of Residency",
-    mortgage: "Current Mortgage/Rent",
-    financialSituation: "Financial Situation (1-10 scale)",
-    upTo10k: "Up to $10,000",
-    income10k25k: "$10,000 - $25,000",
-    income25k50k: "$25,000 - $50,000",
-    income50k100k: "$50,000 - $100,000",
-    income100kPlus: "$100,000+",
+    investmentGoals: "Investment Goals",
+    primaryGoal: "Primary Investment Goal",
+    selectGoal: "Select your primary goal",
+    wealthPreservation: "Wealth Preservation",
+    steadyGrowth: "Steady Growth",
+    aggressiveGrowth: "Aggressive Growth",
+    dayTrading: "Day Trading",
+
+    riskTolerance: "Risk Tolerance",
+    selectRisk: "Select your risk tolerance",
+    conservative: "Conservative",
+    moderate: "Moderate",
+    aggressive: "Aggressive",
+
+    financialSituation: "Financial Situation",
+    monthlyIncome: "Monthly Income (€)",
+    selectIncome: "Select your income range",
+    income1: "Under €2,000",
+    income2: "€2,000 - €5,000",
+    income3: "€5,000 - €10,000",
+    income4: "€10,000 - €20,000",
+    income5: "Over €20,000",
+
+    investmentCapital: "Available Investment Capital (€)",
+    selectCapital: "Select your investment capital",
+    capital1: "€1,000 - €5,000",
+    capital2: "€5,000 - €10,000",
+    capital3: "€10,000 - €25,000",
+    capital4: "€25,000 - €50,000",
+    capital5: "€50,000 - €100,000",
+    capital6: "Over €100,000",
+
+    additionalQuestions: "Additional Questions",
+    hearAboutUs: "How did you hear about us?",
+    selectSource: "Select source",
+    socialMedia: "Social Media",
+    searchEngine: "Search Engine",
+    friendReferral: "Friend/Referral",
+    advertisement: "Advertisement",
+    other: "Other",
+
+    expectations: "What are your expectations from our platform?",
+    expectationsPlaceholder: "Tell us about your investment goals and expectations...",
+
+    financialSituationRating: "Rate your current financial situation (1-10)",
     financialSit1: "1 - Struggling financially",
     financialSit10: "10 - Very comfortable financially",
 
@@ -139,13 +196,37 @@ export const translations = {
     footerDescription: "Empowering investors with AI-driven financial solutions for sustainable wealth growth.",
     quickLinks: "Quick Links",
     legal: "Legal",
-    contact: "Contact Us",
+    contact: "Contact",
     privacyPolicy: "Privacy Policy",
     termsOfService: "Terms of Service",
     riskDisclosure: "Risk Disclosure",
     compliance: "Compliance",
-    allRightsReserved: "© 2024 Incite AI. All rights reserved.",
-    footerDisclaimer: "Investment involves risk. Past performance does not guarantee future results.",
+    footerDisclaimer: "Risk Warning: Trading involves substantial risk and may result in the loss of your invested capital.",
+
+    // Form Actions
+    submitApplication: "Submit Application",
+    agreeToTerms: "I agree to the",
+    and: "and",
+    
+    // Form Validation
+    firstNameRequired: "First name is required",
+    lastNameRequired: "Last name is required",
+    emailRequired: "Email is required",
+    emailInvalid: "Please enter a valid email address",
+    phoneRequired: "Phone number is required",
+    countryRequired: "Please select your country",
+    experienceRequired: "Please select your experience level",
+    goalRequired: "Please select your investment goal",
+    riskRequired: "Please select your risk tolerance",
+    incomeRequired: "Please select your income range",
+    capitalRequired: "Please select your investment capital",
+    sourceRequired: "Please select how you heard about us",
+    expectationsRequired: "Please share your expectations",
+    financialRatingRequired: "Please rate your financial situation",
+    termsRequired: "You must agree to the terms and conditions",
+
+    // Additional
+    optional: "Optional",
   },
 
   pl: {
@@ -157,126 +238,183 @@ export const translations = {
     applyNow: "Aplikuj teraz",
 
     // Hero Section
-    eliteInvestmentOpportunities: "🔥 Elitarne możliwości inwestycyjne",
-    heroTitle: "Odblokuj elitarne możliwości finansowe dzięki handlowi opartemu na AI",
-    heroSubtitle: "Dołącz do ekskluzywnego programu inwestycyjnego Incite AI i uzyskaj dostęp do premium strategii handlowych opartych na najnowocześniejszej sztucznej inteligencji.",
+    eliteInvestmentOpportunities: "Elitarne możliwości inwestycyjne",
+    heroTitle: "Odblokuj elitarne możliwości finansowe dzięki handlowi wspomaganemu przez AI",
+    heroSubtitle: "Dołącz do tysięcy udanych inwestorów korzystających z naszej nowoczesnej platformy AI, aby zmaksymalizować zyski i zminimalizować ryzyko na dzisiejszych niestabilnych rynkach.",
     startJourneyNow: "Rozpocznij swoją podróż teraz",
     investorsTrustUs: "inwestorów nam ufa",
 
-    // Floating Cards
+    // Hero Cards
     recordPortfolioMay: "Rekordowy wzrost portfela - maj 2024",
     portfolioGrowth: "Wzrost portfela",
-    growthPercentage: "+847,3%",
-    aiSays: "Incite AI mówi:",
-    confidence: "97,2% pewności",
-    averageClientProfit: "Średni zysk klienta",
-    monthlyProfit: "47 832 $",
+    growthPercentage: "+34,7%",
+    aiSays: "AI mówi:",
+    confidence: "96% pewności",
+    averageClientProfit: "Średnia zysk klienta",
+    monthlyProfit: "+2,847€",
     last12Months: "Ostatnie 12 miesięcy",
     clientWinrate: "Wskaźnik wygranych klientów",
-    winratePercentage: "94,7%",
+    winratePercentage: "87,3%",
     successRate: "Wskaźnik sukcesu",
 
-    // Trading Platform Section
-    advancedTechnology: "🚀 Zaawansowana technologia",
-    cuttingEdgeTradingPlatform: "Nowoczesna platforma handlowa",
-    tradingPlatformDescription: "Doświadcz przyszłości handlu z naszą platformą opartą na AI, która dostarcza wgląd w czasie rzeczywistym i zautomatyzowane strategie.",
-    aiPoweredPredictions: "Przewidywania oparte na AI",
-    aiPredictionsDescription: "Zaawansowane algorytmy uczenia maszynowego analizują dane rynkowe, aby dostarczyć dokładne przewidywania.",
-    bankGradeSecurity: "Bezpieczeństwo na poziomie bankowym",
-    securityDescription: "Twoje inwestycje są chronione zabezpieczeniami i szyfrowaniem na poziomie przedsiębiorstwa.",
-
     // Steps Section
-    simpleProcess: "✨ Prosty proces",
-    stepsToGetStarted: "3 kroki do rozpoczęcia",
-    leaveApplication: "Złóż wniosek",
-    applicationDescription: "Wypełnij nasz szybki formularz aplikacyjny, aby rozpocząć swoją podróż inwestycyjną.",
-    getGuidanceAccess: "Uzyskaj wskazówki i dostęp",
-    guidanceDescription: "Otrzymaj spersonalizowane wskazówki i dostęp do naszej ekskluzywnej platformy handlowej.",
-    growBalance: "Zwiększ swoje saldo",
-    growDescription: "Obserwuj, jak Twoje inwestycje rosną dzięki naszym strategiom handlowym opartym na AI.",
+    howItWorks: "Jak to działa",
+    stepsTitle: "Twoja ścieżka do sukcesu finansowego",
+    stepsSubtitle: "Postępuj zgodnie z naszym sprawdzonym 3-etapowym procesem, aby zacząć generować stałe zyski dzięki wglądom handlowym wspomaganym przez AI.",
 
-    // Pricing Section
-    flexibleInvestmentOptions: "💰 Elastyczne opcje inwestycyjne",
-    investmentPlansTitle: "Plany inwestycyjne i cennik",
-    standardPlan: "Plan standardowy",
+    step1Title: "Zarejestruj się i zostań zweryfikowany",
+    step1Description: "Ukończ nasz szybki proces rejestracji i zostań zweryfikowany, aby uzyskać dostęp do naszej ekskluzywnej platformy handlowej AI.",
+
+    step2Title: "AI analizuje rynki",
+    step2Description: "Nasza zaawansowana AI stale skanuje globalne rynki, identyfikując zyskowne możliwości w czasie rzeczywistym.",
+
+    step3Title: "Wykonuj i zyskuj",
+    step3Description: "Otrzymuj jasne sygnały handlowe i wykonuj transakcje z pewnością siebie, wspierane przez analizy klasy instytucjonalnej.",
+
+    // Trading Platform
+    tradingPlatformTitle: "Zaawansowana platforma handlowa AI",
+    tradingPlatformSubtitle: "Doświadcz mocy technologii handlowej klasy instytucjonalnej zaprojektowanej dla nowoczesnych inwestorów.",
+
+    feature1Title: "Analiza rynku w czasie rzeczywistym",
+    feature1Description: "Zaawansowane algorytmy AI analizują tysiące punktów danych co sekundę, aby zidentyfikować zyskowne możliwości.",
+
+    feature2Title: "Zarządzanie ryzykiem",
+    feature2Description: "Zaawansowane narzędzia oceny ryzyka pomagają chronić twój kapitał przy jednoczesnej maksymalizacji potencjalnych zysków.",
+
+    feature3Title: "Optymalizacja portfela",
+    feature3Description: "Dynamiczne równoważenie portfela zapewnia optymalną dywersyfikację i wydajność we wszystkich warunkach rynkowych.",
+
+    // Testimonials
+    realUserExperiences: "Prawdziwe doświadczenia użytkowników",
+    testimonialsTitle: "Co mówią nasi użytkownicy",
+    testimonialsSubtitle: "Zobacz, jak Incite AI zmienił podróż inwestycyjną dla tysięcy użytkowników na całym świecie.",
+    getEarlyAccess: "Uzyskaj wczesny dostęp",
+
+    // Industry Experts
+    industryRecognition: "Uznanie branży",
+    industryExpertsTitle: "Co mówią eksperci branżowi",
+    industryExpertsSubtitle: "Wiodący eksperci finansowi i weterani branży uznają moc Incite AI.",
+    joinTheExperts: "Dołącz do ekspertów",
+
+    // Leadership Section
+    leadership: "Przywództwo",
+    leadershipTitle: "Przywództwo Incite AI",
+    founderCEO: "Założyciel i CEO Incite AI",
+    ceoDescription: "Odpowiedzialny za strategiczny rozwój firmy i tworzenie platformy AI do analizy rynków finansowych.",
+
+    // Pricing
+    pricingTitle: "Wybierz swój plan inwestycyjny",
+    pricingSubtitle: "Wybierz idealny plan, który pasuje do twoich celów inwestycyjnych i poziomu doświadczenia.",
+
+    starterPlan: "Plan startowy",
+    starterPrice: "€299",
+    starterDescription: "Idealny dla początkujących, którzy chcą rozpocząć swoją podróż inwestycyjną wspomaganą przez AI.",
+
     proPlan: "Plan Pro",
-    advancedPlan: "Plan zaawansowany",
+    proPrice: "€599",
+    proDescription: "Zaawansowane funkcje dla poważnych inwestorów dążących do maksymalnych zysków.",
     mostPopular: "Najpopularniejszy",
-    support247: "Wsparcie priorytetowe 24/7",
-    personalisedManager: "Spersonalizowany menedżer konta",
-    automaticNotification: "Automatyczne powiadomienia o transakcjach",
-    basicAutotrading: "Podstawowe funkcje auto-handlu",
-    limitedTrades: "Do 50 transakcji/miesiąc",
-    advancedAutotrading: "Zaawansowany auto-handel",
-    moderatedTrades: "Do 200 transakcji/miesiąc",
-    analyseResults: "Szczegółowa analiza wydajności",
-    meetingsInvestors: "Miesięczne spotkania strategiczne",
-    allProFeatures: "Wszystkie funkcje planu Pro",
-    premiumAutotrade: "Premium silnik auto-handlu",
-    unlimitedTrades: "Nieograniczone transakcje/miesiąc",
-    priorityProcessing: "Priorytetowe przetwarzanie zleceń",
-    companyGifts: "Ekskluzywne przywileje i prezenty firmowe",
-    spotsAvailable: "dostępnych miejsc",
-    startNow: "Zacznij teraz",
-    currentlyFull: "Obecnie pełny",
 
-    // Partners Section
-    ourPartners: "Zaufane przez wiodące instytucje finansowe",
+    elitePlan: "Plan Elite",
+    elitePrice: "€999",
+    eliteDescription: "Dostęp premium do narzędzi handlowych klasy instytucjonalnej i wsparcie osobiste.",
 
-    // FAQ Section
-    commonQuestions: "❓ Często zadawane pytania",
-    frequentlyAskedQuestions: "Często zadawane pytania",
-    securityMeasuresQ: "Jakie środki bezpieczeństwa macie wdrożone?",
-    securityMeasuresA: "Używamy szyfrowania na poziomie bankowym, uwierzytelniania dwuskładnikowego i przestrzegamy wszystkich głównych regulacji finansowych, aby zapewnić bezpieczeństwo Twoich inwestycji.",
-    returnsQ: "Jakich zwrotów mogę się spodziewać?",
-    returnsA: "Chociaż wyniki z przeszłości nie gwarantują przyszłych rezultatów, nasz system AI historycznie dostarczał silne zwroty dla naszych klientów. Indywidualne wyniki mogą się różnić w zależności od warunków rynkowych i kwoty inwestycji.",
-    qualificationQ: "Czy muszę być akredytowanym inwestorem?",
-    qualificationA: "Nie, nasza platforma jest zaprojektowana dla inwestorów wszystkich poziomów doświadczenia. Zapewniamy wskazówki i wsparcie, aby pomóc Ci podejmować świadome decyzje inwestycyjne.",
-    withdrawalQ: "Jak szybko mogę wypłacić swoje środki?",
-    withdrawalA: "Standardowe wypłaty są przetwarzane w ciągu 24-48 godzin. Priorytetowe wypłaty dla członków planów Pro i Advanced są przetwarzane w ciągu 2-4 godzin.",
-    tradingSystemQ: "Jak działa Wasz system handlu AI?",
-    tradingSystemA: "Nasza AI analizuje tysiące wskaźników rynkowych, wydarzeń informacyjnych i wzorców historycznych w czasie rzeczywistym, aby zidentyfikować zyskowne możliwości handlowe i wykonywać transakcje automatycznie.",
-    hiddenFeesQ: "Czy są jakieś ukryte opłaty?",
-    hiddenFeesA: "Nie, wierzymy w pełną przejrzystość. Wszystkie opłaty są jasno określone w Twoim planie. Nie ma ukrytych opłat ani niespodziewanych kosztów.",
-    stillHaveQuestions: "Nadal masz pytania?",
-    contactSupport: "Skontaktuj się z naszym zespołem wsparcia",
+    choosePlan: "Wybierz plan",
 
-    // Application Section
-    beginJourney: "🚀 Rozpocznij swoją podróż",
-    applyNowTitle: "Aplikuj do programu Incite AI",
-    step2: "- Krok 2",
+    // Pricing Features
+    aiSignals: "Sygnały handlowe AI",
+    marketAnalysis: "Analiza rynku",
+    riskManagement: "Zarządzanie ryzykiem",
+    portfolio: "Śledzenie portfela",
+    support: "Wsparcie email",
+    prioritySupport: "Wsparcie priorytetowe",
+    personalManager: "Osobisty menedżer",
+    advancedTools: "Zaawansowane narzędzia",
+    institutionalAccess: "Dostęp instytucjonalny",
+
+    // FAQ
+    faqTitle: "Często zadawane pytania",
+    faqSubtitle: "Uzyskaj odpowiedzi na najczęstsze pytania dotyczące naszej platformy handlowej AI.",
+
+    faq1Question: "Jak działa platforma handlowa AI?",
+    faq1Answer: "Nasza platforma AI używa zaawansowanych algorytmów uczenia maszynowego do analizowania danych rynkowych, identyfikowania wzorców i generowania sygnałów handlowych. Przetwarza tysiące punktów danych w czasie rzeczywistym, aby dostarczyć ci możliwości inwestycyjne do działania.",
+
+    faq2Question: "Czy mój kapitał inwestycyjny jest bezpieczny?",
+    faq2Answer: "Priorytetem jest bezpieczeństwo i używamy szyfrowania na poziomie bankowym do ochrony twoich danych. Jednak wszystkie inwestycje niosą ze sobą ryzyko, i zapewniamy kompleksowe narzędzia zarządzania ryzykiem, które pomogą ci podejmować świadome decyzje.",
+
+    faq3Question: "Jakich zwrotów mogę się spodziewać?",
+    faq3Answer: "Chociaż wyniki z przeszłości nie gwarantują przyszłych rezultatów, nasi użytkownicy historycznie osiągali średni miesięczny zwrot 8-15%. Wyniki różnią się w zależności od warunków rynkowych i indywidualnej tolerancji ryzyka.",
+
+    faq4Question: "Czy potrzebuję doświadczenia w handlu?",
+    faq4Answer: "Nie jest wymagane wcześniejsze doświadczenie w handlu. Nasza platforma jest zaprojektowana zarówno dla początkujących, jak i doświadczonych traderów, z zasobami edukacyjnymi i intuicyjnymi interfejsami, które cię poprowadzą.",
+
+    faq5Question: "Jak mogę zacząć?",
+    faq5Answer: "Po prostu wybierz swój plan, ukończ proces rejestracji, a otrzymasz natychmiastowy dostęp do naszej platformy handlowej AI z pełnym wsparciem wprowadzającym.",
+
+    // Application Form
+    applyTitle: "Aplikuj o wczesny dostęp",
+    applySubtitle: "Dołącz do tysięcy udanych inwestorów już korzystających z naszej platformy wspomaganej przez AI.",
+
+    personalInformation: "Informacje osobiste",
     firstName: "Imię",
     lastName: "Nazwisko",
-    emailAddress: "Adres e-mail",
-    phoneNumber: "Numer telefonu",
-    investmentPlan: "Plan inwestycyjny",
-    experience: "Doświadczenie handlowe",
-    additionalMessage: "Dodatkowa wiadomość",
-    required: "*",
-    optional: "opcjonalne",
-    beginner: "Początkujący (0-1 lat)",
-    intermediate: "Średniozaawansowany (1-3 lata)",
-    advanced: "Zaawansowany (3-5 lat)",
-    expert: "Ekspert (5+ lat)",
-    continueStep2: "Przejdź do kroku 2",
-    backStep1: "Wróć do kroku 1",
-    submitApplication: "Prześlij aplikację",
-    secureEncrypted: "Twoje informacje są bezpieczne i zaszyfrowane",
-    validEmailRequired: "Proszę wprowadzić prawidłowy adres e-mail",
-    validPhoneRequired: "Proszę wprowadzić prawidłowy numer telefonu (6-15 cyfr)",
+    email: "Adres e-mail",
+    phone: "Numer telefonu",
+    country: "Kraj",
+    selectCountry: "Wybierz swój kraj",
 
-    // Additional fields for step 2
-    jobTitle: "Stanowisko pracy",
-    annualIncome: "Roczny dochód",
-    citizenship: "Obywatelstwo",
-    residency: "Kraj zamieszkania",
-    mortgage: "Obecny kredyt hipoteczny/czynsz",
-    financialSituation: "Sytuacja finansowa (skala 1-10)",
-    upTo10k: "Do 10 000 $",
-    income10k25k: "10 000 $ - 25 000 $",
-    income25k50k: "25 000 $ - 50 000 $",
-    income50k100k: "50 000 $ - 100 000 $",
-    income100kPlus: "100 000 $+",
+    investmentExperience: "Doświadczenie inwestycyjne",
+    experienceLevel: "Poziom doświadczenia",
+    selectExperience: "Wybierz swój poziom doświadczenia",
+    beginner: "Początkujący (0-1 rok)",
+    intermediate: "Średniozaawansowany (1-3 lata)",
+    advanced: "Zaawansowany (3+ lata)",
+
+    investmentGoals: "Cele inwestycyjne",
+    primaryGoal: "Główny cel inwestycyjny",
+    selectGoal: "Wybierz swój główny cel",
+    wealthPreservation: "Zachowanie bogactwa",
+    steadyGrowth: "Stały wzrost",
+    aggressiveGrowth: "Agresywny wzrost",
+    dayTrading: "Trading dzienny",
+
+    riskTolerance: "Tolerancja ryzyka",
+    selectRisk: "Wybierz swoją tolerancję ryzyka",
+    conservative: "Konserwatywna",
+    moderate: "Umiarkowana",
+    aggressive: "Agresywna",
+
+    financialSituation: "Sytuacja finansowa",
+    monthlyIncome: "Miesięczny dochód (€)",
+    selectIncome: "Wybierz przedział dochodów",
+    income1: "Poniżej €2,000",
+    income2: "€2,000 - €5,000",
+    income3: "€5,000 - €10,000",
+    income4: "€10,000 - €20,000",
+    income5: "Powyżej €20,000",
+
+    investmentCapital: "Dostępny kapitał inwestycyjny (€)",
+    selectCapital: "Wybierz swój kapitał inwestycyjny",
+    capital1: "€1,000 - €5,000",
+    capital2: "€5,000 - €10,000",
+    capital3: "€10,000 - €25,000",
+    capital4: "€25,000 - €50,000",
+    capital5: "€50,000 - €100,000",
+    capital6: "Powyżej €100,000",
+
+    additionalQuestions: "Dodatkowe pytania",
+    hearAboutUs: "Jak się o nas dowiedziałeś?",
+    selectSource: "Wybierz źródło",
+    socialMedia: "Media społecznościowe",
+    searchEngine: "Wyszukiwarka",
+    friendReferral: "Przyjaciel/Polecenie",
+    advertisement: "Reklama",
+    other: "Inne",
+
+    expectations: "Jakie są twoje oczekiwania wobec naszej platformy?",
+    expectationsPlaceholder: "Opowiedz nam o swoich celach inwestycyjnych i oczekiwaniach...",
+
+    financialSituationRating: "Oceń swoją obecną sytuację finansową (1-10)",
     financialSit1: "1 - Trudności finansowe",
     financialSit10: "10 - Bardzo komfortowa sytuacja finansowa",
 
@@ -290,11 +428,35 @@ export const translations = {
     legal: "Prawne",
     contact: "Kontakt",
     privacyPolicy: "Polityka prywatności",
-    termsOfService: "Warunki usługi",
+    termsOfService: "Warunki użytkowania",
     riskDisclosure: "Ujawnienie ryzyka",
     compliance: "Zgodność",
-    allRightsReserved: "© 2024 Incite AI. Wszystkie prawa zastrzeżone.",
-    footerDisclaimer: "Inwestowanie wiąże się z ryzykiem. Wyniki z przeszłości nie gwarantują przyszłych rezultatów.",
+    footerDisclaimer: "Ostrzeżenie o ryzyku: Handel wiąże się ze znacznym ryzykiem i może skutkować utratą zainwestowanego kapitału.",
+
+    // Form Actions
+    submitApplication: "Prześlij aplikację",
+    agreeToTerms: "Zgadzam się z",
+    and: "i",
+    
+    // Form Validation
+    firstNameRequired: "Imię jest wymagane",
+    lastNameRequired: "Nazwisko jest wymagane",
+    emailRequired: "Email jest wymagany",
+    emailInvalid: "Proszę podać prawidłowy adres email",
+    phoneRequired: "Numer telefonu jest wymagany",
+    countryRequired: "Proszę wybrać swój kraj",
+    experienceRequired: "Proszę wybrać swój poziom doświadczenia",
+    goalRequired: "Proszę wybrać swój cel inwestycyjny",
+    riskRequired: "Proszę wybrać swoją tolerancję ryzyka",
+    incomeRequired: "Proszę wybrać przedział dochodów",
+    capitalRequired: "Proszę wybrać swój kapitał inwestycyjny",
+    sourceRequired: "Proszę wybrać skąd się o nas dowiedziałeś",
+    expectationsRequired: "Proszę podzielić się swoimi oczekiwaniami",
+    financialRatingRequired: "Proszę ocenić swoją sytuację finansową",
+    termsRequired: "Musisz zgodzić się z warunkami użytkowania",
+
+    // Additional
+    optional: "Opcjonalne",
   },
 
   de: {
@@ -306,126 +468,183 @@ export const translations = {
     applyNow: "Jetzt bewerben",
 
     // Hero Section
-    eliteInvestmentOpportunities: "🔥 Elite-Investmentmöglichkeiten",
-    heroTitle: "Erschließen Sie Elite-Finanzchancen mit KI-gestütztem Handel",
-    heroSubtitle: "Treten Sie dem exklusiven Incite AI Investmentprogramm bei und erhalten Sie Zugang zu Premium-Handelsstrategien, die von modernster künstlicher Intelligenz unterstützt werden.",
+    eliteInvestmentOpportunities: "Elite-Investitionsmöglichkeiten",
+    heroTitle: "Elite-Finanzchancen mit KI-gestütztem Trading erschließen",
+    heroSubtitle: "Schließen Sie sich Tausenden erfolgreicher Investoren an, die unsere hochmoderne KI-Plattform nutzen, um Renditen zu maximieren und Risiken in den heutigen volatilen Märkten zu minimieren.",
     startJourneyNow: "Starten Sie Ihre Reise jetzt",
     investorsTrustUs: "Investoren vertrauen uns",
 
-    // Floating Cards
+    // Hero Cards
     recordPortfolioMay: "Rekord-Portfolio-Wachstum - Mai 2024",
     portfolioGrowth: "Portfolio-Wachstum",
-    growthPercentage: "+847,3%",
-    aiSays: "Incite AI sagt:",
-    confidence: "97,2% Vertrauen",
+    growthPercentage: "+34,7%",
+    aiSays: "KI sagt:",
+    confidence: "96% Vertrauen",
     averageClientProfit: "Durchschnittlicher Kundengewinn",
-    monthlyProfit: "47.832 $",
+    monthlyProfit: "+2.847€",
     last12Months: "Letzte 12 Monate",
     clientWinrate: "Kunden-Gewinnrate",
-    winratePercentage: "94,7%",
-    successRate: "Erfolgsrate",
-
-    // Trading Platform Section
-    advancedTechnology: "🚀 Fortgeschrittene Technologie",
-    cuttingEdgeTradingPlatform: "Modernste Handelsplattform",
-    tradingPlatformDescription: "Erleben Sie die Zukunft des Handels mit unserer KI-gestützten Plattform, die Echtzeit-Einblicke und automatisierte Strategien liefert.",
-    aiPoweredPredictions: "KI-gestützte Vorhersagen",
-    aiPredictionsDescription: "Fortgeschrittene maschinelle Lernalgorithmen analysieren Marktdaten, um genaue Vorhersagen zu liefern.",
-    bankGradeSecurity: "Banken-Sicherheit",
-    securityDescription: "Ihre Investitionen sind mit Sicherheit und Verschlüsselung auf Unternehmensebene geschützt.",
+    winratePercentage: "87,3%",
+    successRate: "Erfolgsquote",
 
     // Steps Section
-    simpleProcess: "✨ Einfacher Prozess",
-    stepsToGetStarted: "3 Schritte zum Einstieg",
-    leaveApplication: "Bewerbung einreichen",
-    applicationDescription: "Füllen Sie unser schnelles Bewerbungsformular aus, um Ihre Investmentreise zu beginnen.",
-    getGuidanceAccess: "Anleitung und Zugang erhalten",
-    guidanceDescription: "Erhalten Sie personalisierte Anleitung und Zugang zu unserer exklusiven Handelsplattform.",
-    growBalance: "Ihr Guthaben wachsen lassen",
-    growDescription: "Beobachten Sie, wie Ihre Investitionen mit unseren KI-gestützten Handelsstrategien wachsen.",
+    howItWorks: "Wie es funktioniert",
+    stepsTitle: "Ihr Weg zum finanziellen Erfolg",
+    stepsSubtitle: "Folgen Sie unserem bewährten 3-Schritte-Prozess, um mit KI-gestützten Trading-Insights konsistente Renditen zu erzielen.",
 
-    // Pricing Section
-    flexibleInvestmentOptions: "💰 Flexible Investmentoptionen",
-    investmentPlansTitle: "Investmentpläne & Preise",
-    standardPlan: "Standard-Plan",
+    step1Title: "Anmelden & Verifizierung",
+    step1Description: "Schließen Sie unseren schnellen Registrierungsprozess ab und lassen Sie sich verifizieren, um Zugang zu unserer exklusiven KI-Trading-Plattform zu erhalten.",
+
+    step2Title: "KI analysiert Märkte",
+    step2Description: "Unsere fortschrittliche KI scannt kontinuierlich globale Märkte und identifiziert profitable Gelegenheiten in Echtzeit.",
+
+    step3Title: "Ausführen & Profitieren",
+    step3Description: "Erhalten Sie klare Trading-Signale und führen Sie Trades mit Vertrauen aus, unterstützt von institutionellen Analysen.",
+
+    // Trading Platform
+    tradingPlatformTitle: "Fortschrittliche KI-Trading-Plattform",
+    tradingPlatformSubtitle: "Erleben Sie die Macht institutioneller Trading-Technologie, die für moderne Investoren entwickelt wurde.",
+
+    feature1Title: "Echtzeit-Marktanalyse",
+    feature1Description: "Fortschrittliche KI-Algorithmen analysieren jede Sekunde Tausende von Datenpunkten, um profitable Gelegenheiten zu identifizieren.",
+
+    feature2Title: "Risikomanagement",
+    feature2Description: "Ausgeklügelte Risikobewertungstools helfen dabei, Ihr Kapital zu schützen und gleichzeitig potenzielle Renditen zu maximieren.",
+
+    feature3Title: "Portfolio-Optimierung",
+    feature3Description: "Dynamische Portfolio-Balance sorgt für optimale Diversifikation und Leistung unter allen Marktbedingungen.",
+
+    // Testimonials
+    realUserExperiences: "Echte Nutzererfahrungen",
+    testimonialsTitle: "Was unsere Nutzer sagen",
+    testimonialsSubtitle: "Sehen Sie, wie Incite AI die Investitionsreise für Tausende von Nutzern weltweit transformiert hat.",
+    getEarlyAccess: "Frühen Zugang erhalten",
+
+    // Industry Experts
+    industryRecognition: "Branchenanerkennung",
+    industryExpertsTitle: "Was Branchenexperten sagen",
+    industryExpertsSubtitle: "Führende Finanzexperten und Branchenveteranen erkennen die Macht von Incite AI an.",
+    joinTheExperts: "Schließen Sie sich den Experten an",
+
+    // Leadership Section
+    leadership: "Führung",
+    leadershipTitle: "Führung von Incite AI",
+    founderCEO: "Gründer und CEO von Incite AI",
+    ceoDescription: "Verantwortlich für die strategische Entwicklung des Unternehmens und die Schaffung einer KI-Plattform für die Analyse von Finanzmärkten.",
+
+    // Pricing
+    pricingTitle: "Wählen Sie Ihren Investitionsplan",
+    pricingSubtitle: "Wählen Sie den perfekten Plan, der zu Ihren Investitionszielen und Ihrem Erfahrungslevel passt.",
+
+    starterPlan: "Starter-Plan",
+    starterPrice: "€299",
+    starterDescription: "Perfekt für Anfänger, die ihre KI-gestützte Investitionsreise beginnen möchten.",
+
     proPlan: "Pro-Plan",
-    advancedPlan: "Erweiterte Plan",
+    proPrice: "€599",
+    proDescription: "Erweiterte Funktionen für ernsthafte Investoren, die maximale Renditen anstreben.",
     mostPopular: "Am beliebtesten",
-    support247: "24/7 Prioritäts-Support",
-    personalisedManager: "Persönlicher Kontomanager",
-    automaticNotification: "Automatische Handelsmeldungen",
-    basicAutotrading: "Grundlegende Auto-Trading-Funktionen",
-    limitedTrades: "Bis zu 50 Trades/Monat",
-    advancedAutotrading: "Erweiterte Auto-Trading",
-    moderatedTrades: "Bis zu 200 Trades/Monat",
-    analyseResults: "Detaillierte Leistungsanalyse",
-    meetingsInvestors: "Monatliche Strategiebesprechungen",
-    allProFeatures: "Alle Pro-Plan-Funktionen",
-    premiumAutotrade: "Premium Auto-Trading-Engine",
-    unlimitedTrades: "Unbegrenzte Trades/Monat",
-    priorityProcessing: "Prioritäre Auftragsabwicklung",
-    companyGifts: "Exklusive Unternehmensvorteile & Geschenke",
-    spotsAvailable: "verfügbare Plätze",
-    startNow: "Jetzt starten",
-    currentlyFull: "Derzeit voll",
 
-    // Partners Section
-    ourPartners: "Vertraut von führenden Finanzinstitutionen",
+    elitePlan: "Elite-Plan",
+    elitePrice: "€999",
+    eliteDescription: "Premium-Zugang zu institutionellen Trading-Tools und persönlicher Unterstützung.",
 
-    // FAQ Section
-    commonQuestions: "❓ Häufige Fragen",
-    frequentlyAskedQuestions: "Häufig gestellte Fragen",
-    securityMeasuresQ: "Welche Sicherheitsmaßnahmen haben Sie implementiert?",
-    securityMeasuresA: "Wir verwenden Verschlüsselung auf Bankenniveau, Zwei-Faktor-Authentifizierung und halten alle wichtigen Finanzvorschriften ein, um sicherzustellen, dass Ihre Investitionen sicher sind.",
-    returnsQ: "Welche Renditen kann ich erwarten?",
-    returnsA: "Obwohl vergangene Leistungen keine zukünftigen Ergebnisse garantieren, hat unser KI-System historisch starke Renditen für unsere Kunden erzielt. Individuelle Ergebnisse können je nach Marktbedingungen und Investitionsbetrag variieren.",
-    qualificationQ: "Muss ich ein akkreditierter Investor sein?",
-    qualificationA: "Nein, unsere Plattform ist für Investoren aller Erfahrungsstufen konzipiert. Wir bieten Anleitung und Unterstützung, um Ihnen bei fundierten Investitionsentscheidungen zu helfen.",
-    withdrawalQ: "Wie schnell kann ich meine Mittel abheben?",
-    withdrawalA: "Standard-Abhebungen werden innerhalb von 24-48 Stunden bearbeitet. Prioritäts-Abhebungen für Pro- und Advanced-Plan-Mitglieder werden innerhalb von 2-4 Stunden bearbeitet.",
-    tradingSystemQ: "Wie funktioniert Ihr KI-Handelssystem?",
-    tradingSystemA: "Unsere KI analysiert Tausende von Marktindikatoren, Nachrichtenereignissen und historischen Mustern in Echtzeit, um profitable Handelsmöglichkeiten zu identifizieren und Trades automatisch auszuführen.",
-    hiddenFeesQ: "Gibt es versteckte Gebühren?",
-    hiddenFeesA: "Nein, wir glauben an vollständige Transparenz. Alle Gebühren sind in Ihrem Plan klar dargelegt. Es gibt keine versteckten Kosten oder Überraschungsgebühren.",
-    stillHaveQuestions: "Haben Sie noch Fragen?",
-    contactSupport: "Kontaktieren Sie unser Support-Team",
+    choosePlan: "Plan wählen",
 
-    // Application Section
-    beginJourney: "🚀 Beginnen Sie Ihre Reise",
-    applyNowTitle: "Bewerben Sie sich für das Incite AI Programm",
-    step2: "- Schritt 2",
+    // Pricing Features
+    aiSignals: "KI-Trading-Signale",
+    marketAnalysis: "Marktanalyse",
+    riskManagement: "Risikomanagement",
+    portfolio: "Portfolio-Verfolgung",
+    support: "E-Mail-Support",
+    prioritySupport: "Priority-Support",
+    personalManager: "Persönlicher Manager",
+    advancedTools: "Erweiterte Tools",
+    institutionalAccess: "Institutioneller Zugang",
+
+    // FAQ
+    faqTitle: "Häufig gestellte Fragen",
+    faqSubtitle: "Erhalten Sie Antworten auf die häufigsten Fragen zu unserer KI-Trading-Plattform.",
+
+    faq1Question: "Wie funktioniert die KI-Trading-Plattform?",
+    faq1Answer: "Unsere KI-Plattform verwendet fortschrittliche Machine-Learning-Algorithmen zur Analyse von Marktdaten, zur Identifizierung von Mustern und zur Generierung von Trading-Signalen. Sie verarbeitet Tausende von Datenpunkten in Echtzeit, um Ihnen umsetzbare Investitionsmöglichkeiten zu bieten.",
+
+    faq2Question: "Ist mein Investitionskapital sicher?",
+    faq2Answer: "Wir priorisieren Sicherheit und verwenden Verschlüsselung auf Bankniveau zum Schutz Ihrer Daten. Jedoch bergen alle Investitionen Risiken, und wir bieten umfassende Risikomanagement-Tools, um Ihnen bei informierten Entscheidungen zu helfen.",
+
+    faq3Question: "Welche Renditen kann ich erwarten?",
+    faq3Answer: "Während vergangene Leistungen keine zukünftigen Ergebnisse garantieren, haben unsere Nutzer historisch eine durchschnittliche monatliche Rendite von 8-15% gesehen. Die Ergebnisse variieren basierend auf Marktbedingungen und individueller Risikotoleranz.",
+
+    faq4Question: "Benötige ich Trading-Erfahrung?",
+    faq4Answer: "Keine vorherige Trading-Erfahrung erforderlich. Unsere Plattform ist sowohl für Anfänger als auch für erfahrene Trader konzipiert, mit Bildungsressourcen und intuitiven Benutzeroberflächen, die Sie führen.",
+
+    faq5Question: "Wie fange ich an?",
+    faq5Answer: "Wählen Sie einfach Ihren Plan, schließen Sie den Registrierungsprozess ab, und Sie erhalten sofortigen Zugang zu unserer KI-Trading-Plattform mit vollständiger Onboarding-Unterstützung.",
+
+    // Application Form
+    applyTitle: "Für frühen Zugang bewerben",
+    applySubtitle: "Schließen Sie sich Tausenden erfolgreicher Investoren an, die bereits unsere KI-gestützte Plattform nutzen.",
+
+    personalInformation: "Persönliche Informationen",
     firstName: "Vorname",
     lastName: "Nachname",
-    emailAddress: "E-Mail-Adresse",
-    phoneNumber: "Telefonnummer",
-    investmentPlan: "Investmentplan",
-    experience: "Handelserfahrung",
-    additionalMessage: "Zusätzliche Nachricht",
-    required: "*",
-    optional: "optional",
+    email: "E-Mail-Adresse",
+    phone: "Telefonnummer",
+    country: "Land",
+    selectCountry: "Wählen Sie Ihr Land",
+
+    investmentExperience: "Investitionserfahrung",
+    experienceLevel: "Erfahrungslevel",
+    selectExperience: "Wählen Sie Ihr Erfahrungslevel",
     beginner: "Anfänger (0-1 Jahre)",
     intermediate: "Fortgeschritten (1-3 Jahre)",
-    advanced: "Erweitert (3-5 Jahre)",
-    expert: "Experte (5+ Jahre)",
-    continueStep2: "Weiter zu Schritt 2",
-    backStep1: "Zurück zu Schritt 1",
-    submitApplication: "Bewerbung einreichen",
-    secureEncrypted: "Ihre Informationen sind sicher und verschlüsselt",
-    validEmailRequired: "Bitte geben Sie eine gültige E-Mail-Adresse ein",
-    validPhoneRequired: "Bitte geben Sie eine gültige Telefonnummer ein (6-15 Ziffern)",
+    advanced: "Experte (3+ Jahre)",
 
-    // Additional fields for step 2
-    jobTitle: "Berufsbezeichnung",
-    annualIncome: "Jahreseinkommen",
-    citizenship: "Staatsbürgerschaft",
-    residency: "Wohnsitzland",
-    mortgage: "Aktuelle Hypothek/Miete",
-    financialSituation: "Finanzielle Situation (Skala 1-10)",
-    upTo10k: "Bis zu 10.000 $",
-    income10k25k: "10.000 $ - 25.000 $",
-    income25k50k: "25.000 $ - 50.000 $",
-    income50k100k: "50.000 $ - 100.000 $",
-    income100kPlus: "100.000 $+",
+    investmentGoals: "Investitionsziele",
+    primaryGoal: "Primäres Investitionsziel",
+    selectGoal: "Wählen Sie Ihr primäres Ziel",
+    wealthPreservation: "Vermögenserhaltung",
+    steadyGrowth: "Stetiges Wachstum",
+    aggressiveGrowth: "Aggressives Wachstum",
+    dayTrading: "Daytrading",
+
+    riskTolerance: "Risikotoleranz",
+    selectRisk: "Wählen Sie Ihre Risikotoleranz",
+    conservative: "Konservativ",
+    moderate: "Moderat",
+    aggressive: "Aggressiv",
+
+    financialSituation: "Finanzielle Situation",
+    monthlyIncome: "Monatliches Einkommen (€)",
+    selectIncome: "Wählen Sie Ihre Einkommensklasse",
+    income1: "Unter €2.000",
+    income2: "€2.000 - €5.000",
+    income3: "€5.000 - €10.000",
+    income4: "€10.000 - €20.000",
+    income5: "Über €20.000",
+
+    investmentCapital: "Verfügbares Investitionskapital (€)",
+    selectCapital: "Wählen Sie Ihr Investitionskapital",
+    capital1: "€1.000 - €5.000",
+    capital2: "€5.000 - €10.000",
+    capital3: "€10.000 - €25.000",
+    capital4: "€25.000 - €50.000",
+    capital5: "€50.000 - €100.000",
+    capital6: "Über €100.000",
+
+    additionalQuestions: "Zusätzliche Fragen",
+    hearAboutUs: "Wie haben Sie von uns erfahren?",
+    selectSource: "Quelle wählen",
+    socialMedia: "Soziale Medien",
+    searchEngine: "Suchmaschine",
+    friendReferral: "Freund/Empfehlung",
+    advertisement: "Werbung",
+    other: "Andere",
+
+    expectations: "Was sind Ihre Erwartungen an unsere Plattform?",
+    expectationsPlaceholder: "Erzählen Sie uns von Ihren Investitionszielen und Erwartungen...",
+
+    financialSituationRating: "Bewerten Sie Ihre aktuelle finanzielle Situation (1-10)",
     financialSit1: "1 - Finanzielle Schwierigkeiten",
     financialSit10: "10 - Sehr komfortable finanzielle Situation",
 
@@ -440,10 +659,34 @@ export const translations = {
     contact: "Kontakt",
     privacyPolicy: "Datenschutzrichtlinie",
     termsOfService: "Nutzungsbedingungen",
-    riskDisclosure: "Risikooffenlegung",
+    riskDisclosure: "Risikoaufklärung",
     compliance: "Compliance",
-    allRightsReserved: "© 2024 Incite AI. Alle Rechte vorbehalten.",
-    footerDisclaimer: "Investitionen beinhalten Risiken. Vergangene Leistungen garantieren keine zukünftigen Ergebnisse.",
+    footerDisclaimer: "Risikowarnung: Trading beinhaltet erhebliche Risiken und kann zum Verlust Ihres investierten Kapitals führen.",
+
+    // Form Actions
+    submitApplication: "Bewerbung einreichen",
+    agreeToTerms: "Ich stimme den",
+    and: "und",
+    
+    // Form Validation
+    firstNameRequired: "Vorname ist erforderlich",
+    lastNameRequired: "Nachname ist erforderlich",
+    emailRequired: "E-Mail ist erforderlich",
+    emailInvalid: "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    phoneRequired: "Telefonnummer ist erforderlich",
+    countryRequired: "Bitte wählen Sie Ihr Land",
+    experienceRequired: "Bitte wählen Sie Ihr Erfahrungslevel",
+    goalRequired: "Bitte wählen Sie Ihr Investitionsziel",
+    riskRequired: "Bitte wählen Sie Ihre Risikotoleranz",
+    incomeRequired: "Bitte wählen Sie Ihre Einkommensklasse",
+    capitalRequired: "Bitte wählen Sie Ihr Investitionskapital",
+    sourceRequired: "Bitte wählen Sie, wie Sie von uns erfahren haben",
+    expectationsRequired: "Bitte teilen Sie Ihre Erwartungen mit",
+    financialRatingRequired: "Bitte bewerten Sie Ihre finanzielle Situation",
+    termsRequired: "Sie müssen den Allgemeinen Geschäftsbedingungen zustimmen",
+
+    // Additional
+    optional: "Optional",
   },
 
   es: {
@@ -455,126 +698,183 @@ export const translations = {
     applyNow: "Aplicar ahora",
 
     // Hero Section
-    eliteInvestmentOpportunities: "🔥 Oportunidades de inversión de élite",
+    eliteInvestmentOpportunities: "Oportunidades de inversión de élite",
     heroTitle: "Desbloquea oportunidades financieras de élite con trading impulsado por IA",
-    heroSubtitle: "Únete al programa de inversión exclusivo de Incite AI y accede a estrategias de trading premium respaldadas por inteligencia artificial de vanguardia.",
+    heroSubtitle: "Únete a miles de inversores exitosos que utilizan nuestra plataforma de IA de vanguardia para maximizar los rendimientos y minimizar los riesgos en los mercados volátiles de hoy.",
     startJourneyNow: "Comienza tu viaje ahora",
     investorsTrustUs: "inversores confían en nosotros",
 
-    // Floating Cards
-    recordPortfolioMay: "Crecimiento récord de cartera - Mayo 2024",
-    portfolioGrowth: "Crecimiento de la cartera",
-    growthPercentage: "+847,3%",
-    aiSays: "Incite AI dice:",
-    confidence: "97,2% de confianza",
-    averageClientProfit: "Beneficio medio del cliente",
-    monthlyProfit: "$47.832",
+    // Hero Cards
+    recordPortfolioMay: "Crecimiento récord del portafolio - Mayo 2024",
+    portfolioGrowth: "Crecimiento del portafolio",
+    growthPercentage: "+34,7%",
+    aiSays: "La IA dice:",
+    confidence: "96% de confianza",
+    averageClientProfit: "Beneficio promedio del cliente",
+    monthlyProfit: "+2.847€",
     last12Months: "Últimos 12 meses",
     clientWinrate: "Tasa de éxito del cliente",
-    winratePercentage: "94,7%",
+    winratePercentage: "87,3%",
     successRate: "Tasa de éxito",
 
-    // Trading Platform Section
-    advancedTechnology: "🚀 Tecnología avanzada",
-    cuttingEdgeTradingPlatform: "Plataforma de trading de vanguardia",
-    tradingPlatformDescription: "Experimenta el futuro del trading con nuestra plataforma impulsada por IA que ofrece información en tiempo real y estrategias automatizadas.",
-    aiPoweredPredictions: "Predicciones impulsadas por IA",
-    aiPredictionsDescription: "Algoritmos avanzados de aprendizaje automático analizan datos del mercado para proporcionar predicciones precisas.",
-    bankGradeSecurity: "Seguridad de nivel bancario",
-    securityDescription: "Tus inversiones están protegidas con seguridad y encriptación de nivel empresarial.",
-
     // Steps Section
-    simpleProcess: "✨ Proceso sencillo",
-    stepsToGetStarted: "3 pasos para comenzar",
-    leaveApplication: "Deja tu solicitud",
-    applicationDescription: "Completa nuestro rápido formulario de solicitud para comenzar tu viaje de inversión.",
-    getGuidanceAccess: "Obtén orientación y acceso",
-    guidanceDescription: "Recibe orientación personalizada y acceso a nuestra plataforma de trading exclusiva.",
-    growBalance: "Aumenta tu saldo",
-    growDescription: "Observa cómo crecen tus inversiones con nuestras estrategias de trading impulsadas por IA.",
+    howItWorks: "Cómo funciona",
+    stepsTitle: "Tu camino al éxito financiero",
+    stepsSubtitle: "Sigue nuestro proceso probado de 3 pasos para comenzar a generar rendimientos consistentes con insights de trading impulsados por IA.",
 
-    // Pricing Section
-    flexibleInvestmentOptions: "💰 Opciones de inversión flexibles",
-    investmentPlansTitle: "Planes de inversión y precios",
-    standardPlan: "Plan estándar",
+    step1Title: "Regístrate y verifica",
+    step1Description: "Completa nuestro rápido proceso de registro y verifica para acceder a nuestra plataforma exclusiva de trading de IA.",
+
+    step2Title: "La IA analiza los mercados",
+    step2Description: "Nuestra IA avanzada escanea continuamente los mercados globales, identificando oportunidades rentables en tiempo real.",
+
+    step3Title: "Ejecuta y gana",
+    step3Description: "Recibe señales de trading claras y ejecuta operaciones con confianza, respaldado por análisis de grado institucional.",
+
+    // Trading Platform
+    tradingPlatformTitle: "Plataforma de trading de IA avanzada",
+    tradingPlatformSubtitle: "Experimenta el poder de la tecnología de trading de grado institucional diseñada para inversores modernos.",
+
+    feature1Title: "Análisis de mercado en tiempo real",
+    feature1Description: "Los algoritmos avanzados de IA analizan miles de puntos de datos cada segundo para identificar oportunidades rentables.",
+
+    feature2Title: "Gestión de riesgos",
+    feature2Description: "Las herramientas sofisticadas de evaluación de riesgos ayudan a proteger tu capital mientras maximizan los rendimientos potenciales.",
+
+    feature3Title: "Optimización de portafolio",
+    feature3Description: "El equilibrio dinámico del portafolio asegura una diversificación óptima y rendimiento en todas las condiciones del mercado.",
+
+    // Testimonials
+    realUserExperiences: "Experiencias reales de usuarios",
+    testimonialsTitle: "Lo que dicen nuestros usuarios",
+    testimonialsSubtitle: "Ve cómo Incite AI ha transformado el viaje de inversión para miles de usuarios en todo el mundo.",
+    getEarlyAccess: "Obtener acceso temprano",
+
+    // Industry Experts
+    industryRecognition: "Reconocimiento de la industria",
+    industryExpertsTitle: "Lo que dicen los expertos de la industria",
+    industryExpertsSubtitle: "Expertos financieros líderes y veteranos de la industria reconocen el poder de Incite AI.",
+    joinTheExperts: "Únete a los expertos",
+
+    // Leadership Section
+    leadership: "Liderazgo",
+    leadershipTitle: "Liderazgo de Incite AI",
+    founderCEO: "Fundador y CEO de Incite AI",
+    ceoDescription: "Responsable del desarrollo estratégico de la empresa y la creación de una plataforma de IA para el análisis del mercado financiero.",
+
+    // Pricing
+    pricingTitle: "Elige tu plan de inversión",
+    pricingSubtitle: "Selecciona el plan perfecto para que coincida con tus objetivos de inversión y nivel de experiencia.",
+
+    starterPlan: "Plan Inicial",
+    starterPrice: "€299",
+    starterDescription: "Perfecto para principiantes que buscan comenzar su viaje de inversión impulsado por IA.",
+
     proPlan: "Plan Pro",
-    advancedPlan: "Plan avanzado",
+    proPrice: "€599",
+    proDescription: "Características avanzadas para inversores serios que buscan rendimientos máximos.",
     mostPopular: "Más popular",
-    support247: "Soporte prioritario 24/7",
-    personalisedManager: "Gestor de cuenta personalizado",
-    automaticNotification: "Notificaciones automáticas de operaciones",
-    basicAutotrading: "Funciones básicas de trading automático",
-    limitedTrades: "Hasta 50 operaciones/mes",
-    advancedAutotrading: "Trading automático avanzado",
-    moderatedTrades: "Hasta 200 operaciones/mes",
-    analyseResults: "Análisis detallado del rendimiento",
-    meetingsInvestors: "Reuniones estratégicas mensuales",
-    allProFeatures: "Todas las funciones del Plan Pro",
-    premiumAutotrade: "Motor de trading automático premium",
-    unlimitedTrades: "Operaciones ilimitadas/mes",
-    priorityProcessing: "Procesamiento prioritario de órdenes",
-    companyGifts: "Privilegios y regalos exclusivos de la empresa",
-    spotsAvailable: "plazas disponibles",
-    startNow: "Comenzar ahora",
-    currentlyFull: "Actualmente completo",
 
-    // Partners Section
-    ourPartners: "De confianza por instituciones financieras líderes",
+    elitePlan: "Plan Elite",
+    elitePrice: "€999",
+    eliteDescription: "Acceso premium a herramientas de trading de grado institucional y soporte personal.",
 
-    // FAQ Section
-    commonQuestions: "❓ Preguntas comunes",
-    frequentlyAskedQuestions: "Preguntas frecuentes",
-    securityMeasuresQ: "¿Qué medidas de seguridad tienen implementadas?",
-    securityMeasuresA: "Utilizamos encriptación de grado bancario, autenticación de dos factores y cumplimos con todas las principales regulaciones financieras para garantizar que tus inversiones estén seguras.",
-    returnsQ: "¿Qué tipo de rendimientos puedo esperar?",
-    returnsA: "Aunque el rendimiento pasado no garantiza resultados futuros, nuestro sistema de IA ha proporcionado históricamente fuertes rendimientos para nuestros clientes. Los resultados individuales pueden variar según las condiciones del mercado y el monto de inversión.",
-    qualificationQ: "¿Necesito ser un inversor acreditado?",
-    qualificationA: "No, nuestra plataforma está diseñada para inversores de todos los niveles de experiencia. Proporcionamos orientación y apoyo para ayudarte a tomar decisiones de inversión informadas.",
-    withdrawalQ: "¿Qué tan rápido puedo retirar mis fondos?",
-    withdrawalA: "Los retiros estándar se procesan dentro de 24-48 horas. Los retiros prioritarios para miembros de los planes Pro y Advanced se procesan dentro de 2-4 horas.",
-    tradingSystemQ: "¿Cómo funciona su sistema de trading con IA?",
-    tradingSystemA: "Nuestra IA analiza miles de indicadores del mercado, eventos de noticias y patrones históricos en tiempo real para identificar oportunidades de trading rentables y ejecutar operaciones automáticamente.",
-    hiddenFeesQ: "¿Hay tarifas ocultas?",
-    hiddenFeesA: "No, creemos en la transparencia total. Todas las tarifas se detallan claramente en tu plan. No hay cargos ocultos ni tarifas sorpresa.",
-    stillHaveQuestions: "¿Todavía tienes preguntas?",
-    contactSupport: "Contacta a nuestro equipo de soporte",
+    choosePlan: "Elegir plan",
 
-    // Application Section
-    beginJourney: "🚀 Comienza tu viaje",
-    applyNowTitle: "Solicita el programa Incite AI",
-    step2: "- Paso 2",
+    // Pricing Features
+    aiSignals: "Señales de trading de IA",
+    marketAnalysis: "Análisis de mercado",
+    riskManagement: "Gestión de riesgos",
+    portfolio: "Seguimiento de portafolio",
+    support: "Soporte por email",
+    prioritySupport: "Soporte prioritario",
+    personalManager: "Gerente personal",
+    advancedTools: "Herramientas avanzadas",
+    institutionalAccess: "Acceso institucional",
+
+    // FAQ
+    faqTitle: "Preguntas frecuentes",
+    faqSubtitle: "Obtén respuestas a las preguntas más comunes sobre nuestra plataforma de trading de IA.",
+
+    faq1Question: "¿Cómo funciona la plataforma de trading de IA?",
+    faq1Answer: "Nuestra plataforma de IA utiliza algoritmos avanzados de aprendizaje automático para analizar datos del mercado, identificar patrones y generar señales de trading. Procesa miles de puntos de datos en tiempo real para proporcionarte oportunidades de inversión accionables.",
+
+    faq2Question: "¿Está seguro mi capital de inversión?",
+    faq2Answer: "Priorizamos la seguridad y utilizamos encriptación de nivel bancario para proteger tus datos. Sin embargo, todas las inversiones conllevan riesgo, y proporcionamos herramientas integrales de gestión de riesgos para ayudarte a tomar decisiones informadas.",
+
+    faq3Question: "¿Qué rendimientos puedo esperar?",
+    faq3Answer: "Aunque el rendimiento pasado no garantiza resultados futuros, nuestros usuarios han visto históricamente un rendimiento mensual promedio del 8-15%. Los resultados varían según las condiciones del mercado y la tolerancia al riesgo individual.",
+
+    faq4Question: "¿Necesito experiencia en trading?",
+    faq4Answer: "No se requiere experiencia previa en trading. Nuestra plataforma está diseñada tanto para principiantes como para traders experimentados, con recursos educativos e interfaces intuitivas para guiarte.",
+
+    faq5Question: "¿Cómo empiezo?",
+    faq5Answer: "Simplemente elige tu plan, completa el proceso de registro, y obtendrás acceso inmediato a nuestra plataforma de trading de IA con soporte completo de incorporación.",
+
+    // Application Form
+    applyTitle: "Aplicar para acceso temprano",
+    applySubtitle: "Únete a miles de inversores exitosos que ya utilizan nuestra plataforma impulsada por IA.",
+
+    personalInformation: "Información personal",
     firstName: "Nombre",
     lastName: "Apellido",
-    emailAddress: "Dirección de correo electrónico",
-    phoneNumber: "Número de teléfono",
-    investmentPlan: "Plan de inversión",
-    experience: "Experiencia en trading",
-    additionalMessage: "Mensaje adicional",
-    required: "*",
-    optional: "opcional",
+    email: "Dirección de correo electrónico",
+    phone: "Número de teléfono",
+    country: "País",
+    selectCountry: "Selecciona tu país",
+
+    investmentExperience: "Experiencia de inversión",
+    experienceLevel: "Nivel de experiencia",
+    selectExperience: "Selecciona tu nivel de experiencia",
     beginner: "Principiante (0-1 años)",
     intermediate: "Intermedio (1-3 años)",
-    advanced: "Avanzado (3-5 años)",
-    expert: "Experto (5+ años)",
-    continueStep2: "Continuar al paso 2",
-    backStep1: "Volver al paso 1",
-    submitApplication: "Enviar solicitud",
-    secureEncrypted: "Tu información está segura y encriptada",
-    validEmailRequired: "Por favor, ingresa una dirección de correo electrónico válida",
-    validPhoneRequired: "Por favor, ingresa un número de teléfono válido (6-15 dígitos)",
+    advanced: "Avanzado (3+ años)",
 
-    // Additional fields for step 2
-    jobTitle: "Cargo laboral",
-    annualIncome: "Ingresos anuales",
-    citizenship: "Ciudadanía",
-    residency: "País de residencia",
-    mortgage: "Hipoteca/alquiler actual",
-    financialSituation: "Situación financiera (escala 1-10)",
-    upTo10k: "Hasta $10.000",
-    income10k25k: "$10.000 - $25.000",
-    income25k50k: "$25.000 - $50.000",
-    income50k100k: "$50.000 - $100.000",
-    income100kPlus: "$100.000+",
+    investmentGoals: "Objetivos de inversión",
+    primaryGoal: "Objetivo principal de inversión",
+    selectGoal: "Selecciona tu objetivo principal",
+    wealthPreservation: "Preservación de la riqueza",
+    steadyGrowth: "Crecimiento constante",
+    aggressiveGrowth: "Crecimiento agresivo",
+    dayTrading: "Trading diario",
+
+    riskTolerance: "Tolerancia al riesgo",
+    selectRisk: "Selecciona tu tolerancia al riesgo",
+    conservative: "Conservador",
+    moderate: "Moderado",
+    aggressive: "Agresivo",
+
+    financialSituation: "Situación financiera",
+    monthlyIncome: "Ingresos mensuales (€)",
+    selectIncome: "Selecciona tu rango de ingresos",
+    income1: "Menos de €2.000",
+    income2: "€2.000 - €5.000",
+    income3: "€5.000 - €10.000",
+    income4: "€10.000 - €20.000",
+    income5: "Más de €20.000",
+
+    investmentCapital: "Capital de inversión disponible (€)",
+    selectCapital: "Selecciona tu capital de inversión",
+    capital1: "€1.000 - €5.000",
+    capital2: "€5.000 - €10.000",
+    capital3: "€10.000 - €25.000",
+    capital4: "€25.000 - €50.000",
+    capital5: "€50.000 - €100.000",
+    capital6: "Más de €100.000",
+
+    additionalQuestions: "Preguntas adicionales",
+    hearAboutUs: "¿Cómo supiste de nosotros?",
+    selectSource: "Seleccionar fuente",
+    socialMedia: "Redes sociales",
+    searchEngine: "Motor de búsqueda",
+    friendReferral: "Amigo/Referencia",
+    advertisement: "Publicidad",
+    other: "Otro",
+
+    expectations: "¿Cuáles son tus expectativas de nuestra plataforma?",
+    expectationsPlaceholder: "Cuéntanos sobre tus objetivos de inversión y expectativas...",
+
+    financialSituationRating: "Califica tu situación financiera actual (1-10)",
     financialSit1: "1 - Con dificultades financieras",
     financialSit10: "10 - Situación financiera muy cómoda",
 
@@ -591,8 +891,32 @@ export const translations = {
     termsOfService: "Términos de servicio",
     riskDisclosure: "Divulgación de riesgos",
     compliance: "Cumplimiento",
-    allRightsReserved: "© 2024 Incite AI. Todos los derechos reservados.",
-    footerDisclaimer: "La inversión implica riesgo. El rendimiento pasado no garantiza resultados futuros.",
+    footerDisclaimer: "Advertencia de riesgo: El trading involucra un riesgo sustancial y puede resultar en la pérdida de su capital invertido.",
+
+    // Form Actions
+    submitApplication: "Enviar solicitud",
+    agreeToTerms: "Estoy de acuerdo con los",
+    and: "y",
+    
+    // Form Validation
+    firstNameRequired: "El nombre es requerido",
+    lastNameRequired: "El apellido es requerido",
+    emailRequired: "El email es requerido",
+    emailInvalid: "Por favor ingresa una dirección de email válida",
+    phoneRequired: "El número de teléfono es requerido",
+    countryRequired: "Por favor selecciona tu país",
+    experienceRequired: "Por favor selecciona tu nivel de experiencia",
+    goalRequired: "Por favor selecciona tu objetivo de inversión",
+    riskRequired: "Por favor selecciona tu tolerancia al riesgo",
+    incomeRequired: "Por favor selecciona tu rango de ingresos",
+    capitalRequired: "Por favor selecciona tu capital de inversión",
+    sourceRequired: "Por favor selecciona cómo supiste de nosotros",
+    expectationsRequired: "Por favor comparte tus expectativas",
+    financialRatingRequired: "Por favor califica tu situación financiera",
+    termsRequired: "Debes aceptar los términos y condiciones",
+
+    // Additional
+    optional: "Opcional",
   },
 
   ru: {
@@ -604,126 +928,183 @@ export const translations = {
     applyNow: "Подать заявку",
 
     // Hero Section
-    eliteInvestmentOpportunities: "🔥 Элитные инвестиционные возможности",
-    heroTitle: "Откройте элитные финансовые возможности с торговлей на базе ИИ",
-    heroSubtitle: "Присоединяйтесь к эксклюзивной инвестиционной программе Incite AI и получите доступ к премиум-стратегиям трейдинга, подкрепленным передовым искусственным интеллектом.",
+    eliteInvestmentOpportunities: "Элитные инвестиционные возможности",
+    heroTitle: "Откройте элитные финансовые возможности с торговлей на основе ИИ",
+    heroSubtitle: "Присоединяйтесь к тысячам успешных инвесторов, использующих нашу передовую платформу ИИ для максимизации доходов и минимизации рисков на сегодняшних волатильных рынках.",
     startJourneyNow: "Начните свой путь сейчас",
     investorsTrustUs: "инвесторов доверяют нам",
 
-    // Floating Cards
+    // Hero Cards
     recordPortfolioMay: "Рекордный рост портфеля - май 2024",
     portfolioGrowth: "Рост портфеля",
-    growthPercentage: "+847,3%",
-    aiSays: "Incite AI говорит:",
-    confidence: "97,2% уверенности",
+    growthPercentage: "+34,7%",
+    aiSays: "ИИ говорит:",
+    confidence: "96% уверенности",
     averageClientProfit: "Средняя прибыль клиента",
-    monthlyProfit: "$47 832",
+    monthlyProfit: "+2.847€",
     last12Months: "Последние 12 месяцев",
-    clientWinrate: "Показатель успеха клиентов",
-    winratePercentage: "94,7%",
-    successRate: "Коэффициент успеха",
-
-    // Trading Platform Section
-    advancedTechnology: "🚀 Передовая технология",
-    cuttingEdgeTradingPlatform: "Передовая торговая платформа",
-    tradingPlatformDescription: "Испытайте будущее трейдинга с нашей платформой на базе ИИ, которая предоставляет информацию в реальном времени и автоматизированные стратегии.",
-    aiPoweredPredictions: "Прогнозы на базе ИИ",
-    aiPredictionsDescription: "Продвинутые алгоритмы машинного обучения анализируют рыночные данные для предоставления точных прогнозов.",
-    bankGradeSecurity: "Банковская безопасность",
-    securityDescription: "Ваши инвестиции защищены корпоративным уровнем безопасности и шифрования.",
+    clientWinrate: "Процент побед клиентов",
+    winratePercentage: "87,3%",
+    successRate: "Процент успеха",
 
     // Steps Section
-    simpleProcess: "✨ Простой процесс",
-    stepsToGetStarted: "3 шага для начала",
-    leaveApplication: "Оставьте заявку",
-    applicationDescription: "Заполните нашу быструю форму заявки, чтобы начать свой инвестиционный путь.",
-    getGuidanceAccess: "Получите руководство и доступ",
-    guidanceDescription: "Получите персонализированное руководство и доступ к нашей эксклюзивной торговой платформе.",
-    growBalance: "Увеличьте свой баланс",
-    growDescription: "Наблюдайте, как ваши инвестиции растут с нашими торговыми стратегиями на базе ИИ.",
+    howItWorks: "Как это работает",
+    stepsTitle: "Ваш путь к финансовому успеху",
+    stepsSubtitle: "Следуйте нашему проверенному 3-этапному процессу, чтобы начать генерировать стабильные доходы с помощью торговых инсайтов на основе ИИ.",
 
-    // Pricing Section
-    flexibleInvestmentOptions: "💰 Гибкие инвестиционные опции",
-    investmentPlansTitle: "Инвестиционные планы и цены",
-    standardPlan: "Стандартный план",
-    proPlan: "Про план",
-    advancedPlan: "Продвинутый план",
+    step1Title: "Регистрация и верификация",
+    step1Description: "Завершите наш быстрый процесс регистрации и пройдите верификацию для доступа к нашей эксклюзивной торговой платформе ИИ.",
+
+    step2Title: "ИИ анализирует рынки",
+    step2Description: "Наш продвинутый ИИ непрерывно сканирует глобальные рынки, выявляя прибыльные возможности в реальном времени.",
+
+    step3Title: "Исполнение и прибыль",
+    step3Description: "Получайте четкие торговые сигналы и исполняйте сделки с уверенностью, подкрепленные институциональной аналитикой.",
+
+    // Trading Platform
+    tradingPlatformTitle: "Продвинутая торговая платформа ИИ",
+    tradingPlatformSubtitle: "Ощутите мощь институциональной торговой технологии, созданной для современных инвесторов.",
+
+    feature1Title: "Анализ рынка в реальном времени",
+    feature1Description: "Продвинутые алгоритмы ИИ анализируют тысячи точек данных каждую секунду для выявления прибыльных возможностей.",
+
+    feature2Title: "Управление рисками",
+    feature2Description: "Сложные инструменты оценки рисков помогают защитить ваш капитал, максимизируя потенциальные доходы.",
+
+    feature3Title: "Оптимизация портфеля",
+    feature3Description: "Динамический баланс портфеля обеспечивает оптимальную диверсификацию и производительность во всех рыночных условиях.",
+
+    // Testimonials
+    realUserExperiences: "Реальный опыт пользователей",
+    testimonialsTitle: "Что говорят наши пользователи",
+    testimonialsSubtitle: "Посмотрите, как Incite AI преобразил инвестиционный путь для тысяч пользователей по всему миру.",
+    getEarlyAccess: "Получить ранний доступ",
+
+    // Industry Experts
+    industryRecognition: "Признание отрасли",
+    industryExpertsTitle: "Что говорят эксперты отрасли",
+    industryExpertsSubtitle: "Ведущие финансовые эксперты и ветераны отрасли признают мощь Incite AI.",
+    joinTheExperts: "Присоединиться к экспертам",
+
+    // Leadership Section
+    leadership: "Руководство",
+    leadershipTitle: "Руководство Incite AI",
+    founderCEO: "Основатель и генеральный директор Incite AI",
+    ceoDescription: "Отвечает за стратегическое развитие компании и создание платформы ИИ для анализа финансовых рынков.",
+
+    // Pricing
+    pricingTitle: "Выберите свой инвестиционный план",
+    pricingSubtitle: "Выберите идеальный план, соответствующий вашим инвестиционным целям и уровню опыта.",
+
+    starterPlan: "Начальный план",
+    starterPrice: "€299",
+    starterDescription: "Идеально для новичков, желающих начать свой инвестиционный путь с ИИ.",
+
+    proPlan: "Pro план",
+    proPrice: "€599",
+    proDescription: "Продвинутые функции для серьезных инвесторов, стремящихся к максимальным доходам.",
     mostPopular: "Самый популярный",
-    support247: "Приоритетная поддержка 24/7",
-    personalisedManager: "Персонализированный менеджер аккаунта",
-    automaticNotification: "Автоматические уведомления о сделках",
-    basicAutotrading: "Базовые функции автоматической торговли",
-    limitedTrades: "До 50 сделок/месяц",
-    advancedAutotrading: "Продвинутая автоматическая торговля",
-    moderatedTrades: "До 200 сделок/месяц",
-    analyseResults: "Детальный анализ производительности",
-    meetingsInvestors: "Ежемесячные стратегические встречи",
-    allProFeatures: "Все функции Про плана",
-    premiumAutotrade: "Премиум-движок автоматической торговли",
-    unlimitedTrades: "Неограниченное количество сделок/месяц",
-    priorityProcessing: "Приоритетная обработка ордеров",
-    companyGifts: "Эксклюзивные корпоративные привилегии и подарки",
-    spotsAvailable: "доступных мест",
-    startNow: "Начать сейчас",
-    currentlyFull: "В настоящее время заполнен",
 
-    // Partners Section
-    ourPartners: "Доверие ведущих финансовых учреждений",
+    elitePlan: "Элитный план",
+    elitePrice: "€999",
+    eliteDescription: "Премиум доступ к институциональным торговым инструментам и персональной поддержке.",
 
-    // FAQ Section
-    commonQuestions: "❓ Общие вопросы",
-    frequentlyAskedQuestions: "Часто задаваемые вопросы",
-    securityMeasuresQ: "Какие меры безопасности у вас внедрены?",
-    securityMeasuresA: "Мы используем банковское шифрование, двухфакторную аутентификацию и соблюдаем все основные финансовые правила, чтобы обеспечить безопасность ваших инвестиций.",
-    returnsQ: "Какую доходность я могу ожидать?",
-    returnsA: "Хотя прошлые результаты не гарантируют будущих результатов, наша система ИИ исторически обеспечивала высокую доходность для наших клиентов. Индивидуальные результаты могут различаться в зависимости от рыночных условий и суммы инвестиций.",
-    qualificationQ: "Нужно ли мне быть аккредитованным инвестором?",
-    qualificationA: "Нет, наша платформа разработана для инвесторов всех уровней опыта. Мы предоставляем руководство и поддержку, чтобы помочь вам принимать обоснованные инвестиционные решения.",
-    withdrawalQ: "Как быстро я могу вывести свои средства?",
-    withdrawalA: "Стандартные выводы обрабатываются в течение 24-48 часов. Приоритетные выводы для членов планов Pro и Advanced обрабатываются в течение 2-4 часов.",
-    tradingSystemQ: "Как работает ваша торговая система на базе ИИ?",
-    tradingSystemA: "Наш ИИ анализирует тысячи рыночных индикаторов, новостных событий и исторических паттернов в реальном времени, чтобы идентифицировать прибыльные торговые возможности и автоматически выполнять сделки.",
-    hiddenFeesQ: "Есть ли скрытые комиссии?",
-    hiddenFeesA: "Нет, мы верим в полную прозрачность. Все комиссии четко указаны в вашем плане. Никаких скрытых платежей или неожиданных комиссий.",
-    stillHaveQuestions: "Остались вопросы?",
-    contactSupport: "Свяжитесь с нашей службой поддержки",
+    choosePlan: "Выбрать план",
 
-    // Application Section
-    beginJourney: "🚀 Начните свой путь",
-    applyNowTitle: "Подайте заявку на программу Incite AI",
-    step2: "- Шаг 2",
+    // Pricing Features
+    aiSignals: "Торговые сигналы ИИ",
+    marketAnalysis: "Анализ рынка",
+    riskManagement: "Управление рисками",
+    portfolio: "Отслеживание портфеля",
+    support: "Поддержка по email",
+    prioritySupport: "Приоритетная поддержка",
+    personalManager: "Персональный менеджер",
+    advancedTools: "Продвинутые инструменты",
+    institutionalAccess: "Институциональный доступ",
+
+    // FAQ
+    faqTitle: "Часто задаваемые вопросы",
+    faqSubtitle: "Получите ответы на самые часто задаваемые вопросы о нашей торговой платформе ИИ.",
+
+    faq1Question: "Как работает торговая платформа ИИ?",
+    faq1Answer: "Наша платформа ИИ использует продвинутые алгоритмы машинного обучения для анализа рыночных данных, выявления паттернов и генерации торговых сигналов. Она обрабатывает тысячи точек данных в реальном времени, чтобы предоставить вам практические инвестиционные возможности.",
+
+    faq2Question: "Безопасен ли мой инвестиционный капитал?",
+    faq2Answer: "Мы приоритизируем безопасность и используем шифрование банковского уровня для защиты ваших данных. Однако все инвестиции несут риск, и мы предоставляем комплексные инструменты управления рисками, чтобы помочь вам принимать обоснованные решения.",
+
+    faq3Question: "Какую доходность я могу ожидать?",
+    faq3Answer: "Хотя прошлые результаты не гарантируют будущие результаты, наши пользователи исторически видели среднемесячную доходность 8-15%. Результаты варьируются в зависимости от рыночных условий и индивидуальной толерантности к риску.",
+
+    faq4Question: "Нужен ли мне опыт торговли?",
+    faq4Answer: "Предыдущий опыт торговли не требуется. Наша платформа разработана как для новичков, так и для опытных трейдеров, с образовательными ресурсами и интуитивными интерфейсами для вашего руководства.",
+
+    faq5Question: "Как мне начать?",
+    faq5Answer: "Просто выберите свой план, завершите процесс регистрации, и вы получите немедленный доступ к нашей торговой платформе ИИ с полной поддержкой адаптации.",
+
+    // Application Form
+    applyTitle: "Подать заявку на ранний доступ",
+    applySubtitle: "Присоединяйтесь к тысячам успешных инвесторов, уже использующих нашу платформу на основе ИИ.",
+
+    personalInformation: "Личная информация",
     firstName: "Имя",
     lastName: "Фамилия",
-    emailAddress: "Адрес электронной почты",
-    phoneNumber: "Номер телефона",
-    investmentPlan: "Инвестиционный план",
-    experience: "Опыт торговли",
-    additionalMessage: "Дополнительное сообщение",
-    required: "*",
-    optional: "необязательно",
-    beginner: "Начинающий (0-1 год)",
-    intermediate: "Средний уровень (1-3 года)",
-    advanced: "Продвинутый (3-5 лет)",
-    expert: "Эксперт (5+ лет)",
-    continueStep2: "Продолжить к шагу 2",
-    backStep1: "Вернуться к шагу 1",
-    submitApplication: "Отправить заявку",
-    secureEncrypted: "Ваша информация защищена и зашифрована",
-    validEmailRequired: "Пожалуйста, введите действительный адрес электронной почты",
-    validPhoneRequired: "Пожалуйста, введите действительный номер телефона (6-15 цифр)",
+    email: "Адрес электронной почты",
+    phone: "Номер телефона",
+    country: "Страна",
+    selectCountry: "Выберите вашу страну",
 
-    // Additional fields for step 2
-    jobTitle: "Должность",
-    annualIncome: "Годовой доход",
-    citizenship: "Гражданство",
-    residency: "Страна проживания",
-    mortgage: "Текущий ипотечный кредит/аренда",
-    financialSituation: "Финансовое положение (шкала 1-10)",
-    upTo10k: "До $10 000",
-    income10k25k: "$10 000 - $25 000",
-    income25k50k: "$25 000 - $50 000",
-    income50k100k: "$50 000 - $100 000",
-    income100kPlus: "$100 000+",
+    investmentExperience: "Инвестиционный опыт",
+    experienceLevel: "Уровень опыта",
+    selectExperience: "Выберите ваш уровень опыта",
+    beginner: "Новичок (0-1 год)",
+    intermediate: "Средний (1-3 года)",
+    advanced: "Продвинутый (3+ лет)",
+
+    investmentGoals: "Инвестиционные цели",
+    primaryGoal: "Основная инвестиционная цель",
+    selectGoal: "Выберите вашу основную цель",
+    wealthPreservation: "Сохранение богатства",
+    steadyGrowth: "Стабильный рост",
+    aggressiveGrowth: "Агрессивный рост",
+    dayTrading: "Дневная торговля",
+
+    riskTolerance: "Толерантность к риску",
+    selectRisk: "Выберите вашу толерантность к риску",
+    conservative: "Консервативная",
+    moderate: "Умеренная",
+    aggressive: "Агрессивная",
+
+    financialSituation: "Финансовое положение",
+    monthlyIncome: "Месячный доход (€)",
+    selectIncome: "Выберите ваш диапазон доходов",
+    income1: "Менее €2.000",
+    income2: "€2.000 - €5.000",
+    income3: "€5.000 - €10.000",
+    income4: "€10.000 - €20.000",
+    income5: "Более €20.000",
+
+    investmentCapital: "Доступный инвестиционный капитал (€)",
+    selectCapital: "Выберите ваш инвестиционный капитал",
+    capital1: "€1.000 - €5.000",
+    capital2: "€5.000 - €10.000",
+    capital3: "€10.000 - €25.000",
+    capital4: "€25.000 - €50.000",
+    capital5: "€50.000 - €100.000",
+    capital6: "Более €100.000",
+
+    additionalQuestions: "Дополнительные вопросы",
+    hearAboutUs: "Как вы узнали о нас?",
+    selectSource: "Выберите источник",
+    socialMedia: "Социальные сети",
+    searchEngine: "Поисковая система",
+    friendReferral: "Друг/Рекомендация",
+    advertisement: "Реклама",
+    other: "Другое",
+
+    expectations: "Каковы ваши ожидания от нашей платформы?",
+    expectationsPlaceholder: "Расскажите нам о ваших инвестиционных целях и ожиданиях...",
+
+    financialSituationRating: "Оцените ваше текущее финансовое положение (1-10)",
     financialSit1: "1 - Финансовые трудности",
     financialSit10: "10 - Очень комфортное финансовое положение",
 
@@ -734,14 +1115,38 @@ export const translations = {
     // Footer
     footerDescription: "Расширение возможностей инвесторов с финансовыми решениями на базе ИИ для устойчивого роста благосостояния.",
     quickLinks: "Быстрые ссылки",
-    legal: "Юридические",
-    contact: "Контакты",
+    legal: "Правовая информация",
+    contact: "Контакт",
     privacyPolicy: "Политика конфиденциальности",
     termsOfService: "Условия обслуживания",
     riskDisclosure: "Раскрытие рисков",
     compliance: "Соответствие",
-    allRightsReserved: "© 2024 Incite AI. Все права защищены.",
-    footerDisclaimer: "Инвестиции связаны с риском. Прошлая производительность не гарантирует будущих результатов.",
+    footerDisclaimer: "Предупреждение о рисках: Торговля включает существенный риск и может привести к потере вашего инвестированного капитала.",
+
+    // Form Actions
+    submitApplication: "Отправить заявку",
+    agreeToTerms: "Я согласен с",
+    and: "и",
+    
+    // Form Validation
+    firstNameRequired: "Имя обязательно",
+    lastNameRequired: "Фамилия обязательна",
+    emailRequired: "Email обязателен",
+    emailInvalid: "Пожалуйста, введите действительный email адрес",
+    phoneRequired: "Номер телефона обязателен",
+    countryRequired: "Пожалуйста, выберите вашу страну",
+    experienceRequired: "Пожалуйста, выберите ваш уровень опыта",
+    goalRequired: "Пожалуйста, выберите вашу инвестиционную цель",
+    riskRequired: "Пожалуйста, выберите вашу толерантность к риску",
+    incomeRequired: "Пожалуйста, выберите ваш диапазон доходов",
+    capitalRequired: "Пожалуйста, выберите ваш инвестиционный капитал",
+    sourceRequired: "Пожалуйста, выберите как вы узнали о нас",
+    expectationsRequired: "Пожалуйста, поделитесь вашими ожиданиями",
+    financialRatingRequired: "Пожалуйста, оцените ваше финансовое положение",
+    termsRequired: "Вы должны согласиться с условиями и положениями",
+
+    // Additional
+    optional: "Необязательно",
   },
 
   fr: {
@@ -753,126 +1158,183 @@ export const translations = {
     applyNow: "Postuler maintenant",
 
     // Hero Section
-    eliteInvestmentOpportunities: "🔥 Opportunités d'investissement d'élite",
-    heroTitle: "Débloquez des opportunités financières d'élite avec le trading propulsé par l'IA",
-    heroSubtitle: "Rejoignez le programme d'investissement exclusif Incite AI et accédez à des stratégies de trading premium soutenues par une intelligence artificielle de pointe.",
+    eliteInvestmentOpportunities: "Opportunités d'investissement d'élite",
+    heroTitle: "Débloquez des opportunités financières d'élite avec le trading alimenté par l'IA",
+    heroSubtitle: "Rejoignez des milliers d'investisseurs prospères utilisant notre plateforme d'IA de pointe pour maximiser les rendements et minimiser les risques sur les marchés volatils d'aujourd'hui.",
     startJourneyNow: "Commencez votre voyage maintenant",
     investorsTrustUs: "investisseurs nous font confiance",
 
-    // Floating Cards
+    // Hero Cards
     recordPortfolioMay: "Croissance record du portefeuille - Mai 2024",
     portfolioGrowth: "Croissance du portefeuille",
-    growthPercentage: "+847,3%",
-    aiSays: "Incite AI dit :",
-    confidence: "97,2% de confiance",
-    averageClientProfit: "Profit moyen des clients",
-    monthlyProfit: "47 832 $",
+    growthPercentage: "+34,7%",
+    aiSays: "L'IA dit :",
+    confidence: "96% de confiance",
+    averageClientProfit: "Profit moyen du client",
+    monthlyProfit: "+2.847€",
     last12Months: "12 derniers mois",
-    clientWinrate: "Taux de réussite des clients",
-    winratePercentage: "94,7%",
-    successRate: "Taux de réussite",
-
-    // Trading Platform Section
-    advancedTechnology: "🚀 Technologie avancée",
-    cuttingEdgeTradingPlatform: "Plateforme de trading de pointe",
-    tradingPlatformDescription: "Expérimentez le futur du trading avec notre plateforme propulsée par l'IA qui fournit des insights en temps réel et des stratégies automatisées.",
-    aiPoweredPredictions: "Prédictions alimentées par l'IA",
-    aiPredictionsDescription: "Des algorithmes d'apprentissage automatique avancés analysent les données du marché pour fournir des prédictions précises.",
-    bankGradeSecurity: "Sécurité de niveau bancaire",
-    securityDescription: "Vos investissements sont protégés avec une sécurité et un chiffrement de niveau entreprise.",
+    clientWinrate: "Taux de réussite client",
+    winratePercentage: "87,3%",
+    successRate: "Taux de succès",
 
     // Steps Section
-    simpleProcess: "✨ Processus simple",
-    stepsToGetStarted: "3 étapes pour commencer",
-    leaveApplication: "Déposez votre candidature",
-    applicationDescription: "Remplissez notre formulaire de candidature rapide pour commencer votre parcours d'investissement.",
-    getGuidanceAccess: "Obtenez des conseils et un accès",
-    guidanceDescription: "Recevez des conseils personnalisés et accédez à notre plateforme de trading exclusive.",
-    growBalance: "Faites croître votre solde",
-    growDescription: "Regardez vos investissements croître avec nos stratégies de trading propulsées par l'IA.",
+    howItWorks: "Comment ça marche",
+    stepsTitle: "Votre chemin vers le succès financier",
+    stepsSubtitle: "Suivez notre processus éprouvé en 3 étapes pour commencer à générer des rendements cohérents avec des insights de trading alimentés par l'IA.",
 
-    // Pricing Section
-    flexibleInvestmentOptions: "💰 Options d'investissement flexibles",
-    investmentPlansTitle: "Plans d'investissement et tarification",
-    standardPlan: "Plan standard",
+    step1Title: "S'inscrire et se faire vérifier",
+    step1Description: "Complétez notre processus d'inscription rapide et faites-vous vérifier pour accéder à notre plateforme de trading IA exclusive.",
+
+    step2Title: "L'IA analyse les marchés",
+    step2Description: "Notre IA avancée scanne continuellement les marchés mondiaux, identifiant les opportunités rentables en temps réel.",
+
+    step3Title: "Exécuter et profiter",
+    step3Description: "Recevez des signaux de trading clairs et exécutez des trades avec confiance, soutenu par des analyses de niveau institutionnel.",
+
+    // Trading Platform
+    tradingPlatformTitle: "Plateforme de trading IA avancée",
+    tradingPlatformSubtitle: "Découvrez la puissance de la technologie de trading de niveau institutionnel conçue pour les investisseurs modernes.",
+
+    feature1Title: "Analyse de marché en temps réel",
+    feature1Description: "Les algorithmes d'IA avancés analysent des milliers de points de données chaque seconde pour identifier les opportunités rentables.",
+
+    feature2Title: "Gestion des risques",
+    feature2Description: "Des outils sophistiqués d'évaluation des risques aident à protéger votre capital tout en maximisant les rendements potentiels.",
+
+    feature3Title: "Optimisation de portefeuille",
+    feature3Description: "L'équilibrage dynamique du portefeuille assure une diversification optimale et une performance dans toutes les conditions de marché.",
+
+    // Testimonials
+    realUserExperiences: "Expériences utilisateur réelles",
+    testimonialsTitle: "Ce que disent nos utilisateurs",
+    testimonialsSubtitle: "Voyez comment Incite AI a transformé le parcours d'investissement pour des milliers d'utilisateurs dans le monde.",
+    getEarlyAccess: "Obtenir un accès anticipé",
+
+    // Industry Experts
+    industryRecognition: "Reconnaissance de l'industrie",
+    industryExpertsTitle: "Ce que disent les experts de l'industrie",
+    industryExpertsSubtitle: "Les experts financiers de premier plan et les vétérans de l'industrie reconnaissent la puissance d'Incite AI.",
+    joinTheExperts: "Rejoindre les experts",
+
+    // Leadership Section
+    leadership: "Direction",
+    leadershipTitle: "Direction d'Incite AI",
+    founderCEO: "Fondateur et PDG d'Incite AI",
+    ceoDescription: "Responsable du développement stratégique de l'entreprise et de la création d'une plateforme IA pour l'analyse des marchés financiers.",
+
+    // Pricing
+    pricingTitle: "Choisissez votre plan d'investissement",
+    pricingSubtitle: "Sélectionnez le plan parfait pour correspondre à vos objectifs d'investissement et votre niveau d'expérience.",
+
+    starterPlan: "Plan Starter",
+    starterPrice: "€299",
+    starterDescription: "Parfait pour les débutants cherchant à commencer leur parcours d'investissement alimenté par l'IA.",
+
     proPlan: "Plan Pro",
-    advancedPlan: "Plan avancé",
+    proPrice: "€599",
+    proDescription: "Fonctionnalités avancées pour les investisseurs sérieux cherchant des rendements maximaux.",
     mostPopular: "Le plus populaire",
-    support247: "Support prioritaire 24/7",
-    personalisedManager: "Gestionnaire de compte personnalisé",
-    automaticNotification: "Notifications automatiques de transactions",
-    basicAutotrading: "Fonctionnalités d'auto-trading de base",
-    limitedTrades: "Jusqu'à 50 transactions/mois",
-    advancedAutotrading: "Auto-trading avancé",
-    moderatedTrades: "Jusqu'à 200 transactions/mois",
-    analyseResults: "Analyse détaillée des performances",
-    meetingsInvestors: "Réunions stratégiques mensuelles",
-    allProFeatures: "Toutes les fonctionnalités du plan Pro",
-    premiumAutotrade: "Moteur d'auto-trading premium",
-    unlimitedTrades: "Transactions illimitées/mois",
-    priorityProcessing: "Traitement prioritaire des ordres",
-    companyGifts: "Avantages et cadeaux exclusifs de l'entreprise",
-    spotsAvailable: "places disponibles",
-    startNow: "Commencer maintenant",
-    currentlyFull: "Actuellement complet",
 
-    // Partners Section
-    ourPartners: "Approuvé par les principales institutions financières",
+    elitePlan: "Plan Elite",
+    elitePrice: "€999",
+    eliteDescription: "Accès premium aux outils de trading de niveau institutionnel et support personnel.",
 
-    // FAQ Section
-    commonQuestions: "❓ Questions courantes",
-    frequentlyAskedQuestions: "Foire aux questions",
-    securityMeasuresQ: "Quelles mesures de sécurité avez-vous mises en place?",
-    securityMeasuresA: "Nous utilisons un chiffrement de niveau bancaire, une authentification à deux facteurs et nous nous conformons à toutes les principales réglementations financières pour assurer la sécurité de vos investissements.",
-    returnsQ: "Quel type de rendements puis-je attendre?",
-    returnsA: "Bien que les performances passées ne garantissent pas les résultats futurs, notre système d'IA a historiquement fourni de solides rendements à nos clients. Les résultats individuels peuvent varier en fonction des conditions du marché et du montant de l'investissement.",
-    qualificationQ: "Dois-je être un investisseur accrédité?",
-    qualificationA: "Non, notre plateforme est conçue pour les investisseurs de tous niveaux d'expérience. Nous fournissons des conseils et un soutien pour vous aider à prendre des décisions d'investissement éclairées.",
-    withdrawalQ: "À quelle vitesse puis-je retirer mes fonds?",
-    withdrawalA: "Les retraits standard sont traités dans les 24 à 48 heures. Les retraits prioritaires pour les membres des plans Pro et Advanced sont traités dans les 2 à 4 heures.",
-    tradingSystemQ: "Comment fonctionne votre système de trading IA?",
-    tradingSystemA: "Notre IA analyse des milliers d'indicateurs de marché, d'événements d'actualité et de modèles historiques en temps réel pour identifier les opportunités de trading rentables et exécuter automatiquement des transactions.",
-    hiddenFeesQ: "Y a-t-il des frais cachés?",
-    hiddenFeesA: "Non, nous croyons en une transparence totale. Tous les frais sont clairement indiqués dans votre forfait. Il n'y a pas de frais cachés ou de surprises.",
-    stillHaveQuestions: "Vous avez encore des questions?",
-    contactSupport: "Contactez notre équipe d'assistance",
+    choosePlan: "Choisir le plan",
 
-    // Application Section
-    beginJourney: "🚀 Commencez votre voyage",
-    applyNowTitle: "Postulez au programme Incite AI",
-    step2: "- Étape 2",
+    // Pricing Features
+    aiSignals: "Signaux de trading IA",
+    marketAnalysis: "Analyse de marché",
+    riskManagement: "Gestion des risques",
+    portfolio: "Suivi de portefeuille",
+    support: "Support email",
+    prioritySupport: "Support prioritaire",
+    personalManager: "Gestionnaire personnel",
+    advancedTools: "Outils avancés",
+    institutionalAccess: "Accès institutionnel",
+
+    // FAQ
+    faqTitle: "Questions fréquemment posées",
+    faqSubtitle: "Obtenez des réponses aux questions les plus courantes sur notre plateforme de trading IA.",
+
+    faq1Question: "Comment fonctionne la plateforme de trading IA ?",
+    faq1Answer: "Notre plateforme IA utilise des algorithmes d'apprentissage automatique avancés pour analyser les données de marché, identifier les motifs et générer des signaux de trading. Elle traite des milliers de points de données en temps réel pour vous fournir des opportunités d'investissement exploitables.",
+
+    faq2Question: "Mon capital d'investissement est-il sûr ?",
+    faq2Answer: "Nous priorisons la sécurité et utilisons un chiffrement de niveau bancaire pour protéger vos données. Cependant, tous les investissements comportent des risques, et nous fournissons des outils complets de gestion des risques pour vous aider à prendre des décisions éclairées.",
+
+    faq3Question: "Quels rendements puis-je attendre ?",
+    faq3Answer: "Bien que les performances passées ne garantissent pas les résultats futurs, nos utilisateurs ont historiquement vu un rendement mensuel moyen de 8-15%. Les résultats varient selon les conditions de marché et la tolérance au risque individuelle.",
+
+    faq4Question: "Ai-je besoin d'expérience en trading ?",
+    faq4Answer: "Aucune expérience préalable en trading n'est requise. Notre plateforme est conçue pour les débutants et les traders expérimentés, avec des ressources éducatives et des interfaces intuitives pour vous guider.",
+
+    faq5Question: "Comment puis-je commencer ?",
+    faq5Answer: "Choisissez simplement votre plan, complétez le processus d'inscription, et vous obtiendrez un accès immédiat à notre plateforme de trading IA avec un support d'intégration complet.",
+
+    // Application Form
+    applyTitle: "Postuler pour un accès anticipé",
+    applySubtitle: "Rejoignez des milliers d'investisseurs prospères utilisant déjà notre plateforme alimentée par l'IA.",
+
+    personalInformation: "Informations personnelles",
     firstName: "Prénom",
-    lastName: "Nom",
-    emailAddress: "Adresse e-mail",
-    phoneNumber: "Numéro de téléphone",
-    investmentPlan: "Plan d'investissement",
-    experience: "Expérience de trading",
-    additionalMessage: "Message supplémentaire",
-    required: "*",
-    optional: "optionnel",
-    beginner: "Débutant (0-1 ans)",
-    intermediate: "Intermédiaire (1-3 ans)",
-    advanced: "Avancé (3-5 ans)",
-    expert: "Expert (5+ ans)",
-    continueStep2: "Continuer à l'étape 2",
-    backStep1: "Retour à l'étape 1",
-    submitApplication: "Soumettre la candidature",
-    secureEncrypted: "Vos informations sont sécurisées et chiffrées",
-    validEmailRequired: "Veuillez entrer une adresse e-mail valide",
-    validPhoneRequired: "Veuillez entrer un numéro de téléphone valide (6-15 chiffres)",
+    lastName: "Nom de famille",
+    email: "Adresse email",
+    phone: "Numéro de téléphone",
+    country: "Pays",
+    selectCountry: "Sélectionnez votre pays",
 
-    // Additional fields for step 2
-    jobTitle: "Titre du poste",
-    annualIncome: "Revenu annuel",
-    citizenship: "Citoyenneté",
-    residency: "Pays de résidence",
-    mortgage: "Hypothèque/loyer actuel",
-    financialSituation: "Situation financière (échelle de 1 à 10)",
-    upTo10k: "Jusqu'à 10 000 $",
-    income10k25k: "10 000 $ - 25 000 $",
-    income25k50k: "25 000 $ - 50 000 $",
-    income50k100k: "50 000 $ - 100 000 $",
-    income100kPlus: "100 000 $+",
+    investmentExperience: "Expérience d'investissement",
+    experienceLevel: "Niveau d'expérience",
+    selectExperience: "Sélectionnez votre niveau d'expérience",
+    beginner: "Débutant (0-1 an)",
+    intermediate: "Intermédiaire (1-3 ans)",
+    advanced: "Avancé (3+ ans)",
+
+    investmentGoals: "Objectifs d'investissement",
+    primaryGoal: "Objectif d'investissement principal",
+    selectGoal: "Sélectionnez votre objectif principal",
+    wealthPreservation: "Préservation de la richesse",
+    steadyGrowth: "Croissance régulière",
+    aggressiveGrowth: "Croissance agressive",
+    dayTrading: "Trading journalier",
+
+    riskTolerance: "Tolérance au risque",
+    selectRisk: "Sélectionnez votre tolérance au risque",
+    conservative: "Conservateur",
+    moderate: "Modéré",
+    aggressive: "Agressif",
+
+    financialSituation: "Situation financière",
+    monthlyIncome: "Revenu mensuel (€)",
+    selectIncome: "Sélectionnez votre gamme de revenus",
+    income1: "Moins de €2.000",
+    income2: "€2.000 - €5.000",
+    income3: "€5.000 - €10.000",
+    income4: "€10.000 - €20.000",
+    income5: "Plus de €20.000",
+
+    investmentCapital: "Capital d'investissement disponible (€)",
+    selectCapital: "Sélectionnez votre capital d'investissement",
+    capital1: "€1.000 - €5.000",
+    capital2: "€5.000 - €10.000",
+    capital3: "€10.000 - €25.000",
+    capital4: "€25.000 - €50.000",
+    capital5: "€50.000 - €100.000",
+    capital6: "Plus de €100.000",
+
+    additionalQuestions: "Questions supplémentaires",
+    hearAboutUs: "Comment avez-vous entendu parler de nous ?",
+    selectSource: "Sélectionner la source",
+    socialMedia: "Réseaux sociaux",
+    searchEngine: "Moteur de recherche",
+    friendReferral: "Ami/Référence",
+    advertisement: "Publicité",
+    other: "Autre",
+
+    expectations: "Quelles sont vos attentes de notre plateforme ?",
+    expectationsPlaceholder: "Parlez-nous de vos objectifs d'investissement et attentes...",
+
+    financialSituationRating: "Évaluez votre situation financière actuelle (1-10)",
     financialSit1: "1 - En difficulté financière",
     financialSit10: "10 - Situation financière très confortable",
 
@@ -889,8 +1351,32 @@ export const translations = {
     termsOfService: "Conditions d'utilisation",
     riskDisclosure: "Divulgation des risques",
     compliance: "Conformité",
-    allRightsReserved: "© 2024 Incite AI. Tous droits réservés.",
-    footerDisclaimer: "L'investissement comporte des risques. Les performances passées ne garantissent pas les résultats futurs.",
+    footerDisclaimer: "Avertissement de risque : Le trading implique un risque substantiel et peut entraîner la perte de votre capital investi.",
+
+    // Form Actions
+    submitApplication: "Soumettre la candidature",
+    agreeToTerms: "J'accepte les",
+    and: "et",
+    
+    // Form Validation
+    firstNameRequired: "Le prénom est requis",
+    lastNameRequired: "Le nom de famille est requis",
+    emailRequired: "L'email est requis",
+    emailInvalid: "Veuillez entrer une adresse email valide",
+    phoneRequired: "Le numéro de téléphone est requis",
+    countryRequired: "Veuillez sélectionner votre pays",
+    experienceRequired: "Veuillez sélectionner votre niveau d'expérience",
+    goalRequired: "Veuillez sélectionner votre objectif d'investissement",
+    riskRequired: "Veuillez sélectionner votre tolérance au risque",
+    incomeRequired: "Veuillez sélectionner votre gamme de revenus",
+    capitalRequired: "Veuillez sélectionner votre capital d'investissement",
+    sourceRequired: "Veuillez sélectionner comment vous avez entendu parler de nous",
+    expectationsRequired: "Veuillez partager vos attentes",
+    financialRatingRequired: "Veuillez évaluer votre situation financière",
+    termsRequired: "Vous devez accepter les termes et conditions",
+
+    // Additional
+    optional: "Optionnel",
   },
 
   ar: {
@@ -899,129 +1385,186 @@ export const translations = {
     program: "البرنامج",
     pricing: "الأسعار",
     faq: "الأسئلة الشائعة",
-    applyNow: "تقدم بطلب الآن",
+    applyNow: "تقدم الآن",
 
     // Hero Section
-    eliteInvestmentOpportunities: "🔥 فرص استثمارية نخبوية",
-    heroTitle: "افتح الفرص المالية النخبوية مع التداول المدعوم بالذكاء الاصطناعي",
-    heroSubtitle: "انضم إلى برنامج الاستثمار الحصري من Incite AI واحصل على إمكانية الوصول إلى استراتيجيات تداول متميزة مدعومة بالذكاء الاصطناعي المتطور.",
+    eliteInvestmentOpportunities: "فرص استثمارية مميزة",
+    heroTitle: "فتح الفرص المالية المميزة بالتداول المدعوم بالذكاء الاصطناعي",
+    heroSubtitle: "انضم إلى آلاف المستثمرين الناجحين الذين يستخدمون منصة الذكاء الاصطناعي المتطورة لدينا لزيادة العوائد وتقليل المخاطر في الأسواق المتقلبة اليوم.",
     startJourneyNow: "ابدأ رحلتك الآن",
     investorsTrustUs: "مستثمر يثقون بنا",
 
-    // Floating Cards
+    // Hero Cards
     recordPortfolioMay: "نمو قياسي للمحفظة - مايو 2024",
     portfolioGrowth: "نمو المحفظة",
-    growthPercentage: "+847.3%",
-    aiSays: "يقول Incite AI:",
-    confidence: "ثقة 97.2%",
+    growthPercentage: "+34.7%",
+    aiSays: "يقول الذكاء الاصطناعي:",
+    confidence: "96% ثقة",
     averageClientProfit: "متوسط ربح العميل",
-    monthlyProfit: "47,832$",
+    monthlyProfit: "+2,847€",
     last12Months: "آخر 12 شهرًا",
-    clientWinrate: "معدل الفوز للعميل",
-    winratePercentage: "94.7%",
+    clientWinrate: "معدل نجاح العميل",
+    winratePercentage: "87.3%",
     successRate: "معدل النجاح",
 
-    // Trading Platform Section
-    advancedTechnology: "🚀 تكنولوجيا متقدمة",
-    cuttingEdgeTradingPlatform: "منصة تداول متطورة",
-    tradingPlatformDescription: "اختبر مستقبل التداول مع منصتنا المدعومة بالذكاء الاصطناعي التي توفر رؤى في الوقت الحقيقي واستراتيجيات آلية.",
-    aiPoweredPredictions: "تنبؤات مدعومة بالذكاء الاصطناعي",
-    aiPredictionsDescription: "خوارزميات تعلم الآلة المتقدمة تحلل بيانات السوق لتقديم تنبؤات دقيقة.",
-    bankGradeSecurity: "أمان بمستوى البنوك",
-    securityDescription: "استثماراتك محمية بأمان وتشفير على مستوى المؤسسات.",
-
     // Steps Section
-    simpleProcess: "✨ عملية بسيطة",
-    stepsToGetStarted: "3 خطوات للبدء",
-    leaveApplication: "اترك طلبًا",
-    applicationDescription: "املأ نموذج الطلب السريع للبدء في رحلة الاستثمار الخاصة بك.",
-    getGuidanceAccess: "احصل على التوجيه والوصول",
-    guidanceDescription: "احصل على إرشادات مخصصة والوصول إلى منصة التداول الحصرية الخاصة بنا.",
-    growBalance: "نمِّ رصيدك",
-    growDescription: "راقب نمو استثماراتك مع استراتيجيات التداول المدعومة بالذكاء الاصطناعي.",
+    howItWorks: "كيف يعمل",
+    stepsTitle: "طريقك إلى النجاح المالي",
+    stepsSubtitle: "اتبع عمليتنا المجربة المكونة من 3 خطوات لبدء تحقيق عوائد ثابتة بأفكار التداول المدعومة بالذكاء الاصطناعي.",
 
-    // Pricing Section
-    flexibleInvestmentOptions: "💰 خيارات استثمار مرنة",
-    investmentPlansTitle: "خطط الاستثمار والأسعار",
-    standardPlan: "الخطة القياسية",
-    proPlan: "خطة برو",
-    advancedPlan: "خطة متقدمة",
+    step1Title: "سجل واحصل على التحقق",
+    step1Description: "أكمل عملية التسجيل السريعة واحصل على التحقق للوصول إلى منصة التداول الحصرية للذكاء الاصطناعي.",
+
+    step2Title: "الذكاء الاصطناعي يحلل الأسواق",
+    step2Description: "ذكاءنا الاصطناعي المتقدم يفحص الأسواق العالمية باستمرار، محددًا الفرص المربحة في الوقت الفعلي.",
+
+    step3Title: "تنفيذ وربح",
+    step3Description: "احصل على إشارات تداول واضحة ونفذ التداولات بثقة، مدعومة بتحليلات على مستوى المؤسسات.",
+
+    // Trading Platform
+    tradingPlatformTitle: "منصة تداول ذكاء اصطناعي متقدمة",
+    tradingPlatformSubtitle: "اختبر قوة تكنولوجيا التداول على مستوى المؤسسات المصممة للمستثمرين العصريين.",
+
+    feature1Title: "تحليل السوق في الوقت الفعلي",
+    feature1Description: "خوارزميات الذكاء الاصطناعي المتقدمة تحلل آلاف نقاط البيانات كل ثانية لتحديد الفرص المربحة.",
+
+    feature2Title: "إدارة المخاطر",
+    feature2Description: "أدوات تقييم المخاطر المتطورة تساعد في حماية رأس المال مع تعظيم العوائد المحتملة.",
+
+    feature3Title: "تحسين المحفظة",
+    feature3Description: "التوازن الديناميكي للمحفظة يضمن التنويع الأمثل والأداء في جميع ظروف السوق.",
+
+    // Testimonials
+    realUserExperiences: "تجارب مستخدمين حقيقية",
+    testimonialsTitle: "ما يقوله مستخدمونا",
+    testimonialsSubtitle: "انظر كيف غيّر Incite AI رحلة الاستثمار لآلاف المستخدمين حول العالم.",
+    getEarlyAccess: "احصل على وصول مبكر",
+
+    // Industry Experts
+    industryRecognition: "اعتراف الصناعة",
+    industryExpertsTitle: "ما يقوله خبراء الصناعة",
+    industryExpertsSubtitle: "خبراء مالون رائدون وقدماء الصناعة يعترفون بقوة Incite AI.",
+    joinTheExperts: "انضم إلى الخبراء",
+
+    // Leadership Section
+    leadership: "القيادة",
+    leadershipTitle: "قيادة Incite AI",
+    founderCEO: "مؤسس ومدير تنفيذي لـ Incite AI",
+    ceoDescription: "مسؤول عن التطوير الاستراتيجي للشركة وإنشاء منصة ذكاء اصطناعي لتحليل الأسواق المالية.",
+
+    // Pricing
+    pricingTitle: "اختر خطة الاستثمار الخاصة بك",
+    pricingSubtitle: "اختر الخطة المثالية لتتناسب مع أهدافك الاستثمارية ومستوى خبرتك.",
+
+    starterPlan: "خطة البداية",
+    starterPrice: "€299",
+    starterDescription: "مثالية للمبتدئين الذين يتطلعون لبدء رحلة الاستثمار المدعومة بالذكاء الاصطناعي.",
+
+    proPlan: "خطة محترف",
+    proPrice: "€599",
+    proDescription: "ميزات متقدمة للمستثمرين الجادين الساعين لتحقيق أقصى عوائد.",
     mostPopular: "الأكثر شعبية",
-    support247: "دعم ذو أولوية على مدار الساعة",
-    personalisedManager: "مدير حساب مخصص",
-    automaticNotification: "إشعارات تداول تلقائية",
-    basicAutotrading: "ميزات التداول الآلي الأساسية",
-    limitedTrades: "حتى 50 صفقة/شهر",
-    advancedAutotrading: "التداول الآلي المتقدم",
-    moderatedTrades: "حتى 200 صفقة/شهر",
-    analyseResults: "تحليل أداء مفصل",
-    meetingsInvestors: "اجتماعات استراتيجية شهرية",
-    allProFeatures: "جميع ميزات خطة برو",
-    premiumAutotrade: "محرك التداول الآلي المتميز",
-    unlimitedTrades: "صفقات غير محدودة/شهر",
-    priorityProcessing: "معالجة طلبات ذات أولوية",
-    companyGifts: "امتيازات وهدايا حصرية من الشركة",
-    spotsAvailable: "أماكن متاحة",
-    startNow: "ابدأ الآن",
-    currentlyFull: "ممتلئ حاليًا",
 
-    // Partners Section
-    ourPartners: "موثوق به من قبل المؤسسات المالية الرائدة",
+    elitePlan: "خطة النخبة",
+    elitePrice: "€999",
+    eliteDescription: "وصول مميز لأدوات التداول على مستوى المؤسسات والدعم الشخصي.",
 
-    // FAQ Section
-    commonQuestions: "❓ الأسئلة الشائعة",
-    frequentlyAskedQuestions: "الأسئلة المتكررة",
-    securityMeasuresQ: "ما هي إجراءات الأمان التي لديكم؟",
-    securityMeasuresA: "نستخدم تشفيرًا بمستوى البنوك، وتوثيقًا ثنائي العامل، ونلتزم بجميع اللوائح المالية الرئيسية لضمان أمان استثماراتك.",
-    returnsQ: "ما نوع العائدات التي يمكنني توقعها؟",
-    returnsA: "على الرغم من أن الأداء السابق لا يضمن النتائج المستقبلية، فقد قدم نظام الذكاء الاصطناعي لدينا تاريخيًا عوائد قوية لعملائنا. قد تختلف النتائج الفردية بناءً على ظروف السوق ومبلغ الاستثمار.",
-    qualificationQ: "هل أحتاج إلى أن أكون مستثمرًا معتمدًا؟",
-    qualificationA: "لا، تم تصميم منصتنا للمستثمرين من جميع مستويات الخبرة. نقدم التوجيه والدعم لمساعدتك على اتخاذ قرارات استثمارية مستنيرة.",
-    withdrawalQ: "ما مدى سرعة سحب أموالي؟",
-    withdrawalA: "تتم معالجة عمليات السحب القياسية في غضون 24-48 ساعة. تتم معالجة عمليات السحب ذات الأولوية لأعضاء خطط Pro و Advanced في غضون 2-4 ساعات.",
-    tradingSystemQ: "كيف يعمل نظام التداول بالذكاء الاصطناعي الخاص بكم؟",
-    tradingSystemA: "يحلل الذكاء الاصطناعي لدينا آلاف المؤشرات السوقية وأحداث الأخبار والأنماط التاريخية في الوقت الحقيقي لتحديد فرص التداول المربحة وتنفيذ الصفقات تلقائيًا.",
-    hiddenFeesQ: "هل هناك رسوم خفية؟",
-    hiddenFeesA: "لا، نحن نؤمن بالشفافية الكاملة. جميع الرسوم موضحة بوضوح في خطتك. لا توجد رسوم خفية أو مفاجآت.",
-    stillHaveQuestions: "هل لا تزال لديك أسئلة؟",
-    contactSupport: "اتصل بفريق الدعم لدينا",
+    choosePlan: "اختر الخطة",
 
-    // Application Section
-    beginJourney: "🚀 ابدأ رحلتك",
-    applyNowTitle: "تقدم بطلب لبرنامج Incite AI",
-    step2: "- الخطوة 2",
+    // Pricing Features
+    aiSignals: "إشارات تداول الذكاء الاصطناعي",
+    marketAnalysis: "تحليل السوق",
+    riskManagement: "إدارة المخاطر",
+    portfolio: "تتبع المحفظة",
+    support: "دعم البريد الإلكتروني",
+    prioritySupport: "دعم أولوية",
+    personalManager: "مدير شخصي",
+    advancedTools: "أدوات متقدمة",
+    institutionalAccess: "وصول مؤسسي",
+
+    // FAQ
+    faqTitle: "الأسئلة المتكررة",
+    faqSubtitle: "احصل على إجابات للأسئلة الأكثر شيوعًا حول منصة التداول بالذكاء الاصطناعي.",
+
+    faq1Question: "كيف تعمل منصة التداول بالذكاء الاصطناعي؟",
+    faq1Answer: "منصة الذكاء الاصطناعي تستخدم خوارزميات تعلم آلة متقدمة لتحليل بيانات السوق وتحديد الأنماط وتوليد إشارات التداول. تعالج آلاف نقاط البيانات في الوقت الفعلي لتوفير فرص استثمارية قابلة للتنفيذ.",
+
+    faq2Question: "هل رأس مال الاستثمار آمن؟",
+    faq2Answer: "نعطي الأولوية للأمان ونستخدم تشفيرًا على مستوى البنوك لحماية بياناتك. ومع ذلك، تحمل جميع الاستثمارات مخاطر، ونوفر أدوات شاملة لإدارة المخاطر لمساعدتك في اتخاذ قرارات مدروسة.",
+
+    faq3Question: "ما العوائد التي يمكنني توقعها؟",
+    faq3Answer: "بينما الأداء السابق لا يضمن النتائج المستقبلية، رأى مستخدمونا تاريخيًا عائدًا شهريًا متوسطًا من 8-15%. تختلف النتائج حسب ظروف السوق والتسامح الفردي مع المخاطر.",
+
+    faq4Question: "هل أحتاج خبرة في التداول؟",
+    faq4Answer: "لا تُطلب خبرة سابقة في التداول. منصتنا مصممة للمبتدئين والمتداولين المتمرسين، مع موارد تعليمية وواجهات بديهية لإرشادك.",
+
+    faq5Question: "كيف أبدأ؟",
+    faq5Answer: "ببساطة اختر خطتك، أكمل عملية التسجيل، وستحصل على وصول فوري لمنصة التداول بالذكاء الاصطناعي مع دعم التأهيل الكامل.",
+
+    // Application Form
+    applyTitle: "تقدم للحصول على وصول مبكر",
+    applySubtitle: "انضم إلى آلاف المستثمرين الناجحين الذين يستخدمون بالفعل منصتنا المدعومة بالذكاء الاصطناعي.",
+
+    personalInformation: "المعلومات الشخصية",
     firstName: "الاسم الأول",
     lastName: "اسم العائلة",
-    emailAddress: "البريد الإلكتروني",
-    phoneNumber: "رقم الهاتف",
-    investmentPlan: "خطة الاستثمار",
-    experience: "خبرة التداول",
-    additionalMessage: "رسالة إضافية",
-    required: "*",
-    optional: "اختياري",
+    email: "عنوان البريد الإلكتروني",
+    phone: "رقم الهاتف",
+    country: "البلد",
+    selectCountry: "اختر بلدك",
+
+    investmentExperience: "خبرة الاستثمار",
+    experienceLevel: "مستوى الخبرة",
+    selectExperience: "اختر مستوى خبرتك",
     beginner: "مبتدئ (0-1 سنة)",
     intermediate: "متوسط (1-3 سنوات)",
-    advanced: "متقدم (3-5 سنوات)",
-    expert: "خبير (5+ سنوات)",
-    continueStep2: "متابعة إلى الخطوة 2",
-    backStep1: "العودة إلى الخطوة 1",
-    submitApplication: "تقديم الطلب",
-    secureEncrypted: "معلوماتك آمنة ومشفرة",
-    validEmailRequired: "يرجى إدخال عنوان بريد إلكتروني صالح",
-    validPhoneRequired: "يرجى إدخال رقم هاتف صالح (6-15 رقمًا)",
+    advanced: "متقدم (3+ سنوات)",
 
-    // Additional fields for step 2
-    jobTitle: "المسمى الوظيفي",
-    annualIncome: "الدخل السنوي",
-    citizenship: "الجنسية",
-    residency: "بلد الإقامة",
-    mortgage: "الرهن العقاري/الإيجار الحالي",
-    financialSituation: "الوضع المالي (مقياس 1-10)",
-    upTo10k: "حتى 10,000 دولار",
-    income10k25k: "10,000 دولار - 25,000 دولار",
-    income25k50k: "25,000 دولار - 50,000 دولار",
-    income50k100k: "50,000 دولار - 100,000 دولار",
-    income100kPlus: "100,000 دولار+",
+    investmentGoals: "أهداف الاستثمار",
+    primaryGoal: "الهدف الاستثماري الأساسي",
+    selectGoal: "اختر هدفك الأساسي",
+    wealthPreservation: "حفظ الثروة",
+    steadyGrowth: "نمو مستقر",
+    aggressiveGrowth: "نمو عدواني",
+    dayTrading: "التداول اليومي",
+
+    riskTolerance: "تحمل المخاطر",
+    selectRisk: "اختر تحملك للمخاطر",
+    conservative: "محافظ",
+    moderate: "معتدل",
+    aggressive: "عدواني",
+
+    financialSituation: "الوضع المالي",
+    monthlyIncome: "الدخل الشهري (€)",
+    selectIncome: "اختر نطاق دخلك",
+    income1: "أقل من €2,000",
+    income2: "€2,000 - €5,000",
+    income3: "€5,000 - €10,000",
+    income4: "€10,000 - €20,000",
+    income5: "أكثر من €20,000",
+
+    investmentCapital: "رأس المال الاستثماري المتاح (€)",
+    selectCapital: "اختر رأس مالك الاستثماري",
+    capital1: "€1,000 - €5,000",
+    capital2: "€5,000 - €10,000",
+    capital3: "€10,000 - €25,000",
+    capital4: "€25,000 - €50,000",
+    capital5: "€50,000 - €100,000",
+    capital6: "أكثر من €100,000",
+
+    additionalQuestions: "أسئلة إضافية",
+    hearAboutUs: "كيف سمعت عنا؟",
+    selectSource: "اختر المصدر",
+    socialMedia: "وسائل التواصل الاجتماعي",
+    searchEngine: "محرك البحث",
+    friendReferral: "صديق/إحالة",
+    advertisement: "إعلان",
+    other: "أخرى",
+
+    expectations: "ما توقعاتك من منصتنا؟",
+    expectationsPlaceholder: "أخبرنا عن أهدافك الاستثمارية وتوقعاتك...",
+
+    financialSituationRating: "قيّم وضعك المالي الحالي (1-10)",
     financialSit1: "1 - صعوبات مالية",
     financialSit10: "10 - وضع مالي مريح جدًا",
 
@@ -1033,13 +1576,37 @@ export const translations = {
     footerDescription: "تمكين المستثمرين بحلول مالية مدعومة بالذكاء الاصطناعي لنمو ثروة مستدام.",
     quickLinks: "روابط سريعة",
     legal: "قانوني",
-    contact: "اتصل بنا",
+    contact: "تواصل",
     privacyPolicy: "سياسة الخصوصية",
     termsOfService: "شروط الخدمة",
-    riskDisclosure: "الإفصاح عن المخاطر",
+    riskDisclosure: "الكشف عن المخاطر",
     compliance: "الامتثال",
-    allRightsReserved: "© 2024 Incite AI. جميع الحقوق محفوظة.",
-    footerDisclaimer: "الاستثمار ينطوي على مخاطر. الأداء السابق لا يضمن النتائج المستقبلية.",
+    footerDisclaimer: "تحذير المخاطر: التداول ينطوي على مخاطر كبيرة وقد يؤدي إلى فقدان رأس المال المستثمر.",
+
+    // Form Actions
+    submitApplication: "إرسال الطلب",
+    agreeToTerms: "أوافق على",
+    and: "و",
+    
+    // Form Validation
+    firstNameRequired: "الاسم الأول مطلوب",
+    lastNameRequired: "اسم العائلة مطلوب",
+    emailRequired: "البريد الإلكتروني مطلوب",
+    emailInvalid: "يرجى إدخال عنوان بريد إلكتروني صحيح",
+    phoneRequired: "رقم الهاتف مطلوب",
+    countryRequired: "يرجى اختيار بلدك",
+    experienceRequired: "يرجى اختيار مستوى خبرتك",
+    goalRequired: "يرجى اختيار هدفك الاستثماري",
+    riskRequired: "يرجى اختيار تحملك للمخاطر",
+    incomeRequired: "يرجى اختيار نطاق دخلك",
+    capitalRequired: "يرجى اختيار رأس مالك الاستثماري",
+    sourceRequired: "يرجى اختيار كيف سمعت عنا",
+    expectationsRequired: "يرجى مشاركة توقعاتك",
+    financialRatingRequired: "يرجى تقييم وضعك المالي",
+    termsRequired: "يجب أن توافق على الشروط والأحكام",
+
+    // Additional
+    optional: "اختياري",
   },
 
   tr: {
@@ -1051,126 +1618,183 @@ export const translations = {
     applyNow: "Şimdi Başvur",
 
     // Hero Section
-    eliteInvestmentOpportunities: "🔥 Elit Yatırım Fırsatları",
-    heroTitle: "Yapay Zeka Destekli Ticaret ile Elit Finansal Fırsatları Keşfedin",
-    heroSubtitle: "Özel Incite AI yatırım programına katılın ve en gelişmiş yapay zeka ile desteklenen premium ticaret stratejilerine erişin.",
+    eliteInvestmentOpportunities: "Elit yatırım fırsatları",
+    heroTitle: "AI Destekli Ticaret ile Elit Mali Fırsatları Açın",
+    heroSubtitle: "Günümüzün değişken piyasalarında getirileri maksimize etmek ve riskleri minimize etmek için son teknoloji AI platformumuzu kullanan binlerce başarılı yatırımcıya katılın.",
     startJourneyNow: "Yolculuğunuza Şimdi Başlayın",
     investorsTrustUs: "yatırımcı bize güveniyor",
 
-    // Floating Cards
+    // Hero Cards
     recordPortfolioMay: "Rekor Portföy Büyümesi - Mayıs 2024",
     portfolioGrowth: "Portföy Büyümesi",
-    growthPercentage: "+%847,3",
-    aiSays: "Incite AI diyor ki:",
-    confidence: "%97,2 güven",
-    averageClientProfit: "Ortalama Müşteri Kârı",
-    monthlyProfit: "$47.832",
+    growthPercentage: "+%34,7",
+    aiSays: "AI Diyor:",
+    confidence: "%96 güven",
+    averageClientProfit: "Ortalama Müşteri Karı",
+    monthlyProfit: "+2.847€",
     last12Months: "Son 12 ay",
     clientWinrate: "Müşteri Kazanma Oranı",
-    winratePercentage: "%94,7",
+    winratePercentage: "%87,3",
     successRate: "Başarı oranı",
 
-    // Trading Platform Section
-    advancedTechnology: "🚀 Gelişmiş Teknoloji",
-    cuttingEdgeTradingPlatform: "Son Teknoloji Ticaret Platformu",
-    tradingPlatformDescription: "Gerçek zamanlı içgörüler ve otomatikleştirilmiş stratejiler sunan yapay zeka destekli platformumuz ile ticaretin geleceğini deneyimleyin.",
-    aiPoweredPredictions: "Yapay Zeka Destekli Tahminler",
-    aiPredictionsDescription: "Gelişmiş makine öğrenimi algoritmaları, doğru tahminler sağlamak için piyasa verilerini analiz eder.",
-    bankGradeSecurity: "Banka Seviyesi Güvenlik",
-    securityDescription: "Yatırımlarınız kurumsal düzeyde güvenlik ve şifreleme ile korunmaktadır.",
-
     // Steps Section
-    simpleProcess: "✨ Basit Süreç",
-    stepsToGetStarted: "Başlamak için 3 Adım",
-    leaveApplication: "Başvuru Bırakın",
-    applicationDescription: "Yatırım yolculuğunuza başlamak için hızlı başvuru formunu doldurun.",
-    getGuidanceAccess: "Rehberlik ve Erişim Alın",
-    guidanceDescription: "Kişiselleştirilmiş rehberlik ve özel ticaret platformumuza erişim elde edin.",
-    growBalance: "Bakiyenizi Büyütün",
-    growDescription: "Yapay zeka destekli ticaret stratejilerimizle yatırımlarınızın büyümesini izleyin.",
+    howItWorks: "Nasıl Çalışır",
+    stepsTitle: "Finansal Başarıya Giden Yolunuz",
+    stepsSubtitle: "AI destekli ticaret içgörüleri ile tutarlı getiriler elde etmeye başlamak için kanıtlanmış 3 adımlı sürecimizi takip edin.",
 
-    // Pricing Section
-    flexibleInvestmentOptions: "💰 Esnek Yatırım Seçenekleri",
-    investmentPlansTitle: "Yatırım Planları ve Fiyatlandırma",
-    standardPlan: "Standart Plan",
+    step1Title: "Kaydol ve Doğrula",
+    step1Description: "Hızlı kayıt sürecimizi tamamlayın ve özel AI ticaret platformumuza erişim için doğrulanın.",
+
+    step2Title: "AI Piyasaları Analiz Eder",
+    step2Description: "Gelişmiş AI'mız küresel piyasaları sürekli tarar, gerçek zamanlı olarak karlı fırsatları belirler.",
+
+    step3Title: "Uygula ve Kar Et",
+    step3Description: "Net ticaret sinyalleri alın ve kurumsal düzeyde analitiğin desteğiyle güvenle işlem yapın.",
+
+    // Trading Platform
+    tradingPlatformTitle: "Gelişmiş AI Ticaret Platformu",
+    tradingPlatformSubtitle: "Modern yatırımcılar için tasarlanmış kurumsal düzeyde ticaret teknolojisinin gücünü deneyimleyin.",
+
+    feature1Title: "Gerçek Zamanlı Piyasa Analizi",
+    feature1Description: "Gelişmiş AI algoritmaları karlı fırsatları belirlemek için her saniye binlerce veri noktasını analiz eder.",
+
+    feature2Title: "Risk Yönetimi",
+    feature2Description: "Sofistike risk değerlendirme araçları, potansiyel getirileri maksimize ederken sermayenizi korumaya yardımcı olur.",
+
+    feature3Title: "Portföy Optimizasyonu",
+    feature3Description: "Dinamik portföy dengeleme, tüm piyasa koşullarında optimal çeşitlendirme ve performans sağlar.",
+
+    // Testimonials
+    realUserExperiences: "Gerçek Kullanıcı Deneyimleri",
+    testimonialsTitle: "Kullanıcılarımız Ne Diyor",
+    testimonialsSubtitle: "Incite AI'nin dünya çapında binlerce kullanıcı için yatırım yolculuğunu nasıl dönüştürdüğünü görün.",
+    getEarlyAccess: "Erken Erişim Al",
+
+    // Industry Experts
+    industryRecognition: "Sektör Tanınırlığı",
+    industryExpertsTitle: "Sektör Uzmanları Ne Diyor",
+    industryExpertsSubtitle: "Önde gelen finansal uzmanlar ve sektör veteranları Incite AI'nin gücünü kabul ediyor.",
+    joinTheExperts: "Uzmanlara Katıl",
+
+    // Leadership Section
+    leadership: "Liderlik",
+    leadershipTitle: "Incite AI Liderliği",
+    founderCEO: "Incite AI Kurucusu ve CEO'su",
+    ceoDescription: "Şirketin stratejik gelişiminden ve finansal piyasa analizi için AI platformu oluşturulmasından sorumlu.",
+
+    // Pricing
+    pricingTitle: "Yatırım Planınızı Seçin",
+    pricingSubtitle: "Yatırım hedefleriniz ve deneyim seviyenizle eşleşen mükemmel planı seçin.",
+
+    starterPlan: "Başlangıç Planı",
+    starterPrice: "€299",
+    starterDescription: "AI destekli yatırım yolculuğuna başlamak isteyen yeni başlayanlar için mükemmel.",
+
     proPlan: "Pro Plan",
-    advancedPlan: "Gelişmiş Plan",
+    proPrice: "€599",
+    proDescription: "Maksimum getiri arayan ciddi yatırımcılar için gelişmiş özellikler.",
     mostPopular: "En Popüler",
-    support247: "7/24 Öncelikli Destek",
-    personalisedManager: "Kişiselleştirilmiş Hesap Yöneticisi",
-    automaticNotification: "Otomatik Ticaret Bildirimleri",
-    basicAutotrading: "Temel Otomatik Ticaret Özellikleri",
-    limitedTrades: "Ayda 50 işleme kadar",
-    advancedAutotrading: "Gelişmiş Otomatik Ticaret",
-    moderatedTrades: "Ayda 200 işleme kadar",
-    analyseResults: "Detaylı Performans Analizi",
-    meetingsInvestors: "Aylık Strateji Toplantıları",
-    allProFeatures: "Tüm Pro Plan Özellikleri",
-    premiumAutotrade: "Premium Otomatik Ticaret Motoru",
-    unlimitedTrades: "Sınırsız işlem/ay",
-    priorityProcessing: "Öncelikli Emir İşleme",
-    companyGifts: "Özel Şirket Ayrıcalıkları ve Hediyeleri",
-    spotsAvailable: "kontenjan mevcut",
-    startNow: "Şimdi Başla",
-    currentlyFull: "Şu anda dolu",
 
-    // Partners Section
-    ourPartners: "Önde Gelen Finans Kurumları Tarafından Güvenilen",
+    elitePlan: "Elite Plan",
+    elitePrice: "€999",
+    eliteDescription: "Kurumsal düzeyde ticaret araçlarına ve kişisel desteğe premium erişim.",
 
-    // FAQ Section
-    commonQuestions: "❓ Yaygın Sorular",
-    frequentlyAskedQuestions: "Sıkça Sorulan Sorular",
-    securityMeasuresQ: "Hangi güvenlik önlemleriniz var?",
-    securityMeasuresA: "Yatırımlarınızın güvenliğini sağlamak için banka düzeyinde şifreleme, iki faktörlü kimlik doğrulama kullanıyor ve tüm büyük finansal düzenlemelere uyuyoruz.",
-    returnsQ: "Ne tür getiriler bekleyebilirim?",
-    returnsA: "Geçmiş performans gelecekteki sonuçları garanti etmese de, yapay zeka sistemimiz tarihsel olarak müşterilerimize güçlü getiriler sağlamıştır. Bireysel sonuçlar piyasa koşullarına ve yatırım miktarına göre değişebilir.",
-    qualificationQ: "Akredite yatırımcı olmam gerekiyor mu?",
-    qualificationA: "Hayır, platformumuz tüm deneyim seviyelerindeki yatırımcılar için tasarlanmıştır. Bilinçli yatırım kararları vermenize yardımcı olmak için rehberlik ve destek sağlıyoruz.",
-    withdrawalQ: "Fonlarımı ne kadar hızlı çekebilirim?",
-    withdrawalA: "Standart para çekme işlemleri 24-48 saat içinde işleme alınır. Pro ve Gelişmiş plan üyeleri için öncelikli para çekme işlemleri 2-4 saat içinde işleme alınır.",
-    tradingSystemQ: "Yapay zeka ticaret sisteminiz nasıl çalışır?",
-    tradingSystemA: "Yapay zekamız, kârlı ticaret fırsatlarını belirlemek ve işlemleri otomatik olarak gerçekleştirmek için binlerce piyasa göstergesini, haber olaylarını ve tarihsel desenleri gerçek zamanlı olarak analiz eder.",
-    hiddenFeesQ: "Gizli ücretler var mı?",
-    hiddenFeesA: "Hayır, tam şeffaflığa inanıyoruz. Tüm ücretler planınızda açıkça belirtilmiştir. Gizli veya sürpriz ücretler yoktur.",
-    stillHaveQuestions: "Hala sorularınız mı var?",
-    contactSupport: "Destek ekibimize ulaşın",
+    choosePlan: "Plan Seç",
 
-    // Application Section
-    beginJourney: "🚀 Yolculuğunuza Başlayın",
-    applyNowTitle: "Incite AI Programına Başvurun",
-    step2: "- Adım 2",
+    // Pricing Features
+    aiSignals: "AI Ticaret Sinyalleri",
+    marketAnalysis: "Piyasa Analizi",
+    riskManagement: "Risk Yönetimi",
+    portfolio: "Portföy Takibi",
+    support: "E-posta Desteği",
+    prioritySupport: "Öncelikli Destek",
+    personalManager: "Kişisel Yönetici",
+    advancedTools: "Gelişmiş Araçlar",
+    institutionalAccess: "Kurumsal Erişim",
+
+    // FAQ
+    faqTitle: "Sıkça Sorulan Sorular",
+    faqSubtitle: "AI ticaret platformumuz hakkında en sık sorulan soruların cevaplarını alın.",
+
+    faq1Question: "AI ticaret platformu nasıl çalışır?",
+    faq1Answer: "AI platformumuz piyasa verilerini analiz etmek, kalıpları belirlemek ve ticaret sinyalleri oluşturmak için gelişmiş makine öğrenmesi algoritmaları kullanır. Size uygulanabilir yatırım fırsatları sağlamak için gerçek zamanlı olarak binlerce veri noktasını işler.",
+
+    faq2Question: "Yatırım sermayem güvende mi?",
+    faq2Answer: "Güvenliği önceliklendiriyoruz ve verilerinizi korumak için banka düzeyinde şifreleme kullanıyoruz. Ancak, tüm yatırımlar risk taşır ve bilinçli kararlar vermenize yardımcı olmak için kapsamlı risk yönetimi araçları sağlıyoruz.",
+
+    faq3Question: "Ne tür getiriler bekleyebilirim?",
+    faq3Answer: "Geçmiş performans gelecekteki sonuçları garanti etmese de, kullanıcılarımız tarihsel olarak aylık ortalama %8-15 getiri görmüştür. Sonuçlar piyasa koşullarına ve bireysel risk toleransına göre değişir.",
+
+    faq4Question: "Ticaret deneyimine ihtiyacım var mı?",
+    faq4Answer: "Önceki ticaret deneyimi gerekli değildir. Platformumuz hem yeni başlayanlar hem de deneyimli tüccarlar için tasarlanmıştır, size rehberlik edecek eğitim kaynakları ve sezgisel arayüzler içerir.",
+
+    faq5Question: "Nasıl başlarım?",
+    faq5Answer: "Sadece planınızı seçin, kayıt sürecini tamamlayın ve tam yerleştirme desteği ile AI ticaret platformumuza anında erişim elde edin.",
+
+    // Application Form
+    applyTitle: "Erken Erişim İçin Başvur",
+    applySubtitle: "AI destekli platformumuzu zaten kullanan binlerce başarılı yatırımcıya katıl.",
+
+    personalInformation: "Kişisel Bilgiler",
     firstName: "Ad",
     lastName: "Soyad",
-    emailAddress: "E-posta adresi",
-    phoneNumber: "Telefon numarası",
-    investmentPlan: "Yatırım Planı",
-    experience: "Ticaret Deneyimi",
-    additionalMessage: "Ek Mesaj",
-    required: "*",
-    optional: "isteğe bağlı",
+    email: "E-posta Adresi",
+    phone: "Telefon Numarası",
+    country: "Ülke",
+    selectCountry: "Ülkenizi seçin",
+
+    investmentExperience: "Yatırım Deneyimi",
+    experienceLevel: "Deneyim Seviyesi",
+    selectExperience: "Deneyim seviyenizi seçin",
     beginner: "Başlangıç (0-1 yıl)",
     intermediate: "Orta (1-3 yıl)",
-    advanced: "İleri (3-5 yıl)",
-    expert: "Uzman (5+ yıl)",
-    continueStep2: "Adım 2'ye devam",
-    backStep1: "Adım 1'e geri dön",
-    submitApplication: "Başvuruyu Gönder",
-    secureEncrypted: "Bilgileriniz güvende ve şifrelenmiştir",
-    validEmailRequired: "Lütfen geçerli bir e-posta adresi girin",
-    validPhoneRequired: "Lütfen geçerli bir telefon numarası girin (6-15 rakam)",
+    advanced: "İleri (3+ yıl)",
 
-    // Additional fields for step 2
-    jobTitle: "İş Ünvanı",
-    annualIncome: "Yıllık Gelir",
-    citizenship: "Vatandaşlık",
-    residency: "İkamet Ülkesi",
-    mortgage: "Mevcut Mortgage/Kira",
-    financialSituation: "Finansal Durum (1-10 ölçeği)",
-    upTo10k: "10.000$ kadar",
-    income10k25k: "10.000$ - 25.000$",
-    income25k50k: "25.000$ - 50.000$",
-    income50k100k: "50.000$ - 100.000$",
-    income100kPlus: "100.000$+",
+    investmentGoals: "Yatırım Hedefleri",
+    primaryGoal: "Birincil Yatırım Hedefi",
+    selectGoal: "Birincil hedefinizi seçin",
+    wealthPreservation: "Servet Korunması",
+    steadyGrowth: "Düzenli Büyüme",
+    aggressiveGrowth: "Agresif Büyüme",
+    dayTrading: "Günlük Ticaret",
+
+    riskTolerance: "Risk Toleransı",
+    selectRisk: "Risk toleransınızı seçin",
+    conservative: "Muhafazakar",
+    moderate: "Orta",
+    aggressive: "Agresif",
+
+    financialSituation: "Mali Durum",
+    monthlyIncome: "Aylık Gelir (€)",
+    selectIncome: "Gelir aralığınızı seçin",
+    income1: "€2.000'den az",
+    income2: "€2.000 - €5.000",
+    income3: "€5.000 - €10.000",
+    income4: "€10.000 - €20.000",
+    income5: "€20.000'den fazla",
+
+    investmentCapital: "Mevcut Yatırım Sermayesi (€)",
+    selectCapital: "Yatırım sermayenizi seçin",
+    capital1: "€1.000 - €5.000",
+    capital2: "€5.000 - €10.000",
+    capital3: "€10.000 - €25.000",
+    capital4: "€25.000 - €50.000",
+    capital5: "€50.000 - €100.000",
+    capital6: "€100.000'den fazla",
+
+    additionalQuestions: "Ek Sorular",
+    hearAboutUs: "Bizi nasıl duydunuz?",
+    selectSource: "Kaynak seçin",
+    socialMedia: "Sosyal Medya",
+    searchEngine: "Arama Motoru",
+    friendReferral: "Arkadaş/Tavsiye",
+    advertisement: "Reklam",
+    other: "Diğer",
+
+    expectations: "Platformumuzdan beklentileriniz neler?",
+    expectationsPlaceholder: "Yatırım hedefleriniz ve beklentileriniz hakkında bize bilgi verin...",
+
+    financialSituationRating: "Mevcut mali durumunuzu değerlendirin (1-10)",
     financialSit1: "1 - Finansal zorluk yaşıyor",
     financialSit10: "10 - Çok rahat finansal durum",
 
@@ -1184,10 +1808,34 @@ export const translations = {
     legal: "Yasal",
     contact: "İletişim",
     privacyPolicy: "Gizlilik Politikası",
-    termsOfService: "Kullanım Koşulları",
+    termsOfService: "Kullanım Şartları",
     riskDisclosure: "Risk Açıklaması",
     compliance: "Uyumluluk",
-    allRightsReserved: "© 2024 Incite AI. Tüm hakları saklıdır.",
-    footerDisclaimer: "Yatırım risk içerir. Geçmiş performans gelecekteki sonuçları garantilemez.",
+    footerDisclaimer: "Risk Uyarısı: Ticaret önemli risk içerir ve yatırılan sermayenizin kaybıyla sonuçlanabilir.",
+
+    // Form Actions
+    submitApplication: "Başvuruyu Gönder",
+    agreeToTerms: "Kabul ediyorum",
+    and: "ve",
+    
+    // Form Validation
+    firstNameRequired: "Ad gerekli",
+    lastNameRequired: "Soyad gerekli",
+    emailRequired: "E-posta gerekli",
+    emailInvalid: "Lütfen geçerli bir e-posta adresi girin",
+    phoneRequired: "Telefon numarası gerekli",
+    countryRequired: "Lütfen ülkenizi seçin",
+    experienceRequired: "Lütfen deneyim seviyenizi seçin",
+    goalRequired: "Lütfen yatırım hedefinizi seçin",
+    riskRequired: "Lütfen risk toleransınızı seçin",
+    incomeRequired: "Lütfen gelir aralığınızı seçin",
+    capitalRequired: "Lütfen yatırım sermayenizi seçin",
+    sourceRequired: "Lütfen bizi nasıl duyduğunuzu seçin",
+    expectationsRequired: "Lütfen beklentilerinizi paylaşın",
+    financialRatingRequired: "Lütfen mali durumunuzu değerlendirin",
+    termsRequired: "Şartları ve koşulları kabul etmelisiniz",
+
+    // Additional
+    optional: "İsteğe bağlı",
   },
-};
+} as const;

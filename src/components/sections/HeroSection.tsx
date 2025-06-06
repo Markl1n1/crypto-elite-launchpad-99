@@ -68,49 +68,53 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
         </div>
 
-        {/* Floating Dashboard Cards */}
-        <div className="absolute top-28 left-8 hidden xl:block animate-float">
-          <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
+        {/* Floating Dashboard Cards - Responsive */}
+        {/* Card 1 - Portfolio Growth */}
+        <div className="absolute top-20 md:top-28 left-2 md:left-8 animate-float w-40 md:w-64">
+          <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-2 md:p-4">
             <CardContent className="p-0">
-              <div className="text-sm text-gray-400 mb-2">{t('recordPortfolioMay')}</div>
-              <div className="text-lg font-bold text-green-400">{t('portfolioGrowth')}</div>
-              <div className="text-sm text-green-400">{t('growthPercentage')}</div>
+              <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('recordPortfolioMay')}</div>
+              <div className="text-sm md:text-lg font-bold text-green-400">{t('portfolioGrowth')}</div>
+              <div className="text-xs md:text-sm text-green-400">{t('growthPercentage')}</div>
             </CardContent>
           </Card>
         </div>
 
-        <div className="absolute top-44 right-8 hidden xl:block animate-float" style={{
+        {/* Card 2 - AI Signal */}
+        <div className="absolute top-32 md:top-44 right-2 md:right-8 animate-float w-40 md:w-64" style={{
           animationDelay: '1s'
         }}>
-          <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
+          <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-2 md:p-4">
             <CardContent className="p-0">
-              <div className="text-sm text-gray-400 mb-2">{t('aiSays')}</div>
-              <div className="text-lg font-semibold text-[#00d4aa]">Strong Buy Signal for NVIDIA</div>
-              <div className="text-sm text-gray-400">{t('confidence')}</div>
+              <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('aiSays')}</div>
+              <div className="text-sm md:text-lg font-semibold text-[#00d4aa]">Strong Buy Signal for NVIDIA</div>
+              <div className="text-xs md:text-sm text-gray-400">{t('confidence')}</div>
             </CardContent>
           </Card>
         </div>
 
-        <div className="absolute bottom-[540px] left-16 hidden xl:block animate-float" style={{
+        {/* Card 3 - Average Profit */}
+        <div className="absolute bottom-96 md:bottom-[540px] left-2 md:left-16 animate-float w-40 md:w-64" style={{
           animationDelay: '2s'
         }}>
-          <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
+          <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-2 md:p-4">
             <CardContent className="p-0">
-              <div className="text-sm text-gray-400 mb-2">{t('averageClientProfit')}</div>
-              <div className="text-2xl font-bold text-green-400">{t('monthlyProfit')}</div>
-              <div className="text-sm text-gray-400">{t('last12Months')}</div>
+              <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('averageClientProfit')}</div>
+              <div className="text-lg md:text-2xl font-bold text-green-400">{t('monthlyProfit')}</div>
+              <div className="text-xs md:text-sm text-gray-400">{t('last12Months')}</div>
             </CardContent>
           </Card>
         </div>
 
-        <div className="absolute bottom-[400px] right-16 hidden xl:block animate-float" style={{
+        {/* Card 4 - Win Rate */}
+        <div className="absolute bottom-80 md:bottom-[400px] right-2 md:right-16 animate-float w-40 md:w-64" style={{
           animationDelay: '3s'
         }}>
-          <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-4 w-64">
+          <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-2 md:p-4">
             <CardContent className="p-0">
-              <div className="text-sm text-gray-400 mb-2">{t('clientWinrate')}</div>
-              <div className="text-2xl font-bold text-green-400">{t('winratePercentage')}</div>
-              <div className="text-sm text-gray-400">{t('successRate')}</div>
+              <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('clientWinrate')}</div>
+              <div className="text-lg md:text-2xl font-bold text-green-400">{t('winratePercentage')}</div>
+              <div className="text-xs md:text-sm text-gray-400">{t('successRate')}</div>
             </CardContent>
           </Card>
         </div>

@@ -11,7 +11,7 @@ interface IndustryExpertsProps {
 
 export const IndustryExperts = ({ scrollToSection }: IndustryExpertsProps) => {
   return (
-    <section className="py-20 bg-[#1a1f35] border-b-4" style={{ borderColor: 'rgb(0 212 170 / 0.5)' }}>
+    <section className="py-20 bg-[#1a1f35] border-b-2" style={{ borderColor: 'rgb(0 212 170 / 0.3)' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
@@ -24,7 +24,7 @@ export const IndustryExperts = ({ scrollToSection }: IndustryExpertsProps) => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
           {/* Expert 1 - Jill Malandrino */}
           <Card className="bg-[#0a0e1a] border-[#00d4aa]/30 p-8 transform hover:scale-105 transition-all duration-300">
             <CardContent className="p-0">
@@ -78,6 +78,42 @@ export const IndustryExperts = ({ scrollToSection }: IndustryExpertsProps) => {
               </div>
               <p className="text-gray-300 italic text-center">
                 "Incite AI provides institutional-grade analysis that our high-net-worth clients expect and deserve."
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Expert 4 - Raoul Pal */}
+          <Card className="bg-[#0a0e1a] border-[#00d4aa]/30 p-8 transform hover:scale-105 transition-all duration-300">
+            <CardContent className="p-0">
+              <div className="text-center mb-6">
+                <Avatar className="w-20 h-20 mx-auto mb-4">
+                  <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold text-2xl">
+                    RP
+                  </AvatarFallback>
+                </Avatar>
+                <h4 className="font-semibold text-white text-lg">Raoul Pal</h4>
+                <p className="text-[#00d4aa] text-sm font-medium">Co-Founder & CEO, Real Vision</p>
+              </div>
+              <p className="text-gray-300 italic text-center">
+                "What Incite AI is doing is really quite remarkable. We're talking about democratizing access to deep, institutional-level analytics. And that's the direction the entire macro landscape is going—towards systems that help individuals think in probabilities, not noise. It's fast, clean, and frankly, a game-changer for anyone trying to stay ahead of the curve."
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Expert 5 - Cathie Wood */}
+          <Card className="bg-[#0a0e1a] border-[#00d4aa]/30 p-8 transform hover:scale-105 transition-all duration-300">
+            <CardContent className="p-0">
+              <div className="text-center mb-6">
+                <Avatar className="w-20 h-20 mx-auto mb-4">
+                  <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold text-2xl">
+                    CW
+                  </AvatarFallback>
+                </Avatar>
+                <h4 className="font-semibold text-white text-lg">Cathie Wood</h4>
+                <p className="text-[#00d4aa] text-sm font-medium">Founder, CEO & CIO, ARK Invest</p>
+              </div>
+              <p className="text-gray-300 italic text-center">
+                "Incite AI is exactly the kind of innovative tool that represents the convergence of AI, big data, and financial markets. It's empowering individuals to participate in the markets with a level of confidence and clarity that used to be limited to the big players. And when we look at where financial technology is going — this is it."
               </p>
             </CardContent>
           </Card>

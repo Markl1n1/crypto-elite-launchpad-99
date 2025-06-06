@@ -17,6 +17,13 @@ export const useTranslations = () => {
         return;
       }
 
+      // Check for manually set language in localStorage
+      const manualLanguage = localStorage.getItem('selectedLanguage');
+      if (manualLanguage && Object.keys(translations).includes(manualLanguage)) {
+        setCurrentLanguage(manualLanguage as Language);
+        return;
+      }
+
       const browserLang = navigator.language.toLowerCase();
       const browserLangCode = browserLang.split('-')[0]; // Get just the language part (e.g., 'en' from 'en-US')
       
@@ -47,8 +54,12 @@ export const useTranslations = () => {
 
   const changeLanguage = (lang: Language) => {
     setCurrentLanguage(lang);
+    // Store manually selected language
+    localStorage.setItem('selectedLanguage', lang);
     // Clear stored application language when manually changing language
     localStorage.removeItem('applicationLanguage');
+    // Force page reload to update all components
+    window.location.reload();
   };
 
   return {

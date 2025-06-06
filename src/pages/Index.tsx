@@ -6,6 +6,7 @@ import { TradingPlatform } from '@/components/sections/TradingPlatform';
 import { StepsSection } from '@/components/sections/StepsSection';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { IndustryExperts } from '@/components/sections/IndustryExperts';
+import { CEOSection } from '@/components/sections/CEOSection';
 import { PricingSection } from '@/components/sections/PricingSection';
 import { PartnersSection } from '@/components/sections/PartnersSection';
 import { FAQSection } from '@/components/sections/FAQSection';
@@ -37,6 +38,7 @@ const Index = () => {
       <StepsSection scrollToSection={scrollToSection} />
       <Testimonials scrollToSection={scrollToSection} />
       <IndustryExperts scrollToSection={scrollToSection} />
+      <CEOSection />
       <PricingSection scrollToSection={scrollToSection} />
       <PartnersSection />
       <FAQSection />
