@@ -18,6 +18,16 @@ export const translations = {
     // Floating Cards
     avgClientProfit: "Average Client Profit",
     recordPortfolioMay: "Record Portfolio Growth - May 2024",
+    portfolioGrowth: "+142.7%",
+    growthPercentage: "+41.2% ↗",
+    aiSays: "AI says:",
+    confidence: "Confidence: 97%",
+    averageClientProfit: "Average Client Profit",
+    monthlyProfit: "$18,250",
+    last12Months: "Last 12 months",
+    clientWinrate: "Client Win Rate",
+    winratePercentage: "89.4%",
+    successRate: "Success rate",
     clientSuccessRate: "Client Success Rate",
     eliteMembers: "Elite Members",
     
@@ -57,6 +67,50 @@ export const translations = {
     founderCEO: "Founder & CEO of Incite AI",
     ceoDescription: "Responsible for the strategic development of the company and the creation of an AI platform for financial market analysis.",
     
+    // Industry Experts
+    industryExperts: "Industry Experts",
+    industryExpertsTitle: "What Industry Leaders Say About Incite AI",
+    
+    // Pricing Section
+    flexibleInvestmentOptions: "Flexible Investment Options",
+    investmentPlansTitle: "Choose Your Investment Plan",
+    standardPlan: "Standard Plan",
+    proPlan: "Pro Plan",
+    advancedPlan: "Advanced Plan",
+    support247: "24/7 Support",
+    personalisedManager: "Personalised Manager",
+    automaticNotification: "Automatic Notifications",
+    basicAutotrading: "Basic Auto-trading",
+    limitedTrades: "Limited Trades (50/month)",
+    advancedAutotrading: "Advanced Auto-trading",
+    moderatedTrades: "Moderate Trades (200/month)",
+    analyseResults: "Analyse Results",
+    meetingsInvestors: "Meetings with Investors",
+    allProFeatures: "All Pro Features",
+    premiumAutotrade: "Premium Auto-trade",
+    unlimitedTrades: "Unlimited Trades",
+    priorityProcessing: "Priority Processing",
+    companyGifts: "Company Gifts",
+    spotsAvailable: "spots available",
+    startNow: "Start Now",
+    mostPopular: "Most Popular",
+    currentlyFull: "Currently Full",
+    
+    // Partners
+    ourPartners: "Our Partners",
+    
+    // Footer
+    footerDescription: "Advanced AI technology for elite financial opportunities and investment success.",
+    quickLinks: "Quick Links",
+    legal: "Legal",
+    privacyPolicy: "Privacy Policy",
+    termsOfService: "Terms of Service",
+    riskDisclosure: "Risk Disclosure",
+    compliance: "Compliance",
+    contact: "Contact",
+    allRightsReserved: "© 2024 Incite AI. All rights reserved.",
+    footerDisclaimer: "Trading involves risk. Past performance does not guarantee future results.",
+    
     // Success Page
     applicationSuccessful: "Application Successful!",
     managerWillContact: "Our manager will contact you at the shortest.",
@@ -83,6 +137,16 @@ export const translations = {
     // Floating Cards
     avgClientProfit: "Średni Zysk Klienta",
     recordPortfolioMay: "Rekordowy Wzrost Portfela - Maj 2024",
+    portfolioGrowth: "+142,7%",
+    growthPercentage: "+41,2% ↗",
+    aiSays: "AI mówi:",
+    confidence: "Pewność: 97%",
+    averageClientProfit: "Średni Zysk Klienta",
+    monthlyProfit: "$18,250",
+    last12Months: "Ostatnie 12 miesięcy",
+    clientWinrate: "Wskaźnik Wygranych Klientów",
+    winratePercentage: "89,4%",
+    successRate: "Wskaźnik sukcesu",
     clientSuccessRate: "Wskaźnik Sukcesu Klientów",
     eliteMembers: "Członkowie Elite",
     
@@ -122,6 +186,50 @@ export const translations = {
     founderCEO: "Założyciel i CEO Incite AI",
     ceoDescription: "Odpowiedzialny za strategiczny rozwój firmy i tworzenie platformy AI do analizy rynków finansowych.",
     
+    // Industry Experts
+    industryExperts: "Eksperci Branżowi",
+    industryExpertsTitle: "Co Liderzy Branży Mówią o Incite AI",
+    
+    // Pricing Section
+    flexibleInvestmentOptions: "Elastyczne Opcje Inwestycyjne",
+    investmentPlansTitle: "Wybierz Swój Plan Inwestycyjny",
+    standardPlan: "Plan Standardowy",
+    proPlan: "Plan Pro",
+    advancedPlan: "Plan Zaawansowany",
+    support247: "Wsparcie 24/7",
+    personalisedManager: "Spersonalizowany Menedżer",
+    automaticNotification: "Automatyczne Powiadomienia",
+    basicAutotrading: "Podstawowy Auto-handel",
+    limitedTrades: "Ograniczone Transakcje (50/miesiąc)",
+    advancedAutotrading: "Zaawansowany Auto-handel",
+    moderatedTrades: "Umiarkowane Transakcje (200/miesiąc)",
+    analyseResults: "Analiza Wyników",
+    meetingsInvestors: "Spotkania z Inwestorami",
+    allProFeatures: "Wszystkie Funkcje Pro",
+    premiumAutotrade: "Premium Auto-handel",
+    unlimitedTrades: "Nieograniczone Transakcje",
+    priorityProcessing: "Priorytetowe Przetwarzanie",
+    companyGifts: "Prezenty Firmowe",
+    spotsAvailable: "dostępnych miejsc",
+    startNow: "Zacznij Teraz",
+    mostPopular: "Najpopularniejszy",
+    currentlyFull: "Obecnie Pełny",
+    
+    // Partners
+    ourPartners: "Nasi Partnerzy",
+    
+    // Footer
+    footerDescription: "Zaawansowana technologia AI dla elitarnych możliwości finansowych i sukcesu inwestycyjnego.",
+    quickLinks: "Szybkie Linki",
+    legal: "Prawne",
+    privacyPolicy: "Polityka Prywatności",
+    termsOfService: "Warunki Usługi",
+    riskDisclosure: "Ujawnienie Ryzyka",
+    compliance: "Zgodność",
+    contact: "Kontakt",
+    allRightsReserved: "© 2024 Incite AI. Wszystkie prawa zastrzeżone.",
+    footerDisclaimer: "Handel wiąże się z ryzykiem. Wyniki z przeszłości nie gwarantują przyszłych rezultatów.",
+    
     // Success Page
     applicationSuccessful: "Aplikacja Zakończona Sukcesem!",
     managerWillContact: "Nasz menedżer skontaktuje się z Tobą w najkrótszym czasie.",
@@ -148,6 +256,16 @@ export const translations = {
     // Floating Cards
     avgClientProfit: "Durchschnittlicher Kundengewinn",
     recordPortfolioMay: "Rekord-Portfolio-Wachstum - Mai 2024",
+    portfolioGrowth: "+142,7%",
+    growthPercentage: "+41,2% ↗",
+    aiSays: "KI sagt:",
+    confidence: "Vertrauen: 97%",
+    averageClientProfit: "Durchschnittlicher Kundengewinn",
+    monthlyProfit: "$18.250",
+    last12Months: "Letzte 12 Monate",
+    clientWinrate: "Kunden-Gewinnrate",
+    winratePercentage: "89,4%",
+    successRate: "Erfolgsrate",
     clientSuccessRate: "Kunden-Erfolgsrate",
     eliteMembers: "Elite-Mitglieder",
     
@@ -187,6 +305,50 @@ export const translations = {
     founderCEO: "Gründer & CEO von Incite AI",
     ceoDescription: "Verantwortlich für die strategische Entwicklung des Unternehmens und die Schaffung einer KI-Plattform für die Analyse der Finanzmärkte.",
     
+    // Industry Experts
+    industryExperts: "Branchenexperten",
+    industryExpertsTitle: "Was Branchenführer über Incite AI sagen",
+    
+    // Pricing Section
+    flexibleInvestmentOptions: "Flexible Investitionsoptionen",
+    investmentPlansTitle: "Wählen Sie Ihren Investitionsplan",
+    standardPlan: "Standard-Plan",
+    proPlan: "Pro-Plan",
+    advancedPlan: "Erweiterte Plan",
+    support247: "24/7 Support",
+    personalisedManager: "Persönlicher Manager",
+    automaticNotification: "Automatische Benachrichtigungen",
+    basicAutotrading: "Basis Auto-Trading",
+    limitedTrades: "Begrenzte Trades (50/Monat)",
+    advancedAutotrading: "Erweiterte Auto-Trading",
+    moderatedTrades: "Moderate Trades (200/Monat)",
+    analyseResults: "Ergebnisse analysieren",
+    meetingsInvestors: "Treffen mit Investoren",
+    allProFeatures: "Alle Pro-Features",
+    premiumAutotrade: "Premium Auto-Trade",
+    unlimitedTrades: "Unbegrenzte Trades",
+    priorityProcessing: "Prioritäts-Verarbeitung",
+    companyGifts: "Firmengeschenke",
+    spotsAvailable: "Plätze verfügbar",
+    startNow: "Jetzt starten",
+    mostPopular: "Am beliebtesten",
+    currentlyFull: "Derzeit voll",
+    
+    // Partners
+    ourPartners: "Unsere Partner",
+    
+    // Footer
+    footerDescription: "Fortschrittliche KI-Technologie für Elite-Finanzchancen und Investitionserfolg.",
+    quickLinks: "Schnelllinks",
+    legal: "Rechtliches",
+    privacyPolicy: "Datenschutzrichtlinie",
+    termsOfService: "Nutzungsbedingungen",
+    riskDisclosure: "Risikoaufklärung",
+    compliance: "Compliance",
+    contact: "Kontakt",
+    allRightsReserved: "© 2024 Incite AI. Alle Rechte vorbehalten.",
+    footerDisclaimer: "Trading beinhaltet Risiken. Vergangene Performance garantiert keine zukünftigen Ergebnisse.",
+    
     // Success Page
     applicationSuccessful: "Bewerbung erfolgreich!",
     managerWillContact: "Unser Manager wird Sie in kürzester Zeit kontaktieren.",
@@ -213,6 +375,16 @@ export const translations = {
     // Floating Cards
     avgClientProfit: "Ganancia Promedio del Cliente",
     recordPortfolioMay: "Crecimiento Récord del Portafolio - Mayo 2024",
+    portfolioGrowth: "+142,7%",
+    growthPercentage: "+41,2% ↗",
+    aiSays: "IA dice:",
+    confidence: "Confianza: 97%",
+    averageClientProfit: "Ganancia Promedio del Cliente",
+    monthlyProfit: "$18,250",
+    last12Months: "Últimos 12 meses",
+    clientWinrate: "Tasa de Victorias del Cliente",
+    winratePercentage: "89,4%",
+    successRate: "Tasa de éxito",
     clientSuccessRate: "Tasa de Éxito del Cliente",
     eliteMembers: "Miembros Elite",
     
@@ -252,6 +424,50 @@ export const translations = {
     founderCEO: "Fundador y CEO de Incite AI",
     ceoDescription: "Responsable del desarrollo estratégico de la empresa y la creación de una plataforma de IA para el análisis del mercado financiero.",
     
+    // Industry Experts
+    industryExperts: "Expertos de la Industria",
+    industryExpertsTitle: "Lo que los Líderes de la Industria Dicen sobre Incite AI",
+    
+    // Pricing Section
+    flexibleInvestmentOptions: "Opciones de Inversión Flexibles",
+    investmentPlansTitle: "Elige Tu Plan de Inversión",
+    standardPlan: "Plan Estándar",
+    proPlan: "Plan Pro",
+    advancedPlan: "Plan Avanzado",
+    support247: "Soporte 24/7",
+    personalisedManager: "Manager Personalizado",
+    automaticNotification: "Notificaciones Automáticas",
+    basicAutotrading: "Auto-trading Básico",
+    limitedTrades: "Trades Limitados (50/mes)",
+    advancedAutotrading: "Auto-trading Avanzado",
+    moderatedTrades: "Trades Moderados (200/mes)",
+    analyseResults: "Analizar Resultados",
+    meetingsInvestors: "Reuniones con Inversores",
+    allProFeatures: "Todas las Características Pro",
+    premiumAutotrade: "Auto-trade Premium",
+    unlimitedTrades: "Trades Ilimitados",
+    priorityProcessing: "Procesamiento Prioritario",
+    companyGifts: "Regalos de la Empresa",
+    spotsAvailable: "lugares disponibles",
+    startNow: "Comenzar Ahora",
+    mostPopular: "Más Popular",
+    currentlyFull: "Actualmente Lleno",
+    
+    // Partners
+    ourPartners: "Nuestros Socios",
+    
+    // Footer
+    footerDescription: "Tecnología de IA avanzada para oportunidades financieras elite y éxito en inversiones.",
+    quickLinks: "Enlaces Rápidos",
+    legal: "Legal",
+    privacyPolicy: "Política de Privacidad",
+    termsOfService: "Términos de Servicio",
+    riskDisclosure: "Divulgación de Riesgos",
+    compliance: "Cumplimiento",
+    contact: "Contacto",
+    allRightsReserved: "© 2024 Incite AI. Todos los derechos reservados.",
+    footerDisclaimer: "El trading conlleva riesgos. El rendimiento pasado no garantiza resultados futuros.",
+    
     // Success Page
     applicationSuccessful: "¡Aplicación Exitosa!",
     managerWillContact: "Nuestro manager se contactará contigo a la brevedad.",
@@ -278,6 +494,16 @@ export const translations = {
     // Floating Cards
     avgClientProfit: "Средняя Прибыль Клиента",
     recordPortfolioMay: "Рекордный Рост Портфеля - Май 2024",
+    portfolioGrowth: "+142,7%",
+    growthPercentage: "+41,2% ↗",
+    aiSays: "ИИ говорит:",
+    confidence: "Уверенность: 97%",
+    averageClientProfit: "Средняя Прибыль Клиента",
+    monthlyProfit: "$18,250",
+    last12Months: "Последние 12 месяцев",
+    clientWinrate: "Процент Побед Клиентов",
+    winratePercentage: "89,4%",
+    successRate: "Показатель успеха",
     clientSuccessRate: "Показатель Успеха Клиентов",
     eliteMembers: "Элитные Участники",
     
@@ -317,6 +543,50 @@ export const translations = {
     founderCEO: "Основатель и CEO Incite AI",
     ceoDescription: "Отвечает за стратегическое развитие компании и создание ИИ-платформы для анализа финансовых рынков.",
     
+    // Industry Experts
+    industryExperts: "Эксперты Отрасли",
+    industryExpertsTitle: "Что Лидеры Отрасли Говорят о Incite AI",
+    
+    // Pricing Section
+    flexibleInvestmentOptions: "Гибкие Варианты Инвестиций",
+    investmentPlansTitle: "Выберите Свой Инвестиционный План",
+    standardPlan: "Стандартный План",
+    proPlan: "Pro План",
+    advancedPlan: "Продвинутый План",
+    support247: "Поддержка 24/7",
+    personalisedManager: "Персональный Менеджер",
+    automaticNotification: "Автоматические Уведомления",
+    basicAutotrading: "Базовый Авто-трейдинг",
+    limitedTrades: "Ограниченные Сделки (50/месяц)",
+    advancedAutotrading: "Продвинутый Авто-трейдинг",
+    moderatedTrades: "Умеренные Сделки (200/месяц)",
+    analyseResults: "Анализ Результатов",
+    meetingsInvestors: "Встречи с Инвесторами",
+    allProFeatures: "Все Pro Функции",
+    premiumAutotrade: "Премиум Авто-трейд",
+    unlimitedTrades: "Неограниченные Сделки",
+    priorityProcessing: "Приоритетная Обработка",
+    companyGifts: "Корпоративные Подарки",
+    spotsAvailable: "мест доступно",
+    startNow: "Начать Сейчас",
+    mostPopular: "Самый Популярный",
+    currentlyFull: "В Настоящее Время Полный",
+    
+    // Partners
+    ourPartners: "Наши Партнеры",
+    
+    // Footer
+    footerDescription: "Передовая ИИ-технология для элитных финансовых возможностей и инвестиционного успеха.",
+    quickLinks: "Быстрые Ссылки",
+    legal: "Правовые",
+    privacyPolicy: "Политика Конфиденциальности",
+    termsOfService: "Условия Обслуживания",
+    riskDisclosure: "Раскрытие Рисков",
+    compliance: "Соответствие",
+    contact: "Контакт",
+    allRightsReserved: "© 2024 Incite AI. Все права защищены.",
+    footerDisclaimer: "Торговля связана с рисками. Прошлые результаты не гарантируют будущих результатов.",
+    
     // Success Page
     applicationSuccessful: "Заявка Успешно Подана!",
     managerWillContact: "Наш менеджер свяжется с вами в кратчайшие сроки.",
@@ -343,6 +613,16 @@ export const translations = {
     // Floating Cards
     avgClientProfit: "Profit Moyen du Client",
     recordPortfolioMay: "Croissance Record du Portefeuille - Mai 2024",
+    portfolioGrowth: "+142,7%",
+    growthPercentage: "+41,2% ↗",
+    aiSays: "L'IA dit:",
+    confidence: "Confiance: 97%",
+    averageClientProfit: "Profit Moyen du Client",
+    monthlyProfit: "$18,250",
+    last12Months: "12 derniers mois",
+    clientWinrate: "Taux de Victoires des Clients",
+    winratePercentage: "89,4%",
+    successRate: "Taux de succès",
     clientSuccessRate: "Taux de Succès des Clients",
     eliteMembers: "Membres Elite",
     
@@ -382,6 +662,50 @@ export const translations = {
     founderCEO: "Fondateur et PDG d'Incite AI",
     ceoDescription: "Responsable du développement stratégique de l'entreprise et de la création d'une plateforme IA pour l'analyse des marchés financiers.",
     
+    // Industry Experts
+    industryExperts: "Experts de l'Industrie",
+    industryExpertsTitle: "Ce que les Leaders de l'Industrie Disent sur Incite AI",
+    
+    // Pricing Section
+    flexibleInvestmentOptions: "Options d'Investissement Flexibles",
+    investmentPlansTitle: "Choisissez Votre Plan d'Investissement",
+    standardPlan: "Plan Standard",
+    proPlan: "Plan Pro",
+    advancedPlan: "Plan Avancé",
+    support247: "Support 24/7",
+    personalisedManager: "Manager Personnalisé",
+    automaticNotification: "Notifications Automatiques",
+    basicAutotrading: "Auto-trading de Base",
+    limitedTrades: "Trades Limités (50/mois)",
+    advancedAutotrading: "Auto-trading Avancé",
+    moderatedTrades: "Trades Modérés (200/mois)",
+    analyseResults: "Analyser les Résultats",
+    meetingsInvestors: "Réunions avec les Investisseurs",
+    allProFeatures: "Toutes les Fonctionnalités Pro",
+    premiumAutotrade: "Auto-trade Premium",
+    unlimitedTrades: "Trades Illimités",
+    priorityProcessing: "Traitement Prioritaire",
+    companyGifts: "Cadeaux de l'Entreprise",
+    spotsAvailable: "places disponibles",
+    startNow: "Commencer Maintenant",
+    mostPopular: "Plus Populaire",
+    currentlyFull: "Actuellement Complet",
+    
+    // Partners
+    ourPartners: "Nos Partenaires",
+    
+    // Footer
+    footerDescription: "Technologie IA avancée pour les opportunités financières d'élite et le succès des investissements.",
+    quickLinks: "Liens Rapides",
+    legal: "Légal",
+    privacyPolicy: "Politique de Confidentialité",
+    termsOfService: "Conditions de Service",
+    riskDisclosure: "Divulgation des Risques",
+    compliance: "Conformité",
+    contact: "Contact",
+    allRightsReserved: "© 2024 Incite AI. Tous droits réservés.",
+    footerDisclaimer: "Le trading implique des risques. Les performances passées ne garantissent pas les résultats futurs.",
+    
     // Success Page
     applicationSuccessful: "Candidature Réussie!",
     managerWillContact: "Notre gestionnaire vous contactera dans les plus brefs délais.",
@@ -408,6 +732,16 @@ export const translations = {
     // Floating Cards
     avgClientProfit: "متوسط ربح العميل",
     recordPortfolioMay: "نمو قياسي للمحفظة - مايو 2024",
+    portfolioGrowth: "+142.7%",
+    growthPercentage: "+41.2% ↗",
+    aiSays: "الذكاء الاصطناعي يقول:",
+    confidence: "الثقة: 97%",
+    averageClientProfit: "متوسط ربح العميل",
+    monthlyProfit: "$18,250",
+    last12Months: "آخر 12 شهراً",
+    clientWinrate: "معدل فوز العملاء",
+    winratePercentage: "89.4%",
+    successRate: "معدل النجاح",
     clientSuccessRate: "معدل نجاح العملاء",
     eliteMembers: "أعضاء النخبة",
     
@@ -447,6 +781,50 @@ export const translations = {
     founderCEO: "المؤسس والرئيس التنفيذي لـ Incite AI",
     ceoDescription: "مسؤول عن التطوير الاستراتيجي للشركة وإنشاء منصة ذكاء اصطناعي لتحليل الأسواق المالية.",
     
+    // Industry Experts
+    industryExperts: "خبراء الصناعة",
+    industryExpertsTitle: "ما يقوله قادة الصناعة عن Incite AI",
+    
+    // Pricing Section
+    flexibleInvestmentOptions: "خيارات الاستثمار المرنة",
+    investmentPlansTitle: "اختر خطة الاستثمار الخاصة بك",
+    standardPlan: "الخطة المعيارية",
+    proPlan: "خطة Pro",
+    advancedPlan: "الخطة المتقدمة",
+    support247: "دعم 24/7",
+    personalisedManager: "مدير شخصي",
+    automaticNotification: "إشعارات تلقائية",
+    basicAutotrading: "تداول تلقائي أساسي",
+    limitedTrades: "صفقات محدودة (50/شهر)",
+    advancedAutotrading: "تداول تلقائي متقدم",
+    moderatedTrades: "صفقات معتدلة (200/شهر)",
+    analyseResults: "تحليل النتائج",
+    meetingsInvestors: "اجتماعات مع المستثمرين",
+    allProFeatures: "جميع ميزات Pro",
+    premiumAutotrade: "تداول تلقائي مميز",
+    unlimitedTrades: "صفقات غير محدودة",
+    priorityProcessing: "معالجة ذات أولوية",
+    companyGifts: "هدايا الشركة",
+    spotsAvailable: "أماكن متاحة",
+    startNow: "ابدأ الآن",
+    mostPopular: "الأكثر شعبية",
+    currentlyFull: "ممتلئ حالياً",
+    
+    // Partners
+    ourPartners: "شركاؤنا",
+    
+    // Footer
+    footerDescription: "تقنية ذكاء اصطناعي متقدمة للفرص المالية النخبة ونجاح الاستثمار.",
+    quickLinks: "روابط سريعة",
+    legal: "قانوني",
+    privacyPolicy: "سياسة الخصوصية",
+    termsOfService: "شروط الخدمة",
+    riskDisclosure: "الإفصاح عن المخاطر",
+    compliance: "الامتثال",
+    contact: "اتصل",
+    allRightsReserved: "© 2024 Incite AI. جميع الحقوق محفوظة.",
+    footerDisclaimer: "التداول ينطوي على مخاطر. الأداء السابق لا يضمن النتائج المستقبلية.",
+    
     // Success Page
     applicationSuccessful: "تم التقديم بنجاح!",
     managerWillContact: "سيتواصل معك مديرنا في أقرب وقت.",
@@ -473,6 +851,16 @@ export const translations = {
     // Floating Cards
     avgClientProfit: "Ortalama Müşteri Karı",
     recordPortfolioMay: "Rekor Portföy Büyümesi - Mayıs 2024",
+    portfolioGrowth: "+142,7%",
+    growthPercentage: "+41,2% ↗",
+    aiSays: "AI diyor:",
+    confidence: "Güven: %97",
+    averageClientProfit: "Ortalama Müşteri Karı",
+    monthlyProfit: "$18.250",
+    last12Months: "Son 12 ay",
+    clientWinrate: "Müşteri Kazanma Oranı",
+    winratePercentage: "%89,4",
+    successRate: "Başarı oranı",
     clientSuccessRate: "Müşteri Başarı Oranı",
     eliteMembers: "Elit Üyeler",
     
@@ -511,6 +899,50 @@ export const translations = {
     leadershipTitle: "Incite AI Liderliği",
     founderCEO: "Incite AI Kurucusu ve CEO'su",
     ceoDescription: "Şirketin stratejik gelişiminden ve finansal piyasa analizi için AI platformu oluşturulmasından sorumlu.",
+    
+    // Industry Experts
+    industryExperts: "Sektör Uzmanları",
+    industryExpertsTitle: "Sektör Liderleri Incite AI Hakkında Ne Diyor",
+    
+    // Pricing Section
+    flexibleInvestmentOptions: "Esnek Yatırım Seçenekleri",
+    investmentPlansTitle: "Yatırım Planınızı Seçin",
+    standardPlan: "Standart Plan",
+    proPlan: "Pro Plan",
+    advancedPlan: "Gelişmiş Plan",
+    support247: "24/7 Destek",
+    personalisedManager: "Kişiselleştirilmiş Yönetici",
+    automaticNotification: "Otomatik Bildirimler",
+    basicAutotrading: "Temel Otomatik Ticaret",
+    limitedTrades: "Sınırlı İşlemler (50/ay)",
+    advancedAutotrading: "Gelişmiş Otomatik Ticaret",
+    moderatedTrades: "Orta İşlemler (200/ay)",
+    analyseResults: "Sonuçları Analiz Et",
+    meetingsInvestors: "Yatırımcılarla Toplantılar",
+    allProFeatures: "Tüm Pro Özellikler",
+    premiumAutotrade: "Premium Otomatik Ticaret",
+    unlimitedTrades: "Sınırsız İşlemler",
+    priorityProcessing: "Öncelikli İşleme",
+    companyGifts: "Şirket Hediyeleri",
+    spotsAvailable: "yer mevcut",
+    startNow: "Şimdi Başla",
+    mostPopular: "En Popüler",
+    currentlyFull: "Şu Anda Dolu",
+    
+    // Partners
+    ourPartners: "Ortaklarımız",
+    
+    // Footer
+    footerDescription: "Elite finansal fırsatlar ve yatırım başarısı için gelişmiş AI teknolojisi.",
+    quickLinks: "Hızlı Bağlantılar",
+    legal: "Yasal",
+    privacyPolicy: "Gizlilik Politikası",
+    termsOfService: "Hizmet Şartları",
+    riskDisclosure: "Risk Açıklaması",
+    compliance: "Uyumluluk",
+    contact: "İletişim",
+    allRightsReserved: "© 2024 Incite AI. Tüm hakları saklıdır.",
+    footerDisclaimer: "Ticaret risk içerir. Geçmiş performans gelecekteki sonuçları garanti etmez.",
     
     // Success Page
     applicationSuccessful: "Başvuru Başarılı!",
