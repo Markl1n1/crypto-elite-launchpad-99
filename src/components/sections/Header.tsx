@@ -54,7 +54,7 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <img 
-            src="/lovable-uploads/ffe495da-a680-4b06-bb34-b1178c165835.png" 
+            src="/lovable-uploads/16901b7b-f4dd-4180-a419-e2b56caae6c3.png" 
             alt="Incite AI Logo" 
             className="w-8 h-8"
           />

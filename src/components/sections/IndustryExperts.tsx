@@ -68,7 +68,7 @@ export const IndustryExperts = ({ scrollToSection }: IndustryExpertsProps) => {
             <CardContent className="p-0">
               <div className="text-center mb-6">
                 <Avatar className="w-20 h-20 mx-auto mb-4">
-                  <AvatarImage src="/lovable-uploads/8e537a70-a7f3-41a2-bffd-09d279977760.png" alt="Brian Strachan" />
+                  <AvatarImage src="/lovable-uploads/b0c3cff9-196a-4309-9e8b-3eb1eec736f1.png" alt="Brian Strachan" />
                   <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold text-2xl">
                     BS
                   </AvatarFallback>
