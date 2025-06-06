@@ -74,7 +74,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
             </CardContent>
           </Card>
 
-          {/* Testimonial 3 - Loxon */}
+          {/* Testimonial 3 - Loxton */}
           <Card className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
             <CardContent className="p-0">
               <div className="flex items-center mb-4">
@@ -87,7 +87,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
               </p>
               <div className="flex items-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=150&h=150&fit=crop&crop=face" 
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face" 
                   alt="Loxton G." 
                   className="w-12 h-12 rounded-full object-cover"
                 />

@@ -54,7 +54,7 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <img 
-            src="/lovable-uploads/8cea484c-1f52-4aee-84ba-e8fb9cb7e7e3.png" 
+            src="/lovable-uploads/ffe495da-a680-4b06-bb34-b1178c165835.png" 
             alt="Incite AI Logo" 
             className="w-8 h-8"
           />
@@ -71,25 +71,32 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
           <button onClick={() => scrollToSection('faq')} className="hover:text-[#00d4aa] transition-colors">{t('faq')}</button>
           
           {/* Language Switcher */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="flex items-center space-x-2 hover:text-[#00d4aa]">
-                <Globe size={20} />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-[#1a1f35] border-white/20 z-50">
-              {languages.map(lang => 
-                <DropdownMenuItem 
-                  key={lang.code} 
-                  onClick={() => changeLanguage(lang.code as any)} 
-                  className="text-white hover:bg-[#00d4aa]/20 cursor-pointer flex items-center space-x-3"
-                >
-                  <span className="text-xl">{lang.flag}</span>
-                  <span>{lang.name}</span>
-                </DropdownMenuItem>
-              )}
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <div className="relative">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm" className="flex items-center space-x-2 hover:text-[#00d4aa] relative">
+                  <Globe size={20} />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent 
+                className="bg-[#1a1f35] border-white/20 z-[60] min-w-[180px]" 
+                align="end"
+                sideOffset={5}
+                avoidCollisions={true}
+              >
+                {languages.map(lang => 
+                  <DropdownMenuItem 
+                    key={lang.code} 
+                    onClick={() => changeLanguage(lang.code as any)} 
+                    className="text-white hover:bg-[#00d4aa]/20 cursor-pointer flex items-center space-x-3"
+                  >
+                    <span className="text-xl">{lang.flag}</span>
+                    <span>{lang.name}</span>
+                  </DropdownMenuItem>
+                )}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
           
           <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold transform hover:scale-105 transition-all duration-200">
             {t('applyNow')}
