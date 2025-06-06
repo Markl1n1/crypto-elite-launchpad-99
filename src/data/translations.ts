@@ -1,4 +1,3 @@
-
 export const translations = {
   en: {
     // Navigation
@@ -131,6 +130,10 @@ export const translations = {
     income100kPlus: "$100,000+",
     financialSit1: "1 - Struggling financially",
     financialSit10: "10 - Very comfortable financially",
+
+    // Success Page
+    applicationSuccessful: "Application Successful!",
+    managerWillContact: "Our manager will contact you at the shortest.",
 
     // Footer
     footerDescription: "Empowering investors with AI-driven financial solutions for sustainable wealth growth.",
@@ -277,6 +280,10 @@ export const translations = {
     financialSit1: "1 - Trudności finansowe",
     financialSit10: "10 - Bardzo komfortowa sytuacja finansowa",
 
+    // Success Page
+    applicationSuccessful: "Aplikacja zakończona sukcesem!",
+    managerWillContact: "Nasz menedżer skontaktuje się z Tobą w najkrótszym czasie.",
+
     // Footer
     footerDescription: "Wspieramy inwestorów rozwiązaniami finansowymi opartymi na AI dla zrównoważonego wzrostu bogactwa.",
     quickLinks: "Szybkie linki",
@@ -421,6 +428,10 @@ export const translations = {
     income100kPlus: "100.000 $+",
     financialSit1: "1 - Finanzielle Schwierigkeiten",
     financialSit10: "10 - Sehr komfortable finanzielle Situation",
+
+    // Success Page
+    applicationSuccessful: "Bewerbung erfolgreich!",
+    managerWillContact: "Unser Manager wird Sie so schnell wie möglich kontaktieren.",
 
     // Footer
     footerDescription: "Wir stärken Investoren mit KI-gestützten Finanzlösungen für nachhaltiges Vermögenswachstum.",
@@ -567,6 +578,10 @@ export const translations = {
     financialSit1: "1 - Con dificultades financieras",
     financialSit10: "10 - Situación financiera muy cómoda",
 
+    // Success Page
+    applicationSuccessful: "¡Solicitud exitosa!",
+    managerWillContact: "Nuestro gerente se pondrá en contacto contigo lo antes posible.",
+
     // Footer
     footerDescription: "Potenciando a los inversores con soluciones financieras impulsadas por IA para un crecimiento sostenible de la riqueza.",
     quickLinks: "Enlaces rápidos",
@@ -711,6 +726,10 @@ export const translations = {
     income100kPlus: "$100 000+",
     financialSit1: "1 - Финансовые трудности",
     financialSit10: "10 - Очень комфортное финансовое положение",
+
+    // Success Page
+    applicationSuccessful: "Заявка успешно подана!",
+    managerWillContact: "Наш менеджер свяжется с вами в ближайшее время.",
 
     // Footer
     footerDescription: "Расширение возможностей инвесторов с финансовыми решениями на базе ИИ для устойчивого роста благосостояния.",
@@ -857,6 +876,10 @@ export const translations = {
     financialSit1: "1 - En difficulté financière",
     financialSit10: "10 - Situation financière très confortable",
 
+    // Success Page
+    applicationSuccessful: "Candidature réussie!",
+    managerWillContact: "Notre gestionnaire vous contactera dans les plus brefs délais.",
+
     // Footer
     footerDescription: "Donnant aux investisseurs des solutions financières basées sur l'IA pour une croissance durable de la richesse.",
     quickLinks: "Liens rapides",
@@ -1002,6 +1025,10 @@ export const translations = {
     financialSit1: "1 - صعوبات مالية",
     financialSit10: "10 - وضع مالي مريح جدًا",
 
+    // Success Page
+    applicationSuccessful: "تم تقديم الطلب بنجاح!",
+    managerWillContact: "سيتواصل معك مديرنا في أقرب وقت ممكن.",
+
     // Footer
     footerDescription: "تمكين المستثمرين بحلول مالية مدعومة بالذكاء الاصطناعي لنمو ثروة مستدام.",
     quickLinks: "روابط سريعة",
@@ -1146,6 +1173,10 @@ export const translations = {
     income100kPlus: "100.000$+",
     financialSit1: "1 - Finansal zorluk yaşıyor",
     financialSit10: "10 - Çok rahat finansal durum",
+
+    // Success Page
+    applicationSuccessful: "Başvuru başarılı!",
+    managerWillContact: "Yöneticimiz en kısa sürede sizinle iletişime geçecek.",
 
     // Footer
     footerDescription: "Sürdürülebilir servet büyümesi için yapay zeka destekli finansal çözümlerle yatırımcıları güçlendiriyoruz.",
