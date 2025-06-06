@@ -68,9 +68,9 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
         </div>
 
-        {/* Floating Dashboard Cards - Responsive */}
+        {/* Floating Dashboard Cards - Responsive with increased vertical spacing */}
         {/* Card 1 - Portfolio Growth */}
-        <div className="absolute top-20 md:top-28 left-2 md:left-8 animate-float w-40 md:w-64">
+        <div className="absolute top-16 md:top-20 left-2 md:left-8 animate-float w-40 md:w-64">
           <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-2 md:p-4">
             <CardContent className="p-0">
               <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('recordPortfolioMay')}</div>
@@ -81,7 +81,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         </div>
 
         {/* Card 2 - AI Signal */}
-        <div className="absolute top-32 md:top-44 right-2 md:right-8 animate-float w-40 md:w-64" style={{
+        <div className="absolute top-44 md:top-60 right-2 md:right-8 animate-float w-40 md:w-64" style={{
           animationDelay: '1s'
         }}>
           <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-2 md:p-4">
@@ -94,7 +94,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         </div>
 
         {/* Card 3 - Average Profit */}
-        <div className="absolute bottom-96 md:bottom-[540px] left-2 md:left-16 animate-float w-40 md:w-64" style={{
+        <div className="absolute bottom-[28rem] md:bottom-[36rem] left-2 md:left-16 animate-float w-40 md:w-64" style={{
           animationDelay: '2s'
         }}>
           <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-2 md:p-4">
@@ -107,7 +107,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         </div>
 
         {/* Card 4 - Win Rate */}
-        <div className="absolute bottom-80 md:bottom-[400px] right-2 md:right-16 animate-float w-40 md:w-64" style={{
+        <div className="absolute bottom-[22rem] md:bottom-[28rem] right-2 md:right-16 animate-float w-40 md:w-64" style={{
           animationDelay: '3s'
         }}>
           <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-2 md:p-4">

@@ -10,65 +10,81 @@ interface TestimonialsProps {
 }
 
 const testimonials = [
+  // English testimonials (4)
   {
-    name: 'Lodrino M.',
+    name: 'Michael R.',
     profession: 'Automotive Retailer',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
-    content: 'Finally found something that helps me understand the market better! As someone who sells cars, I appreciate when things are explained simply. This AI actually makes investing feel less scary.'
+    content: 'Finally found something that helps me understand the market better! As someone who sells cars, I appreciate when things are explained simply. This AI actually makes investing feel less scary.',
+    language: 'en'
   },
   {
     name: 'Justin F.',
     profession: 'Designer',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-    content: 'Love the clean interface design! As a designer myself, I appreciate good UX. But more importantly, it\'s helping me grow my savings alongside my creative work.'
+    content: 'Love the clean interface design! As a designer myself, I appreciate good UX. But more importantly, it\'s helping me grow my savings alongside my creative work.',
+    language: 'en'
   },
   {
-    name: 'Loxton G.',
+    name: 'Sarah M.',
     profession: 'Coffee Shop Owner',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
-    content: 'Running my coffee shop keeps me busy, but this AI helps me check my investments quickly during breaks. It\'s like having a financial advisor that understands small business owners.'
+    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b217?w=150&h=150&fit=crop&crop=face',
+    content: 'Running my coffee shop keeps me busy, but this AI helps me check my investments quickly during breaks. It\'s like having a financial advisor that understands small business owners.',
+    language: 'en'
   },
   {
-    name: 'Anton T.',
+    name: 'David K.',
     profession: 'System Administrator',
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face',
-    content: 'The data processing capabilities are impressive! As a sysadmin, I appreciate how efficiently it handles market information. Great tool for automating investment research.'
+    content: 'The data processing capabilities are impressive! As a sysadmin, I appreciate how efficiently it handles market information. Great tool for automating investment research.',
+    language: 'en'
   },
+  // Spanish testimonial (1)
   {
-    name: 'Carla D.',
-    profession: 'High School Teacher',
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b217?w=150&h=150&fit=crop&crop=face',
-    content: 'I never thought I\'d understand market trends, but Incite AI breaks it down in a way even a beginner like me can follow. It\'s helped me start investing confidently.'
-  },
-  {
-    name: 'Randy K.',
-    profession: 'Pizza Shop Manager',
-    image: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=150&h=150&fit=crop&crop=face',
-    content: 'Between deliveries and customer orders, I barely have time to think — but Incite AI gives me clear signals I can act on quickly. Super helpful.'
-  },
-  {
-    name: 'Maria E.',
-    profession: 'Hairdresser',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
-    content: 'I started using Incite AI out of curiosity, but now I check it every morning before work. It\'s like a cheat sheet for the markets — made for regular people.'
-  },
-  {
-    name: 'Liam B.',
-    profession: 'Carpenter',
+    name: 'Carlos M.',
+    profession: 'Profesor de instituto',
     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face',
-    content: 'I build furniture for a living, not portfolios. But with Incite AI, I actually made smart investments without stressing about it. Feels good to grow my money.'
+    content: 'Nunca pensé que entendería las tendencias del mercado, pero Incite AI lo explica de una manera que incluso un principiante como yo puede seguir. Me ha ayudado a invertir con confianza.',
+    language: 'es'
+  },
+  // French testimonial (1)
+  {
+    name: 'Marie D.',
+    profession: 'Coiffeuse',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
+    content: 'J\'ai commencé à utiliser Incite AI par curiosité, mais maintenant je le consulte chaque matin avant le travail. C\'est comme une fiche de révision pour les marchés — fait pour les gens ordinaires.',
+    language: 'fr'
+  },
+  // Russian testimonials (2)
+  {
+    name: 'Алексей П.',
+    profession: 'Плотник',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+    content: 'Я строю мебель для жизни, а не портфели. Но с Incite AI я действительно делал умные инвестиции, не напрягаясь по этому поводу. Приятно наращивать свои деньги.',
+    language: 'ru'
   },
   {
-    name: 'Jasmine R.',
-    profession: 'Photo Editor',
+    name: 'Екатерина Р.',
+    profession: 'Фоторедактор',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face',
-    content: 'Even though I\'m not in finance, I\'ve always wanted to trade. Incite AI gave me the structure and confidence to finally do it — and with real success.'
+    content: 'Хотя я не из финансовой сферы, я всегда хотела заниматься торговлей. Incite AI дал мне структуру и уверенность, чтобы наконец сделать это — и с реальным успехом.',
+    language: 'ru'
   },
+  // German testimonial (1)
   {
-    name: 'Marcus T.',
-    profession: 'Professional Broker',
+    name: 'Hans M.',
+    profession: 'Pizzeria-Manager',
+    image: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=150&h=150&fit=crop&crop=face',
+    content: 'Zwischen Lieferungen und Kundenbestellungen habe ich kaum Zeit zum Nachdenken — aber Incite AI gibt mir klare Signale, auf die ich schnell reagieren kann. Super hilfreich.',
+    language: 'de'
+  },
+  // Polish testimonial (1)
+  {
+    name: 'Tomasz B.',
+    profession: 'Profesjonalny Broker',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-    content: 'As a broker, I\'ve tested dozens of tools. Incite AI delivers clean insights and actionable signals — it\'s become essential for spotting entries in volatile markets.'
+    content: 'Jako broker przetestowałem dziesiątki narzędzi. Incite AI dostarcza czyste spostrzeżenia i wykonalne sygnały — stał się niezbędny do wykrywania wejść na niestabilnych rynkach.',
+    language: 'pl'
   }
 ];
 
@@ -80,7 +96,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
   };
 
   const prevTestimonials = () => {
-    setCurrentIndex((prev) => (prev - 4 < 0 ? Math.max(0, testimonials.length - 4) : prev - 4));
+    setCurrentIndex((prev) => (prev - 4 < 0 : Math.max(0, testimonials.length - 4) : prev - 4));
   };
 
   const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + 4);
