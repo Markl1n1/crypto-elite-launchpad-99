@@ -102,42 +102,42 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
   const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + 4);
 
   return (
-    <section className="py-14 border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
+    <section id="testimonials" className="py-14">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
+        <div className="text-center mb-8 md:mb-16">
+          <Badge className="mb-4 md:mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
             <Users className="mr-2" size={16} />
             Real User Experiences
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">What Our Users Say</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">What Our Users Say</h2>
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
             See how Incite AI has transformed the investment journey for thousands of users worldwide.
           </p>
         </div>
 
         {/* Testimonials Carousel */}
         <div className="relative max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {visibleTestimonials.map((testimonial, index) => (
-              <Card key={`${currentIndex}-${index}`} className="bg-[#1a1f35] border-white/10 p-8 transform hover:scale-105 transition-all duration-300">
+              <Card key={`${currentIndex}-${index}`} className="bg-[#1a1f35] border-white/10 p-6 md:p-8 transform hover:scale-105 transition-all duration-300">
                 <CardContent className="p-0">
                   <div className="flex items-center mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={20} className="text-yellow-400 fill-current" />
+                      <Star key={i} size={16} className="text-yellow-400 fill-current md:w-5 md:h-5" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-6 italic">
+                  <p className="text-gray-300 mb-6 italic text-sm md:text-base">
                     "{testimonial.content}"
                   </p>
                   <div className="flex items-center">
                     <img 
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover"
+                      className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover flex-shrink-0"
                     />
-                    <div className="ml-4">
-                      <h4 className="font-semibold text-white">{testimonial.name}</h4>
-                      <p className="text-gray-400 text-sm">{testimonial.profession}</p>
+                    <div className="ml-3 md:ml-4 min-w-0">
+                      <h4 className="font-semibold text-white text-sm md:text-base truncate">{testimonial.name}</h4>
+                      <p className="text-gray-400 text-xs md:text-sm truncate">{testimonial.profession}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -146,14 +146,14 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
           </div>
 
           {/* Navigation Controls */}
-          <div className="flex justify-center items-center mt-8 space-x-4">
+          <div className="flex justify-center items-center mt-6 md:mt-8 space-x-4">
             <Button
               variant="outline"
               size="icon"
               onClick={prevTestimonials}
-              className="border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa] hover:text-black bg-[#1a1f35]"
+              className="border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa] hover:text-black bg-[#1a1f35] w-8 h-8 md:w-10 md:h-10"
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft size={16} className="md:w-5 md:h-5" />
             </Button>
             
             <div className="flex space-x-2">
@@ -161,7 +161,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
                 <button
                   key={i}
                   onClick={() => setCurrentIndex(i * 4)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
+                  className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-colors ${
                     Math.floor(currentIndex / 4) === i ? 'bg-[#00d4aa]' : 'bg-gray-600'
                   }`}
                 />
@@ -172,17 +172,17 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
               variant="outline"
               size="icon"
               onClick={nextTestimonials}
-              className="border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa] hover:text-black bg-[#1a1f35]"
+              className="border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa] hover:text-black bg-[#1a1f35] w-8 h-8 md:w-10 md:h-10"
             >
-              <ChevronRight size={20} />
+              <ChevronRight size={16} className="md:w-5 md:h-5" />
             </Button>
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-4 transform hover:scale-105 transition-all duration-200">
+        <div className="text-center mt-8 md:mt-12">
+          <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-base md:text-lg px-6 md:px-8 py-3 md:py-4 transform hover:scale-105 transition-all duration-200 w-full sm:w-auto">
             Get Early Access
-            <ArrowRight className="ml-2" size={20} />
+            <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
           </Button>
         </div>
       </div>

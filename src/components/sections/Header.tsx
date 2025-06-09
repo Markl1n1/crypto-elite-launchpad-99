@@ -51,35 +51,35 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0a0e1a]/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'}`}>
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-3">
+      <div className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between">
+        <div className="flex items-center space-x-2 md:space-x-3">
           <img 
             src="/lovable-uploads/16901b7b-f4dd-4180-a419-e2b56caae6c3.png" 
             alt="Incite AI Logo" 
-            className="w-8 h-8"
+            className="w-6 h-6 md:w-8 md:h-8"
           />
-          <div className="text-2xl font-bold text-white">
+          <div className="text-xl md:text-2xl font-bold text-white">
             Incite AI
           </div>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <button onClick={() => scrollToSection('program')} className="hover:text-[#00d4aa] transition-colors">Overview</button>
-          <button onClick={() => scrollToSection('testimonials')} className="hover:text-[#00d4aa] transition-colors">Testimonials</button>
-          <button onClick={() => scrollToSection('pricing')} className="hover:text-[#00d4aa] transition-colors">Plans</button>
-          <button onClick={() => scrollToSection('faq')} className="hover:text-[#00d4aa] transition-colors">{t('faq')}</button>
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <button onClick={() => scrollToSection('program')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">Overview</button>
+          <button onClick={() => scrollToSection('testimonials')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">Testimonials</button>
+          <button onClick={() => scrollToSection('pricing')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">Plans</button>
+          <button onClick={() => scrollToSection('faq')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">{t('faq')}</button>
           
           {/* Language Switcher */}
           <div className="relative">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="flex items-center space-x-2 hover:text-[#00d4aa] relative">
-                  <Globe size={20} />
+                <Button variant="ghost" size="sm" className="flex items-center space-x-2 hover:text-[#00d4aa] relative p-1 md:p-2">
+                  <Globe size={18} className="md:w-5 md:h-5" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent 
-                className="bg-[#1a1f35] border-white/20 z-[60] min-w-[180px]" 
+                className="bg-[#1a1f35] border-white/20 z-[60] min-w-[160px] md:min-w-[180px]" 
                 align="end"
                 sideOffset={5}
                 avoidCollisions={true}
@@ -88,9 +88,9 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
                   <DropdownMenuItem 
                     key={lang.code} 
                     onClick={() => changeLanguage(lang.code as any)} 
-                    className="text-white hover:bg-[#00d4aa]/20 cursor-pointer flex items-center space-x-3"
+                    className="text-white hover:bg-[#00d4aa]/20 cursor-pointer flex items-center space-x-2 md:space-x-3 text-sm"
                   >
-                    <span className="text-xl">{lang.flag}</span>
+                    <span className="text-lg md:text-xl">{lang.flag}</span>
                     <span>{lang.name}</span>
                   </DropdownMenuItem>
                 )}
@@ -98,7 +98,7 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
             </DropdownMenu>
           </div>
           
-          <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold transform hover:scale-105 transition-all duration-200">
+          <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold transform hover:scale-105 transition-all duration-200 text-sm lg:text-base px-4 lg:px-6">
             {t('applyNow')}
           </Button>
         </nav>
@@ -108,12 +108,12 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
           {/* Mobile Language Switcher */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="flex items-center space-x-2 hover:text-[#00d4aa] relative">
-                <Globe size={20} />
+              <Button variant="ghost" size="sm" className="flex items-center space-x-2 hover:text-[#00d4aa] relative p-1">
+                <Globe size={18} />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent 
-              className="bg-[#1a1f35] border-white/20 z-[60] min-w-[180px]" 
+              className="bg-[#1a1f35] border-white/20 z-[60] min-w-[160px]" 
               align="end"
               sideOffset={5}
               avoidCollisions={true}
@@ -122,17 +122,17 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
                 <DropdownMenuItem 
                   key={lang.code} 
                   onClick={() => changeLanguage(lang.code as any)} 
-                  className="text-white hover:bg-[#00d4aa]/20 cursor-pointer flex items-center space-x-3"
+                  className="text-white hover:bg-[#00d4aa]/20 cursor-pointer flex items-center space-x-2 text-sm"
                 >
-                  <span className="text-xl">{lang.flag}</span>
+                  <span className="text-lg">{lang.flag}</span>
                   <span>{lang.name}</span>
                 </DropdownMenuItem>
               )}
             </DropdownMenuContent>
           </DropdownMenu>
           
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-1">
+            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
@@ -140,12 +140,12 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-[#1a1f35] border-t border-white/10">
-          <nav className="container mx-auto px-4 py-4 space-y-4 text-center">
-            <button onClick={() => scrollToSection('program')} className="block w-full hover:text-[#00d4aa] transition-colors">Overview</button>
-            <button onClick={() => scrollToSection('testimonials')} className="block w-full hover:text-[#00d4aa] transition-colors">Testimonials</button>
-            <button onClick={() => scrollToSection('pricing')} className="block w-full hover:text-[#00d4aa] transition-colors">Plans</button>
-            <button onClick={() => scrollToSection('faq')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('faq')}</button>
-            <Button onClick={() => scrollToSection('apply')} className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold">
+          <nav className="container mx-auto px-4 py-4 space-y-3 text-center">
+            <button onClick={() => scrollToSection('program')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">Overview</button>
+            <button onClick={() => scrollToSection('testimonials')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">Testimonials</button>
+            <button onClick={() => scrollToSection('pricing')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">Plans</button>
+            <button onClick={() => scrollToSection('faq')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">{t('faq')}</button>
+            <Button onClick={() => scrollToSection('apply')} className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-sm">
               {t('applyNow')}
             </Button>
           </nav>

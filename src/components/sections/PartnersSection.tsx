@@ -63,26 +63,26 @@ export const PartnersSection = () => {
   const { t } = useTranslations();
   
   return (
-    <section className="py-12 bg-[#0a0e1a] overflow-hidden">
+    <section className="py-8 md:py-12 bg-[#0a0e1a] overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="relative">
-          <div className="flex animate-[scroll_20s_linear_infinite] gap-[15px]">
+          <div className="flex animate-[scroll_20s_linear_infinite] gap-[10px] md:gap-[15px]">
             {[...partners, ...partners].map((partner, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 h-16 flex items-center justify-center bg-[#1A1F35] rounded-lg hover:opacity-80 transition-opacity" 
+                className="flex-shrink-0 h-12 md:h-16 flex items-center justify-center bg-[#1A1F35] rounded-lg hover:opacity-80 transition-opacity" 
                 style={{ 
-                  minWidth: '200px',
+                  minWidth: '150px',
                   paddingTop: '0.5rem',
                   paddingBottom: '0.5rem',
-                  paddingLeft: '0.85rem',
-                  paddingRight: '0.85rem'
+                  paddingLeft: '0.75rem',
+                  paddingRight: '0.75rem'
                 }}
               >
                 <img 
                   src={partner.image} 
                   alt={partner.name} 
-                  className="h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" 
+                  className="h-8 md:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" 
                   loading="eager" 
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;
@@ -90,11 +90,11 @@ export const PartnersSection = () => {
                     target.style.display = 'none';
                     if (textSpan) {
                       textSpan.style.display = 'block';
-                      textSpan.className = 'text-gray-300 font-semibold text-sm';
+                      textSpan.className = 'text-gray-300 font-semibold text-xs md:text-sm';
                     }
                   }} 
                 />
-                <span className="text-gray-300 font-semibold text-sm hidden">{partner.name}</span>
+                <span className="text-gray-300 font-semibold text-xs md:text-sm hidden">{partner.name}</span>
               </div>
             ))}
           </div>
