@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Star, Users, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -27,7 +28,7 @@ const testimonials = [
   {
     name: 'Sarah M.',
     profession: 'Coffee Shop Owner',
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b217?w=150&h=150&fit=crop&crop=face',
+    image: '/lovable-uploads/fa0bd918-42b4-4fd9-b1f4-5f96e41896eb.png',
     content: 'Running my coffee shop keeps me busy, but this AI helps me check my investments quickly during breaks. It\'s like having a financial advisor that understands small business owners.',
     language: 'en'
   },
@@ -58,7 +59,7 @@ const testimonials = [
   {
     name: 'Алексей П.',
     profession: 'Плотник',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+    image: '/lovable-uploads/62569248-f468-4900-8a35-2d9cd8a2230a.png',
     content: 'Я строю мебель для жизни, а не портфели. Но с Incite AI я действительно делал умные инвестиции, не напрягаясь по этому поводу. Приятно наращивать свои деньги.',
     language: 'ru'
   },
@@ -81,7 +82,7 @@ const testimonials = [
   {
     name: 'Tomasz B.',
     profession: 'Profesjonalny Broker',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+    image: '/lovable-uploads/3eccb9a7-b084-43ce-b995-28d2ca19c69b.png',
     content: 'Jako broker przetestowałem dziesiątki narzędzi. Incite AI dostarcza czyste spostrzeżenia i wykonalne sygnały — stał się niezbędny do wykrywania wejść na niestabilnych rynkach.',
     language: 'pl'
   }
@@ -101,7 +102,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
   const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + 4);
 
   return (
-    <section className="py-20 border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
+    <section className="py-14 border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">

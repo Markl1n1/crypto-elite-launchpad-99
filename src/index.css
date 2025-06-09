@@ -107,6 +107,12 @@
   .mobile-cta-bar.dark {
     @apply bg-gray-900/95 border-gray-800;
   }
+
+  /* Custom py-20 alternative */
+  .py-14 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
 }
 
 @keyframes float {
