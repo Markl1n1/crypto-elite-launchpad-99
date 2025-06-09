@@ -1,4 +1,3 @@
-
 import { ChevronDown, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -13,7 +12,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   const { t } = useTranslations();
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden border-b-4 border-[#00d4aa]">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderBottomWidth: '1px' }}>
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0e1a] via-[#1a1f35] to-[#0a0e1a]" />
       <div className="absolute inset-0" style={{

@@ -2,16 +2,16 @@
 import { useState, useEffect } from 'react';
 import { Header } from '@/components/sections/Header';
 import { HeroSection } from '@/components/sections/HeroSection';
-import { HowItWorksSection } from '@/components/sections/HowItWorksSection';
-import { StepsSection } from '@/components/sections/StepsSection';
-import { NewsSection } from '@/components/sections/NewsSection';
+import { PartnersSection } from '@/components/sections/PartnersSection';
+import { CEOSection } from '@/components/sections/CEOSection';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { IndustryExperts } from '@/components/sections/IndustryExperts';
-import { CEOSection } from '@/components/sections/CEOSection';
+import { HowItWorksSection } from '@/components/sections/HowItWorksSection';
+import { StepsSection } from '@/components/sections/StepsSection';
 import { PricingSection } from '@/components/sections/PricingSection';
-import { PartnersSection } from '@/components/sections/PartnersSection';
-import { FAQSection } from '@/components/sections/FAQSection';
 import { ApplicationSection } from '@/components/sections/ApplicationSection';
+import { FAQSection } from '@/components/sections/FAQSection';
+import { NewsSection } from '@/components/sections/NewsSection';
 import { Footer } from '@/components/sections/Footer';
 
 const Index = () => {
@@ -35,16 +35,16 @@ const Index = () => {
     <div className="min-h-screen bg-[#0a0e1a] text-white overflow-x-hidden">
       <Header isScrolled={isScrolled} scrollToSection={scrollToSection} />
       <HeroSection scrollToSection={scrollToSection} />
-      <StepsSection scrollToSection={scrollToSection} />
-      <NewsSection />
-      <HowItWorksSection scrollToSection={scrollToSection} />
+      <PartnersSection />
+      <CEOSection />
       <Testimonials scrollToSection={scrollToSection} />
       <IndustryExperts scrollToSection={scrollToSection} />
-      <CEOSection />
+      <HowItWorksSection scrollToSection={scrollToSection} />
+      <StepsSection scrollToSection={scrollToSection} />
       <PricingSection scrollToSection={scrollToSection} />
-      <PartnersSection />
-      <FAQSection />
       <ApplicationSection />
+      <FAQSection />
+      <NewsSection />
       <Footer scrollToSection={scrollToSection} />
     </div>
   );

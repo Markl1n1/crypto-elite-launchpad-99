@@ -101,7 +101,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
   const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + 4);
 
   return (
-    <section className="py-20 border-b-2" style={{ borderColor: 'rgb(0 212 170 / 0.3)' }}>
+    <section className="py-20 border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">

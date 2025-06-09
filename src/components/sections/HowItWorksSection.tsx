@@ -1,4 +1,3 @@
-
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -12,7 +11,7 @@ export const HowItWorksSection = ({ scrollToSection }: HowItWorksSectionProps) =
   const { t } = useTranslations();
 
   return (
-    <section className="py-12 relative border-b-4 border-[#00d4aa]">
+    <section className="py-12 relative border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
       <div className="absolute inset-0 bg-gradient-to-r from-[#00d4aa]/10 to-[#0066ff]/10" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-5 gap-12 items-center">

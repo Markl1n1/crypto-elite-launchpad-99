@@ -1,4 +1,3 @@
-
 import { Edit, Shield, TrendingUp } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -12,9 +11,7 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
   const { t } = useTranslations();
   
   return (
-    <section id="program" className="py-12 bg-[#1a1f35] border-b-4" style={{
-      borderColor: 'rgb(0 212 170 / 0.5)'
-    }}>
+    <section id="program" className="py-12 bg-[#1a1f35] border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">3 Easy Steps</h2>
