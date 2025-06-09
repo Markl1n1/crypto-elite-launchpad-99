@@ -109,7 +109,7 @@ export const PricingSection = ({ scrollToSection }: PricingSectionProps) => {
           <Card className="bg-[#1a1f35] border-white/10 p-8 relative flex flex-col h-[680px]">
             <CardContent className="p-0 flex-grow flex flex-col">
               <h3 className="text-2xl font-bold mb-2 text-white">{t('advancedPlan')}</h3>
-              <div className="text-4xl font-bold mb-6 text-[#00d4aa]">$5,000+</div>
+              <div className="text-4xl font-bold mb-6 text-[#00d4aa]">$20,000+</div>
               <ul className="space-y-3 mb-8 flex-grow text-white">
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-[#00d4aa] rounded-full mr-3" />

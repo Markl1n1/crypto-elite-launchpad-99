@@ -18,6 +18,11 @@ const partners = [
     image: '/lovable-uploads/c4344058-f75f-4b83-9d70-38afc946a863.png'
   },
   {
+    name: 'LLB Alpha',
+    logo: '/lovable-uploads/llb-alpha.png',
+    image: '/lovable-uploads/llb-alpha.png'
+  },
+  {
     name: 'JB',
     logo: '/lovable-uploads/f1780432-ea56-4ea1-a7d5-d195c8a8ddd9.png',
     image: '/lovable-uploads/f1780432-ea56-4ea1-a7d5-d195c8a8ddd9.png'
@@ -65,8 +70,14 @@ export const PartnersSection = () => {
             {[...partners, ...partners].map((partner, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 h-16 flex items-center justify-center bg-[#1A1F35] rounded-lg px-5 py-[15px] hover:opacity-80 transition-opacity" 
-                style={{ minWidth: '200px' }}
+                className="flex-shrink-0 h-16 flex items-center justify-center bg-[#1A1F35] rounded-lg hover:opacity-80 transition-opacity" 
+                style={{ 
+                  minWidth: '200px',
+                  paddingTop: '0.5rem',
+                  paddingBottom: '0.5rem',
+                  paddingLeft: '0.85rem',
+                  paddingRight: '0.85rem'
+                }}
               >
                 <img 
                   src={partner.image} 
