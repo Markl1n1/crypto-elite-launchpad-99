@@ -1,83 +1,110 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Badge } from '@/components/ui/badge';
+
+import { useState } from 'react';
+import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 import { useTranslations } from '@/hooks/useTranslations';
 
 export const FAQSection = () => {
   const { t } = useTranslations();
+  const [openItems, setOpenItems] = useState<number[]>([0]);
+
+  const faqs = [
+    {
+      question: t('faq1Question'),
+      answer: t('faq1Answer')
+    },
+    {
+      question: t('faq2Question'),
+      answer: t('faq2Answer')
+    },
+    {
+      question: t('faq3Question'),
+      answer: t('faq3Answer')
+    },
+    {
+      question: t('faq4Question'),
+      answer: t('faq4Answer')
+    },
+    {
+      question: t('faq5Question'),
+      answer: t('faq5Answer')
+    },
+    {
+      question: t('faq6Question'),
+      answer: t('faq6Answer')
+    }
+  ];
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
 
   return (
-    <section id="faq" className="py-12 border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
-      <div className="container mx-auto px-4 max-w-4xl">
+    <section id="faq" className="py-20 bg-[#0a0e1a]">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
-            {t('commonQuestions')}
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('frequentlyAskedQuestions')}</h2>
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-[#00d4aa]/20 rounded-full mb-6">
+            <HelpCircle className="w-8 h-8 text-[#00d4aa]" />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-[#00d4aa] bg-clip-text text-transparent">
+            {t('faqTitle')}
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            {t('faqSubtitle')}
+          </p>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
-          <AccordionItem value="item-1" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">Where are we located?</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              Incite AI is a software company with head office located in Los Angeles, California. However we have our representatives in every branch of companies partners who provide additional services using our product.
-            </AccordionContent>
-          </AccordionItem>
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-r from-[#1a1f35] to-[#0a0e1a] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 hover:border-[#00d4aa]/30"
+              >
+                <button
+                  onClick={() => toggleItem(index)}
+                  className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+                >
+                  <span className="text-lg font-semibold text-white pr-4">
+                    {faq.question}
+                  </span>
+                  {openItems.includes(index) ? (
+                    <ChevronUp className="w-6 h-6 text-[#00d4aa] flex-shrink-0" />
+                  ) : (
+                    <ChevronDown className="w-6 h-6 text-[#00d4aa] flex-shrink-0" />
+                  )}
+                </button>
+                {openItems.includes(index) && (
+                  <div className="px-6 pb-6">
+                    <div className="text-gray-300 leading-relaxed border-t border-white/10 pt-4">
+                      {faq.answer}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
 
-          <AccordionItem value="item-2" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">{t('returnsQ')}</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              Our AI systen has delivered an average of 54.3% monthly returns, though past performance doesn`t guarantee future results.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-3" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">{t('qualificationQ')}</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              For Standard plan we require 250$ to activate software and trading environment for you. Experience in trading or markets not necessary.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-4" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">{t('withdrawalQ')}</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              Standard withdrawal are processed within 24-72 hours during business days.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-5" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">{t('tradingSystemQ')}</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              {t('tradingSystemA')}
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-6" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">How do we make money?</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              We make a percentage from the total turnover and its profit on the Trading Accounts of our product service providers, therefore, we are the first interested side to grow your portfolio.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-7" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">How does my money hold?</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              To safeguard your funds, Incite AI holds your funds in top-tier banks of USA and Switzerland. In major cases - UBS Group and JPMorgan Chase.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-8" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">Do we give any guarantees?</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              Our financial guarantee is based on private agreements with the companies that provide services through our software. These companies are globally regulated and operate under their own individual insurance and compliance frameworks.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-
-        <div className="text-center mt-12">
-          <p className="text-gray-400 mb-4">{t('stillHaveQuestions')}</p>
-          <a href="mailto:support@inciteai.com" className="text-[#00d4aa] hover:text-[#00d4aa]/80 transition-colors">
-            {t('contactSupport')}
-          </a>
+          <div className="text-center mt-12">
+            <p className="text-gray-400 mb-4">{t('stillHaveQuestions')}</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="mailto:support@inciteai.com" 
+                className="inline-flex items-center justify-center px-6 py-3 bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold rounded-lg transition-colors"
+              >
+                {t('emailSupport')}
+              </a>
+              <a 
+                href="tel:+1-555-INCITE-AI" 
+                className="inline-flex items-center justify-center px-6 py-3 border border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa]/10 font-semibold rounded-lg transition-colors"
+              >
+                {t('callSupport')}
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
