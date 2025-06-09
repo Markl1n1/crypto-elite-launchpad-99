@@ -66,62 +66,62 @@ export const IndustryExperts = ({ scrollToSection }: IndustryExpertsProps) => {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto">
-          <Tabs defaultValue="jill-malandrino" className="w-full">
-            <div className="grid lg:grid-cols-5 gap-8">
-              {/* Left side - Expert tabs */}
-              <div className="lg:col-span-2">
-                <TabsList className="flex flex-col h-auto w-full bg-[#0a0e1a] p-2 space-y-2">
-                  {experts.map((expert) => (
-                    <TabsTrigger
-                      key={expert.id}
-                      value={expert.id}
-                      className="w-full p-4 justify-start data-[state=active]:bg-[#00d4aa]/20 data-[state=active]:text-[#00d4aa] hover:bg-[#00d4aa]/10"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <Avatar className="w-12 h-12">
-                          <AvatarImage src={expert.image} alt={expert.name} />
-                          <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold">
-                            {expert.name.split(' ').map(n => n[0]).join('')}
-                          </AvatarFallback>
-                        </Avatar>
-                        <div className="text-left">
-                          <div className="font-semibold text-sm">{expert.name}</div>
-                          <div className="text-xs text-gray-400">{expert.title}</div>
-                        </div>
-                      </div>
-                    </TabsTrigger>
-                  ))}
-                </TabsList>
+        <div className="max-w-7xl mx-auto lg:min-w-[600px] min-w-[300px] max-w-[90%]">
+  <Tabs defaultValue="jill-malandrino" className="w-full">
+    <div className="grid lg:grid-cols-5 gap-8">
+      {/* Left side - Expert tabs */}
+      <div className="lg:col-span-2">
+        <TabsList className="flex flex-col h-auto w-full bg-[#0a0e1a] p-2 space-y-2">
+          {experts.map((expert) => (
+            <TabsTrigger
+              key={expert.id}
+              value={expert.id}
+              className="w-full p-4 justify-start data-[state=active]:bg-[#00d4aa]/20 data-[state=active]:text-[#00d4aa] hover:bg-[#00d4aa]/10"
+            >
+              <div className="flex items-center space-x-3">
+                <Avatar className="w-12 h-12">
+                  <AvatarImage src={expert.image} alt={expert.name} />
+                  <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold">
+                    {expert.name.split(' ').map(n => n[0]).join('')}
+                  </AvatarFallback>
+                </Avatar>
+                <div className="text-left">
+                  <div className="font-semibold text-sm">{expert.name}</div>
+                  <div className="text-xs text-gray-400">{expert.title}</div>
+                </div>
               </div>
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </div>
 
-              {/* Right side - Expert comments */}
-              <div className="lg:col-span-3">
-                {experts.map((expert) => (
-                  <TabsContent key={expert.id} value={expert.id} className="mt-0">
-                    <Card className="bg-[#0a0e1a] border-[#00d4aa]/30 p-8 h-full">
-                      <CardContent className="p-0">
-                        <div className="mb-6">
-                          <Avatar className="w-24 h-24 mx-auto mb-4">
-                            <AvatarImage src={expert.image} alt={expert.name} />
-                            <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold text-2xl">
-                              {expert.name.split(' ').map(n => n[0]).join('')}
-                            </AvatarFallback>
-                          </Avatar>
-                          <h4 className="font-semibold text-white text-xl text-center">{expert.name}</h4>
-                          <p className="text-[#00d4aa] text-sm font-medium text-center">{expert.title}</p>
-                        </div>
-                        <p className="text-gray-300 italic text-lg leading-relaxed">
-                          "{expert.quote}"
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </TabsContent>
-                ))}
-              </div>
-            </div>
-          </Tabs>
-        </div>
+      {/* Right side - Expert comments */}
+      <div className="lg:col-span-3">
+        {experts.map((expert) => (
+          <TabsContent key={expert.id} value={expert.id} className="mt-0">
+            <Card className="bg-[#0a0e1a] border-[#00d4aa]/30 p-8 h-full">
+              <CardContent className="p-0">
+                <div className="mb-6">
+                  <Avatar className="w-24 h-24 mx-auto mb-4">
+                    <AvatarImage src={expert.image} alt={expert.name} />
+                    <AvatarFallback className="bg-gradient-to-r from-[#00d4aa] to-[#0066ff] text-white font-bold text-2xl">
+                      {expert.name.split(' ').map(n => n[0]).join('')}
+                    </AvatarFallback>
+                  </Avatar>
+                  <h4 className="font-semibold text-white text-xl text-center">{expert.name}</h4>
+                  <p className="text-[#00d4aa] text-sm font-medium text-center">{expert.title}</p>
+                </div>
+                <p className="text-gray-300 italic text-lg leading-relaxed">
+                  "{expert.quote}"
+                </p>
+              </CardContent>
+            </Card>
+          </TabsContent>
+        ))}
+      </div>
+    </div>
+  </Tabs>
+</div>
 
         <div className="text-center mt-12">
           <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-4 transform hover:scale-105 transition-all duration-200">
