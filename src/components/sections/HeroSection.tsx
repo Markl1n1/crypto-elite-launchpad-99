@@ -73,9 +73,9 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         <div className="absolute top-16 md:top-20 left-2 md:left-8 animate-float w-40 md:w-64">
           <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-2 md:p-4">
             <CardContent className="p-0">
-              <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('recordPortfolioMay')}</div>
-              <div className="text-sm md:text-lg font-bold text-green-400">{t('portfolioGrowth')}</div>
-              <div className="text-xs md:text-sm text-green-400">{t('growthPercentage')}</div>
+              <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">Record Portfolio Growth - May 2025</div>
+              <div className="text-sm md:text-lg font-bold text-green-400">+142.7%</div>
+              <div className="text-xs md:text-sm text-green-400">782.2%</div>
             </CardContent>
           </Card>
         </div>
@@ -86,7 +86,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         }}>
           <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-2 md:p-4">
             <CardContent className="p-0">
-              <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('aiSays')}</div>
+              <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">AI Says</div>
               <div className="text-sm md:text-lg font-semibold text-[#00d4aa]">Strong Buy Signal for NVIDIA</div>
               <div className="text-xs md:text-sm text-gray-400">{t('confidence')}</div>
             </CardContent>
@@ -100,8 +100,8 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           <Card className="bg-[#1a1f35]/80 backdrop-blur-sm border-white/10 p-2 md:p-4">
             <CardContent className="p-0">
               <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('averageClientProfit')}</div>
-              <div className="text-lg md:text-2xl font-bold text-green-400">{t('monthlyProfit')}</div>
-              <div className="text-xs md:text-sm text-gray-400">{t('last12Months')}</div>
+              <div className="text-lg md:text-2xl font-bold text-green-400">54.3%</div>
+              <div className="text-xs md:text-sm text-gray-400">Monthly</div>
             </CardContent>
           </Card>
         </div>

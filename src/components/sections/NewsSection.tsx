@@ -8,45 +8,49 @@ export const NewsSection = () => {
         </div>
 
         <div className="flex justify-center items-center space-x-12 md:space-x-16 flex-wrap gap-8">
-          {/* Bloomberg */}
+          {/* Malaysia */}
           <div className="flex items-center justify-center">
-            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="120" height="40" fill="#00d4aa" opacity="0.1" rx="8"/>
-              <text x="60" y="25" textAnchor="middle" fill="#00d4aa" fontSize="14" fontWeight="bold" fontFamily="Inter">Bloomberg</text>
-            </svg>
+            <img 
+              src="/lovable-uploads/54783271-13c1-455d-b3d5-569074348364.png" 
+              alt="Malaysia News" 
+              className="h-12 object-contain filter brightness-200 contrast-150"
+            />
+          </div>
+
+          {/* Check Mark */}
+          <div className="flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/8951a6ee-d9c9-4bb0-ba61-dfc85fe8311a.png" 
+              alt="Verified" 
+              className="h-12 object-contain"
+            />
           </div>
 
           {/* Reuters */}
           <div className="flex items-center justify-center">
-            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="120" height="40" fill="#00d4aa" opacity="0.1" rx="8"/>
-              <text x="60" y="25" textAnchor="middle" fill="#00d4aa" fontSize="14" fontWeight="bold" fontFamily="Inter">Reuters</text>
-            </svg>
+            <img 
+              src="/lovable-uploads/2a51ebac-f33b-4a6f-b85c-567b1144db94.png" 
+              alt="Reuters" 
+              className="h-12 object-contain filter brightness-200 contrast-150"
+            />
           </div>
 
-          {/* Financial Times */}
+          {/* Finance Magnates */}
           <div className="flex items-center justify-center">
-            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="120" height="40" fill="#00d4aa" opacity="0.1" rx="8"/>
-              <text x="60" y="25" textAnchor="middle" fill="#00d4aa" fontSize="12" fontWeight="bold" fontFamily="Inter">Financial Times</text>
-            </svg>
+            <img 
+              src="/lovable-uploads/6d54be53-aa67-4c52-9d3e-2ee6e44ee6af.png" 
+              alt="Finance Magnates" 
+              className="h-12 object-contain filter brightness-200 contrast-150"
+            />
           </div>
 
-          {/* Wall Street Journal */}
+          {/* Finance Feeds */}
           <div className="flex items-center justify-center">
-            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="120" height="40" fill="#00d4aa" opacity="0.1" rx="8"/>
-              <text x="60" y="22" textAnchor="middle" fill="#00d4aa" fontSize="11" fontWeight="bold" fontFamily="Inter">Wall Street</text>
-              <text x="60" y="32" textAnchor="middle" fill="#00d4aa" fontSize="11" fontWeight="bold" fontFamily="Inter">Journal</text>
-            </svg>
-          </div>
-
-          {/* CNBC */}
-          <div className="flex items-center justify-center">
-            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="120" height="40" fill="#00d4aa" opacity="0.1" rx="8"/>
-              <text x="60" y="25" textAnchor="middle" fill="#00d4aa" fontSize="14" fontWeight="bold" fontFamily="Inter">CNBC</text>
-            </svg>
+            <img 
+              src="/lovable-uploads/da25e029-d867-4098-8110-b5c20e33d8b0.png" 
+              alt="Finance Feeds" 
+              className="h-12 object-contain filter brightness-200 contrast-150"
+            />
           </div>
         </div>
       </div>

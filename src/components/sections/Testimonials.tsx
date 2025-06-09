@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Star, Users, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -151,7 +150,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
               variant="outline"
               size="icon"
               onClick={prevTestimonials}
-              className="border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa] hover:text-black"
+              className="border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa] hover:text-black bg-[#1a1f35]"
             >
               <ChevronLeft size={20} />
             </Button>
@@ -172,7 +171,7 @@ export const Testimonials = ({ scrollToSection }: TestimonialsProps) => {
               variant="outline"
               size="icon"
               onClick={nextTestimonials}
-              className="border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa] hover:text-black"
+              className="border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa] hover:text-black bg-[#1a1f35]"
             >
               <ChevronRight size={20} />
             </Button>
