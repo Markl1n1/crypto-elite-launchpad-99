@@ -123,7 +123,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                   <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('aiSays')}</div>
                   {(expandedCards.card2 || !isMobile) && (
                     <>
-                      <div className="text-sm md:text-lg font-semibold text-[#00d4aa]">{t('strongBuySignal')}</div>
+                      <div className="text-sm md:text-lg font-semibold" style={{ color: '#4ADE80' }}>{t('strongBuySignal')}</div>
                       <div className="text-xs md:text-sm text-gray-400">{t('confidence')}</div>
                     </>
                   )}
