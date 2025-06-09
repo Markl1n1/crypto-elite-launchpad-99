@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -21,6 +21,11 @@ export const ApplicationSection = () => {
     lastName: '',
     email: ''
   });
+  const [userLanguage, setUserLanguage] = useState(navigator.language || navigator.languages[0]);
+
+  useEffect(() => {
+    setUserLanguage(navigator.language || navigator.languages[0]);
+  }, []);
 
   const validateEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const validatePhone = (phone: string) => /^\d{6,15}$/.test(phone);
@@ -61,7 +66,9 @@ export const ApplicationSection = () => {
       firstName: formData.firstName,
       lastName: formData.lastName,
       email: formData.email,
-      phone: `${phoneCode}${phoneNumber}`
+      phone: `${phoneCode}${phoneNumber}`,
+      siteLanguage: currentLanguage,
+      userLanguage: userLanguage
     };
 
     await submitToGoogleSheets(submissionData);
