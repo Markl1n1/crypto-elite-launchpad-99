@@ -82,7 +82,7 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
                 </li>
                 <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
                   <MapPin size={16} />
-                  <span>New York, NY</span>
+                  <span>Los Angeles, California</span>
                 </li>
               </ul>
             </div>
