@@ -1,53 +1,57 @@
+
 import { Award, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface IndustryExpertsProps {
   scrollToSection: (sectionId: string) => void;
 }
 
-const experts = [
-  {
-    id: "jill-malandrino",
-    name: "Jill Malandrino",
-    title: "Global Markets Reporter & Host, Nasdaq TradeTalks",
-    image: "/lovable-uploads/859db36d-dbb9-4b46-ae09-80ae2675c512.png",
-    quote: "Incite AI helped us identify market shifts faster than ever—our portfolio returns speak for it."
-  },
-  {
-    id: "tarun-chitra",
-    name: "Tarun Chitra",
-    title: "CEO & Founder, Gauntlet",
-    image: "/lovable-uploads/ffe495da-a680-4b06-bb34-b1178c165835.png",
-    quote: "The predictive modeling of Incite AI is best-in-class—essential for DeFi risk analytics."
-  },
-  {
-    id: "brian-strachan",
-    name: "Brian Strachan",
-    title: "Managing Director, Morgan Stanley Private Wealth Management",
-    image: "/lovable-uploads/b0c3cff9-196a-4309-9e8b-3eb1eec736f1.png",
-    quote: "Incite AI provides institutional-grade analysis that our high-net-worth clients expect and deserve."
-  },
-  {
-    id: "raoul-pal",
-    name: "Raoul Pal",
-    title: "Co-Founder & CEO, Real Vision",
-    image: "/lovable-uploads/aeff9150-2984-498f-8515-fc1b84d6008c.png",
-    quote: "What Incite AI is doing is really quite remarkable. We're talking about democratizing access to deep, institutional-level analytics. And that's the direction the entire macro landscape is going—towards systems that help individuals think in probabilities, not noise. It's fast, clean, and frankly, a game-changer for anyone trying to stay ahead of the curve."
-  },
-  {
-    id: "cathie-wood",
-    name: "Cathie Wood",
-    title: "Founder, CEO & CIO, ARK Invest",
-    image: "/lovable-uploads/c5ee083f-4283-41ad-9e88-19e16fa5a82b.png",
-    quote: "Incite AI is exactly the kind of innovative tool that represents the convergence of AI, big data, and financial markets. It's empowering individuals to participate in the markets with a level of confidence and clarity that used to be limited to the big players. And when we look at where financial technology is going — this is it."
-  }
-];
-
 export const IndustryExperts = ({ scrollToSection }: IndustryExpertsProps) => {
+  const { t } = useTranslations();
+
+  const experts = [
+    {
+      id: "jill-malandrino",
+      name: "Jill Malandrino",
+      title: t('globalMarketsReporter'),
+      image: "/lovable-uploads/859db36d-dbb9-4b46-ae09-80ae2675c512.png",
+      quote: "Incite AI helped us identify market shifts faster than ever—our portfolio returns speak for it."
+    },
+    {
+      id: "tarun-chitra",
+      name: "Tarun Chitra",
+      title: t('ceoFounderGauntlet'),
+      image: "/lovable-uploads/ffe495da-a680-4b06-bb34-b1178c165835.png",
+      quote: "The predictive modeling of Incite AI is best-in-class—essential for DeFi risk analytics."
+    },
+    {
+      id: "brian-strachan",
+      name: "Brian Strachan",
+      title: t('managingDirectorMorganStanley'),
+      image: "/lovable-uploads/b0c3cff9-196a-4309-9e8b-3eb1eec736f1.png",
+      quote: "Incite AI provides institutional-grade analysis that our high-net-worth clients expect and deserve."
+    },
+    {
+      id: "raoul-pal",
+      name: "Raoul Pal",
+      title: t('coFounderCeoRealVision'),
+      image: "/lovable-uploads/aeff9150-2984-498f-8515-fc1b84d6008c.png",
+      quote: "What Incite AI is doing is really quite remarkable. We're talking about democratizing access to deep, institutional-level analytics. And that's the direction the entire macro landscape is going—towards systems that help individuals think in probabilities, not noise. It's fast, clean, and frankly, a game-changer for anyone trying to stay ahead of the curve."
+    },
+    {
+      id: "cathie-wood",
+      name: "Cathie Wood",
+      title: t('founderCeoArkInvest'),
+      image: "/lovable-uploads/c5ee083f-4283-41ad-9e88-19e16fa5a82b.png",
+      quote: "Incite AI is exactly the kind of innovative tool that represents the convergence of AI, big data, and financial markets. It's empowering individuals to participate in the markets with a level of confidence and clarity that used to be limited to the big players. And when we look at where financial technology is going — this is it."
+    }
+  ];
+
   return (
     <section className="py-20 bg-[#1a1f35] border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
       <div className="container mx-auto px-4">
@@ -56,9 +60,9 @@ export const IndustryExperts = ({ scrollToSection }: IndustryExpertsProps) => {
             <Award className="mr-2" size={16} />
             Industry Recognition
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">What Industry Experts Say</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('whatIndustryExpertsSay')}</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Leading financial experts and industry veterans recognize the power of Incite AI.
+            {t('industryExpertsSubtitle')}
           </p>
         </div>
 
@@ -121,7 +125,7 @@ export const IndustryExperts = ({ scrollToSection }: IndustryExpertsProps) => {
 
         <div className="text-center mt-12">
           <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-4 transform hover:scale-105 transition-all duration-200">
-            Join the Experts
+            {t('joinTheExperts')}
             <ArrowRight className="ml-2" size={20} />
           </Button>
         </div>

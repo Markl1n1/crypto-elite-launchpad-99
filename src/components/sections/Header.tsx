@@ -65,9 +65,9 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-          <button onClick={() => scrollToSection('program')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">Overview</button>
-          <button onClick={() => scrollToSection('testimonials')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">Testimonials</button>
-          <button onClick={() => scrollToSection('pricing')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">Plans</button>
+          <button onClick={() => scrollToSection('program')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">{t('overview')}</button>
+          <button onClick={() => scrollToSection('testimonials')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">{t('testimonials')}</button>
+          <button onClick={() => scrollToSection('pricing')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">{t('plans')}</button>
           <button onClick={() => scrollToSection('faq')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">{t('faq')}</button>
           
           {/* Language Switcher */}
@@ -141,9 +141,9 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
       {isMenuOpen && (
         <div className="md:hidden bg-[#1a1f35] border-t border-white/10">
           <nav className="container mx-auto px-4 py-4 space-y-3 text-center">
-            <button onClick={() => scrollToSection('program')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">Overview</button>
-            <button onClick={() => scrollToSection('testimonials')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">Testimonials</button>
-            <button onClick={() => scrollToSection('pricing')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">Plans</button>
+            <button onClick={() => scrollToSection('program')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">{t('overview')}</button>
+            <button onClick={() => scrollToSection('testimonials')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">{t('testimonials')}</button>
+            <button onClick={() => scrollToSection('pricing')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">{t('plans')}</button>
             <button onClick={() => scrollToSection('faq')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">{t('faq')}</button>
             <Button onClick={() => scrollToSection('apply')} className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-sm">
               {t('applyNow')}

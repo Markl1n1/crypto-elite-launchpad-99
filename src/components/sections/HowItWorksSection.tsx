@@ -32,42 +32,42 @@ export const HowItWorksSection = ({ scrollToSection }: HowItWorksSectionProps) =
             </Badge>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Simply How It Works
+              {t('simplyHowItWorksTitle')}
             </h2>
             
             <p className="text-xl text-gray-300 mb-8">
-              Our AI processes your simple requests instantly, providing clear investment insights and actionable recommendations in seconds.
+              {t('simplyHowItWorksSubtitle')}
             </p>
             
             <div className="space-y-6 mb-8">
               <div className="flex items-start space-x-4 text-left">
                 <div className="bg-[#00d4aa] text-black w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Ask Your Question</h3>
-                  <p className="text-gray-400">Simply type your investment question or request in plain language</p>
+                  <h3 className="text-xl font-semibold mb-2">{t('askYourQuestion')}</h3>
+                  <p className="text-gray-400">{t('askYourQuestionDesc')}</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4 text-left">
                 <div className="bg-[#0066ff] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">AI Processes Data</h3>
-                  <p className="text-gray-400">Our advanced AI analyzes market data and provides personalized insights</p>
+                  <h3 className="text-xl font-semibold mb-2">{t('aiProcessesData')}</h3>
+                  <p className="text-gray-400">{t('aiProcessesDataDesc')}</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4 text-left">
                 <div className="bg-[#00d4aa] text-black w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Get Clear Recommendations</h3>
-                  <p className="text-gray-400">Receive actionable investment advice tailored to your needs</p>
+                  <h3 className="text-xl font-semibold mb-2">{t('getClearRecommendations')}</h3>
+                  <p className="text-gray-400">{t('getClearRecommendationsDesc')}</p>
                 </div>
               </div>
             </div>
 
             <div className="text-center lg:text-left">
               <Button onClick={() => scrollToSection('apply')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold px-8 py-3 transform hover:scale-105 transition-all duration-200">
-                Try Incite AI Now
+                {t('tryInciteAiNow')}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </div>
@@ -102,7 +102,7 @@ export const HowItWorksSection = ({ scrollToSection }: HowItWorksSectionProps) =
                   <div className="bg-[#00d4aa] p-4 rounded-lg inline-block mb-6 mx-auto">
                     <Shield size={32} className="text-black" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-white">Get Advisor</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-white">{t('getAdvisor')}</h3>
                 </CardContent>
               </Card>
             </div>
@@ -117,7 +117,7 @@ export const HowItWorksSection = ({ scrollToSection }: HowItWorksSectionProps) =
                   <div className="bg-[#00d4aa] p-4 rounded-lg inline-block mb-6 mx-auto">
                     <TrendingUp size={32} className="text-black" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-white">Grow Portfolio</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-white">{t('growPortfolio')}</h3>
                 </CardContent>
               </Card>
             </div>

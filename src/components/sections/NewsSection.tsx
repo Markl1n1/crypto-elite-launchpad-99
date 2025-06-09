@@ -1,10 +1,14 @@
 
+import { useTranslations } from '@/hooks/useTranslations';
+
 export const NewsSection = () => {
+  const { t } = useTranslations();
+
   return (
     <section className="py-12 bg-[#1a1f35]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">We are in the News</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('weAreInTheNews')}</h2>
         </div>
 
         <div className="flex justify-center items-center space-x-12 md:space-x-16 flex-wrap gap-8">

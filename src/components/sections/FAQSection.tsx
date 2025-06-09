@@ -1,3 +1,4 @@
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { useTranslations } from '@/hooks/useTranslations';
@@ -17,30 +18,30 @@ export const FAQSection = () => {
 
         <Accordion type="single" collapsible className="space-y-4">
           <AccordionItem value="item-1" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">Where are we located?</AccordionTrigger>
+            <AccordionTrigger className="text-left">{t('whereLocatedQ')}</AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              Incite AI is a software company with head office located in Los Angeles, California. However we have our representatives in every branch of companies partners who provide additional services using our product.
+              {t('whereLocatedA')}
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-2" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
             <AccordionTrigger className="text-left">{t('returnsQ')}</AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              Our AI systen has delivered an average of 54.3% monthly returns, though past performance doesn`t guarantee future results.
+              {t('returnsA')}
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-3" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
             <AccordionTrigger className="text-left">{t('qualificationQ')}</AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              For Standard plan we require 250$ to activate software and trading environment for you. Experience in trading or markets not necessary.
+              {t('qualificationA')}
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-4" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
             <AccordionTrigger className="text-left">{t('withdrawalQ')}</AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              Standard withdrawal are processed within 24-72 hours during business days.
+              {t('withdrawalA')}
             </AccordionContent>
           </AccordionItem>
 
@@ -52,23 +53,23 @@ export const FAQSection = () => {
           </AccordionItem>
 
           <AccordionItem value="item-6" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">How do we make money?</AccordionTrigger>
+            <AccordionTrigger className="text-left">{t('howMakeMoneyQ')}</AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              We make a percentage from the total turnover and its profit on the Trading Accounts of our product service providers, therefore, we are the first interested side to grow your portfolio.
+              {t('howMakeMoneyA')}
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-7" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">How does my money hold?</AccordionTrigger>
+            <AccordionTrigger className="text-left">{t('howMoneyHoldQ')}</AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              To safeguard your funds, Incite AI holds your funds in top-tier banks of USA and Switzerland. In major cases - UBS Group and JPMorgan Chase.
+              {t('howMoneyHoldA')}
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-8" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">Do we give any guarantees?</AccordionTrigger>
+            <AccordionTrigger className="text-left">{t('guaranteesQ')}</AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              Our financial guarantee is based on private agreements with the companies that provide services through our software. These companies are globally regulated and operate under their own individual insurance and compliance frameworks.
+              {t('guaranteesA')}
             </AccordionContent>
           </AccordionItem>
         </Accordion>
