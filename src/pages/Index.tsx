@@ -25,7 +25,15 @@ const Index = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({
+    // Map the new menu items to their corresponding section IDs
+    let targetId = sectionId;
+    if (sectionId === 'testimonials') {
+      targetId = 'testimonials';
+    } else if (sectionId === 'pricing') {
+      targetId = 'pricing';
+    }
+    
+    document.getElementById(targetId)?.scrollIntoView({
       behavior: 'smooth'
     });
   };

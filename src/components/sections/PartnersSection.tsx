@@ -1,3 +1,4 @@
+
 import { useTranslations } from '@/hooks/useTranslations';
 
 const partners = [
@@ -17,9 +18,9 @@ const partners = [
     image: '/lovable-uploads/ab6cea58-304a-4395-b66f-0d4defce421f.png'
   },
   {
-    name: 'LLB Alpha',
-    logo: '/lovable-uploads/llb-alpha.png',
-    image: '/lovable-uploads/llb-alpha.png'
+    name: 'Webull',
+    logo: '/lovable-uploads/f6841162-b0f5-42ea-9b03-d77b188fb803.png',
+    image: '/lovable-uploads/f6841162-b0f5-42ea-9b03-d77b188fb803.png'
   },
   {
     name: 'JB',
@@ -62,7 +63,7 @@ export const PartnersSection = () => {
   const { t } = useTranslations();
   
   return (
-    <section className="py-12 bg-[#0a0e1a] overflow-hidden border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
+    <section className="py-12 bg-[#0a0e1a] overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="relative">
           <div className="flex animate-[scroll_20s_linear_infinite] gap-[15px]">

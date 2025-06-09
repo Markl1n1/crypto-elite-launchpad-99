@@ -13,7 +13,7 @@ export const HowItWorksSection = ({ scrollToSection }: HowItWorksSectionProps) =
   const { t } = useTranslations();
 
   return (
-    <section id="program" className="py-14 relative border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
+    <section id="program" className="py-14 relative">
       <div className="absolute inset-0 bg-gradient-to-r from-[#00d4aa]/10 to-[#0066ff]/10" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-5 gap-12 items-center mb-16">
