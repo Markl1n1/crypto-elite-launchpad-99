@@ -42,12 +42,12 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
                   <Send size={16} className="text-white" />
                 </div>
               </a>
-              <a href="https://instagram.com/inciteai" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/incite.ai/" target="_blank" rel="noopener noreferrer">
                 <div className="w-8 h-8 bg-gradient-to-r from-[#E4405F] to-[#F56040] rounded-full flex items-center justify-center hover:opacity-80 transition-colors">
                   <Instagram size={16} className="text-white" />
                 </div>
               </a>
-              <a href="https://x.com/inciteai" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/Incite_corp" target="_blank" rel="noopener noreferrer">
                 <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
                   <X size={16} className="text-white" />
                 </div>
@@ -55,35 +55,37 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
             </div>
           </div>
 
-          {/* Quick Links - Updated to match header menu */}
-          <div className="text-center md:text-left">
-            <h3 className="font-semibold mb-4">{t('quickLinks')}</h3>
-            <ul className="space-y-2">
-              <li><button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('home')}</button></li>
-              <li><button onClick={() => scrollToSection('program')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Overview</button></li>
-              <li><button onClick={() => scrollToSection('testimonials')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Testimonials</button></li>
-              <li><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Plans</button></li>
-              <li><button onClick={() => scrollToSection('faq')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('faq')}</button></li>
-            </ul>
-          </div>
+          {/* Quick Links and Contact - Two columns in one row */}
+          <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Quick Links */}
+            <div className="text-center md:text-left">
+              <h3 className="font-semibold mb-4">{t('quickLinks')}</h3>
+              <ul className="space-y-2">
+                <li><button onClick={() => scrollToSection('program')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Overview</button></li>
+                <li><button onClick={() => scrollToSection('testimonials')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Testimonials</button></li>
+                <li><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Plans</button></li>
+                <li><button onClick={() => scrollToSection('faq')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('faq')}</button></li>
+              </ul>
+            </div>
 
-          {/* Contact */}
-          <div className="text-center md:text-left">
-            <h3 className="font-semibold mb-4">{t('contact')}</h3>
-            <ul className="space-y-2">
-              <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
-                <Mail size={16} />
-                <span>support@inciteai.com</span>
-              </li>
-              <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
-                <Send size={16} />
-                <span>+1 (555) 123-4567</span>
-              </li>
-              <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
-                <MapPin size={16} />
-                <span>New York, NY</span>
-              </li>
-            </ul>
+            {/* Contact */}
+            <div className="text-center md:text-left">
+              <h3 className="font-semibold mb-4">{t('contact')}</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
+                  <Mail size={16} />
+                  <span>support@inciteai.org</span>
+                </li>
+                <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
+                  <Send size={16} />
+                  <span>+1 (555) 123-4567</span>
+                </li>
+                <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
+                  <MapPin size={16} />
+                  <span>New York, NY</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { useTranslations } from '@/hooks/useTranslations';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface HeroSectionProps {
   scrollToSection: (sectionId: string) => void;
@@ -12,7 +13,13 @@ interface HeroSectionProps {
 
 export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   const { t } = useTranslations();
-  const [expandedCards, setExpandedCards] = useState<{ [key: string]: boolean }>({});
+  const isMobile = useIsMobile();
+  const [expandedCards, setExpandedCards] = useState<{ [key: string]: boolean }>({
+    card1: true,
+    card2: true,
+    card3: true,
+    card4: true
+  });
 
   const toggleCard = (cardId: string) => {
     setExpandedCards(prev => ({
@@ -85,19 +92,21 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <div className="flex items-center justify-between">
                 <div className="flex-1">
                   <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">Record Portfolio Growth</div>
-                  {(expandedCards.card1 || window.innerWidth >= 768) && (
+                  {(expandedCards.card1 || !isMobile) && (
                     <>
                       <div className="text-sm md:text-lg font-bold text-green-400">+782.7%</div>
                       <div className="text-xs md:text-sm text-gray-400">April 2025</div>
                     </>
                   )}
                 </div>
-                <button 
-                  onClick={() => toggleCard('card1')}
-                  className="md:hidden ml-2 text-gray-400 hover:text-white transition-colors"
-                >
-                  {expandedCards.card1 ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </button>
+                {isMobile && (
+                  <button 
+                    onClick={() => toggleCard('card1')}
+                    className="ml-2 text-gray-400 hover:text-white transition-colors"
+                  >
+                    {expandedCards.card1 ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                  </button>
+                )}
               </div>
             </CardContent>
           </Card>
@@ -112,19 +121,21 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <div className="flex items-center justify-between">
                 <div className="flex-1">
                   <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">AI Says</div>
-                  {(expandedCards.card2 || window.innerWidth >= 768) && (
+                  {(expandedCards.card2 || !isMobile) && (
                     <>
                       <div className="text-sm md:text-lg font-semibold text-[#00d4aa]">Strong Buy Signal for NVIDIA</div>
                       <div className="text-xs md:text-sm text-gray-400">{t('confidence')}</div>
                     </>
                   )}
                 </div>
-                <button 
-                  onClick={() => toggleCard('card2')}
-                  className="md:hidden ml-2 text-gray-400 hover:text-white transition-colors"
-                >
-                  {expandedCards.card2 ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </button>
+                {isMobile && (
+                  <button 
+                    onClick={() => toggleCard('card2')}
+                    className="ml-2 text-gray-400 hover:text-white transition-colors"
+                  >
+                    {expandedCards.card2 ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                  </button>
+                )}
               </div>
             </CardContent>
           </Card>
@@ -139,19 +150,21 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <div className="flex items-center justify-between">
                 <div className="flex-1">
                   <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('averageClientProfit')}</div>
-                  {(expandedCards.card3 || window.innerWidth >= 768) && (
+                  {(expandedCards.card3 || !isMobile) && (
                     <>
                       <div className="text-lg md:text-2xl font-bold text-green-400">54.3%</div>
                       <div className="text-xs md:text-sm text-gray-400">Monthly</div>
                     </>
                   )}
                 </div>
-                <button 
-                  onClick={() => toggleCard('card3')}
-                  className="md:hidden ml-2 text-gray-400 hover:text-white transition-colors"
-                >
-                  {expandedCards.card3 ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </button>
+                {isMobile && (
+                  <button 
+                    onClick={() => toggleCard('card3')}
+                    className="ml-2 text-gray-400 hover:text-white transition-colors"
+                  >
+                    {expandedCards.card3 ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                  </button>
+                )}
               </div>
             </CardContent>
           </Card>
@@ -166,19 +179,21 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <div className="flex items-center justify-between">
                 <div className="flex-1">
                   <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('clientWinrate')}</div>
-                  {(expandedCards.card4 || window.innerWidth >= 768) && (
+                  {(expandedCards.card4 || !isMobile) && (
                     <>
                       <div className="text-lg md:text-2xl font-bold text-green-400">{t('winratePercentage')}</div>
                       <div className="text-xs md:text-sm text-gray-400">{t('successRate')}</div>
                     </>
                   )}
                 </div>
-                <button 
-                  onClick={() => toggleCard('card4')}
-                  className="md:hidden ml-2 text-gray-400 hover:text-white transition-colors"
-                >
-                  {expandedCards.card4 ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </button>
+                {isMobile && (
+                  <button 
+                    onClick={() => toggleCard('card4')}
+                    className="ml-2 text-gray-400 hover:text-white transition-colors"
+                  >
+                    {expandedCards.card4 ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                  </button>
+                )}
               </div>
             </CardContent>
           </Card>
