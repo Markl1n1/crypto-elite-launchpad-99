@@ -65,9 +65,9 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <button onClick={() => scrollToSection('how-it-works')} className="hover:text-[#00d4aa] transition-colors">{t('overview')}</button>
-          <button onClick={() => scrollToSection('testimonials')} className="hover:text-[#00d4aa] transition-colors">{t('testimonials')}</button>
-          <button onClick={() => scrollToSection('pricing')} className="hover:text-[#00d4aa] transition-colors">{t('plans')}</button>
+          <button onClick={() => scrollToSection('home')} className="hover:text-[#00d4aa] transition-colors">{t('home')}</button>
+          <button onClick={() => scrollToSection('program')} className="hover:text-[#00d4aa] transition-colors">{t('program')}</button>
+          <button onClick={() => scrollToSection('pricing')} className="hover:text-[#00d4aa] transition-colors">{t('pricing')}</button>
           <button onClick={() => scrollToSection('faq')} className="hover:text-[#00d4aa] transition-colors">{t('faq')}</button>
           
           {/* Language Switcher */}
@@ -141,9 +141,9 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
       {isMenuOpen && (
         <div className="md:hidden bg-[#1a1f35] border-t border-white/10">
           <nav className="container mx-auto px-4 py-4 space-y-4 text-center">
-            <button onClick={() => scrollToSection('how-it-works')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('overview')}</button>
-            <button onClick={() => scrollToSection('testimonials')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('testimonials')}</button>
-            <button onClick={() => scrollToSection('pricing')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('plans')}</button>
+            <button onClick={() => scrollToSection('home')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('home')}</button>
+            <button onClick={() => scrollToSection('program')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('program')}</button>
+            <button onClick={() => scrollToSection('pricing')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('pricing')}</button>
             <button onClick={() => scrollToSection('faq')} className="block w-full hover:text-[#00d4aa] transition-colors">{t('faq')}</button>
             <Button onClick={() => scrollToSection('apply')} className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold">
               {t('applyNow')}

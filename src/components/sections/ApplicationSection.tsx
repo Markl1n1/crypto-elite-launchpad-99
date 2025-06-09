@@ -1,281 +1,184 @@
-
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { toast } from 'sonner';
-import { Loader2, Send, Shield, Clock, Users } from 'lucide-react';
-import { useTranslations } from '@/hooks/useTranslations';
 import { phoneCodes } from '@/data/phoneCodes';
-
+import { useTranslations } from '@/hooks/useTranslations';
 export const ApplicationSection = () => {
-  const { t, currentLanguage } = useTranslations();
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
+  const {
+    t,
+    currentLanguage
+  } = useTranslations();
+  const [phoneCode, setPhoneCode] = useState('+1');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
+
+  // Form state for application
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
-    phoneCode: '',
-    phone: '',
-    country: '',
+    plan: '',
     experience: '',
-    investmentRange: '',
-    goals: '',
-    agreeTerms: false,
-    agreePrivacy: false,
-    agreeMarketing: false
+    message: ''
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.agreeTerms || !formData.agreePrivacy) {
-      toast.error(t('pleaseAgreeToTerms'));
-      return;
-    }
+  // Email validation
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
-    setIsSubmitting(true);
-    
+  // Phone validation
+  const validatePhone = (phone: string) => {
+    const phoneRegex = /^\d{6,15}$/;
+    return phoneRegex.test(phone);
+  };
+  const submitToGoogleSheets = async (formData: any) => {
     try {
-      // Store the current language in localStorage for the success page
-      localStorage.setItem('applicationLanguage', currentLanguage);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Redirect to success page
-      window.location.href = '/success';
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzQ8_example/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          spreadsheetId: '1XRubNVLpE4JcaOjYqnWXaxRpP2-WGvrKbtK--6ppnXY',
+          sheetName: 'Leads',
+          values: [[formData.firstName, formData.lastName, formData.email, formData.phone]]
+        })
+      });
+      console.log('Data submitted to Google Sheets');
     } catch (error) {
-      toast.error(t('submitError'));
-    } finally {
-      setIsSubmitting(false);
+      console.error('Error submitting to Google Sheets:', error);
     }
   };
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-  const handleInputChange = (field: string, value: string | boolean) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    // Reset errors
+    setEmailError('');
+    setPhoneError('');
+    let hasErrors = false;
+
+    // Validate email
+    if (!validateEmail(formData.email)) {
+      setEmailError(t('validEmailRequired'));
+      hasErrors = true;
+    }
+
+    // Validate phone
+    if (!validatePhone(phoneNumber)) {
+      setPhoneError(t('validPhoneRequired'));
+      hasErrors = true;
+    }
+    if (hasErrors) return;
+
+    // Store the current language in localStorage for the success page
+    localStorage.setItem('applicationLanguage', currentLanguage);
+
+    // Prepare form data for Google Sheets
+    const submissionData = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: `${phoneCode}${phoneNumber}`,
+      plan: formData.plan,
+      experience: formData.experience,
+      message: formData.message,
+      timestamp: new Date().toISOString(),
+      language: currentLanguage
+    };
+
+    // Submit to Google Sheets
+    await submitToGoogleSheets(submissionData);
+
+    // Navigate to success page
+    navigate('/success');
   };
-
-  return (
-    <section id="apply" className="py-20 bg-[#1a1f35] relative">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-[#00d4aa] bg-clip-text text-transparent">
-            {t('applyTitle')}
+  return <section id="apply" className="py-20 bg-[#1a1f35] border-b-2" style={{
+    borderColor: 'rgb(0 212 170 / 0.3)'
+  }}>
+      <div className="container mx-auto px-4 max-w-2xl">
+        <div className="text-center mb-12">
+          <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
+            {t('beginJourney')}
+          </Badge>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            {t('applyNowTitle')}
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            {t('applySubtitle')}
-          </p>
-          
-          {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            <div className="flex items-center text-gray-300">
-              <Shield className="w-5 h-5 text-[#00d4aa] mr-2" />
-              <span className="text-sm">{t('secureApplication')}</span>
-            </div>
-            <div className="flex items-center text-gray-300">
-              <Clock className="w-5 h-5 text-[#00d4aa] mr-2" />
-              <span className="text-sm">{t('quickReview')}</span>
-            </div>
-            <div className="flex items-center text-gray-300">
-              <Users className="w-5 h-5 text-[#00d4aa] mr-2" />
-              <span className="text-sm">{t('exclusiveAccess')}</span>
-            </div>
-          </div>
         </div>
 
-        <Card className="max-w-4xl mx-auto bg-gradient-to-b from-[#0a0e1a] to-[#1a1f35] border-[#00d4aa]/20">
-          <CardHeader className="text-center">
-            <CardTitle className="text-2xl text-white">{t('applicationForm')}</CardTitle>
-            <CardDescription className="text-gray-300">
-              {t('applicationDescription')}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Personal Information */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-white">{t('firstName')}</Label>
-                  <Input
-                    id="firstName"
-                    value={formData.firstName}
-                    onChange={(e) => handleInputChange('firstName', e.target.value)}
-                    className="bg-[#1a1f35] border-white/20 text-white"
-                    required
-                  />
+        <Card className="bg-[#0a0e1a] border-white/10 p-8">
+          <CardContent className="p-0">
+            <form onSubmit={handleFormSubmit} className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <Label htmlFor="firstName" className="text-white">
+                    {t('firstName')} <span className="text-red-400">{t('required')}</span>
+                  </Label>
+                  <Input id="firstName" value={formData.firstName} onChange={e => setFormData({
+                  ...formData,
+                  firstName: e.target.value
+                })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('firstName')}...`} required />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-white">{t('lastName')}</Label>
-                  <Input
-                    id="lastName"
-                    value={formData.lastName}
-                    onChange={(e) => handleInputChange('lastName', e.target.value)}
-                    className="bg-[#1a1f35] border-white/20 text-white"
-                    required
-                  />
+                <div>
+                  <Label htmlFor="lastName" className="text-white">
+                    {t('lastName')} <span className="text-red-400">{t('required')}</span>
+                  </Label>
+                  <Input id="lastName" value={formData.lastName} onChange={e => setFormData({
+                  ...formData,
+                  lastName: e.target.value
+                })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('lastName')}...`} required />
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-white">{t('email')}</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => handleInputChange('email', e.target.value)}
-                  className="bg-[#1a1f35] border-white/20 text-white"
-                  required
-                />
+              <div>
+                <Label htmlFor="email" className="text-white">
+                  {t('emailAddress')} <span className="text-red-400">{t('required')}</span>
+                </Label>
+                <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                ...formData,
+                email: e.target.value
+              })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('emailAddress')}...`} required />
+                {emailError && <p className="text-red-400 text-sm mt-1">{emailError}</p>}
               </div>
 
-              {/* Phone Number */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="space-y-2">
-                  <Label className="text-white">{t('phoneCode')}</Label>
-                  <Select value={formData.phoneCode} onValueChange={(value) => handleInputChange('phoneCode', value)}>
-                    <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                      <SelectValue placeholder={t('selectCountryCode')} />
+              <div>
+                <Label htmlFor="phone" className="text-white">
+                  {t('phoneNumber')} <span className="text-red-400">{t('required')}</span>
+                </Label>
+                <div className="flex gap-2">
+                  <Select value={phoneCode} onValueChange={setPhoneCode}>
+                    <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white w-32">
+                      <SelectValue className="text-gray-400" />
                     </SelectTrigger>
-                    <SelectContent className="bg-[#1a1f35] border-white/20">
-                      {phoneCodes.map((country) => (
-                        <SelectItem key={country.code} value={country.dial_code} className="text-white hover:bg-[#00d4aa]/20">
-                          {country.flag} {country.dial_code} - {country.name}
-                        </SelectItem>
-                      ))}
+                    <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
+                      {phoneCodes.map((phone, index) => <SelectItem key={index} value={phone.code} className="text-gray-400">
+                          {phone.code}
+                        </SelectItem>)}
                     </SelectContent>
                   </Select>
+                  <Input id="phone" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} className="bg-[#1a1f35] border-white/20 text-white flex-1" placeholder="123456789" required />
                 </div>
-                <div className="md:col-span-2 space-y-2">
-                  <Label htmlFor="phone" className="text-white">{t('phoneNumber')}</Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="bg-[#1a1f35] border-white/20 text-white"
-                    required
-                  />
-                </div>
+                {phoneError && <p className="text-red-400 text-sm mt-1">{phoneError}</p>}
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="country" className="text-white">{t('country')}</Label>
-                <Input
-                  id="country"
-                  value={formData.country}
-                  onChange={(e) => handleInputChange('country', e.target.value)}
-                  className="bg-[#1a1f35] border-white/20 text-white"
-                  required
-                />
-              </div>
-
-              {/* Investment Information */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label className="text-white">{t('experience')}</Label>
-                  <Select value={formData.experience} onValueChange={(value) => handleInputChange('experience', value)}>
-                    <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                      <SelectValue placeholder={t('selectExperience')} />
-                    </SelectTrigger>
-                    <SelectContent className="bg-[#1a1f35] border-white/20">
-                      <SelectItem value="beginner" className="text-white hover:bg-[#00d4aa]/20">{t('beginner')}</SelectItem>
-                      <SelectItem value="intermediate" className="text-white hover:bg-[#00d4aa]/20">{t('intermediate')}</SelectItem>
-                      <SelectItem value="advanced" className="text-white hover:bg-[#00d4aa]/20">{t('advanced')}</SelectItem>
-                      <SelectItem value="professional" className="text-white hover:bg-[#00d4aa]/20">{t('professional')}</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="space-y-2">
-                  <Label className="text-white">{t('investmentRange')}</Label>
-                  <Select value={formData.investmentRange} onValueChange={(value) => handleInputChange('investmentRange', value)}>
-                    <SelectTrigger className="bg-[#1a1f35] border-white/20 text-white">
-                      <SelectValue placeholder={t('selectRange')} />
-                    </SelectTrigger>
-                    <SelectContent className="bg-[#1a1f35] border-white/20">
-                      <SelectItem value="1k-10k" className="text-white hover:bg-[#00d4aa]/20">$1,000 - $10,000</SelectItem>
-                      <SelectItem value="10k-50k" className="text-white hover:bg-[#00d4aa]/20">$10,000 - $50,000</SelectItem>
-                      <SelectItem value="50k-100k" className="text-white hover:bg-[#00d4aa]/20">$50,000 - $100,000</SelectItem>
-                      <SelectItem value="100k-500k" className="text-white hover:bg-[#00d4aa]/20">$100,000 - $500,000</SelectItem>
-                      <SelectItem value="500k+" className="text-white hover:bg-[#00d4aa]/20">$500,000+</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="goals" className="text-white">{t('goals')}</Label>
-                <Textarea
-                  id="goals"
-                  value={formData.goals}
-                  onChange={(e) => handleInputChange('goals', e.target.value)}
-                  className="bg-[#1a1f35] border-white/20 text-white min-h-[100px]"
-                  placeholder={t('goalsPlaceholder')}
-                />
-              </div>
-
-              {/* Agreements */}
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <Checkbox
-                    id="agreeTerms"
-                    checked={formData.agreeTerms}
-                    onCheckedChange={(checked) => handleInputChange('agreeTerms', checked as boolean)}
-                    className="border-white/20"
-                  />
-                  <Label htmlFor="agreeTerms" className="text-sm text-gray-300 leading-relaxed">
-                    {t('agreeTerms')} <a href="/terms-of-service" className="text-[#00d4aa] hover:underline">{t('termsOfService')}</a> {t('and')} <a href="/privacy-policy" className="text-[#00d4aa] hover:underline">{t('privacyPolicy')}</a>
-                  </Label>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Checkbox
-                    id="agreePrivacy"
-                    checked={formData.agreePrivacy}
-                    onCheckedChange={(checked) => handleInputChange('agreePrivacy', checked as boolean)}
-                    className="border-white/20"
-                  />
-                  <Label htmlFor="agreePrivacy" className="text-sm text-gray-300 leading-relaxed">
-                    {t('agreePrivacy')}
-                  </Label>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Checkbox
-                    id="agreeMarketing"
-                    checked={formData.agreeMarketing}
-                    onCheckedChange={(checked) => handleInputChange('agreeMarketing', checked as boolean)}
-                    className="border-white/20"
-                  />
-                  <Label htmlFor="agreeMarketing" className="text-sm text-gray-300 leading-relaxed">
-                    {t('agreeMarketing')}
-                  </Label>
-                </div>
-              </div>
-
-              <Button
-                type="submit"
-                className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold py-4 text-lg"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                    {t('submitting')}
-                  </>
-                ) : (
-                  <>
-                    <Send className="mr-2 h-5 w-5" />
-                    {t('submitApplication')}
-                  </>
-                )}
+              <Button type="submit" className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6">
+                {t('applyNow')}
               </Button>
             </form>
+
+            
           </CardContent>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
