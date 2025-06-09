@@ -100,7 +100,7 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            {t('allRightsReserved')}
+            © 2025 Incite AI. All rights reserved.
           </p>
           <p className="text-gray-400 text-sm mt-4 md:mt-0">
             {t('footerDisclaimer')}

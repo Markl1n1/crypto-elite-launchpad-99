@@ -7,7 +7,7 @@ export const FAQSection = () => {
   const { t } = useTranslations();
 
   return (
-    <section id="faq" className="py-20 border-b-2 border-[#00d4aa]/30">
+    <section id="faq" className="py-12 border-b-2 border-[#00d4aa]/30">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-16">
           <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">

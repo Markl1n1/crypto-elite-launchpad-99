@@ -12,7 +12,7 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
   const { t } = useTranslations();
   
   return (
-    <section id="program" className="py-20 bg-[#1a1f35] border-b-4" style={{
+    <section id="program" className="py-12 bg-[#1a1f35] border-b-4" style={{
       borderColor: 'rgb(0 212 170 / 0.5)'
     }}>
       <div className="container mx-auto px-4">
@@ -47,7 +47,7 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
                   <div className="bg-[#00d4aa] p-4 rounded-lg inline-block mb-6 mx-auto">
                     <Shield size={32} className="text-black" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-white">Get Professional Advisor</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-white">Get Advisor</h3>
                 </CardContent>
               </Card>
             </div>
@@ -62,7 +62,7 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
                   <div className="bg-[#00d4aa] p-4 rounded-lg inline-block mb-6 mx-auto">
                     <TrendingUp size={32} className="text-black" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-white">{t('growBalance')}</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-white">Grow Portfolio</h3>
                 </CardContent>
               </Card>
             </div>
