@@ -1,4 +1,3 @@
-
 import { Award, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -36,7 +35,7 @@ const experts = [
     id: "raoul-pal",
     name: "Raoul Pal",
     title: "Co-Founder & CEO, Real Vision",
-    image: "/lovable-uploads/e29d5dbc-e648-4b74-8f4f-bcff49ac07aa.png",
+    image: "/lovable-uploads/aeff9150-2984-498f-8515-fc1b84d6008c.png",
     quote: "What Incite AI is doing is really quite remarkable. We're talking about democratizing access to deep, institutional-level analytics. And that's the direction the entire macro landscape is going—towards systems that help individuals think in probabilities, not noise. It's fast, clean, and frankly, a game-changer for anyone trying to stay ahead of the curve."
   },
   {
