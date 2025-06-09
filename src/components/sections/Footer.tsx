@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Mail, Send, MapPin, Instagram, X } from 'lucide-react';
 import { useTranslations } from '@/hooks/useTranslations';
@@ -11,7 +10,7 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
   const { t } = useTranslations();
 
   return (
-    <footer className="bg-[#0a0e1a] border-t border-white/10 py-16">
+    <footer className="bg-[#0a0e1a] py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}

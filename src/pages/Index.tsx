@@ -7,7 +7,6 @@ import { CEOSection } from '@/components/sections/CEOSection';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { IndustryExperts } from '@/components/sections/IndustryExperts';
 import { HowItWorksSection } from '@/components/sections/HowItWorksSection';
-import { StepsSection } from '@/components/sections/StepsSection';
 import { PricingSection } from '@/components/sections/PricingSection';
 import { ApplicationSection } from '@/components/sections/ApplicationSection';
 import { FAQSection } from '@/components/sections/FAQSection';
@@ -40,7 +39,6 @@ const Index = () => {
       <Testimonials scrollToSection={scrollToSection} />
       <IndustryExperts scrollToSection={scrollToSection} />
       <HowItWorksSection scrollToSection={scrollToSection} />
-      <StepsSection scrollToSection={scrollToSection} />
       <PricingSection scrollToSection={scrollToSection} />
       <ApplicationSection />
       <FAQSection />

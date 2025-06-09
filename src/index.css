@@ -80,6 +80,11 @@
     animation: scroll 8s linear infinite;
   }
 
+  .py-20 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
   /* CTA Button Effects */
   .cta-button {
     @apply transition-all duration-300 ease-in-out;

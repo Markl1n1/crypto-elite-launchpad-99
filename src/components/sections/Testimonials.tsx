@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Star, Users, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -27,7 +28,7 @@ const testimonials = [
   {
     name: 'Sarah M.',
     profession: 'Coffee Shop Owner',
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b217?w=150&h=150&fit=crop&crop=face',
+    image: '/lovable-uploads/37316238-2ab4-468f-ad35-8ef39e66af16.png',
     content: 'Running my coffee shop keeps me busy, but this AI helps me check my investments quickly during breaks. It\'s like having a financial advisor that understands small business owners.',
     language: 'en'
   },
@@ -58,7 +59,7 @@ const testimonials = [
   {
     name: 'Алексей П.',
     profession: 'Плотник',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+    image: '/lovable-uploads/fec7e4a4-46f1-4da9-aecf-cc34a728f590.png',
     content: 'Я строю мебель для жизни, а не портфели. Но с Incite AI я действительно делал умные инвестиции, не напрягаясь по этому поводу. Приятно наращивать свои деньги.',
     language: 'ru'
   },
@@ -81,7 +82,7 @@ const testimonials = [
   {
     name: 'Tomasz B.',
     profession: 'Profesjonalny Broker',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+    image: '/lovable-uploads/20f7ab0e-c83a-475a-aaa1-7b3841cf3008.png',
     content: 'Jako broker przetestowałem dziesiątki narzędzi. Incite AI dostarcza czyste spostrzeżenia i wykonalne sygnały — stał się niezbędny do wykrywania wejść na niestabilnych rynkach.',
     language: 'pl'
   }
