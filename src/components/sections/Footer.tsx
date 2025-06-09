@@ -61,9 +61,9 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
             <div className="text-center md:text-left">
               <h3 className="font-semibold mb-4">{t('quickLinks')}</h3>
               <ul className="space-y-2">
-                <li><button onClick={() => scrollToSection('program')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Overview</button></li>
-                <li><button onClick={() => scrollToSection('testimonials')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Testimonials</button></li>
-                <li><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Plans</button></li>
+                <li><button onClick={() => scrollToSection('program')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('overview')}</button></li>
+                <li><button onClick={() => scrollToSection('testimonials')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('testimonials')}</button></li>
+                <li><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('plans')}</button></li>
                 <li><button onClick={() => scrollToSection('faq')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('faq')}</button></li>
               </ul>
             </div>
@@ -91,7 +91,7 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 Incite AI. All rights reserved.
+            {t('allRightsReserved')}
           </p>
           <p className="text-gray-400 text-sm mt-4 md:mt-0">
             {t('footerDisclaimer')}

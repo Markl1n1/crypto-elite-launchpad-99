@@ -15,11 +15,14 @@ export const translations = {
     investorsTrustUs: "Investors Trust Us",
     
     // Floating Cards
+    recordPortfolioGrowth: "Record Portfolio Growth",
+    aiSays: "AI Says",
+    strongBuySignal: "Strong Buy Signal for NVIDIA",
+    monthly: "Monthly",
     avgClientProfit: "Average Client Profit",
     recordPortfolioMay: "Record Portfolio Growth - May 2024",
     portfolioGrowth: "+142.7%",
     growthPercentage: "+41.2% ↗",
-    aiSays: "AI says:",
     confidence: "Confidence: 97%",
     averageClientProfit: "Average Client Profit",
     monthlyProfit: "$18,250",
@@ -113,6 +116,11 @@ export const translations = {
     mostPopular: "Most Popular",
     currentlyFull: "Currently Full",
     
+    // Navigation footer links
+    overview: "Overview",
+    testimonials: "Testimonials",
+    plans: "Plans",
+    
     // Partners
     ourPartners: "Our Partners",
     
@@ -125,7 +133,7 @@ export const translations = {
     riskDisclosure: "Risk Disclosure",
     compliance: "Compliance",
     contact: "Contact",
-    allRightsReserved: "© 2024 Incite AI. All rights reserved.",
+    allRightsReserved: "© 2025 Incite AI. All rights reserved.",
     footerDisclaimer: "Trading involves risk. Past performance does not guarantee future results.",
     
     // Success Page
@@ -152,11 +160,14 @@ export const translations = {
     investorsTrustUs: "Inwestorzy Nam Ufają",
     
     // Floating Cards
+    recordPortfolioGrowth: "Rekordowy Wzrost Portfela",
+    aiSays: "AI mówi",
+    strongBuySignal: "Silny Sygnał Kupna dla NVIDIA",
+    monthly: "Miesięcznie",
     avgClientProfit: "Średni Zysk Klienta",
     recordPortfolioMay: "Rekordowy Wzrost Portfela - Maj 2024",
     portfolioGrowth: "+142,7%",
     growthPercentage: "+41,2% ↗",
-    aiSays: "AI mówi:",
     confidence: "Pewność: 97%",
     averageClientProfit: "Średni Zysk Klienta",
     monthlyProfit: "$18,250",
@@ -250,6 +261,11 @@ export const translations = {
     mostPopular: "Najpopularniejszy",
     currentlyFull: "Obecnie Pełny",
     
+    // Navigation footer links
+    overview: "Przegląd",
+    testimonials: "Rekomendacje",
+    plans: "Plany",
+    
     // Partners
     ourPartners: "Nasi Partnerzy",
     
@@ -262,7 +278,7 @@ export const translations = {
     riskDisclosure: "Ujawnienie Ryzyka",
     compliance: "Zgodność",
     contact: "Kontakt",
-    allRightsReserved: "© 2024 Incite AI. Wszystkie prawa zastrzeżone.",
+    allRightsReserved: "© 2025 Incite AI. Wszystkie prawa zastrzeżone.",
     footerDisclaimer: "Handel wiąże się z ryzykiem. Wyniki z przeszłości nie gwarantują przyszłych rezultatów.",
     
     // Success Page
@@ -289,11 +305,14 @@ export const translations = {
     investorsTrustUs: "Investoren vertrauen uns",
     
     // Floating Cards
+    recordPortfolioGrowth: "Rekord-Portfolio-Wachstum",
+    aiSays: "KI sagt",
+    strongBuySignal: "Starkes Kaufsignal für NVIDIA",
+    monthly: "Monatlich",
     avgClientProfit: "Durchschnittlicher Kundengewinn",
     recordPortfolioMay: "Rekord-Portfolio-Wachstum - Mai 2024",
     portfolioGrowth: "+142,7%",
     growthPercentage: "+41,2% ↗",
-    aiSays: "KI sagt:",
     confidence: "Vertrauen: 97%",
     averageClientProfit: "Durchschnittlicher Kundengewinn",
     monthlyProfit: "$18.250",
@@ -387,6 +406,11 @@ export const translations = {
     mostPopular: "Am beliebtesten",
     currentlyFull: "Derzeit voll",
     
+    // Navigation footer links
+    overview: "Überblick",
+    testimonials: "Referenzen",
+    plans: "Pläne",
+    
     // Partners
     ourPartners: "Unsere Partner",
     
@@ -399,7 +423,7 @@ export const translations = {
     riskDisclosure: "Risikoaufklärung",
     compliance: "Compliance",
     contact: "Kontakt",
-    allRightsReserved: "© 2024 Incite AI. Alle Rechte vorbehalten.",
+    allRightsReserved: "© 2025 Incite AI. Alle Rechte vorbehalten.",
     footerDisclaimer: "Trading beinhaltet Risiken. Vergangene Performance garantiert keine zukünftigen Ergebnisse.",
     
     // Success Page
@@ -426,11 +450,14 @@ export const translations = {
     investorsTrustUs: "Los Inversores Confían en Nosotros",
     
     // Floating Cards
+    recordPortfolioGrowth: "Crecimiento Récord del Portafolio",
+    aiSays: "IA dice",
+    strongBuySignal: "Señal Fuerte de Compra para NVIDIA",
+    monthly: "Mensual",
     avgClientProfit: "Ganancia Promedio del Cliente",
     recordPortfolioMay: "Crecimiento Récord del Portafolio - Mayo 2024",
     portfolioGrowth: "+142,7%",
     growthPercentage: "+41,2% ↗",
-    aiSays: "IA dice:",
     confidence: "Confianza: 97%",
     averageClientProfit: "Ganancia Promedio del Cliente",
     monthlyProfit: "$18,250",
@@ -524,6 +551,11 @@ export const translations = {
     mostPopular: "Más Popular",
     currentlyFull: "Actualmente Lleno",
     
+    // Navigation footer links
+    overview: "Resumen",
+    testimonials: "Testimonios",
+    plans: "Planes",
+    
     // Partners
     ourPartners: "Nuestros Socios",
     
@@ -536,7 +568,7 @@ export const translations = {
     riskDisclosure: "Divulgación de Riesgos",
     compliance: "Cumplimiento",
     contact: "Contacto",
-    allRightsReserved: "© 2024 Incite AI. Todos los derechos reservados.",
+    allRightsReserved: "© 2025 Incite AI. Todos los derechos reservados.",
     footerDisclaimer: "El trading conlleva riesgos. El rendimiento pasado no garantiza resultados futuros.",
     
     // Success Page
@@ -563,11 +595,14 @@ export const translations = {
     investorsTrustUs: "Инвесторы Доверяют Нам",
     
     // Floating Cards
+    recordPortfolioGrowth: "Рекордный Рост Портфеля",
+    aiSays: "ИИ говорит",
+    strongBuySignal: "Сильный Сигнал Покупки для NVIDIA",
+    monthly: "Ежемесячно",
     avgClientProfit: "Средняя Прибыль Клиента",
     recordPortfolioMay: "Рекордный Рост Портфеля - Май 2024",
     portfolioGrowth: "+142,7%",
     growthPercentage: "+41,2% ↗",
-    aiSays: "ИИ говорит:",
     confidence: "Уверенность: 97%",
     averageClientProfit: "Средняя Прибыль Клиента",
     monthlyProfit: "$18,250",
@@ -661,6 +696,11 @@ export const translations = {
     mostPopular: "Самый Популярный",
     currentlyFull: "В Настоящее Время Полный",
     
+    // Navigation footer links
+    overview: "Обзор",
+    testimonials: "Отзывы",
+    plans: "Планы",
+    
     // Partners
     ourPartners: "Наши Партнеры",
     
@@ -673,7 +713,7 @@ export const translations = {
     riskDisclosure: "Раскрытие Рисков",
     compliance: "Соответствие",
     contact: "Контакт",
-    allRightsReserved: "© 2024 Incite AI. Все права защищены.",
+    allRightsReserved: "© 2025 Incite AI. Все права защищены.",
     footerDisclaimer: "Торговля связана с рисками. Прошлые результаты не гарантируют будущих результатов.",
     
     // Success Page
@@ -700,11 +740,14 @@ export const translations = {
     investorsTrustUs: "Les Investisseurs Nous Font Confiance",
     
     // Floating Cards
+    recordPortfolioGrowth: "Croissance Record du Portefeuille",
+    aiSays: "L'IA dit",
+    strongBuySignal: "Signal d'Achat Fort pour NVIDIA",
+    monthly: "Mensuel",
     avgClientProfit: "Profit Moyen du Client",
     recordPortfolioMay: "Croissance Record du Portefeuille - Mai 2024",
     portfolioGrowth: "+142,7%",
     growthPercentage: "+41,2% ↗",
-    aiSays: "L'IA dit:",
     confidence: "Confiance: 97%",
     averageClientProfit: "Profit Moyen du Client",
     monthlyProfit: "$18,250",
@@ -798,6 +841,11 @@ export const translations = {
     mostPopular: "Plus Populaire",
     currentlyFull: "Actuellement Complet",
     
+    // Navigation footer links
+    overview: "Aperçu",
+    testimonials: "Témoignages",
+    plans: "Plans",
+    
     // Partners
     ourPartners: "Nos Partenaires",
     
@@ -810,7 +858,7 @@ export const translations = {
     riskDisclosure: "Divulgation des Risques",
     compliance: "Conformité",
     contact: "Contact",
-    allRightsReserved: "© 2024 Incite AI. Tous droits réservés.",
+    allRightsReserved: "© 2025 Incite AI. Tous droits réservés.",
     footerDisclaimer: "Le trading implique des risques. Les performances passées ne garantissent pas les résultats futurs.",
     
     // Success Page
@@ -837,11 +885,14 @@ export const translations = {
     investorsTrustUs: "المستثمرون يثقون بنا",
     
     // Floating Cards
+    recordPortfolioGrowth: "نمو قياسي للمحفظة",
+    aiSays: "الذكاء الاصطناعي يقول",
+    strongBuySignal: "إشارة شراء قوية لـ NVIDIA",
+    monthly: "شهريًا",
     avgClientProfit: "متوسط ربح العميل",
     recordPortfolioMay: "نمو قياسي للمحفظة - مايو 2024",
     portfolioGrowth: "+142.7%",
     growthPercentage: "+41.2% ↗",
-    aiSays: "الذكاء الاصطناعي يقول:",
     confidence: "الثقة: 97%",
     averageClientProfit: "متوسط ربح العميل",
     monthlyProfit: "$18,250",
@@ -935,6 +986,11 @@ export const translations = {
     mostPopular: "الأكثر شعبية",
     currentlyFull: "ممتلئ حالياً",
     
+    // Navigation footer links
+    overview: "نظرة عامة",
+    testimonials: "الشهادات",
+    plans: "الخطط",
+    
     // Partners
     ourPartners: "شركاؤنا",
     
@@ -947,7 +1003,7 @@ export const translations = {
     riskDisclosure: "الإفصاح عن المخاطر",
     compliance: "الامتثال",
     contact: "اتصل",
-    allRightsReserved: "© 2024 Incite AI. جميع الحقوق محفوظة.",
+    allRightsReserved: "© 2025 Incite AI. جميع الحقوق محفوظة.",
     footerDisclaimer: "التداول ينطوي على مخاطر. الأداء السابق لا يضمن النتائج المستقبلية.",
     
     // Success Page
@@ -974,11 +1030,14 @@ export const translations = {
     investorsTrustUs: "Yatırımcılar Bize Güveniyor",
     
     // Floating Cards
+    recordPortfolioGrowth: "Rekor Portföy Büyümesi",
+    aiSays: "AI diyor",
+    strongBuySignal: "NVIDIA için Güçlü Alım Sinyali",
+    monthly: "Aylık",
     avgClientProfit: "Ortalama Müşteri Karı",
     recordPortfolioMay: "Rekor Portföy Büyümesi - Mayıs 2024",
     portfolioGrowth: "+142,7%",
     growthPercentage: "+41,2% ↗",
-    aiSays: "AI diyor:",
     confidence: "Güven: %97",
     averageClientProfit: "Ortalama Müşteri Karı",
     monthlyProfit: "$18.250",
@@ -1072,6 +1131,11 @@ export const translations = {
     mostPopular: "En Popüler",
     currentlyFull: "Şu Anda Dolu",
     
+    // Navigation footer links
+    overview: "Genel Bakış",
+    testimonials: "Referanslar",
+    plans: "Planlar",
+    
     // Partners
     ourPartners: "Ortaklarımız",
     
@@ -1084,7 +1148,7 @@ export const translations = {
     riskDisclosure: "Risk Açıklaması",
     compliance: "Uyumluluk",
     contact: "İletişim",
-    allRightsReserved: "© 2024 Incite AI. Tüm hakları saklıdır.",
+    allRightsReserved: "© 2025 Incite AI. Tüm hakları saklıdır.",
     footerDisclaimer: "Ticaret risk içerir. Geçmiş performans gelecekteki sonuçları garanti etmez.",
     
     // Success Page

@@ -91,7 +91,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             <CardContent className="p-0">
               <div className="flex items-center justify-between">
                 <div className="flex-1">
-                  <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">Record Portfolio Growth</div>
+                  <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('recordPortfolioGrowth')}</div>
                   {(expandedCards.card1 || !isMobile) && (
                     <>
                       <div className="text-sm md:text-lg font-bold text-green-400">+782.7%</div>
@@ -120,10 +120,10 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             <CardContent className="p-0">
               <div className="flex items-center justify-between">
                 <div className="flex-1">
-                  <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">AI Says</div>
+                  <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('aiSays')}</div>
                   {(expandedCards.card2 || !isMobile) && (
                     <>
-                      <div className="text-sm md:text-lg font-semibold text-[#00d4aa]">Strong Buy Signal for NVIDIA</div>
+                      <div className="text-sm md:text-lg font-semibold text-[#00d4aa]">{t('strongBuySignal')}</div>
                       <div className="text-xs md:text-sm text-gray-400">{t('confidence')}</div>
                     </>
                   )}
@@ -153,7 +153,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                   {(expandedCards.card3 || !isMobile) && (
                     <>
                       <div className="text-lg md:text-2xl font-bold text-green-400">54.3%</div>
-                      <div className="text-xs md:text-sm text-gray-400">Monthly</div>
+                      <div className="text-xs md:text-sm text-gray-400">{t('monthly')}</div>
                     </>
                   )}
                 </div>
