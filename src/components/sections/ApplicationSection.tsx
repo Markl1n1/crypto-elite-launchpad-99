@@ -32,7 +32,7 @@ export const ApplicationSection = () => {
 
   const submitToGoogleSheets = async (data: any) => {
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbwmOq3ZVkpe5Ch0dHcUsQjneDm4M-XOW-lmeJRUwIrwQ0r5x6uXeSGkDCjPCAQduOJI/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbx7FrvPGmgeibgyXeDxkUCYvvcVrYYlt6lgnctgopjESjj07A4SG96vip0h6bek6Mya/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
