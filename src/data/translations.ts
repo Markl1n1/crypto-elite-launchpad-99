@@ -116,7 +116,18 @@ export const translations = {
     spotsAvailable: "spots available",
     startNow: "Start Now",
     mostPopular: "Most Popular",
-    currentlyFull: "Currently Full"
+    currentlyFull: "Currently Full",
+    // Trading Platform translations
+    advancedTechnology: "Advanced Technology",
+    cuttingEdgeTradingPlatform: "Cutting-Edge Trading Platform",
+    tradingPlatformDescription: "Experience the future of trading with our AI-powered platform that delivers precision, speed, and unmatched market insights.",
+    aiPoweredPredictions: "AI-Powered Predictions",
+    aiPredictionsDescription: "Our advanced algorithms analyze market patterns to provide accurate trading predictions.",
+    bankGradeSecurity: "Bank-Grade Security",
+    securityDescription: "Your investments are protected with military-grade encryption and institutional security protocols.",
+    // Success page translations
+    applicationSuccessful: "Application Successful!",
+    managerWillContact: "Our manager will contact you at the shortest."
   },
   pl: {
     eliteInvestmentOpportunities: "Elitarne Możliwości Inwestycyjne",
@@ -232,7 +243,16 @@ export const translations = {
     spotsAvailable: "miejsc dostępnych",
     startNow: "Zacznij Teraz",
     mostPopular: "Najpopularniejszy",
-    currentlyFull: "Obecnie Pełny"
+    currentlyFull: "Obecnie Pełny",
+    advancedTechnology: "Zaawansowana Technologia",
+    cuttingEdgeTradingPlatform: "Najnowocześniejsza Platforma Handlowa",
+    tradingPlatformDescription: "Doświadcz przyszłości handlu z naszą platformą napędzaną przez AI, która dostarcza precyzję, szybkość i niezrównane spostrzeżenia rynkowe.",
+    aiPoweredPredictions: "Przewidywania Napędzane przez AI",
+    aiPredictionsDescription: "Nasze zaawansowane algorytmy analizują wzorce rynkowe, aby dostarczyć dokładne przewidywania handlowe.",
+    bankGradeSecurity: "Bezpieczeństwo Klasy Bankowej",
+    securityDescription: "Twoje inwestycje są chronione szyfrowanem wojskowym i protokołami bezpieczeństwa instytucjonalnego.",
+    applicationSuccessful: "Aplikacja Zakończona Sukcesem!",
+    managerWillContact: "Nasz menedżer skontaktuje się z Tobą najszybciej jak to możliwe."
   },
   de: {
     eliteInvestmentOpportunities: "Elite-Investitionsmöglichkeiten",
@@ -348,7 +368,16 @@ export const translations = {
     spotsAvailable: "Plätze verfügbar",
     startNow: "Jetzt Starten",
     mostPopular: "Am Beliebtesten",
-    currentlyFull: "Derzeit Voll"
+    currentlyFull: "Derzeit Voll",
+    advancedTechnology: "Fortschrittliche Technologie",
+    cuttingEdgeTradingPlatform: "Hochmoderne Handelsplattform",
+    tradingPlatformDescription: "Erleben Sie die Zukunft des Handels mit unserer KI-gestützten Plattform, die Präzision, Geschwindigkeit und unvergleichliche Markteinblicke liefert.",
+    aiPoweredPredictions: "KI-gestützte Vorhersagen",
+    aiPredictionsDescription: "Unsere fortschrittlichen Algorithmen analysieren Marktmuster, um genaue Handelsprognosen zu liefern.",
+    bankGradeSecurity: "Banken-Sicherheit",
+    securityDescription: "Ihre Investitionen sind mit militärischer Verschlüsselung und institutionellen Sicherheitsprotokollen geschützt.",
+    applicationSuccessful: "Bewerbung Erfolgreich!",
+    managerWillContact: "Unser Manager wird Sie schnellstmöglich kontaktieren."
   },
   es: {
     eliteInvestmentOpportunities: "Oportunidades de Inversión Elite",
@@ -464,7 +493,16 @@ export const translations = {
     spotsAvailable: "lugares disponibles",
     startNow: "Empezar Ahora",
     mostPopular: "Más Popular",
-    currentlyFull: "Actualmente Lleno"
+    currentlyFull: "Actualmente Lleno",
+    advancedTechnology: "Tecnología Avanzada",
+    cuttingEdgeTradingPlatform: "Plataforma de Trading de Vanguardia",
+    tradingPlatformDescription: "Experimenta el futuro del trading con nuestra plataforma impulsada por AI que entrega precisión, velocidad e insights de mercado incomparables.",
+    aiPoweredPredictions: "Predicciones Impulsadas por AI",
+    aiPredictionsDescription: "Nuestros algoritmos avanzados analizan patrones de mercado para proporcionar predicciones de trading precisas.",
+    bankGradeSecurity: "Seguridad de Grado Bancario",
+    securityDescription: "Tus inversiones están protegidas con cifrado de grado militar y protocolos de seguridad institucional.",
+    applicationSuccessful: "¡Aplicación Exitosa!",
+    managerWillContact: "Nuestro gerente te contactará lo antes posible."
   },
   ru: {
     eliteInvestmentOpportunities: "Элитные Инвестиционные Возможности",
@@ -511,12 +549,12 @@ export const translations = {
     howMoneyHoldQ: "Как хранятся мои деньги?",
     howMoneyHoldA: "Для защиты ваших средств, Incite AI хранит ваши средства в банках высшего уровня США и Швейцарии. В основных случаях - UBS Group и JPMorgan Chase.",
     guaranteesQ: "Даем ли мы какие-либо гарантии?",
-    guaranteesA: "Наша финансовая гарантия основана на частных соглашениях с компаниями, которые предоставляют услуги через наше программное обеспечение. Эти компании глобально регулируются и работают в рамках своих собственных индивидуальных страховых и соответствующих рамок.",
+    guaranteesA: "Наша финансовая гарантия опирается на частные соглашения с компаниями, которые предоставляют услуги через наше программное обеспечение. Эти компании глобально регулируются и работают в рамках своих собственных индивидуальных страховых и соответствующих рамок.",
     weAreInTheNews: "Мы в Новостях",
     getAdvisor: "Получить Советника",
     growPortfolio: "Развивать Портфель",
     tryInciteAiNow: "Попробуйте Incite AI Сейчас",
-    simplyHowItWorksTitle: "Просто Как Это Работает",
+    simplyHowItWorksTitle: "Как Это По Просту Работает",
     simplyHowItWorksSubtitle: "Наш ИИ мгновенно обрабатывает ваши простые запросы, предоставляя четкие инвестиционные решения и практические рекомендации за секунды.",
     askYourQuestion: "Задайте Свой Вопрос",
     askYourQuestionDesc: "Просто введите свой инвестиционный вопрос или запрос простым языком",
@@ -580,7 +618,16 @@ export const translations = {
     spotsAvailable: "мест доступно",
     startNow: "Начать Сейчас",
     mostPopular: "Самый Популярный",
-    currentlyFull: "В настоящее время заполнен"
+    currentlyFull: "В настоящее время заполнен",
+    advancedTechnology: "Передовые Технологии",
+    cuttingEdgeTradingPlatform: "Передовая Торговая Платформа",
+    tradingPlatformDescription: "Испытайте будущее торговли с нашей платформой на основе ИИ, которая обеспечивает точность, скорость и непревзойденные рыночные аналитические данные.",
+    aiPoweredPredictions: "Прогнозы на Основе ИИ",
+    aiPredictionsDescription: "Наши продвинутые алгоритмы анализируют рыночные паттерны для предоставления точных торговых прогнозов.",
+    bankGradeSecurity: "Безопасность Банковского Уровня",
+    securityDescription: "Ваши инвестиции защищены военным шифрованием и институциональными протоколами безопасности.",
+    applicationSuccessful: "Заявка Успешна!",
+    managerWillContact: "Наш менеджер свяжется с вами в кратчайшие сроки."
   },
   fr: {
     eliteInvestmentOpportunities: "Opportunités d'Investissement Elite",
@@ -696,7 +743,16 @@ export const translations = {
     spotsAvailable: "places disponibles",
     startNow: "Commencer Maintenant",
     mostPopular: "Le Plus Populaire",
-    currentlyFull: "Actuellement Complet"
+    currentlyFull: "Actuellement Complet",
+    advancedTechnology: "Technologie Avancée",
+    cuttingEdgeTradingPlatform: "Plateforme de Trading de Pointe",
+    tradingPlatformDescription: "Découvrez l'avenir du trading avec notre plateforme alimentée par l'IA qui offre précision, vitesse et insights de marché inégalés.",
+    aiPoweredPredictions: "Prédictions Alimentées par l'IA",
+    aiPredictionsDescription: "Nos algorithmes avancés analysent les modèles de marché pour fournir des prédictions de trading précises.",
+    bankGradeSecurity: "Sécurité de Grade Bancaire",
+    securityDescription: "Vos investissements sont protégés avec un chiffrement de grade militaire et des protocoles de sécurité institutionnels.",
+    applicationSuccessful: "Candidature Réussie!",
+    managerWillContact: "Notre gestionnaire vous contactera dans les plus brefs délais."
   },
   ar: {
     eliteInvestmentOpportunities: "فرص الاستثمار النخبة",
@@ -812,12 +868,21 @@ export const translations = {
     spotsAvailable: "مكان متاح",
     startNow: "ابدأ الآن",
     mostPopular: "الأكثر شعبية",
-    currentlyFull: "ممتلئ حاليًا"
+    currentlyFull: "ممتلئ حاليًا",
+    advancedTechnology: "التكنولوجيا المتقدمة",
+    cuttingEdgeTradingPlatform: "منصة التداول المتطورة",
+    tradingPlatformDescription: "اختبر مستقبل التداول مع منصتنا المدعومة بالذكاء الاصطناعي التي توفر الدقة والسرعة ورؤى السوق التي لا مثيل لها.",
+    aiPoweredPredictions: "التوقعات المدعومة بالذكاء الاصطناعي",
+    aiPredictionsDescription: "تحلل خوارزمياتنا المتقدمة أنماط السوق لتوفير توقعات تداول دقيقة.",
+    bankGradeSecurity: "أمان على مستوى البنوك",
+    securityDescription: "استثماراتك محمية بتشفير عسكري وبروتوكولات أمان مؤسسية.",
+    applicationSuccessful: "نجح الطلب!",
+    managerWillContact: "سيتصل بك مديرنا في أقرب وقت ممكن."
   },
   tr: {
     eliteInvestmentOpportunities: "Elit Yatırım Fırsatları",
     heroTitle: "AI Yatırım Ortağınız",
-    heroSubtitle: "Tutarlı sonuçlar sunan AI destekli yatırım içgörüleri ile finansal geleceğinizi dönüştürün.",
+    heroSubtitle: "Tutarlı sonuçlar sunan AI destekli yatırım içgörüler ile finansal geleceğinizi dönüştürün.",
     startJourneyNow: "Yolculuğunuzu Şimdi Başlatın",
     investorsTrustUs: "yatırımcı bize güveniyor",
     recordPortfolioGrowth: "Rekor Portföy Büyümesi",
@@ -928,6 +993,15 @@ export const translations = {
     spotsAvailable: "yer mevcut",
     startNow: "Şimdi Başla",
     mostPopular: "En Popüler",
-    currentlyFull: "Şu Anda Dolu"
+    currentlyFull: "Şu Anda Dolu",
+    advancedTechnology: "Gelişmiş Teknoloji",
+    cuttingEdgeTradingPlatform: "Son Teknoloji Ticaret Platformu",
+    tradingPlatformDescription: "Hassaslık, hız ve benzersiz piyasa içgörüleri sunan AI destekli platformumuzla ticaretin geleceğini deneyimleyin.",
+    aiPoweredPredictions: "AI Destekli Tahminler",
+    aiPredictionsDescription: "Gelişmiş algoritmalarımız doğru ticaret tahminleri sağlamak için piyasa desenlerini analiz eder.",
+    bankGradeSecurity: "Banka Düzeyinde Güvenlik",
+    securityDescription: "Yatırımlarınız askeri düzeyde şifreleme ve kurumsal güvenlik protokolleri ile korunmaktadır.",
+    applicationSuccessful: "Başvuru Başarılı!",
+    managerWillContact: "Yöneticimiz en kısa sürede sizinle iletişime geçecek."
   }
 };
