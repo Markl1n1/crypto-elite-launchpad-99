@@ -1,6 +1,4 @@
-
 import { useTranslations } from '@/hooks/useTranslations';
-
 const partners = [{
   name: 'BlackRock',
   logo: 'https://logo.clearbit.com/blackrock.com'
@@ -176,47 +174,35 @@ const partners = [{
   name: 'Goldman Sachs',
   logo: '/lovable-uploads/72abe75f-33aa-4c9d-91fb-f35082cc876d.png'
 }];
-
 export const PartnersSection = () => {
-  const { t } = useTranslations();
-
-  return (
-    <section className="py-20 bg-[#1a1f35] overflow-hidden border-b-2" style={{ borderColor: 'rgb(0 212 170 / 0.3)' }}>
+  const {
+    t
+  } = useTranslations();
+  return <section className="py-20 bg-[#1a1f35] overflow-hidden border-b-2" style={{
+    borderColor: 'rgb(0 212 170 / 0.3)'
+  }}>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          {t('ourPartners')}
-        </h2>
+        
         
         {/* Auto-scrolling carousel */}
         <div className="relative">
           <div className="flex animate-[scroll_20s_linear_infinite]">
-            {[...partners, ...partners].map((partner, index) => (
-              <div 
-                key={index} 
-                className="flex-shrink-0 mx-8 h-16 flex items-center justify-center bg-white/5 rounded-lg px-6 hover:bg-white/10 transition-colors" 
-                style={{ minWidth: '200px' }}
-              >
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name}
-                  className="h-8 w-auto object-contain filter brightness-0 invert opacity-70" 
-                  loading="eager"
-                  onError={(e) => {
-                    const target = e.currentTarget as HTMLImageElement;
-                    const textSpan = target.nextElementSibling as HTMLElement;
-                    target.style.display = 'none';
-                    if (textSpan) {
-                      textSpan.style.display = 'block';
-                      textSpan.className = 'text-gray-300 font-semibold text-sm';
-                    }
-                  }} 
-                />
+            {[...partners, ...partners].map((partner, index) => <div key={index} className="flex-shrink-0 mx-8 h-16 flex items-center justify-center bg-white/5 rounded-lg px-6 hover:bg-white/10 transition-colors" style={{
+            minWidth: '200px'
+          }}>
+                <img src={partner.logo} alt={partner.name} className="h-8 w-auto object-contain filter brightness-0 invert opacity-70" loading="eager" onError={e => {
+              const target = e.currentTarget as HTMLImageElement;
+              const textSpan = target.nextElementSibling as HTMLElement;
+              target.style.display = 'none';
+              if (textSpan) {
+                textSpan.style.display = 'block';
+                textSpan.className = 'text-gray-300 font-semibold text-sm';
+              }
+            }} />
                 <span className="text-gray-300 font-semibold text-sm hidden">{partner.name}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };

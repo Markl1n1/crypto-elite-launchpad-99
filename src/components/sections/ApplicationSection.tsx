@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Lock } from 'lucide-react';
@@ -10,10 +9,12 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { phoneCodes } from '@/data/phoneCodes';
 import { useTranslations } from '@/hooks/useTranslations';
-
 export const ApplicationSection = () => {
   const navigate = useNavigate();
-  const { t, currentLanguage } = useTranslations();
+  const {
+    t,
+    currentLanguage
+  } = useTranslations();
   const [phoneCode, setPhoneCode] = useState('+1');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -40,7 +41,6 @@ export const ApplicationSection = () => {
     const phoneRegex = /^\d{6,15}$/;
     return phoneRegex.test(phone);
   };
-
   const submitToGoogleSheets = async (formData: any) => {
     try {
       const response = await fetch('https://script.google.com/macros/s/AKfycbzQ8_example/exec', {
@@ -52,9 +52,7 @@ export const ApplicationSection = () => {
         body: JSON.stringify({
           spreadsheetId: '1XRubNVLpE4JcaOjYqnWXaxRpP2-WGvrKbtK--6ppnXY',
           sheetName: 'Leads',
-          values: [
-            [formData.firstName, formData.lastName, formData.email, formData.phone]
-          ]
+          values: [[formData.firstName, formData.lastName, formData.email, formData.phone]]
         })
       });
       console.log('Data submitted to Google Sheets');
@@ -62,7 +60,6 @@ export const ApplicationSection = () => {
       console.error('Error submitting to Google Sheets:', error);
     }
   };
-
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -82,7 +79,6 @@ export const ApplicationSection = () => {
       setPhoneError(t('validPhoneRequired'));
       hasErrors = true;
     }
-
     if (hasErrors) return;
 
     // Store the current language in localStorage for the success page
@@ -107,9 +103,9 @@ export const ApplicationSection = () => {
     // Navigate to success page
     navigate('/success');
   };
-
-  return (
-    <section id="apply" className="py-20 bg-[#1a1f35] border-b-2" style={{ borderColor: 'rgb(0 212 170 / 0.3)' }}>
+  return <section id="apply" className="py-20 bg-[#1a1f35] border-b-2" style={{
+    borderColor: 'rgb(0 212 170 / 0.3)'
+  }}>
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="text-center mb-12">
           <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
@@ -128,27 +124,19 @@ export const ApplicationSection = () => {
                   <Label htmlFor="firstName" className="text-white">
                     {t('firstName')} <span className="text-red-400">{t('required')}</span>
                   </Label>
-                  <Input 
-                    id="firstName" 
-                    value={formData.firstName} 
-                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} 
-                    className="bg-[#1a1f35] border-white/20 text-white" 
-                    placeholder={`${t('firstName')}...`} 
-                    required 
-                  />
+                  <Input id="firstName" value={formData.firstName} onChange={e => setFormData({
+                  ...formData,
+                  firstName: e.target.value
+                })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('firstName')}...`} required />
                 </div>
                 <div>
                   <Label htmlFor="lastName" className="text-white">
                     {t('lastName')} <span className="text-red-400">{t('required')}</span>
                   </Label>
-                  <Input 
-                    id="lastName" 
-                    value={formData.lastName} 
-                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} 
-                    className="bg-[#1a1f35] border-white/20 text-white" 
-                    placeholder={`${t('lastName')}...`} 
-                    required 
-                  />
+                  <Input id="lastName" value={formData.lastName} onChange={e => setFormData({
+                  ...formData,
+                  lastName: e.target.value
+                })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('lastName')}...`} required />
                 </div>
               </div>
 
@@ -156,15 +144,10 @@ export const ApplicationSection = () => {
                 <Label htmlFor="email" className="text-white">
                   {t('emailAddress')} <span className="text-red-400">{t('required')}</span>
                 </Label>
-                <Input 
-                  id="email" 
-                  type="email" 
-                  value={formData.email} 
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
-                  className="bg-[#1a1f35] border-white/20 text-white" 
-                  placeholder={`${t('emailAddress')}...`} 
-                  required 
-                />
+                <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                ...formData,
+                email: e.target.value
+              })} className="bg-[#1a1f35] border-white/20 text-white" placeholder={`${t('emailAddress')}...`} required />
                 {emailError && <p className="text-red-400 text-sm mt-1">{emailError}</p>}
               </div>
 
@@ -178,21 +161,12 @@ export const ApplicationSection = () => {
                       <SelectValue className="text-gray-400" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1a1f35] border-white/20 z-50 max-h-48">
-                      {phoneCodes.map((phone, index) => (
-                        <SelectItem key={index} value={phone.code} className="text-gray-400">
+                      {phoneCodes.map((phone, index) => <SelectItem key={index} value={phone.code} className="text-gray-400">
                           {phone.code}
-                        </SelectItem>
-                      ))}
+                        </SelectItem>)}
                     </SelectContent>
                   </Select>
-                  <Input 
-                    id="phone" 
-                    value={phoneNumber} 
-                    onChange={(e) => setPhoneNumber(e.target.value)} 
-                    className="bg-[#1a1f35] border-white/20 text-white flex-1" 
-                    placeholder="123456789" 
-                    required 
-                  />
+                  <Input id="phone" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} className="bg-[#1a1f35] border-white/20 text-white flex-1" placeholder="123456789" required />
                 </div>
                 {phoneError && <p className="text-red-400 text-sm mt-1">{phoneError}</p>}
               </div>
@@ -202,13 +176,9 @@ export const ApplicationSection = () => {
               </Button>
             </form>
 
-            <div className="flex items-center justify-center space-x-2 mt-6 text-sm text-gray-400">
-              <Lock size={16} />
-              <span>{t('secureEncrypted')}</span>
-            </div>
+            
           </CardContent>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };

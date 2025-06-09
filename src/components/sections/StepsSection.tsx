@@ -1,19 +1,20 @@
-
 import { Edit, Shield, TrendingUp, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { useTranslations } from '@/hooks/useTranslations';
-
 interface StepsSectionProps {
   scrollToSection: (sectionId: string) => void;
 }
-
-export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
-  const { t } = useTranslations();
-
-  return (
-    <section id="program" className="py-20 bg-[#1a1f35] border-b-4" style={{ borderColor: 'rgb(0 212 170 / 0.5)' }}>
+export const StepsSection = ({
+  scrollToSection
+}: StepsSectionProps) => {
+  const {
+    t
+  } = useTranslations();
+  return <section id="program" className="py-20 bg-[#1a1f35] border-b-4" style={{
+    borderColor: 'rgb(0 212 170 / 0.5)'
+  }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
@@ -35,7 +36,7 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
                     <Edit size={32} className="text-black" />
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-white">{t('leaveApplication')}</h3>
-                  <p className="text-white/80">{t('applicationDescription')}</p>
+                  
                 </CardContent>
               </Card>
             </div>
@@ -51,7 +52,7 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
                     <Shield size={32} className="text-black" />
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-white">Get Professional Advisor</h3>
-                  <p className="text-white/80">{t('guidanceDescription')}</p>
+                  
                 </CardContent>
               </Card>
             </div>
@@ -67,7 +68,7 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
                     <TrendingUp size={32} className="text-black" />
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-white">{t('growBalance')}</h3>
-                  <p className="text-white/80">{t('growDescription')}</p>
+                  
                 </CardContent>
               </Card>
             </div>
@@ -81,6 +82,5 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
