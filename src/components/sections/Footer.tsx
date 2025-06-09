@@ -13,7 +13,7 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
   return (
     <footer className="bg-[#0a0e1a] py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
@@ -55,27 +55,16 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
             </div>
           </div>
 
-          {/* Quick Links and Legal */}
-          <div className="grid grid-cols-2 gap-8 md:col-span-2">
-            <div className="text-center md:text-left">
-              <h3 className="font-semibold mb-4">{t('quickLinks')}</h3>
-              <ul className="space-y-2">
-                <li><button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('home')}</button></li>
-                <li><button onClick={() => scrollToSection('program')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('program')}</button></li>
-                <li><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('pricing')}</button></li>
-                <li><button onClick={() => scrollToSection('faq')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('faq')}</button></li>
-              </ul>
-            </div>
-
-            <div className="text-center md:text-left">
-              <h3 className="font-semibold mb-4">{t('legal')}</h3>
-              <ul className="space-y-2">
-                <li><Link to="/privacy-policy" className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('privacyPolicy')}</Link></li>
-                <li><Link to="/terms-of-service" className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('termsOfService')}</Link></li>
-                <li><Link to="/risk-disclosure" className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('riskDisclosure')}</Link></li>
-                <li><Link to="/compliance" className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('compliance')}</Link></li>
-              </ul>
-            </div>
+          {/* Quick Links - Updated to match header menu */}
+          <div className="text-center md:text-left">
+            <h3 className="font-semibold mb-4">{t('quickLinks')}</h3>
+            <ul className="space-y-2">
+              <li><button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('home')}</button></li>
+              <li><button onClick={() => scrollToSection('program')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Overview</button></li>
+              <li><button onClick={() => scrollToSection('testimonials')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Testimonials</button></li>
+              <li><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">Plans</button></li>
+              <li><button onClick={() => scrollToSection('faq')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('faq')}</button></li>
+            </ul>
           </div>
 
           {/* Contact */}
