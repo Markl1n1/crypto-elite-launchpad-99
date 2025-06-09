@@ -1,7 +1,6 @@
-
 export const NewsSection = () => {
   return (
-    <section className="py-12 bg-[#1a1f35] border-t" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px' }}>
+    <section className="py-12 bg-[#0a0e1a] border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">We are in the News</h2>
