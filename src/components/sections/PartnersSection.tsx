@@ -61,11 +61,11 @@ export const PartnersSection = () => {
     <section className="py-12 bg-[#0a0e1a] overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="relative">
-          <div className="flex animate-[scroll_20s_linear_infinite]">
+          <div className="flex animate-[scroll_20s_linear_infinite] gap-[15px]">
             {[...partners, ...partners].map((partner, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 mx-8 h-16 flex items-center justify-center rounded-lg px-6 hover:opacity-80 transition-opacity" 
+                className="flex-shrink-0 h-16 flex items-center justify-center bg-[#1A1F35] rounded-lg px-5 py-[15px] hover:opacity-80 transition-opacity" 
                 style={{ minWidth: '200px' }}
               >
                 <img 
