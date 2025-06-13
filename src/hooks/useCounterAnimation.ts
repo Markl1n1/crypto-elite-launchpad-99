@@ -1,14 +1,14 @@
 
 import { useEffect, useState, useRef } from 'react';
 
-export const useCounterAnimation = (
+export const useCounterAnimation = <T extends HTMLElement = HTMLSpanElement>(
   end: number,
   duration = 2000,
   suffix = ''
 ) => {
   const [count, setCount] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<T>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
