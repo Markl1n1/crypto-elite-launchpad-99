@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ChevronDown, ArrowRight, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -103,8 +102,8 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
 
         {/* Enhanced Floating Dashboard Cards */}
         <div ref={cardsRef}>
-          {/* Card 1 - Portfolio Growth */}
-          <div className={`absolute top-16 md:top-20 left-2 md:left-8 animate-float w-40 md:w-64 ${cardVisibility[0] ? 'animate-fade-in-left' : 'opacity-0'}`}>
+          {/* Card 1 - Portfolio Growth - Moved lower */}
+          <div className={`absolute top-24 md:top-32 left-2 md:left-8 animate-float w-40 md:w-64 ${cardVisibility[0] ? 'animate-fade-in-left' : 'opacity-0'}`}>
             <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
@@ -159,8 +158,8 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </Card>
           </div>
 
-          {/* Card 3 - Average Profit */}
-          <div className={`absolute bottom-[28rem] md:bottom-[36rem] left-2 md:left-16 animate-float w-40 md:w-64 ${cardVisibility[2] ? 'animate-fade-in-left animate-delay-400' : 'opacity-0'}`} style={{
+          {/* Card 3 - Average Profit - Moved lower */}
+          <div className={`absolute bottom-[24rem] md:bottom-[32rem] left-2 md:left-16 animate-float w-40 md:w-64 ${cardVisibility[2] ? 'animate-fade-in-left animate-delay-400' : 'opacity-0'}`} style={{
             animationDelay: '2s'
           }}>
             <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
