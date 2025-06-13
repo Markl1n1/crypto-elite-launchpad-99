@@ -134,6 +134,8 @@ export const en = {
   priorityExecute: 'Priority Execute',
   exclusiveEvents: 'Exclusive Events',
   waitingList: 'Waiting List',
+  priorityProcessing: 'Priority Processing',
+  companyGifts: 'Company Gifts',
   
   // Trading Platform
   advancedTechnology: 'Advanced Technology',
@@ -143,6 +145,27 @@ export const en = {
   aiPredictionsDescription: 'Get real-time market predictions powered by advanced machine learning.',
   bankGradeSecurity: 'Bank-Grade Security',
   securityDescription: 'Your investments are protected with enterprise-level security.',
+  
+  // Testimonials
+  whatOurUsersSay: 'What Our Users Say',
+  testimonialsSubtitle: 'Real experiences from investors who trust our AI-powered platform.',
+  getEarlyAccess: 'Get Early Access',
+  
+  // Professions
+  automotiveRetailer: 'Automotive Retailer',
+  designer: 'Designer',
+  coffeeShopOwner: 'Coffee Shop Owner',
+  systemAdministrator: 'System Administrator',
+  highSchoolTeacher: 'High School Teacher',
+  hairdresser: 'Hairdresser',
+  carpenter: 'Carpenter',
+  photoEditor: 'Photo Editor',
+  pizzeriaManager: 'Pizzeria Manager',
+  professionalBroker: 'Professional Broker',
+  
+  // Success Page
+  applicationSuccessful: 'Application Successful!',
+  managerWillContact: 'Our manager will contact you at the shortest.',
   
   // General
   trustedBy: 'Trusted by'

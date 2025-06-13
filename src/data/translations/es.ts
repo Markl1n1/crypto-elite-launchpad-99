@@ -122,6 +122,8 @@ export const es = {
   priorityExecute: 'Ejecución prioritaria',
   exclusiveEvents: 'Eventos exclusivos',
   waitingList: 'Lista de espera',
+  priorityProcessing: 'Procesamiento prioritario',
+  companyGifts: 'Regalos de empresa',
   
   advancedTechnology: 'Tecnología avanzada',
   cuttingEdgeTradingPlatform: 'Plataforma de trading de vanguardia',
@@ -130,6 +132,24 @@ export const es = {
   aiPredictionsDescription: 'Obtén predicciones de mercado en tiempo real impulsadas por aprendizaje automático avanzado.',
   bankGradeSecurity: 'Seguridad de grado bancario',
   securityDescription: 'Tus inversiones están protegidas con seguridad de nivel empresarial.',
+  
+  whatOurUsersSay: 'Lo que dicen nuestros usuarios',
+  testimonialsSubtitle: 'Experiencias reales de inversores que confían en nuestra plataforma impulsada por IA.',
+  getEarlyAccess: 'Obtener acceso anticipado',
+  
+  automotiveRetailer: 'Vendedor de automóviles',
+  designer: 'Diseñador',
+  coffeeShopOwner: 'Propietario de cafetería',
+  systemAdministrator: 'Administrador de sistemas',
+  highSchoolTeacher: 'Profesor de secundaria',
+  hairdresser: 'Peluquero',
+  carpenter: 'Carpintero',
+  photoEditor: 'Editor de fotos',
+  pizzeriaManager: 'Gerente de pizzería',
+  professionalBroker: 'Corredor profesional',
+  
+  applicationSuccessful: '¡Solicitud exitosa!',
+  managerWillContact: 'Nuestro gerente se pondrá en contacto contigo a la brevedad.',
   
   trustedBy: 'Confiado por'
 };

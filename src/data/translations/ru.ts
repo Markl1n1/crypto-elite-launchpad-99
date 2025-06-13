@@ -122,6 +122,8 @@ export const ru = {
   priorityExecute: 'Приоритетное исполнение',
   exclusiveEvents: 'Эксклюзивные события',
   waitingList: 'Лист ожидания',
+  priorityProcessing: 'Приоритетная обработка',
+  companyGifts: 'Корпоративные подарки',
   
   advancedTechnology: 'Продвинутые технологии',
   cuttingEdgeTradingPlatform: 'Передовая торговая платформа',
@@ -130,6 +132,24 @@ export const ru = {
   aiPredictionsDescription: 'Получайте прогнозы рынка в режиме реального времени на основе продвинутого машинного обучения.',
   bankGradeSecurity: 'Безопасность банковского уровня',
   securityDescription: 'Ваши инвестиции защищены безопасностью корпоративного уровня.',
+  
+  whatOurUsersSay: 'Что говорят наши пользователи',
+  testimonialsSubtitle: 'Реальный опыт инвесторов, которые доверяют нашей платформе на основе ИИ.',
+  getEarlyAccess: 'Получить ранний доступ',
+  
+  automotiveRetailer: 'Продавец автомобилей',
+  designer: 'Дизайнер',
+  coffeeShopOwner: 'Владелец кофейни',
+  systemAdministrator: 'Системный администратор',
+  highSchoolTeacher: 'Учитель средней школы',
+  hairdresser: 'Парикмахер',
+  carpenter: 'Плотник',
+  photoEditor: 'Фоторедактор',
+  pizzeriaManager: 'Менеджер пиццерии',
+  professionalBroker: 'Профессиональный брокер',
+  
+  applicationSuccessful: 'Заявка успешно подана!',
+  managerWillContact: 'Наш менеджер свяжется с вами в кратчайшие сроки.',
   
   trustedBy: 'Доверяют'
 };
