@@ -135,3 +135,4 @@ export const fr = {
   
   april2025: 'Avril 2025',
   threeSteps: "3 étapes simples"
+};
