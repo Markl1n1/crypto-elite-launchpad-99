@@ -6,6 +6,18 @@ import { useTranslations } from '@/hooks/useTranslations';
 export const FAQSection = () => {
   const { t } = useTranslations();
 
+  // FAQ data for rendering
+  const faqItems = [
+    { value: "item-1", question: t('whereLocatedQ'), answer: t('whereLocatedA') },
+    { value: "item-2", question: t('returnsQ'), answer: t('returnsA') },
+    { value: "item-3", question: t('qualificationQ'), answer: t('qualificationA') },
+    { value: "item-4", question: t('withdrawalQ'), answer: t('withdrawalA') },
+    { value: "item-5", question: t('tradingSystemQ'), answer: t('tradingSystemA') },
+    { value: "item-6", question: t('howMakeMoneyQ'), answer: t('howMakeMoneyA') },
+    { value: "item-7", question: t('howMoneyHoldQ'), answer: t('howMoneyHoldA') },
+    { value: "item-8", question: t('guaranteesQ'), answer: t('guaranteesA') },
+  ];
+
   return (
     <section id="faq" className="py-12 border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
       <div className="container mx-auto px-4 max-w-4xl">
@@ -17,61 +29,29 @@ export const FAQSection = () => {
         </div>
 
         <Accordion type="single" collapsible className="space-y-4">
-          <AccordionItem value="item-1" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">{t('whereLocatedQ')}</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              {t('whereLocatedA')}
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-2" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">{t('returnsQ')}</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              {t('returnsA')}
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-3" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">{t('qualificationQ')}</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              {t('qualificationA')}
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-4" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">{t('withdrawalQ')}</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              {t('withdrawalA')}
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-5" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">{t('tradingSystemQ')}</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              {t('tradingSystemA')}
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-6" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">{t('howMakeMoneyQ')}</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              {t('howMakeMoneyA')}
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-7" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">{t('howMoneyHoldQ')}</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              {t('howMoneyHoldA')}
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-8" className="bg-[#1a1f35] border-white/10 rounded-lg px-6">
-            <AccordionTrigger className="text-left">{t('guaranteesQ')}</AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              {t('guaranteesA')}
-            </AccordionContent>
-          </AccordionItem>
+          {faqItems.map((item) => (
+            <AccordionItem
+              key={item.value}
+              value={item.value}
+              className="bg-[#1a1f35] border-white/10 rounded-lg px-6"
+            >
+              <div className="relative flex items-center min-h-[3.5rem]"> {/* container for icon + text */}
+                <img
+                  src="/lovable-uploads/60538854-46c4-4c56-a814-9a85d9d041c9.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-30 w-10 h-10 md:w-14 md:h-14 pointer-events-none select-none z-0"
+                  style={{ objectFit: 'contain' }}
+                />
+                <div className="relative z-10 w-full">
+                  <AccordionTrigger className="text-left">
+                    {item.question}
+                  </AccordionTrigger>
+                </div>
+              </div>
+              <AccordionContent className="text-gray-400">{item.answer}</AccordionContent>
+            </AccordionItem>
+          ))}
         </Accordion>
 
         <div className="text-center mt-12">
