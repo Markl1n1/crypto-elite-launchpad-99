@@ -35,8 +35,8 @@ export const FAQSection = () => {
               value={item.value}
               className="bg-[#1a1f35] border-white/10 rounded-lg px-6"
             >
-              <div className="relative flex items-center min-h-[3.5rem] gap-4"> {/* container for icon + text */}
-                <span className="flex-shrink-0 flex items-center justify-center bg-white rounded-full w-8 h-8 md:w-10 md:h-10">
+              <div className="relative flex items-center min-h-[3.5rem] gap-4 group"> {/* group enables hover targeting */}
+                <span className="flex-shrink-0 flex items-center justify-center bg-white rounded-full w-8 h-8 md:w-10 md:h-10 border transition-transform duration-200 group-hover:scale-110">
                   <img
                     src="/lovable-uploads/afb8fcef-6454-4f8f-8564-b83c9983d92f.png"
                     alt=""
@@ -66,4 +66,3 @@ export const FAQSection = () => {
     </section>
   );
 };
-
