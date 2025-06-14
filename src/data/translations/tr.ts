@@ -1,4 +1,3 @@
-
 export const tr = {
   home: 'Ana Sayfa',
   about: 'Hakkımızda',
@@ -130,6 +129,7 @@ export const tr = {
   aiPredictionsDescription: 'Gelişmiş makine öğrenmesi ile gerçek zamanlı piyasa tahminleri alın.',
   bankGradeSecurity: 'Banka Düzeyinde Güvenlik',
   securityDescription: 'Yatırımlarınız kurumsal düzeyde güvenlikle korunuyor.',
-  
-  trustedBy: 'Güvenen'
+
+  // New
+  april2025: 'Nisan 2025'
 };

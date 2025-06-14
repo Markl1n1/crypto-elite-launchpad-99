@@ -1,4 +1,3 @@
-
 export const ru = {
   home: 'Главная',
   about: 'О нас',
@@ -151,5 +150,7 @@ export const ru = {
   applicationSuccessful: 'Заявка успешно подана!',
   managerWillContact: 'Наш менеджер свяжется с вами в кратчайшие сроки.',
   
-  trustedBy: 'Доверяют'
+  trustedBy: 'Доверяют',
+  
+  april2025: 'Апрель 2025'
 };

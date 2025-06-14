@@ -1,4 +1,3 @@
-
 export const es = {
   home: 'Inicio',
   about: 'Acerca de',
@@ -151,5 +150,8 @@ export const es = {
   applicationSuccessful: '¡Solicitud exitosa!',
   managerWillContact: 'Nuestro gerente se pondrá en contacto contigo a la brevedad.',
   
-  trustedBy: 'Confiado por'
+  trustedBy: 'Confiado por',
+
+  // New
+  april2025: 'Abril 2025'
 };

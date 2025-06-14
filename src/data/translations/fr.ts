@@ -1,4 +1,3 @@
-
 export const fr = {
   home: 'Accueil',
   about: 'À propos',
@@ -131,5 +130,8 @@ export const fr = {
   bankGradeSecurity: 'Sécurité de niveau bancaire',
   securityDescription: 'Vos investissements sont protégés par une sécurité de niveau entreprise.',
   
-  trustedBy: 'Fait confiance par'
+  trustedBy: 'Fait confiance par',
+  companyGifts: 'Cadeaux d\'entreprise',
+  
+  april2025: 'Avril 2025'
 };

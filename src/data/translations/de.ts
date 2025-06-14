@@ -1,4 +1,3 @@
-
 export const de = {
   home: 'Startseite',
   about: 'Über uns',
@@ -151,5 +150,7 @@ export const de = {
   applicationSuccessful: 'Bewerbung erfolgreich!',
   managerWillContact: 'Unser Manager wird Sie schnellstmöglich kontaktieren.',
   
-  trustedBy: 'Vertraut von'
+  trustedBy: 'Vertraut von',
+  
+  april2025: 'April 2025'
 };

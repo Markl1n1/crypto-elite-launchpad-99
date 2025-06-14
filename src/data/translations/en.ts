@@ -1,4 +1,3 @@
-
 export const en = {
   // Navigation
   home: 'Home',
@@ -168,5 +167,8 @@ export const en = {
   managerWillContact: 'Our manager will contact you at the shortest.',
   
   // General
-  trustedBy: 'Trusted by'
+  trustedBy: 'Trusted by',
+  
+  // New
+  april2025: 'April 2025'
 };

@@ -1,4 +1,3 @@
-
 export const ar = {
   home: 'الرئيسية',
   about: 'حولنا',
@@ -131,5 +130,7 @@ export const ar = {
   bankGradeSecurity: 'أمان بمستوى البنك',
   securityDescription: 'استثماراتك محمية بأمان على مستوى المؤسسة.',
   
-  trustedBy: 'موثوق من قبل'
+  trustedBy: 'موثوق من قبل',
+  companyGifts: 'هدايا الشركة',
+  april2025: 'أبريل 2025'
 };

@@ -112,7 +112,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                     {(expandedCards.card1 || !isMobile) && (
                       <>
                         <div ref={countRef1} className="text-sm md:text-lg font-bold text-green-400">+{portfolioGrowth}</div>
-                        <div className="text-xs md:text-sm text-gray-400">April 2025</div>
+                        <div className="text-xs md:text-sm text-gray-400">{t('april2025')}</div>
                       </>
                     )}
                   </div>
