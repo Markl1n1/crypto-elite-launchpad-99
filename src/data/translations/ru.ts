@@ -151,10 +151,8 @@ export const ru = {
   managerWillContact: 'Наш менеджер свяжется с вами в кратчайшие сроки.',
   
   trustedBy: 'Доверяют',
-  
-  april2025: 'Апрель 2025',
-  
   threeSteps: "3 простых шага",
+  april2025: 'Апрель 2025',
   
   // Cookie Consent
   cookieConsentTitle: 'Мы используем файлы cookie для улучшения вашего опыта',
@@ -179,6 +177,5 @@ export const ru = {
   cookieRequired: 'Обязательно',
   cookieNeedMoreInfo: 'Нужна дополнительная информация?',
   cookieLearnMore: 'Узнайте больше о том, как мы обрабатываем ваши данные в нашей',
-  
-  april2025: 'Апрель 2025'
+  privacyPolicy: 'Политика конфиденциальности'
 };

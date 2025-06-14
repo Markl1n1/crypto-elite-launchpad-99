@@ -151,10 +151,8 @@ export const de = {
   managerWillContact: 'Unser Manager wird Sie schnellstmöglich kontaktieren.',
   
   trustedBy: 'Vertraut von',
-  
-  april2025: 'April 2025',
-  
   threeSteps: "3 einfache Schritte",
+  april2025: 'April 2025',
   
   // Cookie Consent
   cookieConsentTitle: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern',
@@ -179,6 +177,5 @@ export const de = {
   cookieRequired: 'Erforderlich',
   cookieNeedMoreInfo: 'Benötigen Sie weitere Informationen?',
   cookieLearnMore: 'Erfahren Sie mehr darüber, wie wir Ihre Daten in unserer',
-  
-  april2025: 'April 2025'
+  privacyPolicy: 'Datenschutzrichtlinie'
 };

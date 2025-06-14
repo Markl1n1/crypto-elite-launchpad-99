@@ -1,3 +1,4 @@
+
 export const ar = {
   home: 'الرئيسية',
   about: 'حولنا',
@@ -132,8 +133,8 @@ export const ar = {
   
   trustedBy: 'موثوق من قبل',
   companyGifts: 'هدايا الشركة',
-  april2025: 'أبريل 2025',
   threeSteps: "3 خطوات سهلة",
+  april2025: 'أبريل 2025',
   
   // Cookie Consent
   cookieConsentTitle: 'نستخدم ملفات تعريف الارتباط لتحسين تجربتك',
@@ -158,6 +159,5 @@ export const ar = {
   cookieRequired: 'مطلوب',
   cookieNeedMoreInfo: 'تحتاج المزيد من المعلومات؟',
   cookieLearnMore: 'تعرف على المزيد حول كيفية تعاملنا مع بياناتك في',
-  
-  april2025: 'أبريل 2025'
+  privacyPolicy: 'سياسة الخصوصية'
 };

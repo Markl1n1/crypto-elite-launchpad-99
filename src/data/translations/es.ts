@@ -151,9 +151,7 @@ export const es = {
   managerWillContact: 'Nuestro gerente se pondrá en contacto contigo a la brevedad.',
   
   trustedBy: 'Confiado por',
-
   threeSteps: "3 pasos simples",
-  
   april2025: 'Abril 2025',
   
   // Cookie Consent
@@ -179,6 +177,5 @@ export const es = {
   cookieRequired: 'Requerido',
   cookieNeedMoreInfo: '¿Necesita más información?',
   cookieLearnMore: 'Aprenda más sobre cómo manejamos sus datos en nuestra',
-  
-  april2025: 'Abril 2025'
+  privacyPolicy: 'Política de privacidad'
 };
