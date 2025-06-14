@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -40,7 +39,7 @@ const PrivacyPolicy = () => {
             
             <section>
               <h2 className="text-2xl font-semibold mb-4 text-white">Contact Us</h2>
-              <p>If you have any questions about this Privacy Policy, please contact us at support@inciteai.com.</p>
+              <p>If you have any questions about this Privacy Policy, please contact us at support@inciteai.org.</p>
             </section>
           </div>
         </div>
