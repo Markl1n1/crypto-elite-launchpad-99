@@ -36,12 +36,12 @@ export const FAQSection = () => {
               className="bg-[#1a1f35] border-white/10 rounded-lg px-6"
             >
               <div className="relative flex items-center min-h-[3.5rem] gap-4"> {/* container for icon + text */}
-                <span className="flex-shrink-0 flex items-center justify-center bg-white rounded-full w-10 h-10 md:w-12 md:h-12">
+                <span className="flex-shrink-0 flex items-center justify-center bg-white rounded-full w-8 h-8 md:w-10 md:h-10">
                   <img
-                    src="/lovable-uploads/4955d632-3c0f-4e7d-bfb7-02c66d515734.png"
+                    src="/lovable-uploads/afb8fcef-6454-4f8f-8564-b83c9983d92f.png"
                     alt=""
                     aria-hidden="true"
-                    className="w-6 h-6 md:w-8 md:h-8 object-contain"
+                    className="w-5 h-5 md:w-7 md:h-7 object-contain"
                     draggable={false}
                   />
                 </span>
