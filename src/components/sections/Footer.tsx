@@ -1,14 +1,17 @@
-
 import { Link } from 'react-router-dom';
 import { Mail, Send, MapPin, Instagram, X } from 'lucide-react';
 import { useTranslations } from '@/hooks/useTranslations';
+import { getFaqAbbreviation } from '@/lib/getFaqAbbreviation';
 
 interface FooterProps {
   scrollToSection: (sectionId: string) => void;
 }
 
 export const Footer = ({ scrollToSection }: FooterProps) => {
-  const { t } = useTranslations();
+  const { t, currentLanguage } = useTranslations();
+
+  // Use our new abbreviation mapping utility
+  const faqLabel = getFaqAbbreviation(currentLanguage, t('faq'));
 
   return (
     <footer className="bg-[#0a0e1a] py-16">
@@ -64,7 +67,7 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
                 <li><button onClick={() => scrollToSection('program')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('overview')}</button></li>
                 <li><button onClick={() => scrollToSection('testimonials')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('testimonials')}</button></li>
                 <li><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('plans')}</button></li>
-                <li><button onClick={() => scrollToSection('faq')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('faq')}</button></li>
+                <li><button onClick={() => scrollToSection('faq')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{faqLabel}</button></li>
               </ul>
             </div>
 

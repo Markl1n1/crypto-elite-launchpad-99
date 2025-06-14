@@ -1,25 +1,13 @@
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { useTranslations } from '@/hooks/useTranslations';
-
-// Mapping for FAQ abbreviation/translations by language code
-const faqAbbreviations: Record<string, string> = {
-  en: 'FAQ',
-  pl: 'FAQ',
-  de: 'FAQ',
-  es: 'Preguntas',
-  ru: 'ЧЗВ',
-  fr: 'FAQ',
-  ar: 'الأسئلة',
-  tr: 'SSS',
-};
+import { getFaqAbbreviation } from '@/lib/getFaqAbbreviation';
 
 export const FAQSection = () => {
   const { t, currentLanguage } = useTranslations();
 
-  // Determine the FAQ abbreviation by current language
-  const faqAbbr = faqAbbreviations[currentLanguage] || t('faq') || 'FAQ';
+  // Use our new abbreviation mapping utility
+  const faqAbbr = getFaqAbbreviation(currentLanguage, t('faq') || 'FAQ');
 
   // FAQ data for rendering
   const faqItems = [

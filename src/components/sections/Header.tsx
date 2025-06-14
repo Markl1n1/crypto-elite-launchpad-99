@@ -1,9 +1,9 @@
-
 import { useState } from 'react';
 import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { useTranslations } from '@/hooks/useTranslations';
+import { getFaqAbbreviation } from '@/lib/getFaqAbbreviation';
 
 // Language data
 const languages = [{
@@ -49,6 +49,9 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
   const { currentLanguage, changeLanguage, t } = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Use our new abbreviation mapping utility
+  const faqLabel = getFaqAbbreviation(currentLanguage, t('faq'));
+
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0a0e1a]/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between">
@@ -68,7 +71,7 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
           <button onClick={() => scrollToSection('program')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">{t('overview')}</button>
           <button onClick={() => scrollToSection('testimonials')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">{t('testimonials')}</button>
           <button onClick={() => scrollToSection('pricing')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">{t('plans')}</button>
-          <button onClick={() => scrollToSection('faq')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">{t('faq')}</button>
+          <button onClick={() => scrollToSection('faq')} className="hover:text-[#00d4aa] transition-colors text-sm lg:text-base">{faqLabel}</button>
           
           {/* Language Switcher */}
           <div className="relative">
@@ -144,7 +147,7 @@ export const Header = ({ isScrolled, scrollToSection }: HeaderProps) => {
             <button onClick={() => scrollToSection('program')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">{t('overview')}</button>
             <button onClick={() => scrollToSection('testimonials')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">{t('testimonials')}</button>
             <button onClick={() => scrollToSection('pricing')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">{t('plans')}</button>
-            <button onClick={() => scrollToSection('faq')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">{t('faq')}</button>
+            <button onClick={() => scrollToSection('faq')} className="block w-full hover:text-[#00d4aa] transition-colors text-sm">{faqLabel}</button>
             <Button onClick={() => scrollToSection('apply')} className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-sm">
               {t('applyNow')}
             </Button>
