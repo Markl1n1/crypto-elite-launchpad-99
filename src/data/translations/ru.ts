@@ -152,5 +152,7 @@ export const ru = {
   
   trustedBy: 'Доверяют',
   
-  april2025: 'Апрель 2025'
+  april2025: 'Апрель 2025',
+  
+  threeSteps: "3 простых шага"
 };

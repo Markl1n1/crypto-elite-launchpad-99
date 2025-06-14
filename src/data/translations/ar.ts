@@ -132,5 +132,6 @@ export const ar = {
   
   trustedBy: 'موثوق من قبل',
   companyGifts: 'هدايا الشركة',
-  april2025: 'أبريل 2025'
+  april2025: 'أبريل 2025',
+  threeSteps: "3 خطوات سهلة"
 };

@@ -48,6 +48,7 @@ export const en = {
   leaveApplication: 'Leave Application',
   getAdvisor: 'Get Personal Advisor',
   growPortfolio: 'Grow Your Portfolio',
+  threeSteps: "3 Easy Steps",
   
   // Industry Experts
   whatIndustryExpertsSay: 'What Industry Experts Say',

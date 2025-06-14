@@ -133,5 +133,6 @@ export const fr = {
   trustedBy: 'Fait confiance par',
   companyGifts: 'Cadeaux d\'entreprise',
   
-  april2025: 'Avril 2025'
+  april2025: 'Avril 2025',
+  threeSteps: "3 étapes simples"
 };

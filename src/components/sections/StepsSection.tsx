@@ -1,3 +1,4 @@
+
 import { Edit, Shield, TrendingUp } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -9,14 +10,13 @@ interface StepsSectionProps {
 
 export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
   const { t } = useTranslations();
-  
+
   return (
     <section id="program" className="py-12 bg-[#1a1f35] border-t border-b" style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderTopWidth: '1px', borderBottomWidth: '1px' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">3 Easy Steps</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 whitespace-nowrap">{t('threeSteps')}</h2>
         </div>
-
         <div className="relative max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Step 1 */}
@@ -33,7 +33,6 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
                 </CardContent>
               </Card>
             </div>
-
             {/* Step 2 */}
             <div className="relative">
               <Card className="bg-[#0a0e1a] border-white/10 p-8 text-center relative h-48 transform hover:scale-105 transition-all duration-300">
@@ -48,7 +47,6 @@ export const StepsSection = ({ scrollToSection }: StepsSectionProps) => {
                 </CardContent>
               </Card>
             </div>
-
             {/* Step 3 */}
             <div className="relative">
               <Card className="bg-[#0a0e1a] border-white/10 p-8 text-center relative h-48 transform hover:scale-105 transition-all duration-300">

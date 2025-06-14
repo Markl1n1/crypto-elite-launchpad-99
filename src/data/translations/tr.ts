@@ -129,7 +129,8 @@ export const tr = {
   aiPredictionsDescription: 'Gelişmiş makine öğrenmesi ile gerçek zamanlı piyasa tahminleri alın.',
   bankGradeSecurity: 'Banka Düzeyinde Güvenlik',
   securityDescription: 'Yatırımlarınız kurumsal düzeyde güvenlikle korunuyor.',
-
-  // New
+  
+  threeSteps: "3 Kolay Adım",
+  
   april2025: 'Nisan 2025'
 };

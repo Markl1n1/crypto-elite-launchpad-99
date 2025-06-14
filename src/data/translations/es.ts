@@ -152,6 +152,7 @@ export const es = {
   
   trustedBy: 'Confiado por',
 
-  // New
+  threeSteps: "3 pasos simples",
+  
   april2025: 'Abril 2025'
 };
