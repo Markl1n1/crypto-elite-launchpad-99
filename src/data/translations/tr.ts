@@ -40,9 +40,9 @@ export const tr = {
   learnMore: 'Daha Fazla Öğren',
   getStarted: 'Başla',
   
-  leaveApplication: 'Başvuru Bırak',
-  getAdvisor: 'Kişisel Danışman Al',
-  growPortfolio: 'Portföyünüzü Büyütün',
+  leaveApplication: 'Başvur',
+  getAdvisor: 'Danışman',
+  growPortfolio: 'Portföy Büyüt',
   
   whatIndustryExpertsSay: 'Sektör Uzmanları Ne Diyor',
   industryExpertsSubtitle: 'Önde gelen finans profesyonelleri yatırım kararları için Incite AI\'ya güveniyor.',

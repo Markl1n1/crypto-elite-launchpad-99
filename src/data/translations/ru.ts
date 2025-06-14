@@ -41,8 +41,8 @@ export const ru = {
   getStarted: 'Начать',
   
   leaveApplication: 'Оставить заявку',
-  getAdvisor: 'Получить личного консультанта',
-  growPortfolio: 'Растите свой портфель',
+  getAdvisor: 'Консультант',
+  growPortfolio: 'Рост портфеля',
   
   whatIndustryExpertsSay: 'Что говорят отраслевые эксперты',
   industryExpertsSubtitle: 'Ведущие финансовые профессионалы доверяют Incite AI в своих инвестиционных решениях.',

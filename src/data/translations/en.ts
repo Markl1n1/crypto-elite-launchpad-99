@@ -45,9 +45,9 @@ export const en = {
   getStarted: 'Get Started',
   
   // Steps
-  leaveApplication: 'Leave Application',
-  getAdvisor: 'Get Personal Advisor',
-  growPortfolio: 'Grow Your Portfolio',
+  leaveApplication: 'Apply Now',
+  getAdvisor: 'Get Advisor',
+  growPortfolio: 'Grow Portfolio',
   threeSteps: "3 Easy Steps",
   
   // Industry Experts

@@ -40,9 +40,9 @@ export const ar = {
   learnMore: 'اعرف المزيد',
   getStarted: 'ابدأ',
   
-  leaveApplication: 'ترك الطلب',
-  getAdvisor: 'احصل على مستشار شخصي',
-  growPortfolio: 'نمِّ محفظتك',
+  leaveApplication: 'قدّم الآن',
+  getAdvisor: 'مستشار',
+  growPortfolio: 'نمِّ المحفظة',
   
   whatIndustryExpertsSay: 'ما يقوله خبراء الصناعة',
   industryExpertsSubtitle: 'المهنيون الماليون الرائدون يثقون في Incite AI لقرارات الاستثمار الخاصة بهم.',

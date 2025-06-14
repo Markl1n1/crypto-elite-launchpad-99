@@ -40,9 +40,9 @@ export const es = {
   learnMore: 'Saber más',
   getStarted: 'Comenzar',
   
-  leaveApplication: 'Enviar solicitud',
-  getAdvisor: 'Obtener asesor personal',
-  growPortfolio: 'Hacer crecer tu portafolio',
+  leaveApplication: 'Solicitar',
+  getAdvisor: 'Asesor',
+  growPortfolio: 'Aumentar Cartera',
   
   whatIndustryExpertsSay: 'Lo que dicen los expertos de la industria',
   industryExpertsSubtitle: 'Los profesionales financieros líderes confían en Incite AI para sus decisiones de inversión.',
