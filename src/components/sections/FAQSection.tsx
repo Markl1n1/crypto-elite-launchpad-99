@@ -35,15 +35,17 @@ export const FAQSection = () => {
               value={item.value}
               className="bg-[#1a1f35] border-white/10 rounded-lg px-6"
             >
-              <div className="relative flex items-center min-h-[3.5rem]"> {/* container for icon + text */}
-                <img
-                  src="/lovable-uploads/60538854-46c4-4c56-a814-9a85d9d041c9.png"
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-30 w-10 h-10 md:w-14 md:h-14 pointer-events-none select-none z-0"
-                  style={{ objectFit: 'contain' }}
-                />
-                <div className="relative z-10 w-full">
+              <div className="relative flex items-center min-h-[3.5rem] gap-4"> {/* container for icon + text */}
+                <span className="flex-shrink-0 flex items-center justify-center bg-white rounded-full w-10 h-10 md:w-12 md:h-12">
+                  <img
+                    src="/lovable-uploads/4955d632-3c0f-4e7d-bfb7-02c66d515734.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="w-6 h-6 md:w-8 md:h-8 object-contain"
+                    draggable={false}
+                  />
+                </span>
+                <div className="flex-1">
                   <AccordionTrigger className="text-left">
                     {item.question}
                   </AccordionTrigger>
@@ -64,3 +66,4 @@ export const FAQSection = () => {
     </section>
   );
 };
+
