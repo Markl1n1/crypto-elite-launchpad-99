@@ -70,7 +70,7 @@ export const PartnersSection = () => {
             {[...partners, ...partners].map((partner, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 h-12 md:h-16 flex items-center justify-center bg-[#1A1F35] rounded-lg hover:opacity-80 transition-opacity" 
+                className="flex-shrink-0 h-12 md:h-16 flex items-center justify-center bg-[#1A1F35] rounded-lg transition-all duration-200 hover:bg-[#232a45] hover:opacity-90" 
                 style={{ 
                   minWidth: '150px',
                   paddingTop: '0.5rem',
