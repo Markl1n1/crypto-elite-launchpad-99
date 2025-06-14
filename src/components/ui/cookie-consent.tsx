@@ -4,11 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { CookieSettingsModal } from './cookie-settings-modal';
 import { useCookieConsent } from '@/hooks/useCookieConsent';
+import { useTranslations } from '@/hooks/useTranslations';
 import { Link } from 'react-router-dom';
 import { Cookie, Settings, X } from 'lucide-react';
 
 export const CookieConsent = () => {
   const [showSettings, setShowSettings] = useState(false);
+  const { t } = useTranslations();
   const { 
     showBanner, 
     consent, 
@@ -35,12 +37,10 @@ export const CookieConsent = () => {
               <div className="flex-1 space-y-4">
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">
-                    We use cookies to enhance your experience
+                    {t('cookieConsentTitle')}
                   </h3>
                   <p className="text-sm text-gray-300 leading-relaxed">
-                    We use cookies and similar technologies to provide the best experience on our website. 
-                    Some are essential for functionality, while others help us understand how you use our 
-                    site and improve our services. You can customize your preferences or accept all cookies.
+                    {t('cookieConsentDescription')}
                   </p>
                 </div>
 
@@ -50,14 +50,14 @@ export const CookieConsent = () => {
                       to="/privacy-policy" 
                       className="text-[#00d4aa] hover:text-[#00d4aa]/80 underline"
                     >
-                      Privacy Policy
+                      {t('privacyPolicy')}
                     </Link>
                     <span className="hidden sm:inline text-gray-500">•</span>
                     <button
                       onClick={() => setShowSettings(true)}
                       className="text-[#00d4aa] hover:text-[#00d4aa]/80 underline text-left"
                     >
-                      Cookie Details
+                      {t('cookieDetails')}
                     </button>
                   </div>
 
@@ -68,7 +68,7 @@ export const CookieConsent = () => {
                       size="sm"
                       className="border-gray-600 text-gray-300 hover:bg-gray-700 w-full sm:w-auto"
                     >
-                      Reject Non-Essential
+                      {t('rejectNonEssential')}
                     </Button>
                     
                     <Button
@@ -78,7 +78,7 @@ export const CookieConsent = () => {
                       className="border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa]/10 w-full sm:w-auto inline-flex items-center gap-2"
                     >
                       <Settings className="h-4 w-4" />
-                      Customize
+                      {t('customizeCookies')}
                     </Button>
                     
                     <Button
@@ -86,7 +86,7 @@ export const CookieConsent = () => {
                       size="sm"
                       className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black w-full sm:w-auto"
                     >
-                      Accept All
+                      {t('acceptAllCookies')}
                     </Button>
                   </div>
                 </div>

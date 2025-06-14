@@ -6,7 +6,8 @@ import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { Link } from 'react-router-dom';
-import { cookieCategories, CookieConsent, CookieCategory } from '@/lib/cookieManager';
+import { useTranslations } from '@/hooks/useTranslations';
+import { CookieConsent, CookieCategory } from '@/lib/cookieManager';
 import { ExternalLink, Shield, BarChart3, Target, Settings } from 'lucide-react';
 
 interface CookieSettingsModalProps {
@@ -30,6 +31,30 @@ export const CookieSettingsModal = ({
   onSave 
 }: CookieSettingsModalProps) => {
   const [tempConsent, setTempConsent] = useState<CookieConsent>(currentConsent);
+  const { t } = useTranslations();
+
+  const cookieCategories = {
+    essential: {
+      name: t('essentialCookies'),
+      description: t('essentialCookiesDesc'),
+      required: true,
+    },
+    analytics: {
+      name: t('analyticsCookies'),
+      description: t('analyticsCookiesDesc'),
+      required: false,
+    },
+    marketing: {
+      name: t('marketingCookies'),
+      description: t('marketingCookiesDesc'),
+      required: false,
+    },
+    functional: {
+      name: t('functionalCookies'),
+      description: t('functionalCookiesDesc'),
+      required: false,
+    },
+  };
 
   const handleCategoryChange = (category: CookieCategory, enabled: boolean) => {
     setTempConsent(prev => ({
@@ -71,9 +96,9 @@ export const CookieSettingsModal = ({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto bg-[#0a0e1a] border-gray-700">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-white">Cookie Settings</DialogTitle>
+          <DialogTitle className="text-2xl font-bold text-white">{t('cookieSettings')}</DialogTitle>
           <DialogDescription className="text-gray-300">
-            Manage your cookie preferences. You can enable or disable different types of cookies below.
+            {t('cookieConsentDescription')}
           </DialogDescription>
         </DialogHeader>
 
@@ -95,7 +120,7 @@ export const CookieSettingsModal = ({
                           {config.name}
                         </Label>
                         {config.required && (
-                          <span className="ml-2 text-xs text-gray-400">(Required)</span>
+                          <span className="ml-2 text-xs text-gray-400">({t('cookieRequired')})</span>
                         )}
                       </div>
                     </div>
@@ -118,16 +143,16 @@ export const CookieSettingsModal = ({
 
           <div className="bg-gray-800/50 p-4 rounded-lg">
             <p className="text-sm text-gray-300 mb-2">
-              <strong>Need more information?</strong>
+              <strong>{t('cookieNeedMoreInfo')}</strong>
             </p>
             <p className="text-sm text-gray-400">
-              Learn more about how we handle your data in our{' '}
+              {t('cookieLearnMore')}{' '}
               <Link 
                 to="/privacy-policy" 
                 className="text-[#00d4aa] hover:text-[#00d4aa]/80 underline inline-flex items-center gap-1"
                 onClick={() => onOpenChange(false)}
               >
-                Privacy Policy
+                {t('privacyPolicy')}
                 <ExternalLink className="h-3 w-3" />
               </Link>
             </p>
@@ -140,20 +165,20 @@ export const CookieSettingsModal = ({
             variant="outline"
             className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-700"
           >
-            Reject Non-Essential
+            {t('rejectNonEssential')}
           </Button>
           <Button
             onClick={handleSave}
             variant="outline"
             className="flex-1 border-[#00d4aa] text-[#00d4aa] hover:bg-[#00d4aa]/10"
           >
-            Save Preferences
+            {t('savePreferences')}
           </Button>
           <Button
             onClick={handleAcceptAll}
             className="flex-1 bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black"
           >
-            Accept All
+            {t('acceptAllCookies')}
           </Button>
         </div>
       </DialogContent>

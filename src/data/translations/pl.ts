@@ -154,5 +154,29 @@ export const pl = {
   
   april2025: 'Kwiecień 2025',
   
-  threeSteps: "3 proste kroki"
+  threeSteps: "3 proste kroki",
+  
+  // Cookie Consent
+  cookieConsentTitle: 'Używamy plików cookie, aby poprawić Twoje doświadczenia',
+  cookieConsentDescription: 'Używamy plików cookie i podobnych technologii, aby zapewnić najlepsze doświadczenia na naszej stronie internetowej. Niektóre są niezbędne do funkcjonowania, podczas gdy inne pomagają nam zrozumieć, jak korzystasz z naszej strony i ulepszać nasze usługi. Możesz dostosować swoje preferencje lub zaakceptować wszystkie pliki cookie.',
+  cookieSettings: 'Ustawienia plików cookie',
+  cookieDetails: 'Szczegóły plików cookie',
+  acceptAllCookies: 'Zaakceptuj wszystkie',
+  rejectNonEssential: 'Odrzuć nieistotne',
+  customizeCookies: 'Dostosuj',
+  savePreferences: 'Zapisz preferencje',
+  
+  // Cookie Categories
+  essentialCookies: 'Niezbędne pliki cookie',
+  essentialCookiesDesc: 'Te pliki cookie są niezbędne do działania strony internetowej i nie można ich wyłączyć. Są zwykle ustawiane tylko w odpowiedzi na działania wykonane przez Ciebie, które stanowią żądanie usług.',
+  analyticsCookies: 'Pliki cookie analityczne',
+  analyticsCookiesDesc: 'Te pliki cookie pomagają nam zrozumieć, jak odwiedzający wchodzą w interakcje z naszą stroną internetową, zbierając i raportując informacje anonimowo.',
+  marketingCookies: 'Pliki cookie marketingowe',
+  marketingCookiesDesc: 'Te pliki cookie są używane do śledzenia odwiedzających na stronach internetowych w celu wyświetlania odpowiednich reklam i kampanii marketingowych.',
+  functionalCookies: 'Pliki cookie funkcjonalne',
+  functionalCookiesDesc: 'Te pliki cookie umożliwiają ulepszoną funkcjonalność i personalizację, taką jak zapamiętywanie Twoich preferencji i ustawień.',
+  
+  cookieRequired: 'Wymagane',
+  cookieNeedMoreInfo: 'Potrzebujesz więcej informacji?',
+  cookieLearnMore: 'Dowiedz się więcej o tym, jak obsługujemy Twoje dane w naszej',
 };

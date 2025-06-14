@@ -132,5 +132,29 @@ export const tr = {
   
   threeSteps: "3 Kolay Adım",
   
-  april2025: 'Nisan 2025'
+  april2025: 'Nisan 2025',
+  
+  // Cookie Consent
+  cookieConsentTitle: 'Deneyiminizi geliştirmek için çerezler kullanıyoruz',
+  cookieConsentDescription: 'Web sitemizde en iyi deneyimi sağlamak için çerezler ve benzer teknolojiler kullanıyoruz. Bazıları işlevsellik için gereklidir, diğerleri sitemizi nasıl kullandığınızı anlamamıza ve hizmetlerimizi geliştirmemize yardımcı olur. Tercihlerinizi özelleştirebilir veya tüm çerezleri kabul edebilirsiniz.',
+  cookieSettings: 'Çerez Ayarları',
+  cookieDetails: 'Çerez Detayları',
+  acceptAllCookies: 'Tümünü Kabul Et',
+  rejectNonEssential: 'Zorunlu Olmayanları Reddet',
+  customizeCookies: 'Özelleştir',
+  savePreferences: 'Tercihleri Kaydet',
+  
+  // Cookie Categories
+  essentialCookies: 'Zorunlu Çerezler',
+  essentialCookiesDesc: 'Bu çerezler web sitesinin çalışması için gereklidir ve kapatılamaz. Genellikle sadece hizmet talebiniz sayılacak eylemlerinize yanıt olarak ayarlanır.',
+  analyticsCookies: 'Analitik Çerezler',
+  analyticsCookiesDesc: 'Bu çerezler, ziyaretçilerin web sitemizle nasıl etkileşimde bulunduğunu anlamamıza bilgileri anonim olarak toplayarak ve raporlayarak yardımcı olur.',
+  marketingCookies: 'Pazarlama Çerezleri',
+  marketingCookiesDesc: 'Bu çerezler, alakalı reklamlar ve pazarlama kampanyaları görüntülemek için ziyaretçileri web siteleri genelinde takip etmek için kullanılır.',
+  functionalCookies: 'İşlevsel Çerezler',
+  functionalCookiesDesc: 'Bu çerezler, tercihlerinizi ve ayarlarınızı hatırlama gibi gelişmiş işlevsellik ve kişiselleştirme sağlar.',
+  
+  cookieRequired: 'Gerekli',
+  cookieNeedMoreInfo: 'Daha fazla bilgiye mi ihtiyacınız var?',
+  cookieLearnMore: 'Verilerinizi nasıl işlediğimiz hakkında daha fazla bilgi edinmek için',
 };

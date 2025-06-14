@@ -154,5 +154,31 @@ export const de = {
   
   april2025: 'April 2025',
   
-  threeSteps: "3 einfache Schritte"
+  threeSteps: "3 einfache Schritte",
+  
+  // Cookie Consent
+  cookieConsentTitle: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern',
+  cookieConsentDescription: 'Wir verwenden Cookies und ähnliche Technologien, um die beste Erfahrung auf unserer Website zu bieten. Einige sind für die Funktionalität unerlässlich, während andere uns helfen zu verstehen, wie Sie unsere Website nutzen und unsere Dienste zu verbessern. Sie können Ihre Präferenzen anpassen oder alle Cookies akzeptieren.',
+  cookieSettings: 'Cookie-Einstellungen',
+  cookieDetails: 'Cookie-Details',
+  acceptAllCookies: 'Alle akzeptieren',
+  rejectNonEssential: 'Nicht-wesentliche ablehnen',
+  customizeCookies: 'Anpassen',
+  savePreferences: 'Einstellungen speichern',
+  
+  // Cookie Categories
+  essentialCookies: 'Wesentliche Cookies',
+  essentialCookiesDesc: 'Diese Cookies sind für das Funktionieren der Website notwendig und können nicht ausgeschaltet werden. Sie werden normalerweise nur als Reaktion auf Aktionen gesetzt, die Sie durchführen und die einer Anfrage für Dienste entsprechen.',
+  analyticsCookies: 'Analyse-Cookies',
+  analyticsCookiesDesc: 'Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie Informationen anonym sammeln und melden.',
+  marketingCookies: 'Marketing-Cookies',
+  marketingCookiesDesc: 'Diese Cookies werden verwendet, um Besucher über Websites hinweg zu verfolgen, um relevante Werbung und Marketingkampagnen anzuzeigen.',
+  functionalCookies: 'Funktionale Cookies',
+  functionalCookiesDesc: 'Diese Cookies ermöglichen erweiterte Funktionalität und Personalisierung, wie das Merken Ihrer Präferenzen und Einstellungen.',
+  
+  cookieRequired: 'Erforderlich',
+  cookieNeedMoreInfo: 'Benötigen Sie weitere Informationen?',
+  cookieLearnMore: 'Erfahren Sie mehr darüber, wie wir Ihre Daten in unserer',
+  
+  april2025: 'April 2025'
 };

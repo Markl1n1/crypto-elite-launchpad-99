@@ -134,5 +134,30 @@ export const fr = {
   companyGifts: 'Cadeaux d\'entreprise',
   
   april2025: 'Avril 2025',
+  
+  // Cookie Consent
+  cookieConsentTitle: 'Nous utilisons des cookies pour améliorer votre expérience',
+  cookieConsentDescription: 'Nous utilisons des cookies et des technologies similaires pour offrir la meilleure expérience sur notre site web. Certains sont essentiels au fonctionnement, tandis que d\'autres nous aident à comprendre comment vous utilisez notre site et à améliorer nos services. Vous pouvez personnaliser vos préférences ou accepter tous les cookies.',
+  cookieSettings: 'Paramètres des cookies',
+  cookieDetails: 'Détails des cookies',
+  acceptAllCookies: 'Tout accepter',
+  rejectNonEssential: 'Rejeter les non-essentiels',
+  customizeCookies: 'Personnaliser',
+  savePreferences: 'Sauvegarder les préférences',
+  
+  // Cookie Categories
+  essentialCookies: 'Cookies essentiels',
+  essentialCookiesDesc: 'Ces cookies sont nécessaires au fonctionnement du site web et ne peuvent pas être désactivés. Ils ne sont généralement définis qu\'en réponse à des actions que vous effectuez et qui constituent une demande de services.',
+  analyticsCookies: 'Cookies analytiques',
+  analyticsCookiesDesc: 'Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site web en collectant et rapportant des informations de manière anonyme.',
+  marketingCookies: 'Cookies marketing',
+  marketingCookiesDesc: 'Ces cookies sont utilisés pour suivre les visiteurs à travers les sites web afin d\'afficher des publicités et des campagnes marketing pertinentes.',
+  functionalCookies: 'Cookies fonctionnels',
+  functionalCookiesDesc: 'Ces cookies permettent des fonctionnalités améliorées et la personnalisation, comme se souvenir de vos préférences et paramètres.',
+  
+  cookieRequired: 'Obligatoire',
+  cookieNeedMoreInfo: 'Besoin de plus d\'informations ?',
+  cookieLearnMore: 'En savoir plus sur la façon dont nous traitons vos données dans notre',
+  
   threeSteps: "3 étapes simples"
 };

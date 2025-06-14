@@ -154,5 +154,31 @@ export const es = {
 
   threeSteps: "3 pasos simples",
   
+  april2025: 'Abril 2025',
+  
+  // Cookie Consent
+  cookieConsentTitle: 'Utilizamos cookies para mejorar su experiencia',
+  cookieConsentDescription: 'Utilizamos cookies y tecnologías similares para brindar la mejor experiencia en nuestro sitio web. Algunas son esenciales para la funcionalidad, mientras que otras nos ayudan a entender cómo usa nuestro sitio y mejorar nuestros servicios. Puede personalizar sus preferencias o aceptar todas las cookies.',
+  cookieSettings: 'Configuración de cookies',
+  cookieDetails: 'Detalles de cookies',
+  acceptAllCookies: 'Aceptar todas',
+  rejectNonEssential: 'Rechazar no esenciales',
+  customizeCookies: 'Personalizar',
+  savePreferences: 'Guardar preferencias',
+  
+  // Cookie Categories
+  essentialCookies: 'Cookies esenciales',
+  essentialCookiesDesc: 'Estas cookies son necesarias para que el sitio web funcione y no se pueden desactivar. Normalmente solo se establecen en respuesta a acciones realizadas por usted que equivalen a una solicitud de servicios.',
+  analyticsCookies: 'Cookies analíticas',
+  analyticsCookiesDesc: 'Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando e informando información de forma anónima.',
+  marketingCookies: 'Cookies de marketing',
+  marketingCookiesDesc: 'Estas cookies se utilizan para rastrear visitantes en sitios web para mostrar anuncios relevantes y campañas de marketing.',
+  functionalCookies: 'Cookies funcionales',
+  functionalCookiesDesc: 'Estas cookies permiten funcionalidad mejorada y personalización, como recordar sus preferencias y configuraciones.',
+  
+  cookieRequired: 'Requerido',
+  cookieNeedMoreInfo: '¿Necesita más información?',
+  cookieLearnMore: 'Aprenda más sobre cómo manejamos sus datos en nuestra',
+  
   april2025: 'Abril 2025'
 };

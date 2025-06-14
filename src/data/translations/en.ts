@@ -1,3 +1,4 @@
+
 export const en = {
   // Navigation
   home: 'Home',
@@ -104,6 +105,7 @@ export const en = {
   quickLinks: 'Quick Links',
   allRightsReserved: '© 2025 Incite AI. All rights reserved.',
   footerDisclaimer: 'Investment involves risk. Past performance does not guarantee future results.',
+  privacyPolicy: 'Privacy Policy',
   
   // News Section
   weAreInTheNews: 'We Are In The News',
@@ -169,6 +171,30 @@ export const en = {
   
   // General
   trustedBy: 'Trusted by',
+  
+  // Cookie Consent
+  cookieConsentTitle: 'We use cookies to enhance your experience',
+  cookieConsentDescription: 'We use cookies and similar technologies to provide the best experience on our website. Some are essential for functionality, while others help us understand how you use our site and improve our services. You can customize your preferences or accept all cookies.',
+  cookieSettings: 'Cookie Settings',
+  cookieDetails: 'Cookie Details',
+  acceptAllCookies: 'Accept All',
+  rejectNonEssential: 'Reject Non-Essential',
+  customizeCookies: 'Customize',
+  savePreferences: 'Save Preferences',
+  
+  // Cookie Categories
+  essentialCookies: 'Essential Cookies',
+  essentialCookiesDesc: 'These cookies are necessary for the website to function and cannot be switched off. They are usually only set in response to actions made by you which amount to a request for services.',
+  analyticsCookies: 'Analytics Cookies',
+  analyticsCookiesDesc: 'These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.',
+  marketingCookies: 'Marketing Cookies',
+  marketingCookiesDesc: 'These cookies are used to track visitors across websites to display relevant advertisements and marketing campaigns.',
+  functionalCookies: 'Functional Cookies',
+  functionalCookiesDesc: 'These cookies enable enhanced functionality and personalization, such as remembering your preferences and settings.',
+  
+  cookieRequired: 'Required',
+  cookieNeedMoreInfo: 'Need more information?',
+  cookieLearnMore: 'Learn more about how we handle your data in our',
   
   // New
   april2025: 'April 2025'
