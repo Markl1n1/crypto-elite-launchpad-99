@@ -3,8 +3,23 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Badge } from '@/components/ui/badge';
 import { useTranslations } from '@/hooks/useTranslations';
 
+// Mapping for FAQ abbreviation/translations by language code
+const faqAbbreviations: Record<string, string> = {
+  en: 'FAQ',
+  pl: 'FAQ',
+  de: 'FAQ',
+  es: 'Preguntas',
+  ru: 'ЧЗВ',
+  fr: 'FAQ',
+  ar: 'الأسئلة',
+  tr: 'SSS',
+};
+
 export const FAQSection = () => {
-  const { t } = useTranslations();
+  const { t, currentLanguage } = useTranslations();
+
+  // Determine the FAQ abbreviation by current language
+  const faqAbbr = faqAbbreviations[currentLanguage] || t('faq') || 'FAQ';
 
   // FAQ data for rendering
   const faqItems = [
@@ -25,7 +40,7 @@ export const FAQSection = () => {
           <Badge className="mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10">
             {t('commonQuestions')}
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('frequentlyAskedQuestions')}</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">{faqAbbr}</h2>
         </div>
 
         <Accordion type="single" collapsible className="space-y-4">
@@ -35,7 +50,7 @@ export const FAQSection = () => {
               value={item.value}
               className="bg-[#1a1f35] border-white/10 rounded-lg px-6"
             >
-              <div className="relative flex items-center min-h-[3.5rem] gap-4 group"> {/* group enables hover targeting */}
+              <div className="relative flex items-center min-h-[3.5rem] gap-4 group">
                 <span className="flex-shrink-0 flex items-center justify-center bg-white rounded-full w-8 h-8 md:w-10 md:h-10 border transition-transform duration-200 group-hover:scale-110">
                   <img
                     src="/lovable-uploads/afb8fcef-6454-4f8f-8564-b83c9983d92f.png"
@@ -58,7 +73,7 @@ export const FAQSection = () => {
 
         <div className="text-center mt-12">
           <p className="text-gray-400 mb-4">{t('stillHaveQuestions')}</p>
-          <a href="mailto:support@inciteai.com" className="text-[#00d4aa] hover:text-[#00d4aa]/80 transition-colors">
+          <a href="mailto:support@inciteai.org" className="text-[#00d4aa] hover:text-[#00d4aa]/80 transition-colors">
             {t('contactSupport')}
           </a>
         </div>
