@@ -1,4 +1,5 @@
 
+import { OptimizedImage } from '@/components/ui/optimized-image';
 import { useTranslations } from '@/hooks/useTranslations';
 
 const partners = [
@@ -63,38 +64,35 @@ export const PartnersSection = () => {
   const { t } = useTranslations();
   
   return (
-    <section className="py-8 md:py-12 bg-[#0a0e1a] overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="py-6 sm:py-8 md:py-12 bg-[#0a0e1a] overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
-          <div className="flex animate-[scroll_20s_linear_infinite] gap-[10px] md:gap-[15px]">
+          <div className="flex animate-[scroll_20s_linear_infinite] gap-[8px] sm:gap-[10px] md:gap-[15px]">
             {[...partners, ...partners].map((partner, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 h-12 md:h-16 flex items-center justify-center bg-[#1A1F35] rounded-lg transition-all duration-200 hover:bg-[#232a45] hover:opacity-90" 
+                className="flex-shrink-0 h-10 sm:h-12 md:h-16 flex items-center justify-center bg-[#1A1F35] rounded-lg transition-all duration-200 hover:bg-[#232a45] hover:opacity-90" 
                 style={{ 
-                  minWidth: '150px',
-                  paddingTop: '0.5rem',
-                  paddingBottom: '0.5rem',
-                  paddingLeft: '0.75rem',
-                  paddingRight: '0.75rem'
+                  minWidth: '120px',
+                  paddingTop: '0.375rem',
+                  paddingBottom: '0.375rem',
+                  paddingLeft: '0.5rem',
+                  paddingRight: '0.5rem'
                 }}
               >
-                <img 
+                <OptimizedImage 
                   src={partner.image} 
                   alt={partner.name} 
-                  className="h-8 md:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" 
-                  loading="eager" 
+                  className="h-6 sm:h-8 md:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" 
+                  loading="eager"
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;
-                    const textSpan = target.nextElementSibling as HTMLElement;
-                    target.style.display = 'none';
-                    if (textSpan) {
-                      textSpan.style.display = 'block';
-                      textSpan.className = 'text-gray-300 font-semibold text-xs md:text-sm';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.innerHTML = `<span class="text-gray-300 font-semibold text-xs sm:text-sm">${partner.name}</span>`;
                     }
                   }} 
                 />
-                <span className="text-gray-300 font-semibold text-xs md:text-sm hidden">{partner.name}</span>
               </div>
             ))}
           </div>

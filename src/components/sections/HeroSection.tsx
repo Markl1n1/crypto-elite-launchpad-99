@@ -1,8 +1,10 @@
+
 import { useState } from 'react';
 import { ChevronDown, ArrowRight, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 import { useTranslations } from '@/hooks/useTranslations';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
@@ -50,78 +52,82 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       }} />
       
       {/* Enhanced Floating Blur Elements */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#00d4aa]/20 rounded-full blur-3xl animate-pulse opacity-60" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#0066ff]/20 rounded-full blur-3xl animate-pulse opacity-60" style={{
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-64 sm:h-64 bg-[#00d4aa]/20 rounded-full blur-3xl animate-pulse opacity-60" />
+      <div className="absolute bottom-1/4 right-1/4 w-32 h-32 sm:w-64 sm:h-64 bg-[#0066ff]/20 rounded-full blur-3xl animate-pulse opacity-60" style={{
         animationDelay: '1s'
       }} />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#00b896]/10 rounded-full blur-3xl animate-pulse opacity-40" style={{
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-96 sm:h-96 bg-[#00b896]/10 rounded-full blur-3xl animate-pulse opacity-40" style={{
         animationDelay: '2s'
       }} />
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={`text-center max-w-4xl mx-auto ${heroVisible ? 'animate-fade-in-up' : ''}`}>
-          <Badge className={`mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10 hover-lift ${heroVisible ? 'animate-scale-in animate-delay-200' : ''}`}>
+          <Badge className={`mb-4 sm:mb-6 border-[#00d4aa] text-[#00d4aa] bg-[#00d4aa]/10 hover-lift text-xs sm:text-sm ${heroVisible ? 'animate-scale-in animate-delay-200' : ''}`}>
             <span className="gradient-text font-semibold">
               {t('eliteInvestmentOpportunities')}
             </span>
           </Badge>
           
-          <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight gradient-text ${heroVisible ? 'animate-fade-in-up animate-delay-300' : ''}`}>
+          <h1 className={`text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight gradient-text ${heroVisible ? 'animate-fade-in-up animate-delay-300' : ''}`}>
             {t('heroTitle')}
           </h1>
           
-          <p className={`text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto ${heroVisible ? 'animate-fade-in-up animate-delay-400' : ''}`}>
+          <p className={`text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 ${heroVisible ? 'animate-fade-in-up animate-delay-400' : ''}`}>
             {t('heroSubtitle')}
           </p>
           
-          <div className={`flex flex-col sm:flex-row gap-4 justify-center mb-12 ${heroVisible ? 'animate-fade-in-up animate-delay-500' : ''}`}>
-            <Button size="lg" onClick={() => scrollToSection('pricing')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-6 cta-button cta-primary hover-lift">
+          <div className={`flex flex-col sm:flex-row gap-4 justify-center mb-8 sm:mb-12 px-4 ${heroVisible ? 'animate-fade-in-up animate-delay-500' : ''}`}>
+            <Button 
+              size="lg" 
+              onClick={() => scrollToSection('pricing')} 
+              className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 cta-button cta-primary hover-lift w-full sm:w-auto"
+            >
               {t('startJourneyNow')}
               <ArrowRight className="ml-2" size={20} />
             </Button>
           </div>
           
           {/* Enhanced Social Proof */}
-          <div className={`flex items-center justify-center space-x-4 mb-8 ${heroVisible ? 'animate-fade-in-up animate-delay-600' : ''}`}>
+          <div className={`flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-6 sm:mb-8 px-4 ${heroVisible ? 'animate-fade-in-up animate-delay-600' : ''}`}>
             <div className="flex -space-x-2">
               {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
                 <div 
                   key={num}
-                  className={`w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center hover-lift transition-all duration-300 ${heroVisible ? `animate-scale-in animate-delay-${600 + num * 50}` : ''}`}
+                  className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/20 bg-cover bg-center hover-lift transition-all duration-300 ${heroVisible ? `animate-scale-in animate-delay-${600 + num * 50}` : ''}`}
                   style={{
                     backgroundImage: `url('https://randomuser.me/api/portraits/${num % 2 === 0 ? 'women' : 'men'}/${num}.jpg')`
                   }} 
                 />
               ))}
             </div>
-            <span className="text-gray-300" ref={countRef4}>
+            <span className="text-gray-300 text-sm sm:text-base text-center sm:text-left" ref={countRef4}>
               <span className="font-semibold text-[#00d4aa]">{investorCount}</span> {t('investorsTrustUs')}
             </span>
           </div>
         </div>
 
-        {/* Enhanced Floating Dashboard Cards */}
-        <div ref={cardsRef}>
-          {/* Card 1 - Portfolio Growth - Moved even lower */}
-          <div className={`absolute top-48 md:top-56 left-2 md:left-8 animate-float w-40 md:w-64 ${cardVisibility[0] ? 'animate-fade-in-left' : 'opacity-0'}`}>
-            <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
+        {/* Enhanced Floating Dashboard Cards - Optimized for mobile */}
+        <div ref={cardsRef} className="relative">
+          {/* Card 1 - Portfolio Growth */}
+          <div className={`absolute top-32 sm:top-48 md:top-56 left-1 sm:left-2 md:left-8 animate-float w-32 sm:w-40 md:w-64 ${cardVisibility[0] ? 'animate-fade-in-left' : 'opacity-0'}`}>
+            <Card className="glass-card glass-card-hover p-1 sm:p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('recordPortfolioGrowth')}</div>
+                    <div className="text-xs sm:text-sm text-gray-400 mb-1 md:mb-2">{t('recordPortfolioGrowth')}</div>
                     {(expandedCards.card1 || !isMobile) && (
                       <>
-                        <div ref={countRef1} className="text-sm md:text-lg font-bold text-green-400">+{portfolioGrowth}</div>
-                        <div className="text-xs md:text-sm text-gray-400">{t('april2025')}</div>
+                        <div ref={countRef1} className="text-xs sm:text-sm md:text-lg font-bold text-green-400">+{portfolioGrowth}</div>
+                        <div className="text-xs sm:text-sm text-gray-400">{t('april2025')}</div>
                       </>
                     )}
                   </div>
                   {isMobile && (
                     <button 
                       onClick={() => toggleCard('card1')}
-                      className="ml-2 text-gray-400 hover:text-white transition-colors hover-lift"
+                      className="ml-1 sm:ml-2 text-gray-400 hover:text-white transition-colors hover-lift"
                     >
-                      {expandedCards.card1 ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      {expandedCards.card1 ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                     </button>
                   )}
                 </div>
@@ -130,27 +136,27 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
 
           {/* Card 2 - AI Signal */}
-          <div className={`absolute top-44 md:top-60 right-2 md:right-8 animate-float w-40 md:w-64 ${cardVisibility[1] ? 'animate-fade-in-right animate-delay-200' : 'opacity-0'}`} style={{
+          <div className={`absolute top-28 sm:top-44 md:top-60 right-1 sm:right-2 md:right-8 animate-float w-32 sm:w-40 md:w-64 ${cardVisibility[1] ? 'animate-fade-in-right animate-delay-200' : 'opacity-0'}`} style={{
             animationDelay: '1s'
           }}>
-            <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
+            <Card className="glass-card glass-card-hover p-1 sm:p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('aiSays')}</div>
+                    <div className="text-xs sm:text-sm text-gray-400 mb-1 md:mb-2">{t('aiSays')}</div>
                     {(expandedCards.card2 || !isMobile) && (
                       <>
-                        <div className="text-sm md:text-lg font-semibold" style={{ color: '#4ADE80' }}>{t('strongBuySignal')}</div>
-                        <div className="text-xs md:text-sm text-gray-400">{t('confidence')}</div>
+                        <div className="text-xs sm:text-sm md:text-lg font-semibold" style={{ color: '#4ADE80' }}>{t('strongBuySignal')}</div>
+                        <div className="text-xs sm:text-sm text-gray-400">{t('confidence')}</div>
                       </>
                     )}
                   </div>
                   {isMobile && (
                     <button 
                       onClick={() => toggleCard('card2')}
-                      className="ml-2 text-gray-400 hover:text-white transition-colors hover-lift"
+                      className="ml-1 sm:ml-2 text-gray-400 hover:text-white transition-colors hover-lift"
                     >
-                      {expandedCards.card2 ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      {expandedCards.card2 ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                     </button>
                   )}
                 </div>
@@ -158,28 +164,28 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </Card>
           </div>
 
-          {/* Card 3 - Average Profit - Moved even lower */}
-          <div className={`absolute bottom-[18rem] md:bottom-[26rem] left-2 md:left-16 animate-float w-40 md:w-64 ${cardVisibility[2] ? 'animate-fade-in-left animate-delay-400' : 'opacity-0'}`} style={{
+          {/* Card 3 - Average Profit */}
+          <div className={`absolute bottom-[12rem] sm:bottom-[18rem] md:bottom-[26rem] left-1 sm:left-2 md:left-16 animate-float w-32 sm:w-40 md:w-64 ${cardVisibility[2] ? 'animate-fade-in-left animate-delay-400' : 'opacity-0'}`} style={{
             animationDelay: '2s'
           }}>
-            <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
+            <Card className="glass-card glass-card-hover p-1 sm:p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('averageClientProfit')}</div>
+                    <div className="text-xs sm:text-sm text-gray-400 mb-1 md:mb-2">{t('averageClientProfit')}</div>
                     {(expandedCards.card3 || !isMobile) && (
                       <>
-                        <div ref={countRef2} className="text-lg md:text-2xl font-bold text-green-400">{clientProfit}</div>
-                        <div className="text-xs md:text-sm text-gray-400">{t('monthly')}</div>
+                        <div ref={countRef2} className="text-sm sm:text-lg md:text-2xl font-bold text-green-400">{clientProfit}</div>
+                        <div className="text-xs sm:text-sm text-gray-400">{t('monthly')}</div>
                       </>
                     )}
                   </div>
                   {isMobile && (
                     <button 
                       onClick={() => toggleCard('card3')}
-                      className="ml-2 text-gray-400 hover:text-white transition-colors hover-lift"
+                      className="ml-1 sm:ml-2 text-gray-400 hover:text-white transition-colors hover-lift"
                     >
-                      {expandedCards.card3 ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      {expandedCards.card3 ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                     </button>
                   )}
                 </div>
@@ -188,27 +194,27 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
 
           {/* Card 4 - Win Rate */}
-          <div className={`absolute bottom-[22rem] md:bottom-[28rem] right-2 md:right-16 animate-float w-40 md:w-64 ${cardVisibility[3] ? 'animate-fade-in-right animate-delay-600' : 'opacity-0'}`} style={{
+          <div className={`absolute bottom-[16rem] sm:bottom-[22rem] md:bottom-[28rem] right-1 sm:right-2 md:right-16 animate-float w-32 sm:w-40 md:w-64 ${cardVisibility[3] ? 'animate-fade-in-right animate-delay-600' : 'opacity-0'}`} style={{
             animationDelay: '3s'
           }}>
-            <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
+            <Card className="glass-card glass-card-hover p-1 sm:p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('clientWinrate')}</div>
+                    <div className="text-xs sm:text-sm text-gray-400 mb-1 md:mb-2">{t('clientWinrate')}</div>
                     {(expandedCards.card4 || !isMobile) && (
                       <>
-                        <div ref={countRef3} className="text-lg md:text-2xl font-bold text-green-400">{winRate}</div>
-                        <div className="text-xs md:text-sm text-gray-400">{t('successRate')}</div>
+                        <div ref={countRef3} className="text-sm sm:text-lg md:text-2xl font-bold text-green-400">{winRate}</div>
+                        <div className="text-xs sm:text-sm text-gray-400">{t('successRate')}</div>
                       </>
                     )}
                   </div>
                   {isMobile && (
                     <button 
                       onClick={() => toggleCard('card4')}
-                      className="ml-2 text-gray-400 hover:text-white transition-colors hover-lift"
+                      className="ml-1 sm:ml-2 text-gray-400 hover:text-white transition-colors hover-lift"
                     >
-                      {expandedCards.card4 ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      {expandedCards.card4 ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                     </button>
                   )}
                 </div>
@@ -219,8 +225,8 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       </div>
 
       {/* Enhanced Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hover-lift">
-        <ChevronDown size={24} className="text-gray-400" />
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hover-lift">
+        <ChevronDown size={20} className="text-gray-400 sm:w-6 sm:h-6" />
       </div>
     </section>
   );
