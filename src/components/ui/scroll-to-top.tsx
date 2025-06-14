@@ -33,7 +33,7 @@ export const ScrollToTop = () => {
   return (
     <Button
       onClick={scrollToTop}
-      className="fixed bottom-8 right-4 md:bottom-8 md:right-8 z-[9999] w-12 h-12 rounded-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black shadow-lg transform hover:scale-105 transition-all duration-200"
+      className="fixed bottom-5 right-5 z-[9999] w-12 h-12 rounded-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black shadow-lg transform hover:scale-105 transition-all duration-200"
       size="icon"
     >
       <ArrowUp size={20} />
