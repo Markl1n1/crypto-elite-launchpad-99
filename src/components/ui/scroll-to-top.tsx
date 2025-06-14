@@ -8,10 +8,13 @@ export const ScrollToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
+      console.log('Scroll position:', window.pageYOffset); // Debug log
       if (window.pageYOffset > 300) {
         setIsVisible(true);
+        console.log('Button should be visible'); // Debug log
       } else {
         setIsVisible(false);
+        console.log('Button should be hidden'); // Debug log
       }
     };
 
@@ -26,6 +29,8 @@ export const ScrollToTop = () => {
     });
   };
 
+  console.log('Button visibility state:', isVisible); // Debug log
+
   if (!isVisible) {
     return null;
   }
@@ -33,29 +38,17 @@ export const ScrollToTop = () => {
   return (
     <Button
       onClick={scrollToTop}
-      className="
-        fixed
-        bottom-6 right-6
-        md:bottom-12 md:right-12
-        z-[9999]
-        w-12 h-12
-        rounded-full
-        bg-[#00d4aa] hover:bg-[#00d4aa]/90
-        text-black
-        shadow-lg
-        hover:scale-105
-        transition-all duration-200
-        focus-visible:outline-none
-        border-2 border-white/40
-      "
+      className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[99999] w-14 h-14 rounded-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black shadow-2xl hover:scale-110 transition-all duration-300 border-2 border-white/30"
       size="icon"
       aria-label="Scroll to top"
       style={{
-        // Remove any left offset issues, enforce right-bottom only
-        left: 'auto'
+        position: 'fixed',
+        right: '1.5rem',
+        bottom: '1.5rem',
+        zIndex: 99999,
       }}
     >
-      <ArrowUp size={20} />
+      <ArrowUp size={24} />
     </Button>
   );
 };
