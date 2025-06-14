@@ -91,7 +91,7 @@ export const tr = {
   
   footerDescription: 'Yatırımcıları daha akıllı finansal kararlar için AI destekli içgörülerle güçlendiriyoruz.',
   quickLinks: 'Hızlı Bağlantılar',
-  allRightsReserved: '© 2024 Incite AI. Tüm hakları saklıdır.',
+  allRightsReserved: '© 2025 Incite AI. Tüm hakları saklıdır.',
   footerDisclaimer: 'Yatırım risk içerir. Geçmiş performans gelecekteki sonuçları garanti etmez.',
   
   weAreInTheNews: 'Haberlerdeyiz',

@@ -102,7 +102,7 @@ export const en = {
   // Footer
   footerDescription: 'Empowering investors with AI-driven insights for smarter financial decisions.',
   quickLinks: 'Quick Links',
-  allRightsReserved: '© 2024 Incite AI. All rights reserved.',
+  allRightsReserved: '© 2025 Incite AI. All rights reserved.',
   footerDisclaimer: 'Investment involves risk. Past performance does not guarantee future results.',
   
   // News Section

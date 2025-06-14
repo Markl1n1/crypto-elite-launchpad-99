@@ -91,7 +91,7 @@ export const fr = {
   
   footerDescription: 'Autonomiser les investisseurs avec des insights alimentés par l\'IA pour des décisions financières plus intelligentes.',
   quickLinks: 'Liens rapides',
-  allRightsReserved: '© 2024 Incite AI. Tous droits réservés.',
+  allRightsReserved: '© 2025 Incite AI. Tous droits réservés.',
   footerDisclaimer: 'L\'investissement implique des risques. Les performances passées ne garantissent pas les résultats futurs.',
   
   weAreInTheNews: 'Nous sommes dans l\'actualité',
@@ -135,4 +135,3 @@ export const fr = {
   
   april2025: 'Avril 2025',
   threeSteps: "3 étapes simples"
-};
