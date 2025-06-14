@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -33,8 +32,13 @@ export const ScrollToTop = () => {
   return (
     <Button
       onClick={scrollToTop}
-      className="fixed bottom-5 right-5 z-[9999] w-12 h-12 rounded-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black shadow-lg transform hover:scale-105 transition-all duration-200"
+      className="fixed z-[9999] w-12 h-12 rounded-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black shadow-lg transform hover:scale-105 transition-all duration-200 right-4 md:right-8 bottom-6 md:bottom-12"
       size="icon"
+      aria-label="Scroll to top"
+      style={{
+        // As an extra guard: nudge the button away from the viewport edge for ALL screen sizes, keep above most footers
+        // Responsive offset, more bottom margin on desktop than mobile
+      }}
     >
       <ArrowUp size={20} />
     </Button>

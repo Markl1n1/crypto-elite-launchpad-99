@@ -91,7 +91,7 @@ export const de = {
   
   footerDescription: 'Wir stärken Investoren mit KI-gesteuerten Erkenntnissen für intelligentere Finanzentscheidungen.',
   quickLinks: 'Schnelle Links',
-  allRightsReserved: '© 2024 Incite AI. Alle Rechte vorbehalten.',
+  allRightsReserved: '© 2025 Incite AI. Alle Rechte vorbehalten.',
   footerDisclaimer: 'Investitionen beinhalten Risiken. Vergangene Leistungen garantieren keine zukünftigen Ergebnisse.',
   
   weAreInTheNews: 'Wir sind in den Nachrichten',

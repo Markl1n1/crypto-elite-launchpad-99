@@ -91,7 +91,7 @@ export const es = {
   
   footerDescription: 'Empoderando a inversores con conocimientos impulsados por IA para decisiones financieras más inteligentes.',
   quickLinks: 'Enlaces rápidos',
-  allRightsReserved: '© 2024 Incite AI. Todos los derechos reservados.',
+  allRightsReserved: '© 2025 Incite AI. Todos los derechos reservados.',
   footerDisclaimer: 'La inversión implica riesgo. El rendimiento pasado no garantiza resultados futuros.',
   
   weAreInTheNews: 'Estamos en las noticias',

@@ -91,7 +91,7 @@ export const ar = {
   
   footerDescription: 'تمكين المستثمرين برؤى مدفوعة بالذكاء الاصطناعي لقرارات مالية أذكى.',
   quickLinks: 'روابط سريعة',
-  allRightsReserved: '© 2024 Incite AI. جميع الحقوق محفوظة.',
+  allRightsReserved: '© 2025 Incite AI. جميع الحقوق محفوظة.',
   footerDisclaimer: 'الاستثمار ينطوي على مخاطر. الأداء السابق لا يضمن النتائج المستقبلية.',
   
   weAreInTheNews: 'نحن في الأخبار',

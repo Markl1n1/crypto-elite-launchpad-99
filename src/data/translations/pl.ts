@@ -91,7 +91,7 @@ export const pl = {
   
   footerDescription: 'Wzmacniamy inwestorów dzięki spostrzeżeniom napędzanym AI dla mądrzejszych decyzji finansowych.',
   quickLinks: 'Szybkie linki',
-  allRightsReserved: '© 2024 Incite AI. Wszystkie prawa zastrzeżone.',
+  allRightsReserved: '© 2025 Incite AI. Wszelkie prawa zastrzeżone.',
   footerDisclaimer: 'Inwestowanie wiąże się z ryzykiem. Wyniki z przeszłości nie gwarantują przyszłych rezultatów.',
   
   weAreInTheNews: 'Jesteśmy w wiadomościach',
