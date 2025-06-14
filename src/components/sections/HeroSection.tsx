@@ -20,7 +20,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   const { ref: countRef1, count: portfolioGrowth } = useCounterAnimation<HTMLDivElement>(782.7, 2000, '%');
   const { ref: countRef2, count: clientProfit } = useCounterAnimation<HTMLDivElement>(54.3, 1500, '%');
   const { ref: countRef3, count: winRate } = useCounterAnimation<HTMLDivElement>(87.2, 1800, '%');
-  const { ref: countRef4, count: investorCount } = useCounterAnimation<HTMLSpanElement>(21000, 2500, '+');
+  const { ref: countRef4, count: investorCount } = useCounterAnimation<HTMLSpanElement>(156000, 2500, '+');
   
   const [expandedCards, setExpandedCards] = useState<{ [key: string]: boolean }>({
     card1: true,
