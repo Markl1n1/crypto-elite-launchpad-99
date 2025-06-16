@@ -100,10 +100,10 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
         </div>
 
-        {/* Enhanced Floating Dashboard Cards */}
+        {/* Enhanced Floating Dashboard Cards with Orbital Motion */}
         <div ref={cardsRef}>
-          {/* Card 1 - Portfolio Growth - Moved even lower */}
-          <div className={`absolute top-48 md:top-56 left-2 md:left-8 animate-float w-40 md:w-64 ${cardVisibility[0] ? 'animate-fade-in-left' : 'opacity-0'}`}>
+          {/* Card 1 - Portfolio Growth with Orbital Motion */}
+          <div className={`absolute top-48 md:top-56 left-2 md:left-8 animate-orbit-1 orbit-card w-40 md:w-64 ${cardVisibility[0] ? 'animate-fade-in-left' : 'opacity-0'}`}>
             <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
@@ -129,10 +129,8 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </Card>
           </div>
 
-          {/* Card 2 - AI Signal */}
-          <div className={`absolute top-44 md:top-60 right-2 md:right-8 animate-float w-40 md:w-64 ${cardVisibility[1] ? 'animate-fade-in-right animate-delay-200' : 'opacity-0'}`} style={{
-            animationDelay: '1s'
-          }}>
+          {/* Card 2 - AI Signal with Orbital Motion */}
+          <div className={`absolute top-44 md:top-60 right-2 md:right-8 animate-orbit-2 orbit-card w-40 md:w-64 ${cardVisibility[1] ? 'animate-fade-in-right animate-delay-200' : 'opacity-0'}`}>
             <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
@@ -158,10 +156,8 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </Card>
           </div>
 
-          {/* Card 3 - Average Profit - Moved even lower */}
-          <div className={`absolute bottom-[18rem] md:bottom-[26rem] left-2 md:left-16 animate-float w-40 md:w-64 ${cardVisibility[2] ? 'animate-fade-in-left animate-delay-400' : 'opacity-0'}`} style={{
-            animationDelay: '2s'
-          }}>
+          {/* Card 3 - Average Profit with Orbital Motion */}
+          <div className={`absolute bottom-[18rem] md:bottom-[26rem] left-2 md:left-16 animate-orbit-3 orbit-card w-40 md:w-64 ${cardVisibility[2] ? 'animate-fade-in-left animate-delay-400' : 'opacity-0'}`}>
             <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
@@ -187,10 +183,8 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </Card>
           </div>
 
-          {/* Card 4 - Win Rate */}
-          <div className={`absolute bottom-[22rem] md:bottom-[28rem] right-2 md:right-16 animate-float w-40 md:w-64 ${cardVisibility[3] ? 'animate-fade-in-right animate-delay-600' : 'opacity-0'}`} style={{
-            animationDelay: '3s'
-          }}>
+          {/* Card 4 - Win Rate with Orbital Motion */}
+          <div className={`absolute bottom-[22rem] md:bottom-[28rem] right-2 md:right-16 animate-orbit-4 orbit-card w-40 md:w-64 ${cardVisibility[3] ? 'animate-fade-in-right animate-delay-600' : 'opacity-0'}`}>
             <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
