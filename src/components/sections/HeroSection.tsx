@@ -1,5 +1,5 @@
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState } from 'react';
 import { ChevronDown, ArrowRight, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -17,11 +17,11 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   const { t } = useTranslations();
   const isMobile = useIsMobile();
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation(0.1);
-  const { ref: cardsRef, visibleItems: cardVisibility } = useStaggeredAnimation(4, 150);
-  const { ref: countRef1, count: portfolioGrowth } = useCounterAnimation<HTMLDivElement>(782.7, 1500, '%');
-  const { ref: countRef2, count: clientProfit } = useCounterAnimation<HTMLDivElement>(54.3, 1200, '%');
-  const { ref: countRef3, count: winRate } = useCounterAnimation<HTMLDivElement>(87.2, 1400, '%');
-  const { ref: countRef4, count: investorCount } = useCounterAnimation<HTMLSpanElement>(156000, 2000, '+');
+  const { ref: cardsRef, visibleItems: cardVisibility } = useStaggeredAnimation(4, 200);
+  const { ref: countRef1, count: portfolioGrowth } = useCounterAnimation<HTMLDivElement>(782.7, 2000, '%');
+  const { ref: countRef2, count: clientProfit } = useCounterAnimation<HTMLDivElement>(54.3, 1500, '%');
+  const { ref: countRef3, count: winRate } = useCounterAnimation<HTMLDivElement>(87.2, 1800, '%');
+  const { ref: countRef4, count: investorCount } = useCounterAnimation<HTMLSpanElement>(156000, 2500, '+');
   
   const [expandedCards, setExpandedCards] = useState<{ [key: string]: boolean }>({
     card1: true,
@@ -30,67 +30,12 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
     card4: true
   });
 
-  const toggleCard = useCallback((cardId: string) => {
+  const toggleCard = (cardId: string) => {
     setExpandedCards(prev => ({
       ...prev,
       [cardId]: !prev[cardId]
     }));
-  }, []);
-
-  const handleStartJourney = useCallback(() => {
-    scrollToSection('pricing');
-  }, [scrollToSection]);
-
-  // Memoize avatar images to prevent re-rendering
-  const avatarImages = useMemo(() => 
-    [1, 2, 3, 4, 5, 6, 7, 8].map((num) => ({
-      id: num,
-      src: `https://randomuser.me/api/portraits/${num % 2 === 0 ? 'women' : 'men'}/${num}.jpg`,
-      delay: `animate-delay-${600 + num * 50}`
-    })), []
-  );
-
-  // Memoize card data to prevent unnecessary re-renders
-  const cardData = useMemo(() => [
-    {
-      id: 'card1',
-      title: t('recordPortfolioGrowth'),
-      value: portfolioGrowth,
-      suffix: '%',
-      subtitle: t('april2025'),
-      color: 'text-green-400',
-      ref: countRef1,
-      animation: 'animate-fade-in-left'
-    },
-    {
-      id: 'card2',
-      title: t('aiSays'),
-      value: t('strongBuySignal'),
-      subtitle: t('confidence'),
-      color: 'text-[#4ADE80]',
-      animation: 'animate-fade-in-right animate-delay-200'
-    },
-    {
-      id: 'card3',
-      title: t('averageClientProfit'),
-      value: clientProfit,
-      suffix: '%',
-      subtitle: t('monthly'),
-      color: 'text-green-400',
-      ref: countRef2,
-      animation: 'animate-fade-in-left animate-delay-400'
-    },
-    {
-      id: 'card4',
-      title: t('clientWinrate'),
-      value: winRate,
-      suffix: '%',
-      subtitle: t('successRate'),
-      color: 'text-green-400',
-      ref: countRef3,
-      animation: 'animate-fade-in-right animate-delay-600'
-    }
-  ], [t, portfolioGrowth, clientProfit, winRate, countRef1, countRef2, countRef3]);
+  };
 
   return (
     <section 
@@ -99,16 +44,19 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       className="min-h-screen flex items-center justify-center relative overflow-hidden border-b particle-bg" 
       style={{ borderColor: 'rgba(0, 212, 170, 0.3)', borderBottomWidth: '1px' }}
     >
-      {/* Optimized Background Elements */}
+      {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0e1a] via-[#1a1f35] to-[#0a0e1a]" />
       <div className="absolute inset-0" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
       }} />
       
-      {/* Optimized Floating Blur Elements with reduced complexity */}
-      <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-[#00d4aa]/15 rounded-full blur-2xl animate-pulse opacity-50" />
-      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-[#0066ff]/15 rounded-full blur-2xl animate-pulse opacity-50" style={{
+      {/* Enhanced Floating Blur Elements */}
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#00d4aa]/20 rounded-full blur-3xl animate-pulse opacity-60" />
+      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#0066ff]/20 rounded-full blur-3xl animate-pulse opacity-60" style={{
         animationDelay: '1s'
+      }} />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#00b896]/10 rounded-full blur-3xl animate-pulse opacity-40" style={{
+        animationDelay: '2s'
       }} />
       
       <div className="container mx-auto px-4 relative z-10">
@@ -128,25 +76,21 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </p>
           
           <div className={`flex flex-col sm:flex-row gap-4 justify-center mb-12 ${heroVisible ? 'animate-fade-in-up animate-delay-500' : ''}`}>
-            <Button 
-              size="lg" 
-              onClick={handleStartJourney} 
-              className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-6 cta-button cta-primary hover-lift"
-            >
+            <Button size="lg" onClick={() => scrollToSection('pricing')} className="bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg px-8 py-6 cta-button cta-primary hover-lift">
               {t('startJourneyNow')}
               <ArrowRight className="ml-2" size={20} />
             </Button>
           </div>
           
-          {/* Optimized Social Proof */}
+          {/* Enhanced Social Proof */}
           <div className={`flex items-center justify-center space-x-4 mb-8 ${heroVisible ? 'animate-fade-in-up animate-delay-600' : ''}`}>
             <div className="flex -space-x-2">
-              {avatarImages.map((avatar) => (
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
                 <div 
-                  key={avatar.id}
-                  className={`w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center hover-lift transition-all duration-200 ${heroVisible ? `animate-scale-in ${avatar.delay}` : ''}`}
+                  key={num}
+                  className={`w-10 h-10 rounded-full border-2 border-white/20 bg-cover bg-center hover-lift transition-all duration-300 ${heroVisible ? `animate-scale-in animate-delay-${600 + num * 50}` : ''}`}
                   style={{
-                    backgroundImage: `url('${avatar.src}')`
+                    backgroundImage: `url('https://randomuser.me/api/portraits/${num % 2 === 0 ? 'women' : 'men'}/${num}.jpg')`
                   }} 
                 />
               ))}
@@ -157,19 +101,19 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
         </div>
 
-        {/* Optimized Floating Dashboard Cards */}
+        {/* Enhanced Floating Dashboard Cards with Orbital Motion */}
         <div ref={cardsRef}>
-          {/* Card 1 - Portfolio Growth */}
+          {/* Card 1 - Portfolio Growth with Orbital Motion */}
           <div className={`absolute top-48 md:top-56 left-2 md:left-8 animate-orbit-1 orbit-card w-40 md:w-64 ${cardVisibility[0] ? 'animate-fade-in-left' : 'opacity-0'}`}>
             <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{cardData[0].title}</div>
+                    <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('recordPortfolioGrowth')}</div>
                     {(expandedCards.card1 || !isMobile) && (
                       <>
-                        <div ref={cardData[0].ref} className="text-sm md:text-lg font-bold text-green-400">+{cardData[0].value}</div>
-                        <div className="text-xs md:text-sm text-gray-400">{cardData[0].subtitle}</div>
+                        <div ref={countRef1} className="text-sm md:text-lg font-bold text-green-400">+{portfolioGrowth}</div>
+                        <div className="text-xs md:text-sm text-gray-400">{t('april2025')}</div>
                       </>
                     )}
                   </div>
@@ -186,17 +130,17 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </Card>
           </div>
 
-          {/* Card 2 - AI Signal */}
+          {/* Card 2 - AI Signal with Orbital Motion */}
           <div className={`absolute top-44 md:top-60 right-2 md:right-8 animate-orbit-2 orbit-card w-40 md:w-64 ${cardVisibility[1] ? 'animate-fade-in-right animate-delay-200' : 'opacity-0'}`}>
             <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{cardData[1].title}</div>
+                    <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('aiSays')}</div>
                     {(expandedCards.card2 || !isMobile) && (
                       <>
-                        <div className="text-sm md:text-lg font-semibold" style={{ color: '#4ADE80' }}>{cardData[1].value}</div>
-                        <div className="text-xs md:text-sm text-gray-400">{cardData[1].subtitle}</div>
+                        <div className="text-sm md:text-lg font-semibold" style={{ color: '#4ADE80' }}>{t('strongBuySignal')}</div>
+                        <div className="text-xs md:text-sm text-gray-400">{t('confidence')}</div>
                       </>
                     )}
                   </div>
@@ -213,17 +157,17 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </Card>
           </div>
 
-          {/* Card 3 - Average Profit */}
+          {/* Card 3 - Average Profit with Orbital Motion */}
           <div className={`absolute bottom-[18rem] md:bottom-[26rem] left-2 md:left-16 animate-orbit-3 orbit-card w-40 md:w-64 ${cardVisibility[2] ? 'animate-fade-in-left animate-delay-400' : 'opacity-0'}`}>
             <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{cardData[2].title}</div>
+                    <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('averageClientProfit')}</div>
                     {(expandedCards.card3 || !isMobile) && (
                       <>
-                        <div ref={cardData[2].ref} className="text-lg md:text-2xl font-bold text-green-400">{cardData[2].value}</div>
-                        <div className="text-xs md:text-sm text-gray-400">{cardData[2].subtitle}</div>
+                        <div ref={countRef2} className="text-lg md:text-2xl font-bold text-green-400">{clientProfit}</div>
+                        <div className="text-xs md:text-sm text-gray-400">{t('monthly')}</div>
                       </>
                     )}
                   </div>
@@ -240,17 +184,17 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </Card>
           </div>
 
-          {/* Card 4 - Win Rate */}
+          {/* Card 4 - Win Rate with Orbital Motion */}
           <div className={`absolute bottom-[22rem] md:bottom-[28rem] right-2 md:right-16 animate-orbit-4 orbit-card w-40 md:w-64 ${cardVisibility[3] ? 'animate-fade-in-right animate-delay-600' : 'opacity-0'}`}>
             <Card className="glass-card glass-card-hover p-2 md:p-4 hover-tilt">
               <CardContent className="p-0">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{cardData[3].title}</div>
+                    <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">{t('clientWinrate')}</div>
                     {(expandedCards.card4 || !isMobile) && (
                       <>
-                        <div ref={cardData[3].ref} className="text-lg md:text-2xl font-bold text-green-400">{cardData[3].value}</div>
-                        <div className="text-xs md:text-sm text-gray-400">{cardData[3].subtitle}</div>
+                        <div ref={countRef3} className="text-lg md:text-2xl font-bold text-green-400">{winRate}</div>
+                        <div className="text-xs md:text-sm text-gray-400">{t('successRate')}</div>
                       </>
                     )}
                   </div>
@@ -269,7 +213,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         </div>
       </div>
 
-      {/* Optimized Scroll Indicator */}
+      {/* Enhanced Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hover-lift">
         <ChevronDown size={24} className="text-gray-400" />
       </div>
