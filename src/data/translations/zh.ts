@@ -50,6 +50,19 @@ export const zh = {
   step3Title: '开始交易',
   step3Desc: '激活AI交易机器人并观察您的投资组合增长。',
   
+  // Steps Section
+  threeSteps: '三个步骤',
+  leaveApplication: '提交申请',
+  
+  // Trading Platform
+  advancedTechnology: '先进技术',
+  cuttingEdgeTradingPlatform: '尖端交易平台',
+  tradingPlatformDescription: '我们的AI驱动交易平台为您提供直观且强大的界面，让您轻松管理投资组合并监控市场趋势。',
+  aiPoweredPredictions: 'AI驱动预测',
+  aiPredictionsDescription: '利用机器学习算法分析市场数据并做出准确预测。',
+  bankGradeSecurity: '银行级安全',
+  securityDescription: '您的资金和数据通过最高级别的加密和安全协议得到保护。',
+  
   // Testimonials
   testimonialsTitle: '客户成功故事',
   testimonialsSubtitle: '看看我们的客户如何通过我们的AI交易项目实现财务目标',
@@ -137,7 +150,7 @@ export const zh = {
   quickLinks: '快速链接',
   contact: '联系我们',
   footerDescription: '通过先进的AI交易技术实现您的财务目标。',
-  allRightsReserved: '© 2024 Incite AI. 保留所有权利。',
+  allRightsReserved: '© 2025 Incite AI. 保留所有权利。',
   footerDisclaimer: '投资有风险，可能导致损失。',
   
   // Leadership
@@ -175,6 +188,8 @@ export const zh = {
   // Success Page
   applicationSubmitted: '申请已提交！',
   applicationSubmittedDesc: '感谢您申请我们的AI交易项目。我们将在24小时内审核您的申请并与您联系。',
+  applicationSuccessful: '申请成功！',
+  managerWillContact: '我们的经理将在最短时间内与您联系。',
   
   // Validation Messages
   required: '此字段为必填项',

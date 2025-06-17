@@ -1,25 +1,22 @@
-import { Link } from 'react-router-dom';
-import { Mail, Send, MapPin, Instagram, X } from 'lucide-react';
+
+import { Github, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 import { useTranslations } from '@/hooks/useTranslations';
-import { getFaqAbbreviation } from '@/lib/getFaqAbbreviation';
 
 interface FooterProps {
   scrollToSection: (sectionId: string) => void;
 }
 
 export const Footer = ({ scrollToSection }: FooterProps) => {
-  const { t, currentLanguage } = useTranslations();
-
-  // Use our new abbreviation mapping utility
-  const faqLabel = getFaqAbbreviation(currentLanguage, t('faq'));
-
+  const { t } = useTranslations();
+  
   return (
-    <footer className="bg-[#0a0e1a] py-16">
+    <footer className="bg-[#0a0e1a] border-t border-white/10 py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
-          <div className="text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/16901b7b-f4dd-4180-a419-e2b56caae6c3.png" 
                 alt="Incite AI Logo" 
@@ -29,74 +26,87 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
                 Incite AI
               </div>
             </div>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-400 text-sm">
               {t('footerDescription')}
             </p>
-            <div className="flex space-x-6 justify-center md:justify-start">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <div className="w-8 h-8 bg-[#1877F2] rounded-full flex items-center justify-center hover:bg-[#1877F2]/80 transition-colors">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                  </svg>
-                </div>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-[#00d4aa] transition-colors">
+                <Twitter size={20} />
               </a>
-              <a href="https://t.me/inciteai" target="_blank" rel="noopener noreferrer">
-                <div className="w-8 h-8 bg-[#0088cc] rounded-full flex items-center justify-center hover:bg-[#0088cc]/80 transition-colors">
-                  <Send size={16} className="text-white" />
-                </div>
+              <a href="#" className="text-gray-400 hover:text-[#00d4aa] transition-colors">
+                <Linkedin size={20} />
               </a>
-              <a href="https://www.instagram.com/incite.ai/" target="_blank" rel="noopener noreferrer">
-                <div className="w-8 h-8 bg-gradient-to-r from-[#E4405F] to-[#F56040] rounded-full flex items-center justify-center hover:opacity-80 transition-colors">
-                  <Instagram size={16} className="text-white" />
-                </div>
-              </a>
-              <a href="https://x.com/Incite_corp" target="_blank" rel="noopener noreferrer">
-                <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
-                  <X size={16} className="text-white" />
-                </div>
+              <a href="#" className="text-gray-400 hover:text-[#00d4aa] transition-colors">
+                <Github size={20} />
               </a>
             </div>
           </div>
 
-          {/* Quick Links and Contact - Two columns in one row */}
-          <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Quick Links */}
-            <div className="text-center md:text-left">
-              <h3 className="font-semibold mb-4">{t('quickLinks')}</h3>
-              <ul className="space-y-2">
-                <li><button onClick={() => scrollToSection('program')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('overview')}</button></li>
-                <li><button onClick={() => scrollToSection('testimonials')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('testimonials')}</button></li>
-                <li><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{t('plans')}</button></li>
-                <li><button onClick={() => scrollToSection('faq')} className="text-gray-400 hover:text-[#00d4aa] transition-colors">{faqLabel}</button></li>
-              </ul>
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">{t('quickLinks')}</h3>
+            <div className="space-y-2">
+              <button onClick={() => scrollToSection('program')} className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
+                {t('overview')}
+              </button>
+              <button onClick={() => scrollToSection('testimonials')} className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
+                {t('testimonials')}
+              </button>
+              <button onClick={() => scrollToSection('pricing')} className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
+                {t('plans')}
+              </button>
+              <button onClick={() => scrollToSection('faq')} className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
+                {t('faq')}
+              </button>
             </div>
+          </div>
 
-            {/* Contact */}
-            <div className="text-center md:text-left">
-              <h3 className="font-semibold mb-4">{t('contact')}</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
-                  <Mail size={16} />
-                  <span>support@inciteai.org</span>
-                </li>
-                <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
-                  <Send size={16} />
-                  <span>+1 (555) 123-4567</span>
-                </li>
-                <li className="flex items-center justify-center md:justify-start space-x-2 text-gray-400">
-                  <MapPin size={16} />
-                  <span>Los Angeles, California</span>
-                </li>
-              </ul>
+          {/* Legal */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Legal</h3>
+            <div className="space-y-2">
+              <a href="/terms" className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
+                {t('termsOfService')}
+              </a>
+              <a href="/privacy" className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
+                {t('privacyPolicy')}
+              </a>
+              <a href="/risk-disclosure" className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
+                {t('riskDisclosure')}
+              </a>
+              <a href="/compliance" className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
+                Compliance
+              </a>
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">{t('contact')}</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3 text-gray-400 text-sm">
+                <Mail size={16} />
+                <span>support@inciteai.org</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-400 text-sm">
+                <Phone size={16} />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-400 text-sm">
+                <MapPin size={16} />
+                <span>Los Angeles, CA</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <Separator className="my-8 bg-white/10" />
+        
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-sm">
             {t('allRightsReserved')}
           </p>
-          <p className="text-gray-400 text-sm mt-4 md:mt-0">
+          <p className="text-gray-400 text-sm">
             {t('footerDisclaimer')}
           </p>
         </div>
