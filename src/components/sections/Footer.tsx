@@ -65,10 +65,10 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
           <div>
             <h3 className="text-white font-semibold mb-4">{t('legal')}</h3>
             <div className="space-y-2">
-              <a href="/terms" className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
+              <a href="/terms-of-service" className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
                 {t('termsOfService')}
               </a>
-              <a href="/privacy" className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
+              <a href="/privacy-policy" className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
                 {t('privacyPolicy')}
               </a>
               <a href="/risk-disclosure" className="block text-gray-400 hover:text-[#00d4aa] transition-colors text-sm">
@@ -92,7 +92,7 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
                 <Phone size={16} />
                 <span>+1 (555) 123-4567</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400 text-small">
+              <div className="flex items-center space-x-3 text-gray-400 text-sm">
                 <MapPin size={16} />
                 <span>Los Angeles, CA</span>
               </div>
