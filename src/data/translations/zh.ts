@@ -1,4 +1,3 @@
-
 export const zh = {
   // Navigation
   home: '首页',
@@ -141,6 +140,8 @@ export const zh = {
   quickLinks: '快速链接',
   allRightsReserved: '© 2025 Incite AI. 保留所有权利。',
   footerDisclaimer: '投资有风险，可能导致损失。',
+  legal: '法律',
+  compliance: '合规',
   
   // News Section
   weAreInTheNews: '我们在新闻中',

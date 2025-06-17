@@ -1,4 +1,3 @@
-
 export const en = {
   // Navigation
   home: 'Home',
@@ -108,6 +107,8 @@ export const en = {
   privacyPolicy: 'Privacy Policy',
   termsOfService: 'Terms of Service',
   riskDisclosure: 'Risk Disclosure',
+  legal: 'Legal',
+  compliance: 'Compliance',
   
   // News Section
   weAreInTheNews: 'We Are In The News',
