@@ -106,6 +106,8 @@ export const en = {
   allRightsReserved: '© 2025 Incite AI. All rights reserved.',
   footerDisclaimer: 'Investment involves risk. Past performance does not guarantee future results.',
   privacyPolicy: 'Privacy Policy',
+  termsOfService: 'Terms of Service',
+  riskDisclosure: 'Risk Disclosure',
   
   // News Section
   weAreInTheNews: 'We Are In The News',

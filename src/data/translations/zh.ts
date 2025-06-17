@@ -162,6 +162,110 @@ export const zh = {
   // News
   weAreInTheNews: '我们在新闻中',
   
+  // Hero Section - additional translations
+  home: '首页',
+  about: '关于我们',
+  services: '服务',
+  contact: '联系我们',
+  login: '登录',
+  signUp: '注册',
+  
+  heroTitle: 'AI驱动的投资智能',
+  heroSubtitle: '通过尖端AI技术转变您的投资策略，提供机构级分析和可操作的见解。',
+  eliteInvestmentOpportunities: '精英投资机会',
+  startJourneyNow: '立即开始您的旅程',
+  investorsTrustUs: '投资者信任我们',
+  
+  recordPortfolioGrowth: '创纪录的投资组合增长',
+  aiSays: 'AI说',
+  strongBuySignal: '强烈买入信号',
+  confidence: '94%信心',
+  averageClientProfit: '客户平均利润',
+  monthly: '每月',
+  clientWinrate: '客户胜率',
+  winratePercentage: '87.2%',
+  
+  howItWorks: '工作原理',
+  simplyHowItWorksTitle: '简单询问，获得结果',
+  simplyHowItWorksSubtitle: '我们的AI驱动系统让投资分析变得像提问一样简单。',
+  askYourQuestion: '提出您的问题',
+  askYourQuestionDesc: '用简单的中文输入您的投资问题。',
+  aiProcessesData: 'AI处理数据',
+  aiProcessesDataDesc: '我们的AI实时分析数百万个数据点。',
+  getClearRecommendations: '获得明确建议',
+  getClearRecommendationsDesc: '获得可操作的投资见解和建议。',
+  tryInciteAiNow: '立即试用Incite AI',
+  
+  getAdvisor: '获得顾问',
+  growPortfolio: '增长投资组合',
+  
+  whatIndustryExpertsSay: '行业专家怎么说',
+  industryExpertsSubtitle: '领先的金融专业人士信任Incite AI进行投资决策。',
+  globalMarketsReporter: '全球市场记者',
+  ceoFounderGauntlet: 'CEO兼创始人，Gauntlet',
+  managingDirectorMorganStanley: '董事总经理，摩根士丹利',
+  coFounderCeoRealVision: '联合创始人兼CEO，Real Vision',
+  founderCeoArkInvest: '创始人兼CEO，ARK Invest',
+  joinTheExperts: '加入专家行列',
+  
+  beginJourney: '开始您的旅程',
+  applyNowTitle: '申请独家访问权限',
+  emailAddress: '电子邮件地址',
+  phoneNumber: '电话号码',
+  required: '*',
+  validEmailRequired: '请输入有效的电子邮件地址',
+  validPhoneRequired: '请输入有效的电话号码（6-15位数字）',
+  
+  frequentlyAskedQuestions: '常见问题解答',
+  
+  flexibleInvestmentOptions: '灵活的投资选择',
+  investmentPlansTitle: '投资计划',
+  standardPlan: '标准计划',
+  support247: '24/7支持',
+  personalisedManager: '个性化经理',
+  automaticNotification: '自动通知',
+  basicAutotrading: '基础自动交易',
+  limitedTrades: '有限交易',
+  spotsAvailable: '名额可用',
+  startNow: '立即开始',
+  mostPopular: '最受欢迎',
+  proPlan: '专业计划',
+  advancedAutotrading: '高级自动交易',
+  moderatedTrades: '调节交易',
+  analyseResults: '分析结果',
+  meetingsInvestors: '与投资者会议',
+  currentlyFull: '目前已满',
+  advancedPlan: '高级计划',
+  allProFeatures: '所有专业功能',
+  premiumAutotrade: '高级自动交易',
+  unlimitedTrades: '无限交易',
+  portfolioInsurance: '投资组合保险',
+  priorityExecute: '优先执行',
+  exclusiveEvents: '专属活动',
+  waitingList: '等候名单',
+  
+  whatOurUsersSay: '我们的用户怎么说',
+  testimonialsSubtitle: '来自信任我们AI驱动平台的投资者的真实体验。',
+  getEarlyAccess: '获得早期访问权限',
+  
+  automotiveRetailer: '汽车零售商',
+  designer: '设计师',
+  coffeeShopOwner: '咖啡店老板',
+  systemAdministrator: '系统管理员',
+  highSchoolTeacher: '高中教师',
+  hairdresser: '理发师',
+  carpenter: '木匠',
+  photoEditor: '照片编辑',
+  pizzeriaManager: '比萨店经理',
+  professionalBroker: '专业经纪人',
+  
+  applicationSuccessful: '申请成功！',
+  managerWillContact: '我们的经理将尽快与您联系。',
+  
+  trustedBy: '受信任的',
+  
+  april2025: '2025年4月',
+  
   // Cookie Consent
   cookieConsentTitle: '我们使用cookies',
   cookieConsentDescription: '我们使用cookies来改善您的浏览体验，分析网站流量，并个性化内容。您可以管理您的偏好或了解更多信息。',
@@ -188,11 +292,8 @@ export const zh = {
   // Success Page
   applicationSubmitted: '申请已提交！',
   applicationSubmittedDesc: '感谢您申请我们的AI交易项目。我们将在24小时内审核您的申请并与您联系。',
-  applicationSuccessful: '申请成功！',
-  managerWillContact: '我们的经理将在最短时间内与您联系。',
   
   // Validation Messages
-  required: '此字段为必填项',
   invalidEmail: '请输入有效的邮箱地址',
   invalidPhone: '请输入有效的电话号码',
   
