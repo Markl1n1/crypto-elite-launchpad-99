@@ -38,6 +38,10 @@ const languages = [{
   code: 'tr',
   name: 'Türkçe',
   flag: '🇹🇷'
+}, {
+  code: 'zh',
+  name: '中文',
+  flag: '🇨🇳'
 }];
 
 interface HeaderProps {

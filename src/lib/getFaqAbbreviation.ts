@@ -11,6 +11,7 @@ const faqAbbreviations: Record<string, string> = {
   fr: 'FAQ',
   ar: 'الأسئلة',
   tr: 'SSS',
+  zh: '常见问题',
 };
 
 export function getFaqAbbreviation(language: string, fallback: string = 'FAQ') {

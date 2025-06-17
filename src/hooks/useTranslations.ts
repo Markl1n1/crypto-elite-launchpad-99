@@ -27,7 +27,7 @@ export const useTranslations = () => {
       const browserLang = navigator.language.toLowerCase();
       const browserLangCode = browserLang.split('-')[0]; // Get just the language part (e.g., 'en' from 'en-US')
       
-      const availableLanguages: Language[] = ['en', 'pl', 'de', 'es', 'ru', 'fr', 'ar', 'tr'];
+      const availableLanguages: Language[] = ['en', 'pl', 'de', 'es', 'ru', 'fr', 'ar', 'tr', 'zh'];
       
       // First try exact match with full language code
       if (availableLanguages.includes(browserLang as Language)) {

@@ -7,6 +7,7 @@ import { ru } from './translations/ru';
 import { fr } from './translations/fr';
 import { ar } from './translations/ar';
 import { tr } from './translations/tr';
+import { zh } from './translations/zh';
 
 export const translations = {
   en,
@@ -16,5 +17,6 @@ export const translations = {
   ru,
   fr,
   ar,
-  tr
+  tr,
+  zh
 };
