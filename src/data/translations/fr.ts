@@ -71,7 +71,7 @@ export const fr = {
   commonQuestions: 'Questions courantes',
   frequentlyAskedQuestions: 'Questions fréquemment posées',
   whereLocatedQ: 'Où se trouve votre entreprise?',
-  whereLocatedA: 'Notre siège social est situé à Los Angeles, Californie, avec des membres d\'équipe distribués mondialement.',
+  whereLocatedA: 'Notre siège est situé à Los Angeles, en Californie, avec des membres de l\'équipe répartis dans le monde entier : Suisse, Allemagne, Royaume-Uni, Chine, Canada, Espagne, Pologne, Estonie.',
   returnsQ: 'Quel type de rendements puis-je attendre?',
   returnsA: 'Bien que les performances passées ne garantissent pas les résultats futurs, nos clients ont historiquement vu des améliorations significatives dans les performances de leur portefeuille.',
   qualificationQ: 'Quelles sont les exigences de qualification?',

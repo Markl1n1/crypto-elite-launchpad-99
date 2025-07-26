@@ -71,7 +71,7 @@ export const de = {
   commonQuestions: 'Häufige Fragen',
   frequentlyAskedQuestions: 'Häufig gestellte Fragen',
   whereLocatedQ: 'Wo befindet sich Ihr Unternehmen?',
-  whereLocatedA: 'Unser Hauptsitz befindet sich in Los Angeles, Kalifornien, mit Teammitgliedern weltweit verteilt.',
+  whereLocatedA: 'Unser Hauptsitz befindet sich in Los Angeles, Kalifornien, mit Teammitgliedern auf der ganzen Welt: Schweiz, Deutschland, Vereinigtes Königreich, China, Kanada, Spanien, Polen, Estland.',
   returnsQ: 'Welche Renditen kann ich erwarten?',
   returnsA: 'Obwohl vergangene Leistungen keine zukünftigen Ergebnisse garantieren, haben unsere Kunden historisch signifikante Verbesserungen in ihrer Portfolio-Performance gesehen.',
   qualificationQ: 'Was sind die Qualifikationsanforderungen?',

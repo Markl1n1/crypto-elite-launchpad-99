@@ -71,7 +71,7 @@ export const tr = {
   commonQuestions: 'Yaygın Sorular',
   frequentlyAskedQuestions: 'Sıkça Sorulan Sorular',
   whereLocatedQ: 'Şirketiniz nerede bulunuyor?',
-  whereLocatedA: 'Genel merkezimiz Los Angeles, Kaliforniya\'da bulunuyor ve ekip üyelerimiz küresel olarak dağıtılmış durumda.',
+  whereLocatedA: 'Merkez ofisimiz Kaliforniya, Los Angeles bulunuyor ve ekip üyelerimiz dünyanın dört bir yanına dağılmış durumda: İsviçre, Almanya, Birleşik Krallık, Çin, Kanada, İspanya, Polonya, Estonya.',
   returnsQ: 'Ne tür getiriler bekleyebilirim?',
   returnsA: 'Geçmiş performans gelecekteki sonuçları garanti etmese de, müşterilerimiz tarihsel olarak portföy performanslarında önemli iyileşmeler gördü.',
   qualificationQ: 'Yeterlilik gereksinimleri nelerdir?',

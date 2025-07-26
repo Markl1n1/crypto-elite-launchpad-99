@@ -71,7 +71,7 @@ export const pl = {
   commonQuestions: 'Często zadawane pytania',
   frequentlyAskedQuestions: 'Często zadawane pytania',
   whereLocatedQ: 'Gdzie znajduje się wasza firma?',
-  whereLocatedA: 'Nasza siedziba główna znajduje się w Los Angeles w Kalifornii, z członkami zespołu rozproszonymi na całym świecie.',
+  whereLocatedA: 'Nasza siedziba główna znajduje się w Los Angeles w Kalifornii, a członkowie zespołu są rozmieszczeni na całym świecie: Szwajcaria, Niemcy, Wielka Brytania, Chiny, Kanada, Hiszpania, Polska, Estonia.',
   returnsQ: 'Jakich zwrotów mogę się spodziewać?',
   returnsA: 'Chociaż wyniki z przeszłości nie gwarantują przyszłych rezultatów, nasi klienci historycznie obserwowali znaczące poprawy w wydajności swoich portfeli.',
   qualificationQ: 'Jakie są wymagania kwalifikacyjne?',

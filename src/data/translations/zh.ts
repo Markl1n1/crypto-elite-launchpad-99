@@ -117,7 +117,7 @@ export const zh = {
   commonQuestions: '常见问题',
   frequentlyAskedQuestions: '常见问题解答',
   whereLocatedQ: '您的公司位于哪里？',
-  whereLocatedA: '我们的总部位于加利福尼亚州洛杉矶，在全球设有办事处。',
+  whereLocatedA: '我们的总部位于加利福尼亚州洛杉矶，团队成员分布在全球各地：瑞士、德国、英国、中国、加拿大、西班牙、波兰、爱沙尼亚。',
   returnsQ: '预期回报是多少？',
   returnsA: '虽然过去的表现不能保证未来的结果，但我们的AI系统历史上每月平均回报率为20-40%。',
   qualificationQ: '申请需要什么资格？',
