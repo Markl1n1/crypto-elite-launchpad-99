@@ -81,7 +81,7 @@ export const en = {
   commonQuestions: 'Common Questions',
   frequentlyAskedQuestions: 'Frequently Asked Questions',
   whereLocatedQ: 'Where is your company located?',
-  whereLocatedA: 'Our headquarters is located in Los Angeles, California, with team members distributed globally.',
+  whereLocatedA: 'Our headquarters is located in Los Angeles, California, with team members distributed globally: Switzerland, Germany, United Kingdom, China, Canada, Spain, Poland, Estonia.',
   returnsQ: 'What kind of returns can I expect?',
   returnsA: 'While past performance doesn\'t guarantee future results, our clients have historically seen significant improvements in their portfolio performance.',
   qualificationQ: 'What are the qualification requirements?',

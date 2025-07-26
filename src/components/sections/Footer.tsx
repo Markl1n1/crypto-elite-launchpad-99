@@ -90,7 +90,11 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
               </div>
               <div className="flex items-center space-x-3 text-gray-400 text-sm">
                 <Phone size={16} />
-                <span>+1 (555) 123-4567</span>
+                <span>+(41) 41-333-6207</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-400 text-sm">
+                <Phone size={16} />
+                <span>+(41) 81-508-7115</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400 text-sm">
                 <MapPin size={16} />
