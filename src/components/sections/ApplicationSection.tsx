@@ -155,7 +155,7 @@ export const ApplicationSection = () => {
                     value={phoneNumber}
                     onChange={e => setPhoneNumber(e.target.value)}
                     className="bg-[#1a1f35] border-white/20 text-white flex-1"
-                    placeholder="123456789"
+                    placeholder="12-345-6789"
                     required
                   />
                 </div>
