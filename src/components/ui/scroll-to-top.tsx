@@ -50,7 +50,7 @@ export const ScrollToTop = () => {
         zIndex: 99999,
       }}
     >
-      <ArrowUp size={24} />
+      <ArrowUp size={32} />
     </Button>
   );
 };
