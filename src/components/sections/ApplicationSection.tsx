@@ -16,6 +16,7 @@ export const ApplicationSection = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [emailError, setEmailError] = useState('');
   const [phoneError, setPhoneError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -62,6 +63,7 @@ export const ApplicationSection = () => {
 
     if (hasErrors) return;
 
+    setIsSubmitting(true);
     const submissionData = {
       firstName: formData.firstName,
       lastName: formData.lastName,
@@ -73,6 +75,7 @@ export const ApplicationSection = () => {
 
     await submitToGoogleSheets(submissionData);
     localStorage.setItem('applicationLanguage', currentLanguage);
+    setIsSubmitting(false);
     navigate('/success');
   };
 
@@ -162,8 +165,12 @@ export const ApplicationSection = () => {
                 {phoneError && <p className="text-red-400 text-sm mt-1">{phoneError}</p>}
               </div>
 
-              <Button type="submit" className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6">
-                {t('applyNow')}
+              <Button
+                type="submit"
+                className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold text-lg py-6"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? t('submitting') : t('applyNow')}
               </Button>
             </form>
           </CardContent>
