@@ -44,7 +44,7 @@ export const ScrollToTop = () => {
       style={{
         position: 'fixed',
         right: '1.5rem',
-        bottom: '1.5rem',
+        bottom: '6rem',
         zIndex: 99999,
       }}
     >
