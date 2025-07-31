@@ -49,7 +49,7 @@ export const PricingSection = ({ scrollToSection }: PricingSectionProps) => {
                 </li>
               </ul>
               <div className="flex justify-center mb-4">
-                <Badge className="bg-green-500/20 text-green-400 border-green-500">8 {t('spotsAvailable')}</Badge>
+                <Badge className="bg-green-500/20 text-green-400 border-green-500">11 {t('spotsAvailable')}</Badge>
               </div>
               <Button onClick={() => scrollToSection('apply')} className="w-full bg-[#00d4aa] hover:bg-[#00d4aa]/90 text-black font-semibold mt-auto">
                 {t('startNow')}
