@@ -10,13 +10,11 @@ export const ru = {
   plans: 'Планы',
   faq: 'FAQ',
   applyNow: 'Подать заявку',
-  
   heroTitle: 'Инвестиционная разведка на основе ИИ',
   heroSubtitle: 'Преобразуйте свою инвестиционную стратегию с помощью передовой технологии ИИ, которая предоставляет анализ институционального уровня и практические идеи.',
   eliteInvestmentOpportunities: 'Элитные инвестиционные возможности',
   startJourneyNow: 'Начните свое путешествие сейчас',
   investorsTrustUs: 'инвесторов доверяют нам',
-  
   recordPortfolioGrowth: 'Рекордный рост портфеля',
   aiSays: 'ИИ говорит',
   strongBuySignal: 'Сильный сигнал покупки',
@@ -26,7 +24,6 @@ export const ru = {
   clientWinrate: 'Коэффициент побед клиентов',
   winratePercentage: '87.2%',
   successRate: 'Коэффициент успеха',
-  
   howItWorks: 'Как это работает',
   simplyHowItWorksTitle: 'Просто спросите, получите результаты',
   simplyHowItWorksSubtitle: 'Наша система на основе ИИ делает анализ инвестиций простым как задать вопрос.',
@@ -39,11 +36,9 @@ export const ru = {
   tryInciteAiNow: 'Попробуйте Incite AI сейчас',
   learnMore: 'Узнать больше',
   getStarted: 'Начать',
-  
   leaveApplication: 'Оставить заявку',
   getAdvisor: 'Консультант',
   growPortfolio: 'Рост портфеля',
-  
   whatIndustryExpertsSay: 'Что говорят отраслевые эксперты',
   industryExpertsSubtitle: 'Ведущие финансовые профессионалы доверяют Incite AI в своих инвестиционных решениях.',
   globalMarketsReporter: 'Репортер глобальных рынков',
@@ -52,12 +47,10 @@ export const ru = {
   coFounderCeoRealVision: 'Соучредитель и CEO, Real Vision',
   founderCeoArkInvest: 'Основатель и CEO, ARK Invest',
   joinTheExperts: 'Присоединяйтесь к экспертам',
-  
   leadership: 'Руководство',
   leadershipTitle: 'Познакомьтесь с нашим руководством',
   founderCEO: 'Основатель и CEO',
   ceoDescription: 'Николли привносит более 15 лет опыта в области ИИ и финансовых технологий, возглавляя миссию Incite AI по демократизации инвестиционной разведки институционального уровня.',
-  
   beginJourney: 'Начните свое путешествие',
   applyNowTitle: 'Подайте заявку на эксклюзивный доступ',
   firstName: 'Имя',
@@ -67,7 +60,6 @@ export const ru = {
   required: '*',
   validEmailRequired: 'Пожалуйста, введите действительный адрес электронной почты',
   validPhoneRequired: 'Пожалуйста, введите действительный номер телефона (6-15 цифр)',
-  
   commonQuestions: 'Часто задаваемые вопросы',
   frequentlyAskedQuestions: 'Часто задаваемые вопросы',
   whereLocatedQ: 'Где находится ваша компания?',
@@ -88,14 +80,11 @@ export const ru = {
   guaranteesA: 'Мы гарантируем прозрачную коммуникацию и преданную поддержку.',
   stillHaveQuestions: 'Остались вопросы?',
   contactSupport: 'Свяжитесь с нашей службой поддержки',
-  
   footerDescription: 'Расширяем возможности инвесторов с помощью аналитических данных на основе ИИ для более умных финансовых решений.',
   quickLinks: 'Быстрые ссылки',
   allRightsReserved: '© 2025 Incite AI. Все права защищены.',
   footerDisclaimer: 'Инвестирование связано с риском. Прошлая производительность не гарантирует будущих результатов.',
-  
   weAreInTheNews: 'Мы в новостях',
-  
   flexibleInvestmentOptions: 'Гибкие варианты инвестирования',
   investmentPlansTitle: 'Планы инвестирования',
   standardPlan: 'Стандартный план',
@@ -123,7 +112,6 @@ export const ru = {
   waitingList: 'Лист ожидания',
   priorityProcessing: 'Приоритетная обработка',
   companyGifts: 'Корпоративные подарки',
-  
   advancedTechnology: 'Продвинутые технологии',
   cuttingEdgeTradingPlatform: 'Передовая торговая платформа',
   tradingPlatformDescription: 'Испытайте профессиональную торговлю с нашей платформой на основе ИИ.',
@@ -131,11 +119,9 @@ export const ru = {
   aiPredictionsDescription: 'Получайте прогнозы рынка в режиме реального времени на основе продвинутого машинного обучения.',
   bankGradeSecurity: 'Безопасность банковского уровня',
   securityDescription: 'Ваши инвестиции защищены безопасностью корпоративного уровня.',
-  
   whatOurUsersSay: 'Что говорят наши пользователи',
   testimonialsSubtitle: 'Реальный опыт инвесторов, которые доверяют нашей платформе на основе ИИ.',
   getEarlyAccess: 'Получить ранний доступ',
-  
   automotiveRetailer: 'Продавец автомобилей',
   designer: 'Дизайнер',
   coffeeShopOwner: 'Владелец кофейни',
@@ -146,15 +132,11 @@ export const ru = {
   photoEditor: 'Фоторедактор',
   pizzeriaManager: 'Менеджер пиццерии',
   professionalBroker: 'Профессиональный брокер',
-  
   applicationSuccessful: 'Заявка успешно подана!',
   managerWillContact: 'Наш менеджер свяжется с вами в кратчайшие сроки.',
-  
   trustedBy: 'Доверяют',
   threeSteps: "3 простых шага",
   april2025: 'Апрель 2025',
-  
-  // Cookie Consent
   cookieConsentTitle: 'Мы используем файлы cookie для улучшения вашего опыта',
   cookieConsentDescription: 'Мы используем файлы cookie и аналогичные технологии для обеспечения наилучшего опыта на нашем веб-сайте. Некоторые необходимы для функциональности, в то время как другие помогают нам понять, как вы используете наш сайт, и улучшать наши услуги. Вы можете настроить свои предпочтения или принять все файлы cookie.',
   cookieSettings: 'Настройки файлов cookie',
@@ -163,8 +145,6 @@ export const ru = {
   rejectNonEssential: 'Отклонить необязательные',
   customizeCookies: 'Настроить',
   savePreferences: 'Сохранить предпочтения',
-  
-  // Cookie Categories
   essentialCookies: 'Основные файлы cookie',
   essentialCookiesDesc: 'Эти файлы cookie необходимы для работы веб-сайта и не могут быть отключены. Они обычно устанавливаются только в ответ на ваши действия, которые представляют собой запрос на услуги.',
   analyticsCookies: 'Аналитические файлы cookie',
@@ -173,7 +153,6 @@ export const ru = {
   marketingCookiesDesc: 'Эти файлы cookie используются для отслеживания посетителей на веб-сайтах для отображения соответствующей рекламы и маркетинговых кампаний.',
   functionalCookies: 'Функциональные файлы cookie',
   functionalCookiesDesc: 'Эти файлы cookie обеспечивают расширенную функциональность и персонализацию, например, запоминание ваших предпочтений и настроек.',
-  
   cookieRequired: 'Обязательно',
   cookieNeedMoreInfo: 'Нужна дополнительная информация?',
   cookieLearnMore: 'Узнайте больше о том, как мы обрабатываем ваши данные в нашей',

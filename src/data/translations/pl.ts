@@ -10,13 +10,11 @@ export const pl = {
   plans: 'Plany',
   faq: 'FAQ',
   applyNow: 'Aplikuj teraz',
-  
   heroTitle: 'Inteligencja inwestycyjna napędzana AI',
   heroSubtitle: 'Przekształć swoją strategię inwestycyjną dzięki najnowocześniejszej technologii AI, która dostarcza analizy na poziomie instytucjonalnym i praktyczne spostrzeżenia.',
   eliteInvestmentOpportunities: 'Elitarne możliwości inwestycyjne',
   startJourneyNow: 'Rozpocznij swoją podróż teraz',
   investorsTrustUs: 'inwestorów nam ufa',
-  
   recordPortfolioGrowth: 'Rekordowy wzrost portfela',
   aiSays: 'AI mówi',
   strongBuySignal: 'Silny sygnał kupna',
@@ -26,7 +24,6 @@ export const pl = {
   clientWinrate: 'Wskaźnik wygranych klientów',
   winratePercentage: '87.2%',
   successRate: 'Wskaźnik sukcesu',
-  
   howItWorks: 'Jak to działa',
   simplyHowItWorksTitle: 'Po prostu zapytaj, otrzymaj rezultaty',
   simplyHowItWorksSubtitle: 'Nasz system napędzany AI sprawia, że analiza inwestycji jest tak prosta jak zadanie pytania.',
@@ -39,11 +36,9 @@ export const pl = {
   tryInciteAiNow: 'Wypróbuj Incite AI teraz',
   learnMore: 'Dowiedz się więcej',
   getStarted: 'Rozpocznij',
-  
   leaveApplication: 'Aplikuj',
   getAdvisor: 'Doradca',
   growPortfolio: 'Portfel w górę',
-  
   whatIndustryExpertsSay: 'Co mówią eksperci branżowi',
   industryExpertsSubtitle: 'Wiodący profesjonaliści finansowi ufają Incite AI w swoich decyzjach inwestycyjnych.',
   globalMarketsReporter: 'Reporter rynków globalnych',
@@ -52,12 +47,10 @@ export const pl = {
   coFounderCeoRealVision: 'Współzałożyciel i CEO, Real Vision',
   founderCeoArkInvest: 'Założyciel i CEO, ARK Invest',
   joinTheExperts: 'Dołącz do ekspertów',
-  
   leadership: 'Przywództwo',
   leadershipTitle: 'Poznaj nasze kierownictwo',
   founderCEO: 'Założyciel i CEO',
   ceoDescription: 'Nicolli wnosi ponad 15 lat doświadczenia w AI i technologii finansowej, prowadząc misję Incite AI w demokratyzacji inteligencji inwestycyjnej na poziomie instytucjonalnym.',
-  
   beginJourney: 'Rozpocznij swoją podróż',
   applyNowTitle: 'Aplikuj o ekskluzywny dostęp',
   firstName: 'Imię',
@@ -67,7 +60,6 @@ export const pl = {
   required: '*',
   validEmailRequired: 'Proszę wprowadzić prawidłowy adres e-mail',
   validPhoneRequired: 'Proszę wprowadzić prawidłowy numer telefonu (6-15 cyfr)',
-  
   commonQuestions: 'Często zadawane pytania',
   frequentlyAskedQuestions: 'Często zadawane pytania',
   whereLocatedQ: 'Gdzie znajduje się wasza firma?',
@@ -88,14 +80,11 @@ export const pl = {
   guaranteesA: 'Chociaż nie możemy gwarantować zysków ze względu na ryzyko rynkowe, gwarantujemy przejrzystą komunikację i dedykowane wsparcie.',
   stillHaveQuestions: 'Masz jeszcze pytania?',
   contactSupport: 'Skontaktuj się z naszym zespołem wsparcia',
-  
   footerDescription: 'Wzmacniamy inwestorów dzięki spostrzeżeniom napędzanym AI dla mądrzejszych decyzji finansowych.',
   quickLinks: 'Szybkie linki',
   allRightsReserved: '© 2025 Incite AI. Wszelkie prawa zastrzeżone.',
   footerDisclaimer: 'Inwestowanie wiąże się z ryzykiem. Wyniki z przeszłości nie gwarantują przyszłych rezultatów.',
-  
   weAreInTheNews: 'Jesteśmy w wiadomościach',
-  
   flexibleInvestmentOptions: 'Elastyczne opcje inwestycyjne',
   investmentPlansTitle: 'Plany inwestycyjne',
   standardPlan: 'Plan standardowy',
@@ -123,7 +112,6 @@ export const pl = {
   waitingList: 'Lista oczekujących',
   priorityProcessing: 'Priorytetowe przetwarzanie',
   companyGifts: 'Prezenty firmowe',
-  
   advancedTechnology: 'Zaawansowana technologia',
   cuttingEdgeTradingPlatform: 'Nowoczesna platforma tradingowa',
   tradingPlatformDescription: 'Doświadcz profesjonalnego tradingu z naszą platformą napędzaną AI.',
@@ -131,11 +119,9 @@ export const pl = {
   aiPredictionsDescription: 'Otrzymuj prognozy rynkowe w czasie rzeczywistym napędzane zaawansowanym uczeniem maszynowym.',
   bankGradeSecurity: 'Bezpieczeństwo na poziomie banku',
   securityDescription: 'Twoje inwestycje są chronione bezpieczeństwem na poziomie przedsiębiorstwa.',
-  
   whatOurUsersSay: 'Co mówią nasi użytkownicy',
   testimonialsSubtitle: 'Prawdziwe doświadczenia inwestorów, którzy ufają naszej platformie opartej na AI.',
   getEarlyAccess: 'Uzyskaj wczesny dostęp',
-  
   automotiveRetailer: 'Sprzedawca samochodów',
   designer: 'Projektant',
   coffeeShopOwner: 'Właściciel kawiarni',
@@ -146,17 +132,11 @@ export const pl = {
   photoEditor: 'Edytor zdjęć',
   pizzeriaManager: 'Menedżer pizzerii',
   professionalBroker: 'Profesjonalny broker',
-  
   applicationSuccessful: 'Aplikacja pomyślna!',
   managerWillContact: 'Nasz menedżer skontaktuje się z Tobą najszybciej jak to możliwe.',
-  
   trustedBy: 'Zaufali nam',
-  
   april2025: 'Kwiecień 2025',
-  
   threeSteps: "3 proste kroki",
-  
-  // Cookie Consent
   cookieConsentTitle: 'Używamy plików cookie, aby poprawić Twoje doświadczenia',
   cookieConsentDescription: 'Używamy plików cookie i podobnych technologii, aby zapewnić najlepsze doświadczenia na naszej stronie internetowej. Niektóre są niezbędne do funkcjonowania, podczas gdy inne pomagają nam zrozumieć, jak korzystasz z naszej strony i ulepszać nasze usługi. Możesz dostosować swoje preferencje lub zaakceptować wszystkie pliki cookie.',
   cookieSettings: 'Ustawienia plików cookie',
@@ -165,8 +145,6 @@ export const pl = {
   rejectNonEssential: 'Odrzuć nieistotne',
   customizeCookies: 'Dostosuj',
   savePreferences: 'Zapisz preferencje',
-  
-  // Cookie Categories
   essentialCookies: 'Niezbędne pliki cookie',
   essentialCookiesDesc: 'Te pliki cookie są niezbędne do działania strony internetowej i nie można ich wyłączyć. Są zwykle ustawiane tylko w odpowiedzi na działania wykonane przez Ciebie, które stanowią żądanie usług.',
   analyticsCookies: 'Pliki cookie analityczne',
@@ -175,7 +153,6 @@ export const pl = {
   marketingCookiesDesc: 'Te pliki cookie są używane do śledzenia odwiedzających na stronach internetowych w celu wyświetlania odpowiednich reklam i kampanii marketingowych.',
   functionalCookies: 'Pliki cookie funkcjonalne',
   functionalCookiesDesc: 'Te pliki cookie umożliwiają ulepszoną funkcjonalność i personalizację, taką jak zapamiętywanie Twoich preferencji i ustawień.',
-  
   cookieRequired: 'Wymagane',
   cookieNeedMoreInfo: 'Potrzebujesz więcej informacji?',
   cookieLearnMore: 'Dowiedz się więcej o tym, jak obsługujemy Twoje dane w naszej',

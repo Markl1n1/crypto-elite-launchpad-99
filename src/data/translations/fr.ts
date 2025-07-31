@@ -10,13 +10,11 @@ export const fr = {
   plans: 'Plans',
   faq: 'FAQ',
   applyNow: 'Postuler maintenant',
-  
   heroTitle: 'Intelligence d\'investissement alimentée par l\'IA',
   heroSubtitle: 'Transformez votre stratégie d\'investissement avec une technologie d\'IA de pointe qui fournit des analyses de niveau institutionnel et des insights actionnables.',
   eliteInvestmentOpportunities: 'Opportunités d\'investissement d\'élite',
   startJourneyNow: 'Commencez votre voyage maintenant',
   investorsTrustUs: 'investisseurs nous font confiance',
-  
   recordPortfolioGrowth: 'Croissance record du portefeuille',
   aiSays: 'L\'IA dit',
   strongBuySignal: 'Signal d\'achat fort',
@@ -26,7 +24,6 @@ export const fr = {
   clientWinrate: 'Taux de réussite client',
   winratePercentage: '87.2%',
   successRate: 'Taux de succès',
-  
   howItWorks: 'Comment ça marche',
   simplyHowItWorksTitle: 'Demandez simplement, obtenez des résultats',
   simplyHowItWorksSubtitle: 'Notre système alimenté par l\'IA rend l\'analyse d\'investissement aussi simple que de poser une question.',
@@ -39,11 +36,9 @@ export const fr = {
   tryInciteAiNow: 'Essayez Incite AI maintenant',
   learnMore: 'En savoir plus',
   getStarted: 'Commencer',
-  
   leaveApplication: 'Postuler',
   getAdvisor: 'Conseiller',
   growPortfolio: 'Portefeuille+',
-  
   whatIndustryExpertsSay: 'Ce que disent les experts de l\'industrie',
   industryExpertsSubtitle: 'Les professionnels financiers de premier plan font confiance à Incite AI pour leurs décisions d\'investissement.',
   globalMarketsReporter: 'Journaliste des marchés mondiaux',
@@ -52,12 +47,10 @@ export const fr = {
   coFounderCeoRealVision: 'Co-fondateur et PDG, Real Vision',
   founderCeoArkInvest: 'Fondateur et PDG, ARK Invest',
   joinTheExperts: 'Rejoignez les experts',
-  
   leadership: 'Direction',
   leadershipTitle: 'Rencontrez notre direction',
   founderCEO: 'Fondateur et PDG',
   ceoDescription: 'Nicolli apporte plus de 15 ans d\'expérience en IA et technologie financière, dirigeant la mission d\'Incite AI de démocratiser l\'intelligence d\'investissement de niveau institutionnel.',
-  
   beginJourney: 'Commencez votre voyage',
   applyNowTitle: 'Postulez pour un accès exclusif',
   firstName: 'Prénom',
@@ -67,7 +60,6 @@ export const fr = {
   required: '*',
   validEmailRequired: 'Veuillez entrer une adresse e-mail valide',
   validPhoneRequired: 'Veuillez entrer un numéro de téléphone valide (6-15 chiffres)',
-  
   commonQuestions: 'Questions courantes',
   frequentlyAskedQuestions: 'Questions fréquemment posées',
   whereLocatedQ: 'Où se trouve votre entreprise?',
@@ -88,14 +80,11 @@ export const fr = {
   guaranteesA: 'Bien que nous ne puissions pas garantir les profits en raison des risques du marché, nous garantissons une communication transparente et un support dédié.',
   stillHaveQuestions: 'Avez-vous encore des questions?',
   contactSupport: 'Contactez notre équipe de support',
-  
   footerDescription: 'Autonomiser les investisseurs avec des insights alimentés par l\'IA pour des décisions financières plus intelligentes.',
   quickLinks: 'Liens rapides',
   allRightsReserved: '© 2025 Incite AI. Tous droits réservés.',
   footerDisclaimer: 'L\'investissement implique des risques. Les performances passées ne garantissent pas les résultats futurs.',
-  
   weAreInTheNews: 'Nous sommes dans l\'actualité',
-  
   flexibleInvestmentOptions: 'Options d\'investissement flexibles',
   investmentPlansTitle: 'Plans d\'investissement',
   standardPlan: 'Plan standard',
@@ -121,7 +110,6 @@ export const fr = {
   priorityExecute: 'Exécution prioritaire',
   exclusiveEvents: 'Événements exclusifs',
   waitingList: 'Liste d\'attente',
-  
   advancedTechnology: 'Technologie avancée',
   cuttingEdgeTradingPlatform: 'Plateforme de trading de pointe',
   tradingPlatformDescription: 'Découvrez le trading professionnel avec notre plateforme alimentée par l\'IA.',
@@ -129,13 +117,9 @@ export const fr = {
   aiPredictionsDescription: 'Obtenez des prédictions de marché en temps réel alimentées par l\'apprentissage automatique avancé.',
   bankGradeSecurity: 'Sécurité de niveau bancaire',
   securityDescription: 'Vos investissements sont protégés par une sécurité de niveau entreprise.',
-  
   trustedBy: 'Fait confiance par',
   companyGifts: 'Cadeaux d\'entreprise',
-  
   april2025: 'Avril 2025',
-  
-  // Cookie Consent
   cookieConsentTitle: 'Nous utilisons des cookies pour améliorer votre expérience',
   cookieConsentDescription: 'Nous utilisons des cookies et des technologies similaires pour offrir la meilleure expérience sur notre site web. Certains sont essentiels au fonctionnement, tandis que d\'autres nous aident à comprendre comment vous utilisez notre site et à améliorer nos services. Vous pouvez personnaliser vos préférences ou accepter tous les cookies.',
   cookieSettings: 'Paramètres des cookies',
@@ -144,8 +128,6 @@ export const fr = {
   rejectNonEssential: 'Rejeter les non-essentiels',
   customizeCookies: 'Personnaliser',
   savePreferences: 'Sauvegarder les préférences',
-  
-  // Cookie Categories
   essentialCookies: 'Cookies essentiels',
   essentialCookiesDesc: 'Ces cookies sont nécessaires au fonctionnement du site web et ne peuvent pas être désactivés. Ils ne sont généralement définis qu\'en réponse à des actions que vous effectuez et qui constituent une demande de services.',
   analyticsCookies: 'Cookies analytiques',
@@ -154,10 +136,8 @@ export const fr = {
   marketingCookiesDesc: 'Ces cookies sont utilisés pour suivre les visiteurs à travers les sites web afin d\'afficher des publicités et des campagnes marketing pertinentes.',
   functionalCookies: 'Cookies fonctionnels',
   functionalCookiesDesc: 'Ces cookies permettent des fonctionnalités améliorées et la personnalisation, comme se souvenir de vos préférences et paramètres.',
-  
   cookieRequired: 'Obligatoire',
   cookieNeedMoreInfo: 'Besoin de plus d\'informations ?',
   cookieLearnMore: 'En savoir plus sur la façon dont nous traitons vos données dans notre',
-  
   threeSteps: "3 étapes simples"
 };

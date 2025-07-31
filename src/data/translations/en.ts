@@ -1,5 +1,4 @@
 export const en = {
-  // Navigation
   home: 'Home',
   about: 'About',
   services: 'Services',  
@@ -11,15 +10,11 @@ export const en = {
   plans: 'Plans',
   faq: 'FAQ',
   applyNow: 'Apply Now',
-  
-  // Hero Section
   heroTitle: 'AI-Powered Investment Intelligence',
   heroSubtitle: 'Transform your investment strategy with cutting-edge AI technology that delivers institutional-grade analysis and actionable insights.',
   eliteInvestmentOpportunities: 'Elite Investment Opportunities',
   startJourneyNow: 'Start Your Journey Now',
   investorsTrustUs: 'investors trust us',
-  
-  // Hero Cards
   recordPortfolioGrowth: 'Record Portfolio Growth',
   aiSays: 'AI Says',
   strongBuySignal: 'Strong Buy Signal',
@@ -29,8 +24,6 @@ export const en = {
   clientWinrate: 'Client Win Rate',
   winratePercentage: '87.2%',
   successRate: 'Success Rate',
-  
-  // How It Works
   howItWorks: 'How It Works',
   simplyHowItWorksTitle: 'Simply Ask, Get Results',
   simplyHowItWorksSubtitle: 'Our AI-powered system makes investment analysis as simple as asking a question.',
@@ -43,14 +36,10 @@ export const en = {
   tryInciteAiNow: 'Try Incite AI Now',
   learnMore: 'Learn More',
   getStarted: 'Get Started',
-  
-  // Steps
   leaveApplication: 'Apply Now',
   getAdvisor: 'Get Advisor',
   growPortfolio: 'Grow Portfolio',
   threeSteps: "3 Easy Steps",
-  
-  // Industry Experts
   whatIndustryExpertsSay: 'What Industry Experts Say',
   industryExpertsSubtitle: 'Leading financial professionals trust Incite AI for their investment decisions.',
   globalMarketsReporter: 'Global Markets Reporter',
@@ -59,14 +48,10 @@ export const en = {
   coFounderCeoRealVision: 'Co-Founder & CEO, Real Vision',
   founderCeoArkInvest: 'Founder & CEO, ARK Invest',
   joinTheExperts: 'Join the Experts',
-  
-  // CEO Section
   leadership: 'Leadership',
   leadershipTitle: 'Meet Our Leadership',
   founderCEO: 'Founder & CEO',
   ceoDescription: 'Nicolli brings over 15 years of experience in AI and financial technology, leading Incite AI\'s mission to democratize institutional-grade investment intelligence.',
-  
-  // Application Form
   beginJourney: 'Begin Your Journey',
   applyNowTitle: 'Apply for Exclusive Access',
   firstName: 'First Name',
@@ -76,8 +61,6 @@ export const en = {
   required: '*',
   validEmailRequired: 'Please enter a valid email address',
   validPhoneRequired: 'Please enter a valid phone number (6-15 digits)',
-  
-  // FAQ
   commonQuestions: 'Common Questions',
   frequentlyAskedQuestions: 'Frequently Asked Questions',
   whereLocatedQ: 'Where is your company located?',
@@ -98,8 +81,6 @@ export const en = {
   guaranteesA: 'While we cannot guarantee profits due to market risks, we guarantee transparent communication and dedicated support.',
   stillHaveQuestions: 'Still have questions?',
   contactSupport: 'Contact our support team',
-  
-  // Footer
   footerDescription: 'Empowering investors with AI-driven insights for smarter financial decisions.',
   quickLinks: 'Quick Links',
   allRightsReserved: '© 2025 Incite AI. All rights reserved.',
@@ -109,11 +90,7 @@ export const en = {
   riskDisclosure: 'Risk Disclosure',
   legal: 'Legal',
   compliance: 'Compliance',
-  
-  // News Section
   weAreInTheNews: 'We Are In The News',
-  
-  // Pricing Section
   flexibleInvestmentOptions: 'Flexible Investment Options',
   investmentPlansTitle: 'Investment Plans',
   standardPlan: 'Standard Plan',
@@ -141,8 +118,6 @@ export const en = {
   waitingList: 'Waiting List',
   priorityProcessing: 'Priority Processing',
   companyGifts: 'Company Gifts',
-  
-  // Trading Platform
   advancedTechnology: 'Advanced Technology',
   cuttingEdgeTradingPlatform: 'Cutting-Edge Trading Platform',
   tradingPlatformDescription: 'Experience professional-grade trading with our AI-powered platform.',
@@ -150,13 +125,9 @@ export const en = {
   aiPredictionsDescription: 'Get real-time market predictions powered by advanced machine learning.',
   bankGradeSecurity: 'Bank-Grade Security',
   securityDescription: 'Your investments are protected with enterprise-level security.',
-  
-  // Testimonials
   whatOurUsersSay: 'What Our Users Say',
   testimonialsSubtitle: 'Real experiences from investors who trust our AI-powered platform.',
   getEarlyAccess: 'Get Early Access',
-  
-  // Professions
   automotiveRetailer: 'Automotive Retailer',
   designer: 'Designer',
   coffeeShopOwner: 'Coffee Shop Owner',
@@ -167,15 +138,9 @@ export const en = {
   photoEditor: 'Photo Editor',
   pizzeriaManager: 'Pizzeria Manager',
   professionalBroker: 'Professional Broker',
-  
-  // Success Page
   applicationSuccessful: 'Application Successful!',
   managerWillContact: 'Our manager will contact you at the shortest.',
-  
-  // General
   trustedBy: 'Trusted by',
-  
-  // Cookie Consent
   cookieConsentTitle: 'We use cookies to enhance your experience',
   cookieConsentDescription: 'We use cookies and similar technologies to provide the best experience on our website. Some are essential for functionality, while others help us understand how you use our site and improve our services. You can customize your preferences or accept all cookies.',
   cookieSettings: 'Cookie Settings',
@@ -184,8 +149,6 @@ export const en = {
   rejectNonEssential: 'Reject Non-Essential',
   customizeCookies: 'Customize',
   savePreferences: 'Save Preferences',
-  
-  // Cookie Categories
   essentialCookies: 'Essential Cookies',
   essentialCookiesDesc: 'These cookies are necessary for the website to function and cannot be switched off. They are usually only set in response to actions made by you which amount to a request for services.',
   analyticsCookies: 'Analytics Cookies',
@@ -194,11 +157,8 @@ export const en = {
   marketingCookiesDesc: 'These cookies are used to track visitors across websites to display relevant advertisements and marketing campaigns.',
   functionalCookies: 'Functional Cookies',
   functionalCookiesDesc: 'These cookies enable enhanced functionality and personalization, such as remembering your preferences and settings.',
-  
   cookieRequired: 'Required',
   cookieNeedMoreInfo: 'Need more information?',
   cookieLearnMore: 'Learn more about how we handle your data in our',
-  
-  // New
   april2025: 'April 2025'
 };

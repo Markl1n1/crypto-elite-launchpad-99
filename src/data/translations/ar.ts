@@ -1,4 +1,3 @@
-
 export const ar = {
   home: 'الرئيسية',
   about: 'حولنا',
@@ -11,13 +10,11 @@ export const ar = {
   plans: 'الخطط',
   faq: 'الأسئلة الشائعة',
   applyNow: 'تطبيق الآن',
-  
   heroTitle: 'ذكاء الاستثمار المدعوم بالذكاء الاصطناعي',
   heroSubtitle: 'حول استراتيجية الاستثمار الخاصة بك باستخدام تقنية الذكاء الاصطناعي المتطورة التي تقدم تحليلات على المستوى المؤسسي ورؤى قابلة للتنفيذ.',
   eliteInvestmentOpportunities: 'فرص الاستثمار النخبوية',
   startJourneyNow: 'ابدأ رحلتك الآن',
   investorsTrustUs: 'المستثمرون يثقون بنا',
-  
   recordPortfolioGrowth: 'نمو المحفظة القياسي',
   aiSays: 'الذكاء الاصطناعي يقول',
   strongBuySignal: 'إشارة شراء قوية',
@@ -27,7 +24,6 @@ export const ar = {
   clientWinrate: 'معدل فوز العميل',
   winratePercentage: '87.2%',
   successRate: 'معدل النجاح',
-  
   howItWorks: 'كيف يعمل',
   simplyHowItWorksTitle: 'ببساطة اسأل، احصل على النتائج',
   simplyHowItWorksSubtitle: 'نظامنا المدعوم بالذكاء الاصطناعي يجعل تحليل الاستثمار بسيطًا مثل طرح سؤال.',
@@ -40,11 +36,9 @@ export const ar = {
   tryInciteAiNow: 'جرب Incite AI الآن',
   learnMore: 'اعرف المزيد',
   getStarted: 'ابدأ',
-  
   leaveApplication: 'قدّم الآن',
   getAdvisor: 'مستشار',
   growPortfolio: 'نمِّ المحفظة',
-  
   whatIndustryExpertsSay: 'ما يقوله خبراء الصناعة',
   industryExpertsSubtitle: 'المهنيون الماليون الرائدون يثقون في Incite AI لقرارات الاستثمار الخاصة بهم.',
   globalMarketsReporter: 'مراسل الأسواق العالمية',
@@ -53,12 +47,10 @@ export const ar = {
   coFounderCeoRealVision: 'المؤسس المشارك والرئيس التنفيذي، Real Vision',
   founderCeoArkInvest: 'المؤسس والرئيس التنفيذي، ARK Invest',
   joinTheExperts: 'انضم إلى الخبراء',
-  
   leadership: 'القيادة',
   leadershipTitle: 'تعرف على قيادتنا',
   founderCEO: 'المؤسس والرئيس التنفيذي',
   ceoDescription: 'يجلب نيكولي أكثر من 15 عامًا من الخبرة في الذكاء الاصطناعي والتكنولوجيا المالية، ويقود مهمة Incite AI في إضفاء الطابع الديمقراطي على ذكاء الاستثمار على المستوى المؤسسي.',
-  
   beginJourney: 'ابدأ رحلتك',
   applyNowTitle: 'تقدم للحصول على وصول حصري',
   firstName: 'الاسم الأول',
@@ -68,7 +60,6 @@ export const ar = {
   required: '*',
   validEmailRequired: 'يرجى إدخال عنوان بريد إلكتروني صحيح',
   validPhoneRequired: 'يرجى إدخال رقم هاتف صحيح (6-15 رقمًا)',
-  
   commonQuestions: 'الأسئلة الشائعة',
   frequentlyAskedQuestions: 'الأسئلة المتكررة',
   whereLocatedQ: 'أين تقع شركتكم؟',
@@ -89,14 +80,11 @@ export const ar = {
   guaranteesA: 'بينما لا يمكننا ضمان الأرباح بسبب مخاطر السوق، نضمن التواصل الشفاف والدعم المخصص.',
   stillHaveQuestions: 'لا تزال لديك أسئلة؟',
   contactSupport: 'اتصل بفريق الدعم لدينا',
-  
   footerDescription: 'تمكين المستثمرين برؤى مدفوعة بالذكاء الاصطناعي لقرارات مالية أذكى.',
   quickLinks: 'روابط سريعة',
   allRightsReserved: '© 2025 Incite AI. جميع الحقوق محفوظة.',
   footerDisclaimer: 'الاستثمار ينطوي على مخاطر. الأداء السابق لا يضمن النتائج المستقبلية.',
-  
   weAreInTheNews: 'نحن في الأخبار',
-  
   flexibleInvestmentOptions: 'خيارات استثمار مرنة',
   investmentPlansTitle: 'خطط الاستثمار',
   standardPlan: 'الخطة القياسية',
@@ -122,7 +110,6 @@ export const ar = {
   priorityExecute: 'تنفيذ أولوية',
   exclusiveEvents: 'فعاليات حصرية',
   waitingList: 'قائمة الانتظار',
-  
   advancedTechnology: 'تكنولوجيا متقدمة',
   cuttingEdgeTradingPlatform: 'منصة تداول متطورة',
   tradingPlatformDescription: 'اختبر التداول على المستوى المهني مع منصتنا المدعومة بالذكاء الاصطناعي.',
@@ -130,13 +117,10 @@ export const ar = {
   aiPredictionsDescription: 'احصل على تنبؤات السوق في الوقت الفعلي مدعومة بالتعلم الآلي المتقدم.',
   bankGradeSecurity: 'أمان بمستوى البنك',
   securityDescription: 'استثماراتك محمية بأمان على مستوى المؤسسة.',
-  
   trustedBy: 'موثوق من قبل',
   companyGifts: 'هدايا الشركة',
   threeSteps: "3 خطوات سهلة",
   april2025: 'أبريل 2025',
-  
-  // Cookie Consent
   cookieConsentTitle: 'نستخدم ملفات تعريف الارتباط لتحسين تجربتك',
   cookieConsentDescription: 'نستخدم ملفات تعريف الارتباط والتقنيات المشابهة لتوفير أفضل تجربة على موقعنا الإلكتروني. بعضها ضروري للوظائف، بينما يساعدنا البعض الآخر على فهم كيفية استخدامك لموقعنا وتحسين خدماتنا. يمكنك تخصيص تفضيلاتك أو قبول جميع ملفات تعريف الارتباط.',
   cookieSettings: 'إعدادات ملفات تعريف الارتباط',
@@ -145,8 +129,6 @@ export const ar = {
   rejectNonEssential: 'رفض غير الضرورية',
   customizeCookies: 'تخصيص',
   savePreferences: 'حفظ التفضيلات',
-  
-  // Cookie Categories
   essentialCookies: 'ملفات تعريف الارتباط الأساسية',
   essentialCookiesDesc: 'ملفات تعريف الارتباط هذه ضرورية لعمل الموقع الإلكتروني ولا يمكن إيقاف تشغيلها. عادة ما يتم تعيينها فقط استجابة للإجراءات التي تقوم بها والتي تعادل طلب الخدمات.',
   analyticsCookies: 'ملفات تعريف الارتباط التحليلية',
@@ -155,7 +137,6 @@ export const ar = {
   marketingCookiesDesc: 'تُستخدم ملفات تعريف الارتباط هذه لتتبع الزوار عبر المواقع الإلكترونية لعرض الإعلانات والحملات التسويقية ذات الصلة.',
   functionalCookies: 'ملفات تعريف الارتباط الوظيفية',
   functionalCookiesDesc: 'تتيح ملفات تعريف الارتباط هذه وظائف محسنة وتخصيصًا، مثل تذكر تفضيلاتك وإعداداتك.',
-  
   cookieRequired: 'مطلوب',
   cookieNeedMoreInfo: 'تحتاج المزيد من المعلومات؟',
   cookieLearnMore: 'تعرف على المزيد حول كيفية تعاملنا مع بياناتك في',

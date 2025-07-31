@@ -10,13 +10,11 @@ export const tr = {
   plans: 'Planlar',
   faq: 'SSS',
   applyNow: 'Şimdi Başvur',
-  
   heroTitle: 'AI Destekli Yatırım Zekası',
   heroSubtitle: 'Kurumsal düzeyde analiz ve eyleme geçirilebilir içgörüler sunan son teknoloji AI teknolojisi ile yatırım stratejinizi dönüştürün.',
   eliteInvestmentOpportunities: 'Elit Yatırım Fırsatları',
   startJourneyNow: 'Yolculuğunuza Şimdi Başlayın',
   investorsTrustUs: 'yatırımcı bize güveniyor',
-  
   recordPortfolioGrowth: 'Rekor Portföy Büyümesi',
   aiSays: 'AI Diyor Ki',
   strongBuySignal: 'Güçlü Alım Sinyali',
@@ -26,7 +24,6 @@ export const tr = {
   clientWinrate: 'Müşteri Kazanma Oranı',
   winratePercentage: '87.2%',
   successRate: 'Başarı Oranı',
-  
   howItWorks: 'Nasıl Çalışır',
   simplyHowItWorksTitle: 'Basitçe Sor, Sonuç Al',
   simplyHowItWorksSubtitle: 'AI destekli sistemimiz yatırım analizini soru sormak kadar basit hale getirir.',
@@ -39,11 +36,9 @@ export const tr = {
   tryInciteAiNow: 'Incite AI\'yi Şimdi Deneyin',
   learnMore: 'Daha Fazla Öğren',
   getStarted: 'Başla',
-  
   leaveApplication: 'Başvur',
   getAdvisor: 'Danışman',
   growPortfolio: 'Portföy Büyüt',
-  
   whatIndustryExpertsSay: 'Sektör Uzmanları Ne Diyor',
   industryExpertsSubtitle: 'Önde gelen finans profesyonelleri yatırım kararları için Incite AI\'ya güveniyor.',
   globalMarketsReporter: 'Küresel Piyasalar Muhabiri',
@@ -52,12 +47,10 @@ export const tr = {
   coFounderCeoRealVision: 'Kurucu Ortak ve CEO, Real Vision',
   founderCeoArkInvest: 'Kurucu ve CEO, ARK Invest',
   joinTheExperts: 'Uzmanlara Katılın',
-  
   leadership: 'Liderlik',
   leadershipTitle: 'Liderliğimizi Tanıyın',
   founderCEO: 'Kurucu ve CEO',
   ceoDescription: 'Nicolli, AI ve finans teknolojisinde 15 yıldan fazla deneyim getiriyor ve Incite AI\'nin kurumsal düzeyde yatırım zekasını demokratikleştirme misyonunu yönetiyor.',
-  
   beginJourney: 'Yolculuğunuza Başlayın',
   applyNowTitle: 'Özel Erişim İçin Başvurun',
   firstName: 'Ad',
@@ -67,7 +60,6 @@ export const tr = {
   required: '*',
   validEmailRequired: 'Lütfen geçerli bir e-posta adresi girin',
   validPhoneRequired: 'Lütfen geçerli bir telefon numarası girin (6-15 haneli)',
-  
   commonQuestions: 'Yaygın Sorular',
   frequentlyAskedQuestions: 'Sıkça Sorulan Sorular',
   whereLocatedQ: 'Şirketiniz nerede bulunuyor?',
@@ -88,14 +80,11 @@ export const tr = {
   guaranteesA: 'Piyasa riskleri nedeniyle kar garanti edemesek de, şeffaf iletişim ve özel destek garantisi veriyoruz.',
   stillHaveQuestions: 'Hala sorularınız var mı?',
   contactSupport: 'Destek ekibimizle iletişime geçin',
-  
   footerDescription: 'Yatırımcıları daha akıllı finansal kararlar için AI destekli içgörülerle güçlendiriyoruz.',
   quickLinks: 'Hızlı Bağlantılar',
   allRightsReserved: '© 2025 Incite AI. Tüm hakları saklıdır.',
   footerDisclaimer: 'Yatırım risk içerir. Geçmiş performans gelecekteki sonuçları garanti etmez.',
-  
   weAreInTheNews: 'Haberlerdeyiz',
-  
   flexibleInvestmentOptions: 'Esnek Yatırım Seçenekleri',
   investmentPlansTitle: 'Yatırım Planları',
   standardPlan: 'Standart Plan',
@@ -121,7 +110,6 @@ export const tr = {
   priorityExecute: 'Öncelikli Yürütme',
   exclusiveEvents: 'Özel Etkinlikler',
   waitingList: 'Bekleme Listesi',
-  
   advancedTechnology: 'Gelişmiş Teknoloji',
   cuttingEdgeTradingPlatform: 'Son Teknoloji Ticaret Platformu',
   tradingPlatformDescription: 'AI destekli platformumuzla profesyonel düzeyde ticaret deneyimi yaşayın.',
@@ -129,12 +117,8 @@ export const tr = {
   aiPredictionsDescription: 'Gelişmiş makine öğrenmesi ile gerçek zamanlı piyasa tahminleri alın.',
   bankGradeSecurity: 'Banka Düzeyinde Güvenlik',
   securityDescription: 'Yatırımlarınız kurumsal düzeyde güvenlikle korunuyor.',
-  
   threeSteps: "3 Kolay Adım",
-  
   april2025: 'Nisan 2025',
-  
-  // Cookie Consent
   cookieConsentTitle: 'Deneyiminizi geliştirmek için çerezler kullanıyoruz',
   cookieConsentDescription: 'Web sitemizde en iyi deneyimi sağlamak için çerezler ve benzer teknolojiler kullanıyoruz. Bazıları işlevsellik için gereklidir, diğerleri sitemizi nasıl kullandığınızı anlamamıza ve hizmetlerimizi geliştirmemize yardımcı olur. Tercihlerinizi özelleştirebilir veya tüm çerezleri kabul edebilirsiniz.',
   cookieSettings: 'Çerez Ayarları',
@@ -143,8 +127,6 @@ export const tr = {
   rejectNonEssential: 'Zorunlu Olmayanları Reddet',
   customizeCookies: 'Özelleştir',
   savePreferences: 'Tercihleri Kaydet',
-  
-  // Cookie Categories
   essentialCookies: 'Zorunlu Çerezler',
   essentialCookiesDesc: 'Bu çerezler web sitesinin çalışması için gereklidir ve kapatılamaz. Genellikle sadece hizmet talebiniz sayılacak eylemlerinize yanıt olarak ayarlanır.',
   analyticsCookies: 'Analitik Çerezler',
@@ -153,7 +135,6 @@ export const tr = {
   marketingCookiesDesc: 'Bu çerezler, alakalı reklamlar ve pazarlama kampanyaları görüntülemek için ziyaretçileri web siteleri genelinde takip etmek için kullanılır.',
   functionalCookies: 'İşlevsel Çerezler',
   functionalCookiesDesc: 'Bu çerezler, tercihlerinizi ve ayarlarınızı hatırlama gibi gelişmiş işlevsellik ve kişiselleştirme sağlar.',
-  
   cookieRequired: 'Gerekli',
   cookieNeedMoreInfo: 'Daha fazla bilgiye mi ihtiyacınız var?',
   cookieLearnMore: 'Verilerinizi nasıl işlediğimiz hakkında daha fazla bilgi edinmek için',
