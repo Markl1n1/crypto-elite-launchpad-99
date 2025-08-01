@@ -1,4 +1,5 @@
 
+
 export const ar = {
   home: 'الرئيسية',
   about: 'حولنا',
@@ -144,4 +145,3 @@ export const ar = {
   privacyPolicy: 'سياسة الخصوصية',
   joinedRecently: 'انضم مؤخرًا'
 };
-```
