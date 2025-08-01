@@ -1,31 +1,77 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
-export const useScrollAnimation = (threshold: number = 300) => {
+export const useScrollAnimation = (threshold: number = 0.1) => {
   const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      
-      if (scrollPosition > threshold) {
-        if (!isVisible) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
           setIsVisible(true);
-        }
-      } else {
-        if (isVisible) {
+        } else {
           setIsVisible(false);
         }
+      },
+      {
+        threshold,
+        rootMargin: '0px 0px -50px 0px'
       }
-    };
+    );
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
     };
-  }, [threshold, isVisible]);
+  }, [threshold]);
 
-  return isVisible;
+  return { ref, isVisible };
+};
+
+export const useStaggeredAnimation = (itemCount: number, staggerDelay: number = 200) => {
+  const [visibleItems, setVisibleItems] = useState<boolean[]>(new Array(itemCount).fill(false));
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Stagger the animations
+          for (let i = 0; i < itemCount; i++) {
+            setTimeout(() => {
+              setVisibleItems(prev => {
+                const newState = [...prev];
+                newState[i] = true;
+                return newState;
+              });
+            }, i * staggerDelay);
+          }
+        } else {
+          setVisibleItems(new Array(itemCount).fill(false));
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [itemCount, staggerDelay]);
+
+  return { ref, visibleItems };
 };
