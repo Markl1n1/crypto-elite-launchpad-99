@@ -1,3 +1,4 @@
+
 export const ar = {
   home: 'الرئيسية',
   about: 'حولنا',
@@ -140,5 +141,7 @@ export const ar = {
   cookieRequired: 'مطلوب',
   cookieNeedMoreInfo: 'تحتاج المزيد من المعلومات؟',
   cookieLearnMore: 'تعرف على المزيد حول كيفية تعاملنا مع بياناتك في',
-  privacyPolicy: 'سياسة الخصوصية'
+  privacyPolicy: 'سياسة الخصوصية',
+  joinedRecently: 'انضم مؤخرًا'
 };
+```
