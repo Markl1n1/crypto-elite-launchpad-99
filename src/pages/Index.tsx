@@ -13,6 +13,7 @@ import { FAQSection } from '@/components/sections/FAQSection';
 import { NewsSection } from '@/components/sections/NewsSection';
 import { Footer } from '@/components/sections/Footer';
 import { ScrollToTop } from '@/components/ui/scroll-to-top';
+import { ChatButton } from '@/components/ui/chat-button';
 
 const Index = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,6 +55,7 @@ const Index = () => {
       <NewsSection />
       <Footer scrollToSection={scrollToSection} />
       <ScrollToTop />
+      <ChatButton />
     </div>
   );
 };
