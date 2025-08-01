@@ -1,60 +1,31 @@
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export const useScrollAnimation = <T extends HTMLElement = HTMLDivElement>(threshold = 0.1) => {
+export const useScrollAnimation = (threshold: number = 300) => {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<T>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      
+      if (scrollPosition > threshold) {
+        if (!isVisible) {
           setIsVisible(true);
-          observer.unobserve(entry.target);
         }
-      },
-      { threshold }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [threshold]);
-
-  return { ref, isVisible };
-};
-
-export const useStaggeredAnimation = <T extends HTMLElement = HTMLDivElement>(count: number, delay = 100) => {
-  const [visibleItems, setVisibleItems] = useState<boolean[]>(new Array(count).fill(false));
-  const ref = useRef<T>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          for (let i = 0; i < count; i++) {
-            setTimeout(() => {
-              setVisibleItems(prev => {
-                const newState = [...prev];
-                newState[i] = true;
-                return newState;
-              });
-            }, i * delay);
-          }
-          observer.unobserve(entry.target);
+      } else {
+        if (isVisible) {
+          setIsVisible(false);
         }
-      },
-      { threshold: 0.1 }
-    );
+      }
+    };
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
 
-    return () => observer.disconnect();
-  }, [count, delay]);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [threshold, isVisible]);
 
-  return { ref, visibleItems };
+  return isVisible;
 };

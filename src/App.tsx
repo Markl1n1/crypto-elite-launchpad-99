@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CookieConsent } from "@/components/ui/cookie-consent";
+import { JoinNotification } from "@/components/ui/join-notification";
 import Index from "./pages/Index";
 import Success from "./pages/Success";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/compliance" element={<Compliance />} />
         </Routes>
         <CookieConsent />
+        <JoinNotification />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
