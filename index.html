@@ -8,8 +8,11 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-      gtag('config', 'AW-17334931253');
+      gtag('config', 'AW-17334931253', {
+        'linker': {
+          'domains': ['incite-success.org', 'inciteai.org']
+        }
+      });
     </script>
 
     <!-- Ember Chat Widget -->
