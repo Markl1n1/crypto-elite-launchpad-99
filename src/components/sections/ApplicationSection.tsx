@@ -31,6 +31,12 @@ export const ApplicationSection = () => {
   const validateEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const validatePhone = (phone: string) => /^\d{6,15}$/.test(phone);
 
+  const formatPhoneNumber = (phoneCode: string, phoneNumber: string) => {
+    // Remove the '+' sign from phoneCode and format as (code) number
+    const code = phoneCode.replace('+', '');
+    return `(${code}) ${phoneNumber}`;
+  };
+
   const submitToGoogleSheets = async (data: any) => {
     try {
       await fetch('https://script.google.com/macros/s/AKfycbzwJ-kDg_tIsVc_GJl1d0QYPnfvl3TqRogavwy5l_-vEWTIdU0lZ94fWXSsJXS6rtzd/exec', {
@@ -68,7 +74,7 @@ export const ApplicationSection = () => {
       firstName: formData.firstName,
       lastName: formData.lastName,
       email: formData.email,
-      phone: `${phoneCode}${phoneNumber}`,
+      phone: formatPhoneNumber(phoneCode, phoneNumber),
       siteLanguage: currentLanguage,
       userLanguage: userLanguage
     };
